@@ -1,0 +1,70 @@
+{
+  "destinationIata": "HNL",
+  "destinationName": "Honolulu",
+  "routes": [
+    {
+      "originIata": "SEA",
+      "originCity": "Seattle",
+      "price": 253,
+      "airline": "Southwest",
+      "departureAt": "2027-02-27T07:30:00-08:00",
+      "link": "https://www.aviasales.com/search/SEA2702HNL06031?t=WN18037134001803751500000755SEAOAKHNL18043752001804423500000685HNLSANSEA_a743ce925c6df578926a4c96d37ac518_20328&search_date=26102026&expected_price_uuid=01a175c7-07c2-8040-a8fa-353010135294&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=kIAbSymXJpp4NCjdfdzHHQ&expected_price_source=share&expected_price_currency=usd&expected_price=253&marker=541388"
+    },
+    {
+      "originIata": "LAX",
+      "originCity": "Los Angeles",
+      "price": 258,
+      "airline": "United",
+      "departureAt": "2026-11-16T17:10:00-08:00",
+      "link": "https://www.aviasales.com/search/LAX1611HNL18111?t=UA17948490001794862560000346LAXHNL17950053001795032240000329HNLLAX_29b507cd35efeb492011dc0f1e581c89_21133&search_date=22102026&expected_price_uuid=01a16452-d628-8040-6886-feb806daab6f&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=y8T2YmzlARrJVtOL7Ii5tA&expected_price_source=share&expected_price_currency=usd&expected_price=258&marker=541388"
+    },
+    {
+      "originIata": "SFO",
+      "originCity": "San Francisco",
+      "price": 273,
+      "airline": "Alaska",
+      "departureAt": "2026-10-28T19:48:00-07:00",
+      "link": "https://www.aviasales.com/search/SFO2810HNL04111?t=HA17932168801793225880000330SFOHNL17937945001793820300000310HNLSFO_82795e3fe314ee0627b496715c57ed4f_21963&search_date=25102026&expected_price_uuid=01a174bd-d369-8040-a939-2e0263fdd72a&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=wKlYHN1GJMYrbgH9iQ-NOg&expected_price_source=share&expected_price_currency=usd&expected_price=273&marker=541388"
+    },
+    {
+      "originIata": "DFW",
+      "originCity": "Dallas",
+      "price": 280,
+      "airline": "Southwest",
+      "departureAt": "2027-02-18T10:00:00-06:00",
+      "link": "https://www.aviasales.com/search/DFW1802HNL24021?t=WN18029448001802979000000810DALLAXHNL18034566001803508200000620HNLSANDAL_44853a57c8ac03806a046c8940601890_23167&search_date=20102026&expected_price_uuid=01a157fe-b114-8040-af71-406eb146b1f0&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=mTEJXQMnVuLdK5rDh258hQ&expected_price_source=share&expected_price_currency=usd&expected_price=280&marker=541388"
+    },
+    {
+      "originIata": "LAS",
+      "originCity": "Las Vegas",
+      "price": 281,
+      "airline": "Southwest",
+      "departureAt": "2026-11-25T10:20:00-08:00",
+      "link": "https://www.aviasales.com/search/LAS2511HNL29111?t=WN17956020001795635000000670LASLGBLAXHNL17959860001796030700000625HNLPHXBURLAS_5f5b008ca55b1be5d749720ee66c7b54_22590&search_date=25102026&expected_price_uuid=01a174b7-0064-8040-af26-17f3195802b0&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=slAzfZM6OQkCr-O9m115qw&expected_price_source=share&expected_price_currency=usd&expected_price=281&marker=541388"
+    },
+    {
+      "originIata": "JFK",
+      "originCity": "New York",
+      "price": 476,
+      "airline": "Alaska",
+      "departureAt": "2026-12-13T08:40:00-05:00",
+      "link": "https://www.aviasales.com/search/JFK1312HNL13011?t=AS17971512001797173700000675JFKHNL17998740001799943780000863HNLKOASEAJFK_ec7d289619c83c564cafb4e6092c4845_38794&search_date=22102026&expected_price_uuid=01a163a8-ea87-8031-6ed4-abc397c9b04b&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=YOJCNVgyHhRN2EeHFYiK-g&origin_airports=0&destination_airports=1&expected_price_source=share&expected_price_currency=usd&expected_price=476&marker=541388"
+    },
+    {
+      "originIata": "ORD",
+      "originCity": "Chicago",
+      "price": 492,
+      "airline": "Alaska",
+      "departureAt": "2027-01-18T14:13:00-06:00",
+      "link": "https://www.aviasales.com/search/ORD1801HNL31011?t=AS18002815801800311640000741ORDSANHNL18013858801801487580001455HNLPDXORD_d1a3c37cf5d2f932e9469facba2f25a4_39754&search_date=27102026&expected_price_uuid=01a17ade-1d1b-8030-ef0a-aa3a7c58a7da&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=fyCnQSqgM5JF6XtfDWnGhw&origin_airports=0&destination_airports=1&expected_price_source=share&expected_price_currency=usd&expected_price=492&marker=541388"
+    },
+    {
+      "originIata": "DEN",
+      "originCity": "Denver",
+      "price": 862,
+      "airline": "Alaska",
+      "departureAt": "2026-12-21T18:28:00-07:00",
+      "link": "https://www.aviasales.com/search/DEN2112HNL27121?t=AS17978776801797920400000892DENSEALASHNL17984133001798461600000625HNLSANDEN_c1e4c08724841604c1a37571d2704aa0_69640&search_date=26102026&expected_price_uuid=01a17a90-3452-8031-2166-ee0512371c7a&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=fkrn-cbpSOo36c99hljlAw&expected_price_source=share&expected_price_currency=usd&expected_price=862&marker=541388"
+    }
+  ]
+}

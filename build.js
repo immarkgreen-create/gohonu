@@ -1,0 +1,880 @@
+#!/usr/bin/env node
+/**
+ * ${SITE.name} — zero-dependency static site generator.
+ *
+ * Reads data/tours.json and emits a complete static site into /public:
+ *   /index.html                      home (all tours, Viator-style grid)
+ *   /islands/<island>/index.html     one grid page per island
+ *   /tours/<slug>/index.html         one landing page per tour -> Book Now
+ *   /sitemap.xml, /robots.txt
+ * Assets in /assets are copied verbatim.
+ *
+ * Run:  node build.js
+ */
+const fs = require("fs");
+const path = require("path");
+
+const ROOT = __dirname;
+const OUT = path.join(ROOT, "public");
+const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "tours.json"), "utf8"));
+const SITE = DATA.site;
+const TOURS = DATA.tours;
+
+/* ---------- helpers ---------- */
+const esc = (s = "") =>
+  String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+const money = (n) => "$" + (Number(n) % 1 === 0 ? Number(n).toFixed(0) : Number(n).toFixed(2));
+
+const slugifyIsland = (i) => i.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
+const stars = (r) => {
+  const full = Math.round(r);
+  return "★★★★★".slice(0, full) + "☆☆☆☆☆".slice(0, 5 - full);
+};
+
+/* Build the destination URL + CTA label for a tour's Book Now button. */
+function booking(tour) {
+  const b = tour.booking || {};
+  if (b.provider === "fareharbor") {
+    const url =
+      `https://fareharbor.com/embeds/book/${b.shortname}/items/${b.itemId}/` +
+      `?full-items=yes&flow=no&branding=yes&bookable-only=yes` +
+      `&asn=fhdn&asn-ref=${SITE.affiliateRef}&ref=${SITE.affiliateRef}`;
+    return { url, label: "Book Now", lightframe: true, note: "Instant confirmation via FareHarbor" };
+  }
+  if (b.provider === "viator") return { url: b.url, label: "Check Availability", external: true, note: "Booked securely on Viator" };
+  if (b.provider === "polynesia") return { url: b.url, label: "Book Now", external: true, note: "Booked on Polynesia.com" };
+  // inquire / fallback
+  return {
+    url: `mailto:${SITE.email}?subject=Booking%20enquiry:%20${encodeURIComponent(tour.name)}`,
+    label: "Request to Book",
+    note: "We'll confirm availability within 24 hours",
+  };
+}
+
+// Optional image map (slug -> url), produced by fetch/images.js. Merged onto tours.
+const IMAGES = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "images.json"), "utf8"));
+  } catch {
+    return {};
+  }
+})();
+// Image precedence: explicit image in tours.json > your own file at
+// assets/img/tours/<slug>.(jpg|jpeg|png|webp) > Pexels map (images.json) > gradient.
+DATA.tours.forEach((t) => {
+  if (t.image) return;
+  const localDir = path.join(ROOT, "assets", "img", "tours");
+  const local = ["jpg", "jpeg", "png", "webp"]
+    .map((ext) => `${t.slug}.${ext}`)
+    .find((f) => fs.existsSync(path.join(localDir, f)));
+  if (local) t.image = `/assets/img/tours/${local}`;
+  else if (IMAGES[t.slug]) t.image = IMAGES[t.slug];
+});
+
+// Inline background-image (with a readability scrim). Falls back to the gradient class when no image.
+// Hero/section backgrounds (above the fold — not lazy).
+const bg = (url) =>
+  url
+    ? ` style="background-image:linear-gradient(rgba(0,0,0,.08),rgba(0,0,0,.30)),url('${esc(url)}');background-size:cover;background-position:center"`
+    : "";
+
+// Card photo as a real <img> so the browser can lazy-load it as you scroll.
+const photo = (url, alt) =>
+  url ? `<img class="card-photo" src="${esc(url)}" alt="${esc(alt || "")}" loading="lazy" decoding="async">` : "";
+
+// Official multicolor Google "G" — attributes the ratings as Google reviews.
+const GOOGLE_G = `<svg class="g-logo" viewBox="0 0 48 48" aria-label="Google" width="13" height="13"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>`;
+
+// Estimated price tier (1-4) by tour type — a browsing guide, not an exact quote.
+// Real price always shows live in the booking Lightframe.
+const PRICE_BANDS = { 1: "$ · under $50", 2: "$$ · $50–100", 3: "$$$ · $100–200", 4: "$$$$ · $200+" };
+function priceTier(t) {
+  const s = `${t.category || ""} ${t.tags || ""} ${t.name || ""}`.toLowerCase();
+  if (/private|charter|rental|helicopter|air tour|\bair\b|yacht|luxury|submarine|skydiv/.test(s)) return 4;
+  if (/boat tour|scuba|\bdive\b|luau|zipline|sail|dinner|sunset cruise|parasail|whale|fishing/.test(s)) return 3;
+  if (/snorkel|kayak|guided|eco tour|\bhike\b|bike|atv|dolphin|horseback|paddle|cruise/.test(s)) return 2;
+  if (/attraction|farm|\bsup\b|surf|lesson|shuttle|\bbus\b|walking|yoga|museum|garden|tour show/.test(s)) return 1;
+  return 2;
+}
+const tierBadge = (tier) =>
+  `<span class="tier" title="Typical price: ${esc(PRICE_BANDS[tier])}">${"$".repeat(tier)}<span class="tier-dim">${"$".repeat(4 - tier)}</span></span>`;
+
+// Live FareHarbor catalog (from the FHDN marketplace CSV). When present it drives
+// the Hawaii hub — real, currently-bookable tours, no stale prices (the Lightframe
+// shows the live price). Falls back to the curated tours.json when absent.
+const FH = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "fareharbor.json"), "utf8")).tours || [];
+  } catch {
+    return [];
+  }
+})();
+const USE_FH = FH.length > 0;
+// Google ratings per operator (data/ratings.json, keyed by lowercased company name).
+const RATINGS = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "ratings.json"), "utf8"));
+  } catch {
+    return {};
+  }
+})();
+// Backfill images + merge ratings onto FareHarbor items.
+FH.forEach((t) => {
+  if (!t.image && IMAGES[t.slug]) t.image = IMAGES[t.slug];
+  const r = RATINGS[(t.company || "").toLowerCase()];
+  if (r) {
+    t.rating = r.rating;
+    t.reviews = r.reviews;
+  }
+  t._tier = priceTier(t);
+});
+const HAS_RATINGS = FH.some((t) => t.rating);
+// Rank by Google rating weighted by review volume (so 5.0 with 3 reviews can't beat
+// 4.9 with 2,000). Rated tours lead; unrated fall back to FareHarbor quality score.
+if (USE_FH) {
+  const score = (t) => (t.rating ? t.rating * Math.log10((Number(t.reviews) || 0) + 10) : -1);
+  FH.sort((a, b) => score(b) - score(a) || (b.qualityScore || 0) - (a.qualityScore || 0));
+}
+const CATALOG = USE_FH ? FH : DATA.tours;
+
+const PRIMARY = SITE.primaryIsland || "Oahu";
+const islands = [...new Set(CATALOG.map((t) => t.island))].sort((a, b) =>
+  a === PRIMARY ? -1 : b === PRIMARY ? 1 : 0
+);
+const otherIslands = islands.filter((i) => i !== PRIMARY);
+const FEATURED_PER_ISLAND = 12; // on the home page
+
+const BEYOND = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "beyond.json"), "utf8")).destinations || [];
+  } catch {
+    return [];
+  }
+})();
+const DEST_IMAGES = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "dest-images.json"), "utf8"));
+  } catch {
+    return {};
+  }
+})();
+const destImage = (d) => DEST_IMAGES[d.slug] || (d.tours && d.tours[0] && d.tours[0].image);
+const POLY = BEYOND.filter((d) => d.collection === "polynesia");
+const WORLD = BEYOND.filter((d) => d.collection !== "polynesia");
+const beyondRegions = [...new Set(WORLD.map((d) => d.region))];
+
+const FLIGHTS = (() => {
+  try {
+    const f = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "flights.json"), "utf8"));
+    return f.routes && f.routes.length ? f : null;
+  } catch {
+    return null;
+  }
+})();
+
+/* ---------- shared chrome ---------- */
+function layout({ title, description, body, canonical, extraHead = "" }) {
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(description)}">
+${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ""}
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(description)}">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/logo.png">
+${extraHead}
+</head>
+<body>
+${nav()}
+${body}
+${footer()}
+<script src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
+</body>
+</html>`;
+}
+
+function nav() {
+  const primary = `<a class="nav-primary" href="/islands/${slugifyIsland(PRIMARY)}/">${esc(PRIMARY)}</a>`;
+  const rest = otherIslands.map((i) => `<a href="/islands/${slugifyIsland(i)}/">${esc(i)}</a>`).join("");
+  return `<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img class="brand-logo" src="/assets/img/logo.png" alt="" width="34" height="34"> Go<em>Honu</em></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
+    <nav class="nav-links">${primary}${rest}${
+      SITE.stay22Aid ? `<a href="/stay/">🏨 Stay</a>` : ""
+    }${FLIGHTS ? `<a href="/flights/">✈️ Flights</a>` : ""}<a href="/cars/">🚗 Cars</a>${
+      POLY.length ? `<a href="/polynesia/">🌴 Polynesia</a>` : ""
+    }${WORLD.length ? `<a class="nav-beyond" href="/beyond/">🌏 Beyond Hawaii</a>` : ""}</nav>
+  </div>
+</header>`;
+}
+
+function footer() {
+  return `<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="brand brand--footer"><img class="brand-logo" src="/assets/img/logo.png" alt="" width="34" height="34"> Go<em>Honu</em></div>
+      <p class="muted">${esc(SITE.tagline)}</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:${SITE.email}">${esc(SITE.email)}</a></p>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <p><a href="${esc(SITE.facebook)}" target="_blank" rel="noopener">Facebook</a><br>
+      <a href="${esc(SITE.instagram)}" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+  </div>
+  <div class="wrap footer-legal muted">
+    © ${SITE.name}. Bookings powered by FareHarbor, Viator & partner operators.${
+      HAS_RATINGS ? " Visitor ratings by Google." : ""
+    }
+  </div>
+</footer>`;
+}
+
+/* ---------- components ---------- */
+function card(tour) {
+  const b = booking(tour);
+  return `<a class="card" href="/tours/${tour.slug}/">
+  <div class="card-img island-${slugifyIsland(tour.island)}">${photo(tour.image, tour.name)}
+    <span class="card-island">${esc(tour.island)}</span>
+    ${tour.freeCancellation ? `<span class="card-flag">Free cancellation</span>` : ""}
+  </div>
+  <div class="card-body">
+    <span class="card-eyebrow">${esc(tour.category)}</span>
+    <h3 class="card-title">${esc(tour.name)}</h3>
+    <div class="card-meta">
+      <span class="rating">${stars(tour.rating)} <b>${tour.rating.toFixed(1)}</b></span>
+      <span class="muted">· ${esc(tour.duration)}</span>
+    </div>
+    <div class="card-foot">
+      <span class="price"><span class="muted">from</span> <b>${money(tour.priceFrom)}</b></span>
+      <span class="card-cta">${b.label} →</span>
+    </div>
+  </div>
+</a>`;
+}
+
+function grid(tours) {
+  return `<div class="grid">${tours.map(card).join("\n")}</div>`;
+}
+
+// Live FareHarbor catalog card — click opens the booking Lightframe (live price).
+function fhCard(t) {
+  const avail = t.availNext30 > 0 ? `<span class="card-flag">${t.availNext30} dates in 30 days</span>` : "";
+  return `<a class="card" href="/tours/${t.slug}/" data-cat="${esc(t.category)}" data-tier="${t._tier}">
+  <div class="card-img island-${slugifyIsland(t.island)}">${photo(t.image, t.name)}
+    <span class="card-island">${esc(t.island)}</span>${avail}
+  </div>
+  <div class="card-body">
+    <span class="card-eyebrow">${esc(t.category)}</span>
+    <h3 class="card-title">${esc(t.name)}</h3>
+    <div class="card-meta">${
+      t.rating
+        ? `<span class="rating">${GOOGLE_G}${stars(t.rating)} <b>${Number(t.rating).toFixed(1)}</b></span>${
+            t.reviews ? ` <span class="muted">(${Number(t.reviews).toLocaleString()})</span>` : ""
+          } <span class="muted">· ${esc(t.company)}</span>`
+        : `<span class="muted">${esc(t.company)}</span>`
+    }</div>
+    <div class="card-foot">${tierBadge(t._tier)}<span class="card-cta">Book now →</span></div>
+  </div>
+</a>`;
+}
+const fhGrid = (tours) => `<div class="grid">${tours.map(fhCard).join("\n")}</div>`;
+const gridFor = (tours) => (USE_FH ? fhGrid(tours) : grid(tours));
+
+// Viator-style FareHarbor tour detail page — keeps the visitor on GoHonu to see
+// live prices via the embedded FareHarbor calendar, with a Book button.
+function fhTourPage(t) {
+  const calScript = (t.calendarUrl || "").replace("/embeds/calendar/", "/embeds/script/calendar/");
+  const ratingLine = t.rating
+    ? `<span class="rating">${GOOGLE_G}${stars(t.rating)} <b>${Number(t.rating).toFixed(1)}</b></span>${t.reviews ? ` <span class="muted">(${Number(t.reviews).toLocaleString()} Google reviews)</span>` : ""}`
+    : "";
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: t.name,
+    image: t.image || undefined,
+    brand: { "@type": "Organization", name: t.company },
+    aggregateRating: t.rating ? { "@type": "AggregateRating", ratingValue: t.rating, reviewCount: t.reviews || 1, bestRating: 5 } : undefined,
+  };
+  const body = `
+<section class="tour-hero island-${slugifyIsland(t.island)}"${bg(t.image)}>
+  <div class="wrap">
+    <nav class="crumbs crumbs--light"><a href="/">Home</a> / <a href="/islands/${slugifyIsland(t.island)}/">${esc(t.island)}</a> / <span>${esc(t.name)}</span></nav>
+    <span class="tour-eyebrow">${esc(t.category)} · ${esc(t.island)}</span>
+    <h1>${esc(t.name)}</h1>
+    <div class="tour-meta">${ratingLine}${t.freeCancellation ? ` <span class="chip">Free cancellation</span>` : ""}</div>
+  </div>
+</section>
+<section class="wrap tour-grid">
+  <div class="tour-main">
+    <p class="lead">Operated by <b>${esc(t.company)}</b>. Pick a date below to see live prices & availability — all without leaving GoHonu.</p>
+    <h2>Check dates & prices</h2>
+    <div class="fh-cal">${calScript ? `<script src="${esc(calScript)}"></script>` : ""}</div>
+  </div>
+  <aside class="tour-book">
+    <div class="book-card">
+      ${ratingLine ? `<div class="book-rating">${ratingLine}</div>` : ""}
+      <a class="btn btn--book" href="${esc(t.bookingUrl)}">Book now</a>
+      <p class="book-note">Secure booking · instant e-ticket</p>
+      <ul class="book-perks">
+        ${t.freeCancellation ? "<li>✓ Free cancellation</li>" : ""}
+        <li>✓ Reserve now, pay later</li>
+        <li>✓ Live prices from the operator</li>
+      </ul>
+      <a class="book-back" href="/islands/${slugifyIsland(t.island)}/">← More ${esc(t.island)} tours</a>
+    </div>
+  </aside>
+</section>`;
+  return layout({
+    title: `${t.name} — ${t.island} | ${SITE.name}`,
+    description: `Book ${t.name} with ${t.company} in ${t.island}. Live prices, free cancellation on most, instant confirmation.`,
+    canonical: `${SITE.domain}/tours/${t.slug}/`,
+    extraHead: `<script type="application/ld+json">${JSON.stringify(ld)}</script>`,
+    body,
+  });
+}
+
+function filterBar(tours) {
+  const counts = {};
+  tours.forEach((t) => (counts[t.category] = (counts[t.category] || 0) + 1));
+  const cats = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 14);
+  const tiers = {};
+  tours.forEach((t) => (tiers[t._tier] = (tiers[t._tier] || 0) + 1));
+  return `<div class="wrap">
+    <div class="filters" data-group="cat">
+      <button class="filter active" data-filter="*">All (${tours.length})</button>
+      ${cats.map(([c, n]) => `<button class="filter" data-filter="${esc(c)}">${esc(c)} (${n})</button>`).join("")}
+    </div>
+    <div class="filters filters--price" data-group="tier">
+      <span class="filters-label">Price guide (approx.):</span>
+      <button class="filter active" data-filter="*">Any</button>
+      ${[1, 2, 3, 4].map((t) => (tiers[t] ? `<button class="filter" data-filter="${t}">${esc(PRICE_BANDS[t])} (${tiers[t]})</button>` : "")).join("")}
+    </div>
+  </div>`;
+}
+function filterScript() {
+  return `<script>
+(function(){
+  var cards=[].slice.call(document.querySelectorAll('.grid .card'));
+  if(!cards.length) return;
+  var active={cat:'*',tier:'*'};
+  function apply(){cards.forEach(function(c){
+    var okC=active.cat==='*'||c.getAttribute('data-cat')===active.cat;
+    var okT=active.tier==='*'||c.getAttribute('data-tier')===active.tier;
+    c.style.display=(okC&&okT)?'':'none';});}
+  [].slice.call(document.querySelectorAll('.filters')).forEach(function(bar){
+    var group=bar.getAttribute('data-group');
+    bar.addEventListener('click',function(e){
+      var b=e.target.closest('.filter'); if(!b) return;
+      bar.querySelectorAll('.filter').forEach(function(x){x.classList.remove('active')});
+      b.classList.add('active'); active[group]=b.getAttribute('data-filter'); apply();
+    });
+  });
+})();
+</script>`;
+}
+
+/* ---------- pages ---------- */
+function homePage() {
+  const oahuTours = CATALOG.filter((t) => t.island === PRIMARY).slice(0, FEATURED_PER_ISLAND);
+  const restTours = CATALOG.filter((t) => t.island !== PRIMARY).slice(0, 8);
+  const body = `
+<section class="hero hero--photo" style="background:linear-gradient(120deg,rgba(6,43,56,.74),rgba(10,126,164,.5)),url('/assets/img/hero-napali.jpg');background-size:cover;background-position:center">
+  <div class="wrap">
+    <span class="hero-badge">🌴 Local ${esc(PRIMARY)} experts</span>
+    <h1>The best of ${esc(PRIMARY)}, booked in seconds</h1>
+    <p class="hero-sub">We live here — these are the ${esc(PRIMARY)} tours we'd send our own friends on. Free cancellation on most, reserve now & pay later.</p>
+    <div class="hero-islands">
+      <a href="/islands/${slugifyIsland(PRIMARY)}/" class="pill pill--solid">Explore ${esc(PRIMARY)} →</a>
+      ${otherIslands.map((i) => `<a href="/islands/${slugifyIsland(i)}/" class="pill">${esc(i)}</a>`).join("")}
+    </div>
+  </div>
+</section>
+<section class="wrap section">
+  <div class="section-head">
+    <div><span class="kicker">Our backyard</span><h2>Featured on ${esc(PRIMARY)}</h2></div>
+    <a class="seeall" href="/islands/${slugifyIsland(PRIMARY)}/">See all ${esc(PRIMARY)} tours →</a>
+  </div>
+  ${gridFor(oahuTours)}
+</section>
+<section class="band">
+  <div class="wrap section">
+    <div class="section-head">
+      <div><span class="kicker">Island-hopping?</span><h2>Also booking across Hawaii</h2>
+      <p class="muted">Maui, Kauai & the Big Island — booked through the same trusted operators.</p></div>
+    </div>
+    ${gridFor(restTours)}
+  </div>
+</section>`;
+  return layout({
+    title: `${PRIMARY} Tours & Activities — ${SITE.name}`,
+    description: `Local ${PRIMARY} experts. ${SITE.tagline} Hand-picked ${PRIMARY} tours with free cancellation on most.`,
+    canonical: SITE.domain + "/",
+    body,
+  });
+}
+
+function islandPage(island) {
+  const tours = CATALOG.filter((t) => t.island === island);
+  const body = `
+<section class="hero hero--sm island-${slugifyIsland(island)}">
+  <div class="wrap">
+    <nav class="crumbs"><a href="/">Home</a> / <span>${esc(island)}</span></nav>
+    <h1>${esc(island)} Tours & Activities</h1>
+    <p class="hero-sub">${tours.length} ${esc(island)} experiences, all bookable now.</p>
+  </div>
+</section>
+${USE_FH ? filterBar(tours) : ""}
+<section class="wrap section">${gridFor(tours)}</section>
+${USE_FH ? filterScript() : ""}`;
+  return layout({
+    title: `${island} Tours & Activities — ${SITE.name}`,
+    description: `Book the best ${island} tours and activities. ${tours.length} experiences with free cancellation on most.`,
+    canonical: `${SITE.domain}/islands/${slugifyIsland(island)}/`,
+    body,
+  });
+}
+
+function tourPage(tour) {
+  const b = booking(tour);
+  const rel = `${b.lightframe ? "" : 'target="_blank" rel="noopener"'}`;
+  const bookBtn = `<a class="btn btn--book" href="${esc(b.url)}" ${rel}>${esc(b.label)}</a>`;
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: tour.name,
+    description: tour.tagline,
+    brand: { "@type": "Brand", name: SITE.name },
+    offers: { "@type": "Offer", price: tour.priceFrom, priceCurrency: "USD", availability: "https://schema.org/InStock" },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: tour.rating, bestRating: 5, ratingCount: 50 },
+  };
+  const body = `
+<section class="tour-hero island-${slugifyIsland(tour.island)}"${bg(tour.image)}>
+  <div class="wrap">
+    <nav class="crumbs crumbs--light"><a href="/">Home</a> / <a href="/islands/${slugifyIsland(tour.island)}/">${esc(tour.island)}</a> / <span>${esc(tour.name)}</span></nav>
+    <span class="tour-eyebrow">${esc(tour.category)} · ${esc(tour.island)}</span>
+    <h1>${esc(tour.name)}</h1>
+    <div class="tour-meta"><span class="rating">${stars(tour.rating)} <b>${tour.rating.toFixed(1)}</b></span>
+      <span>· ${esc(tour.duration)}</span>${tour.freeCancellation ? ` <span class="chip">Free cancellation</span>` : ""}</div>
+  </div>
+</section>
+<section class="wrap tour-grid">
+  <div class="tour-main">
+    <p class="lead">${esc(tour.tagline)}</p>
+    <h2>Highlights</h2>
+    <ul class="ticks">${tour.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>
+    <h2>What's included</h2>
+    <ul class="ticks">${tour.included.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>
+    <h2>Good to know</h2>
+    <ul class="ticks">
+      ${tour.freeCancellation ? "<li>Free cancellation up to 24 hours before start time</li>" : ""}
+      ${tour.reserveNowPayLater ? "<li>Reserve now & pay later available</li>" : ""}
+      <li>Instant e-ticket delivered to your email</li>
+    </ul>
+  </div>
+  <aside class="tour-book">
+    <div class="book-card">
+      <div class="book-price"><span class="muted">from</span> <b>${money(tour.priceFrom)}</b> <span class="muted">/ person</span></div>
+      ${bookBtn}
+      <p class="book-note">${esc(b.note)}</p>
+      <ul class="book-perks">
+        ${tour.freeCancellation ? "<li>✓ Free cancellation</li>" : ""}
+        ${tour.reserveNowPayLater ? "<li>✓ Reserve now, pay later</li>" : ""}
+        <li>✓ Instant e-ticket</li>
+      </ul>
+    </div>
+  </aside>
+</section>`;
+  return layout({
+    title: `${tour.name} — ${tour.island} | ${SITE.name}`,
+    description: tour.tagline,
+    canonical: `${SITE.domain}/tours/${tour.slug}/`,
+    extraHead: `<script type="application/ld+json">${JSON.stringify(ld)}</script>`,
+    body,
+  });
+}
+
+/* ---------- Beyond Hawaii (external affiliate cards) ---------- */
+function extCard(tour) {
+  const price = tour.priceFrom != null ? `<span class="price"><span class="muted">from</span> <b>${money(tour.priceFrom)}</b></span>` : `<span class="muted">See price</span>`;
+  const reviews = tour.reviewCount ? ` <span class="muted">(${Number(tour.reviewCount).toLocaleString()})</span>` : "";
+  const flag = tour.sample
+    ? `<span class="card-flag card-flag--sample">Sample</span>`
+    : tour.freeCancellation ? `<span class="card-flag">Free cancellation</span>` : "";
+  return `<a class="card" href="${esc(tour.bookingUrl)}" target="_blank" rel="noopener sponsored">
+  <div class="card-img ext">${photo(tour.image, tour.name)}<span class="card-island">${esc(tour.destination)}</span>${flag}</div>
+  <div class="card-body">
+    <span class="card-eyebrow">${esc(tour.category)}</span>
+    <h3 class="card-title">${esc(tour.name)}</h3>
+    <div class="card-meta"><span class="rating">${stars(tour.rating)} <b>${Number(tour.rating).toFixed(1)}</b></span>${reviews}${tour.duration ? ` <span class="muted">· ${esc(tour.duration)}</span>` : ""}</div>
+    <div class="card-foot">${price}<span class="card-cta">Book →</span></div>
+  </div>
+</a>`;
+}
+const extGrid = (tours) => `<div class="grid">${tours.map(extCard).join("\n")}</div>`;
+
+// Image-rich destination card — uses the destination's top tour photo as the backdrop.
+function destCard(d, base) {
+  const img = destImage(d);
+  return `<a class="dest-card dest-card--img island-oahu" href="/${base}/${d.slug}/"${bg(img)}>
+    <div class="dest-card-overlay"><span class="dest-name">${esc(d.name)}</span><span class="dest-meta">${d.tours.length} top tours →</span></div>
+  </a>`;
+}
+// Hero backdrop with a teal Polynesian tint over a photo (falls back to the flat gradient).
+const heroImg = (img) =>
+  img
+    ? ` style="background:linear-gradient(120deg,rgba(8,59,76,.82),rgba(23,162,184,.68)),url('${esc(img)}');background-size:cover;background-position:center"`
+    : ` style="background:linear-gradient(120deg,#0a4f63,#17a2b8)"`;
+
+function beyondLandingPage() {
+  const body = `
+<section class="hero hero--sm">
+  <div class="wrap">
+    <nav class="crumbs crumbs--light"><a href="/">Home</a> / <span>Beyond Hawaii</span></nav>
+    <span class="hero-badge">🌏 Beyond Hawaii</span>
+    <h1>Top tours & activities around the world</h1>
+    <p class="hero-sub">The 10 most-reviewed experiences in each destination, booked through our trusted partners.</p>
+  </div>
+</section>
+${beyondRegions
+    .map(
+      (r) => `<section class="wrap section">
+  <div class="section-head"><h2>${esc(r)}</h2></div>
+  <div class="dest-grid">
+    ${WORLD.filter((d) => d.region === r).map((d) => destCard(d, "beyond")).join("")}
+  </div>
+</section>`
+    )
+    .join("")}`;
+  return layout({
+    title: `Beyond Hawaii — Top Tours Worldwide | ${SITE.name}`,
+    description: "Top-rated tours and activities in destinations around the world, ranked by traveler reviews.",
+    canonical: SITE.domain + "/beyond/",
+    body,
+  });
+}
+
+function destinationPage(dest, base) {
+  const parentLabel = base === "polynesia" ? "Polynesia" : "Beyond Hawaii";
+  const heroPhoto = destImage(dest);
+  const hasStay = dest.lat != null && dest.lng != null;
+  const body = `
+<section class="hero hero--sm"${heroImg(heroPhoto)}>
+  <div class="wrap">
+    <nav class="crumbs crumbs--light"><a href="/">Home</a> / <a href="/${base}/">${esc(parentLabel)}</a> / <span>${esc(dest.name)}</span></nav>
+    <h1>${esc(dest.name)}</h1>
+    <p class="hero-sub">Top-rated things to do in ${esc(dest.name)}${hasStay ? ", plus where to stay" : ""}.</p>
+  </div>
+</section>
+<div class="wrap"><div class="tabs" id="dest-tabs">
+  <button class="tab active" data-tab="tours">Tours & activities</button>
+  ${hasStay ? `<button class="tab" data-tab="stay">🏨 Where to stay</button>` : ""}
+</div></div>
+<section class="wrap section tabpane" id="pane-tours">${extGrid(dest.tours)}</section>
+${hasStay ? `<section class="band tabpane" id="pane-stay" hidden><div class="wrap section">
+  <div class="section-head"><div><span class="kicker">Where to stay</span><h2>${esc(dest.name)} hotels & resorts</h2></div></div>
+  ${stayEmbed(dest.lat, dest.lng, dest.name)}
+  <p class="muted" style="margin-top:12px;font-size:.84rem">Accommodation search powered by Stay22 · prices update live.</p>
+</div></section>` : ""}
+<script>
+(function(){
+  var tabs=document.getElementById('dest-tabs'); if(!tabs) return;
+  var panes={tours:document.getElementById('pane-tours'),stay:document.getElementById('pane-stay')};
+  tabs.addEventListener('click',function(e){var b=e.target.closest('.tab'); if(!b) return;
+    tabs.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active')}); b.classList.add('active');
+    var t=b.dataset.tab; Object.keys(panes).forEach(function(k){if(panes[k])panes[k].hidden=(k!==t);});
+  });
+})();
+</script>`;
+  return layout({
+    title: `${dest.name} — Tours${hasStay ? " & Hotels" : ""} | ${SITE.name}`,
+    description: `The top-rated tours${hasStay ? " and hotels" : ""} in ${dest.name}, ranked by traveler reviews.`,
+    canonical: `${SITE.domain}/${base}/${dest.slug}/`,
+    body,
+  });
+}
+
+/* ---------- Polynesia tab (tours + Stay22 hotel map) ---------- */
+function stayEmbed(lat, lng, venue) {
+  return `<iframe class="stay-map" title="Hotels in ${esc(venue)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-lat="${lat}" data-lng="${lng}" data-venue="${esc(venue)}"></iframe>
+<script>(function(){var m=document.currentScript.previousElementSibling;function ds(d){return d.toISOString().slice(0,10);}var ci=new Date(Date.now()+30*864e5),co=new Date(Date.now()+33*864e5);m.src='https://www.stay22.com/embed/gm?aid=${SITE.stay22Aid}&lat='+m.dataset.lat+'&lng='+m.dataset.lng+'&maincolor=0a7ea4&checkin='+ds(ci)+'&checkout='+ds(co)+'&venue='+encodeURIComponent(m.dataset.venue);})();</script>`;
+}
+
+function polyLandingPage() {
+  const heroPhoto = POLY[0] && destImage(POLY[0]);
+  const body = `
+<section class="hero hero--sm"${heroImg(heroPhoto)}>
+  <div class="wrap">
+    <nav class="crumbs crumbs--light"><a href="/">Home</a> / <span>Polynesia</span></nav>
+    <span class="hero-badge">🌴 The Polynesian Islands</span>
+    <h1>Beyond Hawaii — across the Pacific triangle</h1>
+    <p class="hero-sub">Tahiti, Bora Bora, Fiji, the Cook Islands and more — top-rated tours and places to stay on the islands of Polynesia.</p>
+  </div>
+</section>
+<section class="wrap section">
+  <div class="dest-grid">
+    ${POLY.map((d) => destCard(d, "polynesia")).join("")}
+  </div>
+</section>`;
+  return layout({
+    title: `The Polynesian Islands — Tours & Hotels | ${SITE.name}`,
+    description: "Top-rated tours and hotels across Tahiti, Bora Bora, Fiji, the Cook Islands, Samoa and the Polynesian islands.",
+    canonical: SITE.domain + "/polynesia/",
+    body,
+  });
+}
+
+const AIRPORTS = [
+  ["LAX", "Los Angeles"], ["SFO", "San Francisco"], ["SJC", "San Jose"], ["OAK", "Oakland"],
+  ["SAN", "San Diego"], ["SMF", "Sacramento"], ["SEA", "Seattle"], ["PDX", "Portland"],
+  ["LAS", "Las Vegas"], ["PHX", "Phoenix"], ["DEN", "Denver"], ["SLC", "Salt Lake City"],
+  ["DFW", "Dallas"], ["IAH", "Houston"], ["AUS", "Austin"], ["ORD", "Chicago"],
+  ["MSP", "Minneapolis"], ["ATL", "Atlanta"], ["JFK", "New York"], ["EWR", "Newark"],
+  ["BOS", "Boston"], ["IAD", "Washington DC"], ["YVR", "Vancouver"], ["YYZ", "Toronto"],
+  ["NRT", "Tokyo"], ["ICN", "Seoul"], ["SYD", "Sydney"], ["AKL", "Auckland"], ["LHR", "London"],
+  ["HNL", "Honolulu · Oahu"], ["OGG", "Kahului · Maui"], ["KOA", "Kona · Big Island"],
+  ["LIH", "Lihue · Kauai"], ["ITO", "Hilo · Big Island"],
+];
+
+function flightSearchForm() {
+  const opts = AIRPORTS.map(([c, name]) => `<option value="${name} (${c})"></option>`).join("");
+  return `<form id="flt" class="flt">
+  <div class="flt-trip">
+    <label><input type="radio" name="trip" value="round" checked> Round trip</label>
+    <label><input type="radio" name="trip" value="oneway"> One way</label>
+  </div>
+  <div class="flt-row">
+    <div class="flt-field"><label>From</label><input name="origin" list="airports" placeholder="City or code" autocomplete="off" required></div>
+    <div class="flt-field"><label>To</label><input name="dest" list="airports" value="Honolulu · Oahu (HNL)" autocomplete="off" required></div>
+    <div class="flt-field"><label>Depart</label><input name="depart" type="date" required></div>
+    <div class="flt-field ret"><label>Return</label><input name="ret" type="date"></div>
+    <div class="flt-field flt-pax"><label>Travellers</label><input name="pax" type="number" min="1" max="9" value="1"></div>
+    <button class="btn btn--book flt-go" type="submit">Search flights ✈</button>
+  </div>
+  <datalist id="airports">${opts}</datalist>
+  <p class="flt-note">Live results & non-stop filter open on Aviasales — free cancellation varies by fare.</p>
+</form>
+<script>
+(function(){
+  var f=document.getElementById('flt'); if(!f) return;
+  function iata(s){s=(s||'').toUpperCase();var m=s.match(/\\(([A-Z]{3})\\)/)||s.match(/\\b([A-Z]{3})\\b/);return m?m[1]:s.replace(/[^A-Z]/g,'').slice(0,3);}
+  function ddmm(v){if(!v)return'';var p=v.split('-');return p[2]+p[1];}
+  function round(){return f.querySelector('[name=trip]:checked').value==='round';}
+  function toggle(){f.querySelector('.ret').style.display=round()?'':'none';}
+  try{f.depart.min=new Date().toISOString().slice(0,10);f.ret.min=f.depart.min;}catch(e){}
+  f.addEventListener('change',function(e){if(e.target.name==='trip')toggle();});
+  toggle();
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var o=iata(f.origin.value),d=iata(f.dest.value),dep=ddmm(f.depart.value),ret=round()?ddmm(f.ret.value):'',pax=f.pax.value||1;
+    if(o.length!==3||d.length!==3||!dep){alert('Please enter a valid origin, destination and departure date.');return;}
+    if(round()&&!ret){alert('Please choose a return date (or switch to One way).');return;}
+    var url='https://www.aviasales.com/search/'+o+dep+d+ret+pax+'?marker=${SITE.tpMarker}';
+    window.open(url,'_blank','noopener');
+  });
+})();
+</script>`;
+}
+
+function flightsPage() {
+  const sample = FLIGHTS.routes.some((r) => r.sample);
+  const rows = FLIGHTS.routes
+    .map(
+      (r) => `<a class="flight-row" href="${esc(r.link)}" target="_blank" rel="noopener sponsored">
+    <span class="flight-route"><b>${esc(r.originCity)}</b> <span class="muted">(${esc(r.originIata)})</span> → ${esc(FLIGHTS.destinationName)}</span>
+    <span class="flight-air muted">${esc(r.airline || "")}</span>
+    <span class="flight-price"><span class="muted">from</span> <b>${money(r.price)}</b></span>
+    <span class="flight-cta">Search deals →</span>
+  </a>`
+    )
+    .join("\n");
+  const body = `
+<section class="hero hero--sm">
+  <div class="wrap">
+    <nav class="crumbs crumbs--light"><a href="/">Home</a> / <span>Flights</span></nav>
+    <span class="hero-badge">✈️ Getting to Hawaii</span>
+    <h1>Cheap flights to ${esc(FLIGHTS.destinationName)}</h1>
+    <p class="hero-sub">Lowest recent fares from major cities. Prices update from live search — tap any route to see current deals.</p>
+  </div>
+</section>
+<section class="wrap" style="padding-top:28px">${flightSearchForm()}</section>
+${sample ? `<div class="wrap"><p class="notice">Sample fares shown — add your Travelpayouts token (TP_TOKEN) to show live prices.</p></div>` : ""}
+<section class="wrap section">
+  <div class="section-head"><div><span class="kicker">Quick picks</span><h2>Cheapest recent fares to ${esc(FLIGHTS.destinationName)}</h2></div></div>
+  <div class="flight-list">${rows}</div>
+</section>`;
+  return layout({
+    title: `Cheap Flights to ${FLIGHTS.destinationName} | ${SITE.name}`,
+    description: `Find the lowest fares to ${FLIGHTS.destinationName} from major US cities.`,
+    canonical: SITE.domain + "/flights/",
+    body,
+  });
+}
+
+const STAY_AREAS = [
+  { name: "Waikiki, Oahu", lat: 21.2793, lng: -157.8294 },
+  { name: "Kaanapali, Maui", lat: 20.925, lng: -156.694 },
+  { name: "Poipu, Kauai", lat: 21.88, lng: -159.46 },
+  { name: "Kailua-Kona, Big Island", lat: 19.64, lng: -155.996 },
+];
+function stayPage() {
+  const buttons = STAY_AREAS.map(
+    (a, i) =>
+      `<button class="filter${i === 0 ? " active" : ""}" data-lat="${a.lat}" data-lng="${a.lng}" data-venue="${esc(a.name)}">${esc(a.name)}</button>`
+  ).join("");
+  const body = `
+<section class="hero hero--sm">
+  <div class="wrap">
+    <nav class="crumbs crumbs--light"><a href="/">Home</a> / <span>Where to stay</span></nav>
+    <span class="hero-badge">🏨 Where to stay</span>
+    <h1>Hotels & rentals across Hawaii</h1>
+    <p class="hero-sub">Live prices from Booking.com and more — compare on the map and book in a tap.</p>
+  </div>
+</section>
+<section class="wrap section">
+  <div class="filters" id="stay-areas">${buttons}</div>
+  <iframe id="s22" class="stay-map" title="Hotels map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <p class="muted" style="margin-top:12px;font-size:.84rem">Accommodation search powered by Stay22. Prices update live; free cancellation varies by property.</p>
+</section>
+<script>
+(function(){
+  var map=document.getElementById('s22'), bar=document.getElementById('stay-areas');
+  if(!map||!bar) return;
+  function ds(d){return d.toISOString().slice(0,10);}
+  var ci=new Date(Date.now()+30*864e5), co=new Date(Date.now()+33*864e5);
+  function load(lat,lng,venue){
+    map.src='https://www.stay22.com/embed/gm?aid=${SITE.stay22Aid}&lat='+lat+'&lng='+lng+'&maincolor=0a7ea4&checkin='+ds(ci)+'&checkout='+ds(co)+'&venue='+encodeURIComponent(venue);
+  }
+  bar.addEventListener('click',function(e){var b=e.target.closest('.filter'); if(!b) return;
+    bar.querySelectorAll('.filter').forEach(function(x){x.classList.remove('active')}); b.classList.add('active');
+    load(b.dataset.lat,b.dataset.lng,b.dataset.venue);});
+  var f=bar.querySelector('.filter'); load(f.dataset.lat,f.dataset.lng,f.dataset.venue);
+})();
+</script>`;
+  return layout({
+    title: `Where to Stay in Hawaii — Hotels & Rentals | ${SITE.name}`,
+    description: "Compare live hotel and vacation-rental prices across Oahu, Maui, Kauai and the Big Island.",
+    canonical: SITE.domain + "/stay/",
+    body,
+  });
+}
+
+// DiscoverCars search widget (generated in the DiscoverCars affiliate panel, tracks a_aid=GoHonu).
+const CARS_WIDGET = `<div><script id="dchwidget" src="https://www.discovercars.com/widget.js?v1" data-dev-env="com" data-location="usa-hawaii" data-utm-source="GoHonu" data-utm-medium="widget" data-aff-code="a_aid" data-autocomplete="on" data-style-submit-bg-color="#ff5a36" data-style-submit-font-color="#ffffff" data-style-form-bg-color="#0a7ea4" data-style-form-font-color="#000000" data-style-submit-text="Search cars" data-style-title-color="#ffffff" data-title-text="Compare Hawaii car rentals — save up to 70%" async="async" data-style_rounded_corners="on" data-layout_benefits="on" data-layout_description="on" data-layout_description_text="We compare the best deals from top car-rental suppliers across Hawaii." data-layout_logo_style="on dark" data-layout_powered_by="on" data-layout_style_form_bg_color="#0a7ea4" data-layout_title="on"></script></div>`;
+
+function carsPage() {
+  const body = `
+<section class="hero hero--sm">
+  <div class="wrap">
+    <nav class="crumbs crumbs--light"><a href="/">Home</a> / <span>Rent a Car</span></nav>
+    <span class="hero-badge">🚗 Rent a Car</span>
+    <h1>Compare Hawaii car rentals</h1>
+    <p class="hero-sub">Search top suppliers at once — best prices, free cancellation on most, book in minutes.</p>
+  </div>
+</section>
+<section class="wrap section">
+  <div class="cars-widget">${CARS_WIDGET}</div>
+  <p class="muted" style="margin-top:14px;font-size:.84rem">Car-rental search powered by DiscoverCars · prices update live.</p>
+</section>`;
+  return layout({
+    title: `Rent a Car in Hawaii — Compare Prices | ${SITE.name}`,
+    description: "Compare Hawaii car rental prices across top suppliers. Best deals on Oahu, Maui, Kauai and the Big Island.",
+    canonical: SITE.domain + "/cars/",
+    body,
+  });
+}
+
+/* ---------- writer ---------- */
+function write(rel, html) {
+  const file = path.join(OUT, rel);
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, html);
+}
+
+function copyDir(src, dest) {
+  if (!fs.existsSync(src)) return;
+  fs.mkdirSync(dest, { recursive: true });
+  for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    const s = path.join(src, entry.name);
+    const d = path.join(dest, entry.name);
+    entry.isDirectory() ? copyDir(s, d) : fs.copyFileSync(s, d);
+  }
+}
+
+/* ---------- run ---------- */
+fs.rmSync(OUT, { recursive: true, force: true });
+fs.mkdirSync(OUT, { recursive: true });
+
+write("index.html", homePage());
+islands.forEach((i) => write(`islands/${slugifyIsland(i)}/index.html`, islandPage(i)));
+if (USE_FH) FH.forEach((t) => write(`tours/${t.slug}/index.html`, fhTourPage(t)));
+else DATA.tours.forEach((t) => write(`tours/${t.slug}/index.html`, tourPage(t)));
+
+if (WORLD.length) {
+  write("beyond/index.html", beyondLandingPage());
+  WORLD.forEach((d) => write(`beyond/${d.slug}/index.html`, destinationPage(d, "beyond")));
+}
+if (POLY.length) {
+  write("polynesia/index.html", polyLandingPage());
+  POLY.forEach((d) => write(`polynesia/${d.slug}/index.html`, destinationPage(d, "polynesia")));
+}
+if (FLIGHTS) write("flights/index.html", flightsPage());
+if (SITE.stay22Aid) write("stay/index.html", stayPage());
+write("cars/index.html", carsPage());
+
+// 404
+write(
+  "404.html",
+  layout({
+    title: `Page not found — ${SITE.name}`,
+    description: "That page doesn't exist.",
+    body: `<section class="hero hero--sm"><div class="wrap"><h1>Lost in paradise 🌴</h1>
+      <p class="hero-sub">We couldn't find that page.</p>
+      <div class="hero-islands"><a class="pill pill--solid" href="/">Back to home →</a>
+      ${FLIGHTS ? `<a class="pill" href="/flights/">Flights</a>` : ""}
+      ${BEYOND.length ? `<a class="pill" href="/beyond/">Beyond Hawaii</a>` : ""}</div></div></section>`,
+  })
+);
+
+copyDir(path.join(ROOT, "assets"), path.join(OUT, "assets"));
+
+// sitemap + robots
+const urls = [
+  SITE.domain + "/",
+  ...islands.map((i) => `${SITE.domain}/islands/${slugifyIsland(i)}/`),
+  ...(USE_FH ? FH : DATA.tours).map((t) => `${SITE.domain}/tours/${t.slug}/`),
+  ...(WORLD.length ? [`${SITE.domain}/beyond/`] : []),
+  ...WORLD.map((d) => `${SITE.domain}/beyond/${d.slug}/`),
+  ...(POLY.length ? [`${SITE.domain}/polynesia/`] : []),
+  ...POLY.map((d) => `${SITE.domain}/polynesia/${d.slug}/`),
+  ...(FLIGHTS ? [`${SITE.domain}/flights/`] : []),
+  ...(SITE.stay22Aid ? [`${SITE.domain}/stay/`] : []),
+  `${SITE.domain}/cars/`,
+];
+write(
+  "sitemap.xml",
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
+    .map((u) => `  <url><loc>${u}</loc></url>`)
+    .join("\n")}\n</urlset>\n`
+);
+write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${SITE.domain}/sitemap.xml\n`);
+
+const beyondPages = BEYOND.length ? BEYOND.length + 1 : 0;
+const tourPages = USE_FH ? FH.length : DATA.tours.length;
+console.log(
+  `Built ${1 + islands.length + tourPages + beyondPages + (FLIGHTS ? 1 : 0)} pages ` +
+    `(${CATALOG.length} Hawaii tours [${USE_FH ? "live FareHarbor catalog" : "curated"}], ${islands.length} islands, ` +
+    `${WORLD.length} Beyond-Hawaii + ${POLY.length} Polynesia destinations${FLIGHTS ? ", flights" : ""}) -> public/`
+);

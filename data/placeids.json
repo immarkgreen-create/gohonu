@@ -1,0 +1,892 @@
+{
+  "ohana surf project": {
+    "shortname": "ohanasurfproject",
+    "placeId": "ChIJe8FESNptAHwRAIcMtlFZqns",
+    "googleMapUrl": ""
+  },
+  "makena coast charters": {
+    "shortname": "mauiunderwater",
+    "placeId": "ChIJb2q6ibvaVHkR3GWd_MvsI4k",
+    "googleMapUrl": "http://mauiunderwater.com/index.php/directions-kihei-boat-ramp/"
+  },
+  "sea maui": {
+    "shortname": "seamauicharter",
+    "placeId": "ChIJGYn2eUErVXkRvStxyTEwAlU",
+    "googleMapUrl": "https://www.google.com/#q=sea%20maui&rflfq=1&rlha=0&rllag=20811249,-156564040,18388&tbm=lcl&tbs=lf:1,lf_ui:1&oll=20.8112499,-156.56404035&ospn=0.24778348692994712,0.2959811784353974&oz=11&fll=20.921707,-157.06046076464844&fspn=0.8418459165578724,0.62"
+  },
+  "hawaii island & ocean tours": {
+    "shortname": "hawaiiislandandoceantours",
+    "placeId": "ChIJby7wIBMOVHkRBn1yj19clwc",
+    "googleMapUrl": "https://goo.gl/maps/bRuCn"
+  },
+  "stars above hawaii": {
+    "shortname": "starsabovehawaii",
+    "placeId": "ChIJWQe_SsJiAHwRzQU0kk4pBiA",
+    "googleMapUrl": "https://goo.gl/maps/NbJBF"
+  },
+  "go hawaii watersports": {
+    "shortname": "gohawaii-watersports",
+    "placeId": "ChIJy53VJRBtAHwRROdKTjB8gy4",
+    "googleMapUrl": ""
+  },
+  "coral reef snorkel adventures": {
+    "shortname": "coralreef",
+    "placeId": "ChIJXy4rE3wOVHkRRlfy_GLx0vg",
+    "googleMapUrl": "https://goo.gl/maps/fNkJy"
+  },
+  "dolphin discoveries": {
+    "shortname": "dolphindiscoveries",
+    "placeId": "ChIJZWV-Nt0FVHkRzfiSz-QYdOE",
+    "googleMapUrl": ""
+  },
+  "heavenly hawaiian coffee farm": {
+    "shortname": "heavenlyhawaiian",
+    "placeId": "ChIJQajy-moGVHkRnk0DuTARgmo",
+    "googleMapUrl": ""
+  },
+  "kona cloud forest sanctuary": {
+    "shortname": "konacloudforest",
+    "placeId": "ChIJhfSaXoYLVHkRVAI24ir_r8Y",
+    "googleMapUrl": ""
+  },
+  "kona style": {
+    "shortname": "konasnorkelandsail",
+    "placeId": "ChIJ0c_hMf8OVHkRkN5OletBtBE",
+    "googleMapUrl": "https://www.bing.com/maps/default.aspx?v=2&pc=FACEBK&mid=8100&rtp=adr.~pos.19.671975_-156.014164_74-425+Kelalakehe+Prkwy+%231%2C+Kailua-Kona%2C+Hawaii&cp=19.671975~-156.014164&lvl=16&sty=r&rtop=0~0~0~&mode=D&FORM=FBKPL1&mkt=en-US"
+  },
+  "ali'i air tours & charters": {
+    "shortname": "iflykauai",
+    "placeId": "ChIJY0BlQdMfB3wRvgp9eN9Pgn8",
+    "googleMapUrl": "https://goo.gl/maps/UCijDv5Nt9L2"
+  },
+  "north shore stables": {
+    "shortname": "northshorestables",
+    "placeId": "ChIJEQr3s4tfAHwRllF40cQnq-U",
+    "googleMapUrl": ""
+  },
+  "maui pineapple tour": {
+    "shortname": "mauipineappletour",
+    "placeId": "ChIJ684HSAzNVHkRxTiWjMKy7tM",
+    "googleMapUrl": ""
+  },
+  "wai kai": {
+    "shortname": "waikai-atthelineup",
+    "placeId": "ChIJoe73geJ7AHwRRfF5ygOgaiE",
+    "googleMapUrl": ""
+  },
+  "go adventure hawaii": {
+    "shortname": "goadventurehawaii",
+    "placeId": "ChIJd4qjauFZAHwRJgZllzqCUao",
+    "googleMapUrl": ""
+  },
+  "hawaii ocean charters": {
+    "shortname": "hawaiioceancharters",
+    "placeId": "ChIJs8apPSNtAHwR4t3Jagnc3ew",
+    "googleMapUrl": ""
+  },
+  "waikiki beach services": {
+    "shortname": "waikikibeachservices",
+    "placeId": "ChIJy0PC1XVyAHwRj5t5vFkD12k",
+    "googleMapUrl": "https://goo.gl/maps/o4rHCCqCjY32"
+  },
+  "wild side specialty tours": {
+    "shortname": "wildsidespecialtytours",
+    "placeId": "ChIJdSPZRLGLAHwRjG0Rrc3ebiA",
+    "googleMapUrl": ""
+  },
+  "hawaii oceanic": {
+    "shortname": "hawaiioceanic",
+    "placeId": "ChIJNzJN2kUMVHkRcvTUr0i8g68",
+    "googleMapUrl": "https://goo.gl/maps/QEXDgSrhndm"
+  },
+  "hawaii lifeguard surf instructors": {
+    "shortname": "surflessonshawaii",
+    "placeId": "ChIJxYelUAMPVHkRBaN6rNcvaNk",
+    "googleMapUrl": "https://www.google.com/maps/dir/My+location/Hawaii+Lifeguard+Surf+Instructors,+75-5909+Alii+Dr,+Kailua-Kona,+HI+96740/data=!4m6!4m5!1m0!1m2!1m1!1s0x79540f0350a587c5:0xd9682fd7ac7aa305!3e0?sa=X&ved=0ahUKEwjH1MrEtcbWAhUExWMKHYfqDsEQox0INDAA"
+  },
+  "kohala divers": {
+    "shortname": "kohaladivers",
+    "placeId": "ChIJ92TqfeuAU3kRHyGl-ZvghRw",
+    "googleMapUrl": "http://goo.gl/UBAID3"
+  },
+  "maui snorkel charters": {
+    "shortname": "mauisnorkelcharters",
+    "placeId": "ChIJN4KXALzaVHkR8K_s9GHRVO8",
+    "googleMapUrl": ""
+  },
+  "northshore zipline co.": {
+    "shortname": "nszipline",
+    "placeId": "ChIJ-dxkHss0q34RE9fwxrXDtDI",
+    "googleMapUrl": "https://nszipline.com/zipline-locations/"
+  },
+  "kaimana tours": {
+    "shortname": "kaimanatours",
+    "placeId": "ChIJpf0ATWQSAHwRzGP3qoMFHDI",
+    "googleMapUrl": ""
+  },
+  "local pros maui": {
+    "shortname": "surflessonsinmauihi",
+    "placeId": "ChIJF1zg4u_Uqn4R431o0x5k3ZY",
+    "googleMapUrl": ""
+  },
+  "kona snorkel trips": {
+    "shortname": "konasnorkeltrips",
+    "placeId": "ChIJp6N6xfgOVHkRN06oeK6TqJg",
+    "googleMapUrl": "https://goo.gl/maps/z33aXAhguNQ2"
+  },
+  "aloha hawaii tours": {
+    "shortname": "alohahawaiitours",
+    "placeId": "ChIJq6qqqoltAHwRdRLZry-kMIs",
+    "googleMapUrl": ""
+  },
+  "danielshawaii": {
+    "shortname": "hawaiireisetipps",
+    "placeId": "ChIJ5YxlH6htAHwRmplHXMnbVQU",
+    "googleMapUrl": ""
+  },
+  "and you creations": {
+    "shortname": "andyoucreations",
+    "placeId": "ChIJN3WWP_5tAHwReNd2XSOJ7Do",
+    "googleMapUrl": "https://goo.gl/maps/xJ5yLtve9TR2"
+  },
+  "oahu photography tours": {
+    "shortname": "oahuphotographytours",
+    "placeId": "ChIJYVNqowltAHwRdxOwp_0dCMU",
+    "googleMapUrl": ""
+  },
+  "body glove hawaii": {
+    "shortname": "bodyglove",
+    "placeId": "ChIJI5oX-vgOVHkRBXZEDNc6A0Q",
+    "googleMapUrl": "http://goo.gl/gZzUkc"
+  },
+  "botanical world adventures - segway off road and zip isle zip line": {
+    "shortname": "bwa",
+    "placeId": "ChIJ1x_2fISsU3kR9qcFX-Js6SU",
+    "googleMapUrl": "https://goo.gl/maps/3g5n91mrtaU2"
+  },
+  "glass experience maui": {
+    "shortname": "makaiglass",
+    "placeId": "ChIJwzTl86LMVHkR4sH2U_4MxKE",
+    "googleMapUrl": ""
+  },
+  "ocean outfitters hawaii": {
+    "shortname": "hawaiiglassbottomboats-slt",
+    "placeId": "ChIJAzrDsbtZAHwRjXdzSfDrAU8",
+    "googleMapUrl": ""
+  },
+  "kailua beach adventures": {
+    "shortname": "kailuasailboards",
+    "placeId": "ChIJXTpJ5eMUAHwR3xVi9PRK0ZM",
+    "googleMapUrl": ""
+  },
+  "active oahu tours": {
+    "shortname": "activeoahutours",
+    "placeId": "ChIJFS6ZUcMUAHwRRZmNCI8Xm04",
+    "googleMapUrl": ""
+  },
+  "the adventure boat": {
+    "shortname": "theadventureboat",
+    "placeId": "ChIJdRhZyh9tAHwRCxUBQFU_eS8",
+    "googleMapUrl": "https://g.page/adventureboat/"
+  },
+  "kohala zipline": {
+    "shortname": "kohalazipline",
+    "placeId": "ChIJNZmUKQF9U3kRJWyt_ZqG6AQ",
+    "googleMapUrl": "https://goo.gl/maps/msoi8jk9FRS2"
+  },
+  "dive oahu": {
+    "shortname": "diveoahu",
+    "placeId": "ChIJESBjIApuAHwRDlEo_CzxdNY",
+    "googleMapUrl": "http://goo.gl/maps/vVcix"
+  },
+  "aloha ocean llc": {
+    "shortname": "oahudolphinswim",
+    "placeId": "ChIJ_5WnrlSLAHwRunRroC-t5Gc",
+    "googleMapUrl": ""
+  },
+  "hawaii pacific adventures": {
+    "shortname": "hawaiipacificadventures",
+    "placeId": "ChIJxcDNFY9tAHwRVikGuvBMERo",
+    "googleMapUrl": ""
+  },
+  "emountain bike tour maui llc": {
+    "shortname": "emountainbiketourmauillc",
+    "placeId": "ChIJnWoduN8yq34R2LaIN2-0FNE",
+    "googleMapUrl": ""
+  },
+  "ka moana luau": {
+    "shortname": "kamoanaluau",
+    "placeId": "ChIJc2DzKWMRAHwRNT918YaIOm0",
+    "googleMapUrl": "https://goo.gl/maps/MrW5TkeKk6q"
+  },
+  "honoli'i orchards": {
+    "shortname": "honoliiestate",
+    "placeId": "ChIJlzqRRyWzU3kRvrVeIlfWn_Y",
+    "googleMapUrl": ""
+  },
+  "kauai offshore adventures llc": {
+    "shortname": "napalihawaii",
+    "placeId": "ChIJfTWvKK8HB3wRCzY5uW12E7s",
+    "googleMapUrl": ""
+  },
+  "maui sunriders bike company": {
+    "shortname": "mauisunriders",
+    "placeId": "ChIJU4RQdyAzq34RSWSsAJHmBaQ",
+    "googleMapUrl": "https://www.google.com/maps/place/Maui+Sunriders+Bike+Co/@20.9151431,-156.3814918,17z/data=!3m1!4b1!4m5!3m4!1s0x7eab332077508453:0xa405e69100ac6449!8m2!3d20.9151381!4d-156.3793031"
+  },
+  "hawaii polo trail rides": {
+    "shortname": "hipolotrailrides",
+    "placeId": "ChIJD2iHuMb1AHwRLUmgTnSgenA",
+    "googleMapUrl": "https://goo.gl/maps/sPKDS"
+  },
+  "kona honu divers": {
+    "shortname": "konahonudivers",
+    "placeId": "ChIJLQl61_cOVHkR36hmpO5gnfU",
+    "googleMapUrl": "https://goo.gl/maps/tkiMe"
+  },
+  "hawaii zipline tours": {
+    "shortname": "ziplinetourshawaii",
+    "placeId": "ChIJtxXvjtysU3kRezNVbFG1dxA",
+    "googleMapUrl": ""
+  },
+  "hawaii forest & trail": {
+    "shortname": "hawaiiforestandtrail",
+    "placeId": "ChIJneIEgXEOVHkRtKALY-ETjB0",
+    "googleMapUrl": "https://goo.gl/maps/RFkwAuCAuL82"
+  },
+  "maui diamond sea sports": {
+    "shortname": "mauidreamsdiveco",
+    "placeId": "ChIJ93ysy3TQVHkRjf7fW8j27MY",
+    "googleMapUrl": ""
+  },
+  "hawaii ocean rafting": {
+    "shortname": "hawaiioceanrafting",
+    "placeId": "ChIJR_MD_borVXkRSRbA1mJALe8",
+    "googleMapUrl": ""
+  },
+  "mauna loa helicopter tours - oahu": {
+    "shortname": "maunaloahelicoptertoursoahu",
+    "placeId": "ChIJYXCTL7FvAHwRH7sZ3QE1jfw",
+    "googleMapUrl": "https://goo.gl/maps/VTH8kcjmQsG2"
+  },
+  "kona sea salt – the farm": {
+    "shortname": "konaseasalt",
+    "placeId": "ChIJa58Db9MPVHkRxVgR-UFIhzc",
+    "googleMapUrl": ""
+  },
+  "hawaii nautical - maui": {
+    "shortname": "hawaiinautical-maui",
+    "placeId": "ChIJQazpXv1tAHwR8X98_23loNM",
+    "googleMapUrl": ""
+  },
+  "holo holo charters": {
+    "shortname": "holoholo",
+    "placeId": "ChIJn2gZcm0GB3wRAqXiJ_Gt-sE",
+    "googleMapUrl": "https://goo.gl/maps/xSktS"
+  },
+  "malahini tours": {
+    "shortname": "malahinitours",
+    "placeId": "ChIJyd6XbFpLUnkRxhUMMwCpW8E",
+    "googleMapUrl": ""
+  },
+  "aloha scuba diving co.": {
+    "shortname": "divealohascuba",
+    "placeId": "ChIJNYedQjVtAHwRYRDhIzjEkgo",
+    "googleMapUrl": "https://goo.gl/maps/v4EYvKcDSB32"
+  },
+  "hana tours of maui": {
+    "shortname": "hanatoursofmaui",
+    "placeId": "ChIJFcgsIQDJVHkReEvY5BqwUPc",
+    "googleMapUrl": ""
+  },
+  "e noa corporation": {
+    "shortname": "enoatours",
+    "placeId": "ChIJf_LBaKpvAHwRDWA_v6A2Xo4",
+    "googleMapUrl": ""
+  },
+  "aloha adventure farms": {
+    "shortname": "alohaadventurefarms",
+    "placeId": "ChIJLzWDzPoJVHkR9fwqUv484dk",
+    "googleMapUrl": ""
+  },
+  "blue planet adventure company": {
+    "shortname": "blueplanetadventure",
+    "placeId": "ChIJb4v4AfNZAHwRxBz0pS3xFGo",
+    "googleMapUrl": ""
+  },
+  "airventures hawaii": {
+    "shortname": "airventures",
+    "placeId": "ChIJpVNYSVYeB3wR7KTEIfYTJjQ",
+    "googleMapUrl": ""
+  },
+  "unique maui tours": {
+    "shortname": "uniquehawaiiexperience",
+    "placeId": "ChIJbxM75UHQVHkRp_WbbWkb2-Q",
+    "googleMapUrl": ""
+  },
+  "wasabi tours hawaii": {
+    "shortname": "wasabi",
+    "placeId": "ChIJv5Sen_0OVHkRs_WL9eVc9Io",
+    "googleMapUrl": ""
+  },
+  "leigreeting.com": {
+    "shortname": "leigreeting",
+    "placeId": "ChIJ6ZqMO6hvAHwRvMx0orG-CJo",
+    "googleMapUrl": ""
+  },
+  "hawaiian adventures": {
+    "shortname": "hawaiianadventureskona",
+    "placeId": "EjkyNDcgS2VhbGFrZWhlIFBhcmt3YXksIEthaWx1YS1Lb25hLCBIYXdhaWksIFVuaXRlZCBTdGF0ZXMiMRIvChQKEglddnsvEw5UeRGcAWU4QnlyZRD3ASoUChIJ7598anAOVHkRBGNnpkDDKCQ",
+    "googleMapUrl": ""
+  },
+  "maui pacific divers": {
+    "shortname": "mauipacificdivers",
+    "placeId": "ChIJGS3p5CjRVHkRp_BdW4xzUzM",
+    "googleMapUrl": ""
+  },
+  "maui chocolate tour": {
+    "shortname": "mauichocolatetour",
+    "placeId": "ChIJd8pvPlArVXkR1nxJvuSEINc",
+    "googleMapUrl": ""
+  },
+  "north shore shark adventures / whale encounters / turtle encounters": {
+    "shortname": "sharktourshawaii",
+    "placeId": "ChIJ55J1OdJYAHwRDRDet-LR6y4",
+    "googleMapUrl": "https://goo.gl/maps/YXyvx"
+  },
+  "da life outdoors | kauai beach boys": {
+    "shortname": "kauaibeachboys",
+    "placeId": "ChIJaZl36OkeB3wRQiIogPdole4",
+    "googleMapUrl": ""
+  },
+  "living ocean tours": {
+    "shortname": "livingoceanscuba",
+    "placeId": "ChIJARKuKLESAHwRjyPh6YdhAjs",
+    "googleMapUrl": ""
+  },
+  "experience hawaii": {
+    "shortname": "experiencemauitours",
+    "placeId": "ChIJCQwt3R8zq34RyB84IRF7gOo",
+    "googleMapUrl": ""
+  },
+  "hans hedemann south shore (queen kapiolani)": {
+    "shortname": "hhsurf",
+    "placeId": "ChIJEUaHlHByAHwRTKLZQkubY-c",
+    "googleMapUrl": ""
+  },
+  "surf yoga maui": {
+    "shortname": "surfyogamaui",
+    "placeId": "ChIJWfseNzTFVHkRjXsA1QHcw6Y",
+    "googleMapUrl": "https://goo.gl/maps/xktpS9iCFoG2"
+  },
+  "hawaii nautical big island": {
+    "shortname": "hawaiinautical-kona",
+    "placeId": "ChIJFwASsRMOVHkR_lwaSNUP2a8",
+    "googleMapUrl": ""
+  },
+  "pink sails waikiki": {
+    "shortname": "pinksailswaikiki",
+    "placeId": "EjoxNjUxIEFsYSBNb2FuYSBCbHZkICM2MDBhLCBIb25vbHVsdSwgSGF3YWlpLCBVbml0ZWQgU3RhdGVzIiAaHgoWChQKEglnrAFo9m0AfBEXLBEACqqRlxIENjAwYQ",
+    "googleMapUrl": "https://goo.gl/maps/6RNL5bFDadZyQxF49"
+  },
+  "hawaii island holidays": {
+    "shortname": "hawaiiislandholidays",
+    "placeId": "EjA1NDE3IEhpbG8gUGxhY2UsIEhvbm9sdWx1LCBIYXdhaWksIFVuaXRlZCBTdGF0ZXMiMRIvChQKEgkRpkwQbG0AfBErtrSw5sQLxBCpKioUChIJEaZMEGxtAHwRtsWMYQXrpI8",
+    "googleMapUrl": ""
+  },
+  "hawaii nautical - oahu": {
+    "shortname": "hawaiinautical",
+    "placeId": "EjQxMDc5IEFsYSBNb2FuYSBCbHZkLCBIb25vbHVsdSwgSGF3YWlpLCBVbml0ZWQgU3RhdGVzIjESLwoUChIJCY_mPv1tAHwRqVjfkRM8224QtwgqFAoSCftfV_rkbQB8EYEHXKNLbkf6",
+    "googleMapUrl": ""
+  },
+  "yoga floats": {
+    "shortname": "yogafloats",
+    "placeId": "ChIJ43pxt_ttAHwR03SoO3Wlq6I",
+    "googleMapUrl": ""
+  },
+  "snorkel with turtles": {
+    "shortname": "snorkelwithturtles",
+    "placeId": "ChIJK6v1W2cSAHwRf1FEGTS1LVI",
+    "googleMapUrl": ""
+  },
+  "aquatic life divers": {
+    "shortname": "aquaticlifedivers",
+    "placeId": "ChIJrbQBHRMOVHkRdrFswwzLWd8",
+    "googleMapUrl": ""
+  },
+  "mauka warriors luau": {
+    "shortname": "maukawarriorsluau",
+    "placeId": "ChIJbzZZOQlhAHwRl1xDlepltWo",
+    "googleMapUrl": ""
+  },
+  "liljestrand foundation": {
+    "shortname": "liljestrandhouse",
+    "placeId": "ChIJL-8fPLVtAHwRe4yubloOBb4",
+    "googleMapUrl": ""
+  },
+  "polynesian adventure activities": {
+    "shortname": "polyad-activities",
+    "placeId": "ChIJR5Q9r6pvAHwRCearRBhiO4c",
+    "googleMapUrl": ""
+  },
+  "unicorn tours of hawaii inc": {
+    "shortname": "sailwinona",
+    "placeId": "",
+    "googleMapUrl": ""
+  },
+  "x-treme parasail & diamond head parasail": {
+    "shortname": "xtreme",
+    "placeId": "ChIJE6aaQP1tAHwRS-Ak7Gxl1Bo",
+    "googleMapUrl": ""
+  },
+  "kona town surf adventures": {
+    "shortname": "konatownsurfadventures",
+    "placeId": "ChIJGYUt1BsFVHkROfOgYfA9loI",
+    "googleMapUrl": ""
+  },
+  "tradewind charters": {
+    "shortname": "tradewindcharters",
+    "placeId": "ChIJTTmkDf1tAHwRK2cGIzLrMcU",
+    "googleMapUrl": "https://goo.gl/maps/5Znu0"
+  },
+  "ko hana distillers": {
+    "shortname": "kohanarum",
+    "placeId": "ChIJ37P1dtBgAHwRm0ejK2raBo0",
+    "googleMapUrl": "https://goo.gl/maps/DwRc6bHW1XN2"
+  },
+  "mauna loa helicopter tours - big island": {
+    "shortname": "maunaloahelicoptertoursbigisland",
+    "placeId": "EjA3My0zMTAgVXUgU3QsIEthaWx1YS1Lb25hLCBIYXdhaWksIFVuaXRlZCBTdGF0ZXMiLiosChQKEgnpswLwgQ1UeRGvZ_GYe5OXERIUChIJAbSRarIOVHkRp6UtiIMdkQc",
+    "googleMapUrl": "https://goo.gl/maps/C8Vd3a5nias"
+  },
+  "holokai catamaran": {
+    "shortname": "waikikirigger",
+    "placeId": "ChIJQwE_xetzAHwRULqUDa0EM1w",
+    "googleMapUrl": "https://goo.gl/maps/PopcnjEEfKF2"
+  },
+  "volcano ohana": {
+    "shortname": "volcanoohana",
+    "placeId": "ChIJhfLFmeU0UnkR2NX3CPZXXLo",
+    "googleMapUrl": ""
+  },
+  "shaka braddah tours": {
+    "shortname": "shakabraddahtours",
+    "placeId": "ChIJr-isTlqiCo4RtQ7Yhq_1Ous",
+    "googleMapUrl": ""
+  },
+  "adventure x boat tours": {
+    "shortname": "adventurex",
+    "placeId": "ChIJH6gcyAyHU3kRSMu7enf6nuQ",
+    "googleMapUrl": "https://goo.gl/maps/y6kRe"
+  },
+  "dive maui": {
+    "shortname": "goscubadivemaui",
+    "placeId": "ChIJUaHU0gMrVXkREAMGCB1vhzs",
+    "googleMapUrl": ""
+  },
+  "wildlife hawaii": {
+    "shortname": "wildlifehawaii",
+    "placeId": "ChIJ7-ujz5kcHikRMtVJ7ED782M",
+    "googleMapUrl": ""
+  },
+  "kona diving company": {
+    "shortname": "konadivingcompany",
+    "placeId": "ChIJEz9wvvcOVHkROeuM028SB44",
+    "googleMapUrl": ""
+  },
+  "mahina hawaii": {
+    "shortname": "mahinahawaii",
+    "placeId": "ChIJUUGX71REAHwROOMAzdcE88s",
+    "googleMapUrl": ""
+  },
+  "break'n anger": {
+    "shortname": "breaknanger",
+    "placeId": "ChIJPYkbGwptAHwRYnmlwMh7wj8",
+    "googleMapUrl": ""
+  },
+  "jungle zipline": {
+    "shortname": "junglezip",
+    "placeId": "ChIJEz-fUoRKq34RWoUHnhlBIZM",
+    "googleMapUrl": "https://goo.gl/maps/VmaV1HPJKSM2"
+  },
+  "charter oahu": {
+    "shortname": "charteroahu",
+    "placeId": "ChIJ3-W_ss1tAHwRK32ynNCTkWs",
+    "googleMapUrl": ""
+  },
+  "jack harter helicopters": {
+    "shortname": "jackharterheli",
+    "placeId": "ChIJx4nRJIseB3wRetQTRgF_y8E",
+    "googleMapUrl": ""
+  },
+  "ohana ranch": {
+    "shortname": "ohanaranch",
+    "placeId": "ChIJPVXvGBrLU3kRVF-diXC5pto",
+    "googleMapUrl": ""
+  },
+  "big island vip": {
+    "shortname": "bigislandvip",
+    "placeId": "ChIJuz5shu3QU3kRopg1JrQm0fE",
+    "googleMapUrl": ""
+  },
+  "hawaii efoil experience": {
+    "shortname": "hawaiiefoilexperience",
+    "placeId": "ChIJsxGFKaIVAHwRhR-Qnt03id8",
+    "googleMapUrl": ""
+  },
+  "iruka hawaii": {
+    "shortname": "irukajapan",
+    "placeId": "ChIJ43et6ChvAHwR8cXmBiUlnGw",
+    "googleMapUrl": ""
+  },
+  "na pali riders": {
+    "shortname": "napaliriders",
+    "placeId": "ChIJg9JCkOCpB3wR6wWZnjv7eYQ",
+    "googleMapUrl": "https://www.napaliriders.com/where-to-meet/"
+  },
+  "experience aloha co": {
+    "shortname": "experiencealoha",
+    "placeId": "ChIJqSJETGdyAHwRJVT8fD-s2UE",
+    "googleMapUrl": ""
+  },
+  "kona ocean adventures": {
+    "shortname": "konaoceanadventures",
+    "placeId": "ChIJbcgLwRoPVHkRgHMHQ_KiMuw",
+    "googleMapUrl": "https://goo.gl/maps/wZWw36ijD4B2"
+  },
+  "waikiki dive center": {
+    "shortname": "waikikidivecenter",
+    "placeId": "ChIJzy4z34ltAHwRs6JQe6I_mVE",
+    "googleMapUrl": "http://www.waikikidiving.com/ContactUs/tabid/56/Default.aspx"
+  },
+  "hilo ocean adventures": {
+    "shortname": "hilooceanadventures",
+    "placeId": "ChIJQ-Ivl2xLUnkRSkZvUw7bNGM",
+    "googleMapUrl": ""
+  },
+  "aloha sunshine tours": {
+    "shortname": "alohasunshinetours",
+    "placeId": "Ej8xMTAwNyBOIDU2dGggU3Qgc3RlIDIyMCwgVGVtcGxlIFRlcnJhY2UsIEZsb3JpZGEsIFVuaXRlZCBTdGF0ZXMiIxohChYKFAoSCX9l4KbWx8KIEUWBG7Kw2VBuEgdzdGUgMjIw",
+    "googleMapUrl": ""
+  },
+  "port waikiki cruises": {
+    "shortname": "portwaikikicruises",
+    "placeId": "ChIJKWk2nvVtAHwR4ChIJKWk2nvVtAHwR4nbmdufEslA",
+    "googleMapUrl": "https://goo.gl/maps/yabTBJgiLMu"
+  },
+  "sea paradise": {
+    "shortname": "seaparadise",
+    "placeId": "ChIJ5XH3Xt0FVHkRqjaSDn0BW7I",
+    "googleMapUrl": ""
+  },
+  "hawaii turtle tours": {
+    "shortname": "hawaiiturtletours",
+    "placeId": "ChIJzViqFQtuAHwR9h0RbG0bnW0",
+    "googleMapUrl": "https://goo.gl/maps/uKn2C"
+  },
+  "hanalei charters, inc.": {
+    "shortname": "hanaleicharters",
+    "placeId": "ChIJ-eV27rJMfGYRD07mxmQsMnc",
+    "googleMapUrl": ""
+  },
+  "waikiki parasail": {
+    "shortname": "gohawaii-waikikiparasail",
+    "placeId": "ChIJHWBUtfZtAHwRqOZYrkcppEc",
+    "googleMapUrl": ""
+  },
+  "paradise hawaii tours": {
+    "shortname": "paradisehawaiitours",
+    "placeId": "ChIJz9zXUHtuAHwR2n5rf7cziwY",
+    "googleMapUrl": ""
+  },
+  "kapalua ziplines": {
+    "shortname": "kapaluaziplines",
+    "placeId": "ChIJsWLRXrfVqn4RNL1cGXOhwAg",
+    "googleMapUrl": ""
+  },
+  "kipu ranch adventures": {
+    "shortname": "kiputours",
+    "placeId": "ChIJK5aUOXkcB3wRAR2tXyzXlBM",
+    "googleMapUrl": "https://goo.gl/maps/vR2ob"
+  },
+  "zephyr adventures maui": {
+    "shortname": "zephyrmaui",
+    "placeId": "ChIJpZqwnQnQVHkR_2aNvwpr6mg",
+    "googleMapUrl": ""
+  },
+  "captain chad's charters": {
+    "shortname": "captainchads",
+    "placeId": "ChIJD1-oZkOGU3kRosneLaMG4TU",
+    "googleMapUrl": ""
+  },
+  "pacific historic parks": {
+    "shortname": "phptours",
+    "placeId": "ChIJ50pKaENvAHwR4JVPmFbtYTw",
+    "googleMapUrl": "https://goo.gl/maps/VYWgs48DDAN2"
+  },
+  "hana and beyond": {
+    "shortname": "hanaandbeyond",
+    "placeId": "ChIJEzQQSMLSVHkRcvkbOOnNtVM",
+    "googleMapUrl": ""
+  },
+  "na pali coast hanalei tours": {
+    "shortname": "napalitours",
+    "placeId": "ChIJeYzpJ8f6BnwRJpLlcG5eaUI",
+    "googleMapUrl": "https://goo.gl/maps/2MqwE"
+  },
+  "sea & board sports hawaii llc": {
+    "shortname": "sbshawaii",
+    "placeId": "ChIJAwp5PtFYAHwRsSZZ3oxgC7o",
+    "googleMapUrl": "https://goo.gl/maps/E98gm"
+  },
+  "hawaii geo tours": {
+    "shortname": "hawaiigeotours",
+    "placeId": "ChIJfwyPCPYFVHkRLbguerjh95Y",
+    "googleMapUrl": ""
+  },
+  "outfitters kauai": {
+    "shortname": "outfitterskauai",
+    "placeId": "ChIJ4ZoKI8gaB3wRzXW8-XdjNbc",
+    "googleMapUrl": ""
+  },
+  "queens waikiki luau": {
+    "shortname": "queenswaikikiluau",
+    "placeId": "ChIJdwV9EXVyAHwR-uFk5UWTn20",
+    "googleMapUrl": ""
+  },
+  "mana cruises": {
+    "shortname": "manacruises",
+    "placeId": "ChIJ4Y__arZiAHwREgj59ynjt84",
+    "googleMapUrl": "https://goo.gl/maps/SDVMkSnTEdC2"
+  },
+  "ams motorcycle kihei": {
+    "shortname": "alohamotorsports-motorcycle-kihei",
+    "placeId": "ChIJg5p8laPaVHkRhUEbgPZ_5rY",
+    "googleMapUrl": ""
+  },
+  "try scuba diving - honolulu": {
+    "shortname": "tryscuba-honolulu",
+    "placeId": "ChIJwdQbG_RtAHwRkoAiCmmS3Ww",
+    "googleMapUrl": ""
+  },
+  "sea quest hawaii": {
+    "shortname": "seaquesthawaii",
+    "placeId": "ChIJFw78ON0FVHkRVa-7JbjmEC8",
+    "googleMapUrl": "https://goo.gl/maps/RKL7FUTfM2R2"
+  },
+  "north shore beach bus": {
+    "shortname": "northshorebeachbus",
+    "placeId": "ChIJbQ6AasJtAHwR6Biw8Xfj4Uk",
+    "googleMapUrl": ""
+  },
+  "deep water hawaii": {
+    "shortname": "seethroughsea",
+    "placeId": "ChIJc8pVO-sPVHkRMaA-gERp2Jw",
+    "googleMapUrl": ""
+  },
+  "kai kanani": {
+    "shortname": "kaikanani",
+    "placeId": "ChIJi3ntEtLaVHkR_OILzwyuCDc",
+    "googleMapUrl": ""
+  },
+  "paina waikiki - the luau at waikiki beach marriott": {
+    "shortname": "painawaikikiluau",
+    "placeId": "ChIJWwnQed9zAHwRBXT-T7cWJFU",
+    "googleMapUrl": ""
+  },
+  "common ground kauai": {
+    "shortname": "commongroundkauai",
+    "placeId": "ChIJDQ2L-5flBnwR70pUdzLj6CQ",
+    "googleMapUrl": ""
+  },
+  "luau kalamaku": {
+    "shortname": "luau-kalamaku",
+    "placeId": "ChIJP2wjeCQcB3wRHWbMOyYi98s",
+    "googleMapUrl": ""
+  },
+  "quicksilver maui": {
+    "shortname": "quicksilvermaui",
+    "placeId": "ChIJY4N05i_RVHkREIXq10uhrAc",
+    "googleMapUrl": ""
+  },
+  "north shore ohana school of surfing": {
+    "shortname": "nsohanasurfschool",
+    "placeId": "ChIJu5AdqfVZAHwRtCH5helL410",
+    "googleMapUrl": ""
+  },
+  "maui off road adventures west side": {
+    "shortname": "mauioffroadadventureswestside",
+    "placeId": "ChIJPfTAhUXVqn4RDKud43MPy9U",
+    "googleMapUrl": ""
+  },
+  "hi private tours": {
+    "shortname": "hiprivatetours",
+    "placeId": "ChIJ4UAXZvNtAHwRODX2EiEjr3k",
+    "googleMapUrl": ""
+  },
+  "in2scuba": {
+    "shortname": "in2scuba",
+    "placeId": "ChIJE7RNb-XUqn4RyApKNLzVCA8",
+    "googleMapUrl": ""
+  },
+  "fathom five divers": {
+    "shortname": "fathomfive",
+    "placeId": "ChIJkbZ5ZNcaB3wR2d0QqClBsMc",
+    "googleMapUrl": ""
+  },
+  "ultimate circle island tours": {
+    "shortname": "haleiwaturtletours",
+    "placeId": "ChIJhZxEV3ZyAHwRsbsbPPyOxIs",
+    "googleMapUrl": ""
+  },
+  "iruka kona": {
+    "shortname": "irukakona",
+    "placeId": "ChIJMU_iTNgPVHkRYt3-yt-ypuc",
+    "googleMapUrl": "https://goo.gl/maps/spngEYczqgB2"
+  },
+  "kona shore divers": {
+    "shortname": "konashoredivers",
+    "placeId": "ChIJD2EPtNsPVHkRVbYTgaAHzJY",
+    "googleMapUrl": ""
+  },
+  "umauma falls & zipline experience": {
+    "shortname": "ziplinehawaii",
+    "placeId": "ChIJy2-7gI-rU3kR5YVDNZfSbX8",
+    "googleMapUrl": "https://goo.gl/maps/QJTSTasxmKD2"
+  },
+  "the lū'au at grand wailea": {
+    "shortname": "ahaainawailea",
+    "placeId": "ChIJVU1UGUvbVHkR0yyfQNZ1KBI",
+    "googleMapUrl": ""
+  },
+  "kahuku farms": {
+    "shortname": "kahukufarms",
+    "placeId": "ChIJ96PZDBFFAHwRvM6PJspIx1Q",
+    "googleMapUrl": "https://goo.gl/maps/QX11m"
+  },
+  "dive kauai": {
+    "shortname": "divekauai",
+    "placeId": "EjczNDE3IFBvaXB1IFJvYWQgc3VpdGUgMTA1LCBLb2xvYSwgSGF3YWlpLCBVbml0ZWQgU3RhdGVzIiUaIwoWChQKEglbidKilhoHfBHNGGIzLo6WdhIJc3VpdGUgMTA1",
+    "googleMapUrl": "https://goo.gl/maps/tNTJhr6HayE2"
+  },
+  "cat cafe maui": {
+    "shortname": "catcafemaui",
+    "placeId": "ChIJlxP3sX3TVHkRLuCrlTGJZ6c",
+    "googleMapUrl": ""
+  },
+  "captain max boat tours": {
+    "shortname": "captainmaxboattours",
+    "placeId": "EjUxMDg1IEFsYSBNb2FuYSBCb3VsZXZhcmQgc3VpdGUgMTA0LCBIb25vbHVsdSwgSEksIFVTQSIlGiMKFgoUChIJMeSTQP1tAHwR2YgzYHQBZFsSCXN1aXRlIDEwNA",
+    "googleMapUrl": ""
+  },
+  "koloa zipline": {
+    "shortname": "koloazipline",
+    "placeId": "ChIJVUyiTdgaB3wRJTqc8A6lU5c",
+    "googleMapUrl": "https://goo.gl/maps/5B3fYpsS3Yq"
+  },
+  "maui butterfly farm": {
+    "shortname": "mauibutterflyfarm",
+    "placeId": "ChIJ6wgpJl0pVXkRq4QMmRvUcvs",
+    "googleMapUrl": ""
+  },
+  "lavaloha": {
+    "shortname": "lavaloha",
+    "placeId": "ChIJqZzNNIyzU3kR6yjG1qFj1O0",
+    "googleMapUrl": "https://goo.gl/maps/kyvQpeipfL42"
+  },
+  "my splash llc": {
+    "shortname": "seascootersnorkeling",
+    "placeId": "ChIJg5jAZtjaVHkRVaI4b5nj6BI",
+    "googleMapUrl": "https://www.google.com/maps/dir/20.7773696,-156.4565504/3894+Wailea+Alanui+Dr,+Kihei,+HI+96753/@20.7290615,-156.4803004,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x7954dad8614e3cd5:0x81d5b7ec1abace77!2m2!1d-156.441688!2d20.681138"
+  },
+  "keep it simple hawaii": {
+    "shortname": "keepitsimplehawaii",
+    "placeId": "ChIJoTvUeODVqn4RFqjuMYTv2T8",
+    "googleMapUrl": ""
+  },
+  "big island abalone": {
+    "shortname": "bigislandabalone",
+    "placeId": "ChIJadW9oIt2VHkRsoeoac1dPc0",
+    "googleMapUrl": ""
+  },
+  "e foil": {
+    "shortname": "efoilwaikiki",
+    "placeId": "ChIJ51qXG0VzAHwRhkNzElpgsak",
+    "googleMapUrl": ""
+  },
+  "catamaran kepoikai ii": {
+    "shortname": "kepoikai",
+    "placeId": "ChIJH4gGtHVyAHwR0qC3R8DuLL4",
+    "googleMapUrl": "https://www.google.com/maps/place/2259+Kalakaua+Ave,+Honolulu,+HI+96815/@21.27739,-157.829155,12z/data=!4m2!3m1!1s0x7c007275b391b069:0x43aadfb1eb6108b0?hl=en"
+  },
+  "hang loose boat tours llc": {
+    "shortname": "hawaiitourboat",
+    "placeId": "ChIJB1h-mV4PVHkRtyL1bv07fvY",
+    "googleMapUrl": "https://goo.gl/maps/aPObl"
+  },
+  "rainbow watersports adventure, llc": {
+    "shortname": "rainbowwatersportsadventure",
+    "placeId": "ChIJWbw06dBYAHwRFoGmTvv_Qb8",
+    "googleMapUrl": "https://goo.gl/maps/h9z09"
+  },
+  "torpedo tours": {
+    "shortname": "onelove",
+    "placeId": "ChIJ63BiyhIOVHkRqZREzzrR-Jg",
+    "googleMapUrl": "https://goo.gl/maps/pn7Xu"
+  },
+  "dolphin excursions": {
+    "shortname": "dolphinexcursions",
+    "placeId": "ChIJ____e7GLAHwRqousSVJsROg",
+    "googleMapUrl": "http://www.dolphinexcursions.com/driving-directions/"
+  },
+  "kona brewing company": {
+    "shortname": "konabrewing",
+    "placeId": "ChIJ4wzG-vgOVHkRJkYBEDZ7jQo",
+    "googleMapUrl": "http://goo.gl/75w1hi"
+  },
+  "big island bees": {
+    "shortname": "bigislandbees",
+    "placeId": "ChIJIfFrxCABVHkRIUZzslleTsk",
+    "googleMapUrl": "https://goo.gl/maps/gduVXB1CsQk"
+  },
+  "gone surfing hawaii": {
+    "shortname": "gonesurfinghawaii",
+    "placeId": "ChIJL8xbXXVyAHwRuDI38m2xMJw",
+    "googleMapUrl": ""
+  },
+  "go nuts hawaii": {
+    "shortname": "gonuts-hawaii",
+    "placeId": "ChIJv6POMbtQAHwRgpwkD7Te7fU",
+    "googleMapUrl": "https://goo.gl/maps/v4uk8"
+  },
+  "oahu boat cruises": {
+    "shortname": "oahuboatcruises",
+    "placeId": "ChIJ0aorcgduAHwRgO-QCvVacRE",
+    "googleMapUrl": "https://goo.gl/maps/moJKbiwKX1A2"
+  },
+  "three tiki's sailing": {
+    "shortname": "threetikisailing",
+    "placeId": "ChIJiT6galJtAHwRvV24dKBIrWc",
+    "googleMapUrl": ""
+  },
+  "kona boys": {
+    "shortname": "konaboys",
+    "placeId": "ChIJByMbAvIGVHkRtdEOqR5KcQs",
+    "googleMapUrl": "https://goo.gl/oxrkvl"
+  },
+  "maui custom charters": {
+    "shortname": "sail-maui",
+    "placeId": "Ei8xMDMgTWFhbGFlYSBSZCwgSG9ub2x1bHUsIEhhd2FpaSwgVW5pdGVkIFN0YXRlcyIuKiwKFAoSCU2yut6AbgB8EUvkfS0GX6nBEhQKEglNRsOMOxgAfBFsl6fzX_UoSw",
+    "googleMapUrl": ""
+  },
+  "kahuna research group": {
+    "shortname": "bigislandghosttours",
+    "placeId": "ChIJAbSRarIOVHkRp6UtiIMdkQc",
+    "googleMapUrl": ""
+  },
+  "kaanapali ocean adventures": {
+    "shortname": "kaanapalioceanadventures",
+    "placeId": "ChIJHyvZ5VnVqn4RugTakgktTek",
+    "googleMapUrl": "https://goo.gl/maps/JEqHC"
+  }
+}

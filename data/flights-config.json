@@ -1,0 +1,15 @@
+{
+  "comment": "Cheap-flights section config. destination = where the trip goes; origins = cities we show fares FROM.",
+  "destinationIata": "HNL",
+  "destinationName": "Honolulu",
+  "origins": [
+    { "iata": "LAX", "city": "Los Angeles" },
+    { "iata": "SFO", "city": "San Francisco" },
+    { "iata": "SEA", "city": "Seattle" },
+    { "iata": "LAS", "city": "Las Vegas" },
+    { "iata": "ORD", "city": "Chicago" },
+    { "iata": "JFK", "city": "New York" },
+    { "iata": "DFW", "city": "Dallas" },
+    { "iata": "DEN", "city": "Denver" }
+  ]
+}

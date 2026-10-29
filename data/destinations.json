@@ -1,0 +1,18 @@
+{
+  "comment": "Beyond-Hawaii destinations. collection 'polynesia' => Polynesia tab (tours + hotel map); otherwise the worldwide Beyond Hawaii tab. lat/lng power the Stay22 hotel map on Polynesia pages.",
+  "destinations": [
+    { "slug": "cancun",    "name": "Cancún",     "region": "Mexico & Caribbean", "country": "Mexico",         "viatorDestId": 631, "lat": 21.1619,  "lng": -86.8515 },
+    { "slug": "las-vegas", "name": "Las Vegas",  "region": "United States",      "country": "United States",  "viatorDestId": 684, "lat": 36.1147,  "lng": -115.1728 },
+    { "slug": "rome",      "name": "Rome",       "region": "Europe",             "country": "Italy",          "viatorDestId": 511, "lat": 41.9028,  "lng": 12.4964 },
+    { "slug": "bali",      "name": "Bali",       "region": "Asia & Pacific",     "country": "Indonesia",      "viatorDestId": 98,  "lat": -8.6900,  "lng": 115.1680 },
+    { "slug": "paris",     "name": "Paris",      "region": "Europe",             "country": "France",         "viatorDestId": 479, "lat": 48.8566,  "lng": 2.3522 },
+    { "slug": "london",    "name": "London",     "region": "Europe",             "country": "United Kingdom", "viatorDestId": 737, "lat": 51.5074,  "lng": -0.1278 },
+
+    { "slug": "bora-bora", "name": "Bora Bora",  "region": "French Polynesia",   "country": "French Polynesia", "viatorDestId": 5180,  "collection": "polynesia", "lat": -16.5004, "lng": -151.7415 },
+    { "slug": "tahiti",    "name": "Tahiti",     "region": "French Polynesia",   "country": "French Polynesia", "viatorDestId": 25,    "collection": "polynesia", "lat": -17.5516, "lng": -149.5585 },
+    { "slug": "moorea",    "name": "Moorea",     "region": "French Polynesia",   "country": "French Polynesia", "viatorDestId": 5182,  "collection": "polynesia", "lat": -17.5388, "lng": -149.8295 },
+    { "slug": "fiji",      "name": "Fiji",       "region": "Fiji",               "country": "Fiji",             "viatorDestId": 23,    "collection": "polynesia", "lat": -17.7765, "lng": 177.4356 },
+    { "slug": "rarotonga", "name": "Rarotonga",  "region": "Cook Islands",       "country": "Cook Islands",     "viatorDestId": 22128, "collection": "polynesia", "lat": -21.2367, "lng": -159.7777 },
+    { "slug": "samoa",     "name": "Samoa",      "region": "Samoa",              "country": "Samoa",            "viatorDestId": 4770,  "collection": "polynesia", "lat": -13.8507, "lng": -171.7514 }
+  ]
+}
