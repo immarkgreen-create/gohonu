@@ -68,6 +68,16 @@ function queryFor(d) {
     bali: "Bali rice terraces temple",
     paris: "Paris Eiffel Tower",
     london: "London Tower Bridge",
+    tokyo: "Tokyo skyline Shibuya night",
+    "new-york": "New York City skyline Manhattan",
+    barcelona: "Barcelona Sagrada Familia",
+    dubai: "Dubai skyline Burj Khalifa",
+    bangkok: "Bangkok temple grand palace",
+    sydney: "Sydney Opera House harbour",
+    reykjavik: "Iceland northern lights landscape",
+    athens: "Athens Acropolis Parthenon",
+    amsterdam: "Amsterdam canal houses",
+    marrakech: "Marrakech medina market morocco",
   };
   return custom[d.slug] || `${d.name} landmark scenic`;
 }

@@ -202,17 +202,22 @@ ${footer()}
 }
 
 function nav() {
-  const primary = `<a class="nav-primary" href="/islands/${slugifyIsland(PRIMARY)}/">${esc(PRIMARY)}</a>`;
-  const rest = otherIslands.map((i) => `<a href="/islands/${slugifyIsland(i)}/">${esc(i)}</a>`).join("");
+  const islandLinks = islands.map((i) => `<a href="/islands/${slugifyIsland(i)}/">${esc(i)}</a>`).join("");
   return `<header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="/"><img class="brand-logo" src="/assets/img/logo.png" alt="" width="34" height="34"> Go<em>Honu</em></a>
     <button class="nav-toggle" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
-    <nav class="nav-links">${primary}${rest}${
-      SITE.stay22Aid ? `<a href="/stay/">🏨 Stay</a>` : ""
-    }${FLIGHTS ? `<a href="/flights/">✈️ Flights</a>` : ""}<a href="/cars/">🚗 Cars</a>${
-      POLY.length ? `<a href="/polynesia/">🌴 Polynesia</a>` : ""
-    }${WORLD.length ? `<a class="nav-beyond" href="/beyond/">🌏 Beyond Hawaii</a>` : ""}</nav>
+    <nav class="nav-links">
+      <div class="nav-group" tabindex="0">
+        <span class="nav-link nav-group-label">Hawaii Islands <i class="caret">▾</i></span>
+        <div class="nav-dropdown">${islandLinks}</div>
+      </div>
+      ${POLY.length ? `<a class="nav-link" href="/polynesia/">Polynesia</a>` : ""}
+      ${WORLD.length ? `<a class="nav-link" href="/beyond/">Beyond Hawaii</a>` : ""}
+      ${FLIGHTS ? `<a class="nav-link" href="/flights/">Flights</a>` : ""}
+      ${SITE.stay22Aid ? `<a class="nav-link" href="/stay/">Hotels</a>` : ""}
+      <a class="nav-link" href="/cars/">Cars</a>
+    </nav>
   </div>
 </header>`;
 }
