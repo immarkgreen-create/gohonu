@@ -13,8 +13,16 @@
  */
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 const ROOT = __dirname;
+// Content hash of the stylesheet so edits bust the browser cache (assets are
+// served immutable for a year — without this, CSS changes wouldn't be picked up).
+const CSS_VER = crypto
+  .createHash("md5")
+  .update(fs.readFileSync(path.join(__dirname, "assets", "css", "styles.css")))
+  .digest("hex")
+  .slice(0, 8);
 const OUT = path.join(ROOT, "public");
 const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "tours.json"), "utf8"));
 const SITE = DATA.site;
@@ -187,7 +195,7 @@ ${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ""}
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/styles.css?v=${CSS_VER}">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/img/logo.png">
 ${extraHead}
