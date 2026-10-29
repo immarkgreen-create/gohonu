@@ -98,12 +98,37 @@ const GOOGLE_G = `<svg class="g-logo" viewBox="0 0 48 48" aria-label="Google" wi
 // Estimated price tier (1-4) by tour type — a browsing guide, not an exact quote.
 // Real price always shows live in the booking Lightframe.
 const PRICE_BANDS = { 1: "$ · under $50", 2: "$$ · $50–100", 3: "$$$ · $100–200", 4: "$$$$ · $200+" };
+// Base price tier by FareHarbor category (Hawaii-typical ranges). A premium signal
+// in the name (private/charter/helicopter/yacht/etc.) bumps to $$$$ regardless.
+const TIER_BY_CATEGORY = {
+  // $ — under $50
+  attraction: 1, farm: 1, shuttle: 1, sup: 1, "walking tour": 1, "pop up attraction": 1,
+  "rage room": 1, vr: 1, "paint and sip": 1, wellness: 1, sports: 1, "bike rental": 1,
+  brewery: 1, distillery: 1,
+  // $$ — $50–100
+  snorkel: 2, "guided tour": 2, hiking: 2, "eco tour": 2, "photography tour": 2, kayak: 2,
+  dolphin: 2, "bike tour": 2, canoe: 2, catamaran: 2, rafting: 2, "history tour": 2, "city tour": 2,
+  "bus tour": 2, surf: 2, parasail: 2, "whale watch": 2, "water activities": 2, self: 2, e: 2,
+  "sightseeing tour": 2, transportation: 2, events: 2, rentals: 2,
+  // $$$ — $100–200
+  "boat tour": 3, scuba: 3, luau: 3, zipline: 3, sailing: 3, "atv/utv": 3, horse: 3, fishing: 3,
+  "food tour": 3,
+  // $$$$ — $200+
+  "boat rental": 4, private: 4, "air activities": 4, "air tour": 4, airplane: 4,
+};
 function priceTier(t) {
   const s = `${t.category || ""} ${t.tags || ""} ${t.name || ""}`.toLowerCase();
-  if (/private|charter|rental|helicopter|air tour|\bair\b|yacht|luxury|submarine|skydiv/.test(s)) return 4;
-  if (/boat tour|scuba|\bdive\b|luau|zipline|sail|dinner|sunset cruise|parasail|whale|fishing/.test(s)) return 3;
-  if (/snorkel|kayak|guided|eco tour|\bhike\b|bike|atv|dolphin|horseback|paddle|cruise/.test(s)) return 2;
-  if (/attraction|farm|\bsup\b|surf|lesson|shuttle|\bbus\b|walking|yoga|museum|garden|tour show/.test(s)) return 1;
+  // premium -> $$$$: genuinely private (not "semi-private"), or luxury/yacht/helicopter/etc.
+  const premium =
+    (/\bprivate\b/.test(s) && !/semi[- ]?private/.test(s)) ||
+    /\byacht\b|luxury|\bvip\b|helicopter|air tour|skydiv|submarine/.test(s);
+  if (premium) return 4;
+  const cat = (t.category || "").toLowerCase();
+  if (TIER_BY_CATEGORY[cat]) return TIER_BY_CATEGORY[cat];
+  // fallback for uncategorized ("Other", "Tours & Activities", etc.)
+  if (/luau|zipline|scuba|\bdive\b|boat tour|\bsail/.test(s)) return 3;
+  if (/snorkel|kayak|\bhike|bike|dolphin|whale|parasail|atv/.test(s)) return 2;
+  if (/attraction|farm|museum|walking|shuttle|\bsurf|\bsup\b/.test(s)) return 1;
   return 2;
 }
 const tierBadge = (tier) =>
