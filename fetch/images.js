@@ -166,8 +166,34 @@ async function main() {
     }
   }
 
+  // ---- Phase 2b: guarantee — any FH tour STILL without an image gets a
+  // per-island Hawaii fallback, so no card is ever a bare gradient. ----
+  const stillMissing = fh.filter((t) => !t.image && !out[t.slug]);
+  if (stillMissing.length) {
+    const byIsland = {};
+    stillMissing.forEach((t) => (byIsland[t.island] = byIsland[t.island] || []).push(t));
+    console.log(`Fallback images: ${stillMissing.length} tours with no category match (filling)`);
+    for (const island of Object.keys(byIsland)) {
+      let pool = [];
+      try {
+        pool = await provider.fn(`${island} Hawaii tropical landscape scenic`);
+      } catch (e) {
+        console.warn(`[fallback] ${island}: ${e.message}`);
+      }
+      if (!pool.length) continue;
+      let i = 0;
+      for (const t of byIsland[island]) {
+        const url = pool[i % pool.length];
+        i++;
+        const rel = `/assets/img/fill/${t.slug}.jpg`;
+        out[t.slug] = (await download(url, path.join(ROOT, rel))) ? rel : url;
+      }
+    }
+  }
+
   fs.writeFileSync(path.join(ROOT, "data", "images.json"), JSON.stringify(out, null, 2) + "\n");
-  console.log(`Wrote data/images.json (${Object.keys(out).length} images)`);
+  const noneLeft = fh.filter((t) => !t.image && !out[t.slug]).length;
+  console.log(`Wrote data/images.json (${Object.keys(out).length} images; ${noneLeft} FareHarbor tours still without an image)`);
 }
 
 function fhQuery(island, category) {
