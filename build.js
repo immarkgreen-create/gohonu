@@ -284,7 +284,7 @@ function grid(tours) {
 
 // Live FareHarbor catalog card — click opens the booking Lightframe (live price).
 function fhCard(t) {
-  const avail = t.availNext30 > 0 ? `<span class="card-flag">${t.availNext30} dates in 30 days</span>` : "";
+  const avail = t.availNext30 > 0 ? `<span class="card-flag">${t.availNext30} time slots · next 30 days</span>` : "";
   return `<a class="card" href="/tours/${t.slug}/" data-cat="${esc(t.category)}" data-tier="${t._tier}">
   <div class="card-img island-${slugifyIsland(t.island)}">${photo(t.image, t.name)}
     <span class="card-island">${esc(t.island)}</span>${avail}
