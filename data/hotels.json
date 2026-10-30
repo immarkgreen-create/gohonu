@@ -11,7 +11,8 @@
       "reviews": 4327,
       "image": "/assets/img/hotels/halekulani.jpg",
       "expediaDest": "Halekulani, Honolulu, Hawaii",
-      "photoCredit": "Google"
+      "photoCredit": "Google",
+      "expediaUrl": "https://www.expedia.com/Honolulu-Hotels-Halekulani.h20136.Hotel-Information"
     },
     {
       "slug": "the-royal-hawaiian-a-luxury-collection-r",
@@ -24,7 +25,8 @@
       "reviews": 4772,
       "image": "/assets/img/hotels/the-royal-hawaiian-a-luxury-collection-r.jpg",
       "expediaDest": "The Royal Hawaiian, a Luxury Collection Resort, Honolulu, Hawaii",
-      "photoCredit": "Google"
+      "photoCredit": "Google",
+      "expediaUrl": "https://www.expedia.com/Honolulu-Hotels-The-Royal-Hawaiian.h19184.Hotel-Information"
     },
     {
       "slug": "moana-surfrider-a-westin-resort-spa",
@@ -51,7 +53,8 @@
       "reviews": 27405,
       "image": "/assets/img/hotels/hilton-hawaiian-village-waikiki-beach-re.jpg",
       "expediaDest": "Hilton Hawaiian Village Waikiki Beach Resort, Honolulu, Hawaii",
-      "photoCredit": "Google"
+      "photoCredit": "Google",
+      "expediaUrl": "https://www.expedia.com/Honolulu-Hotels-Hilton-Hawaiian-Village-Waikiki-Beach-Resort.h13857.Hotel-Information"
     },
     {
       "slug": "outrigger-waikiki-beach-resort",
@@ -64,7 +67,8 @@
       "reviews": 7914,
       "image": "/assets/img/hotels/outrigger-waikiki-beach-resort.jpg",
       "expediaDest": "Outrigger Waikiki Beach Resort, Honolulu, Hawaii",
-      "photoCredit": "Google"
+      "photoCredit": "Google",
+      "expediaUrl": "https://www.expedia.com/Honolulu-Hotels-OUTRIGGER-Waikiki-Beach-Resort.h13791.Hotel-Information"
     },
     {
       "slug": "queen-kapiolani-hotel",
@@ -77,7 +81,8 @@
       "reviews": 2883,
       "image": "/assets/img/hotels/queen-kapiolani-hotel.jpg",
       "expediaDest": "Queen Kapiolani Hotel, Honolulu, Hawaii",
-      "photoCredit": "Google"
+      "photoCredit": "Google",
+      "expediaUrl": "https://www.expedia.com/Honolulu-Hotels-Queen-Kapiolani-Hotel.h234.Hotel-Information"
     }
   ]
 }
