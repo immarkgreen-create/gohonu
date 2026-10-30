@@ -78,6 +78,22 @@ function queryFor(d) {
     athens: "Athens Acropolis Parthenon",
     amsterdam: "Amsterdam canal houses",
     marrakech: "Marrakech medina market morocco",
+    seoul: "Seoul skyline Gyeongbokgung palace",
+    busan: "Busan Gamcheon village coast",
+    jeju: "Jeju island coast waterfall Korea",
+    kyoto: "Kyoto temple torii gate autumn",
+    osaka: "Osaka castle skyline night",
+    beijing: "Beijing Great Wall of China",
+    shanghai: "Shanghai skyline Pudong bund",
+    hanoi: "Hanoi old quarter street Vietnam",
+    "ho-chi-minh-city": "Ho Chi Minh City skyline Vietnam",
+    "hoi-an": "Hoi An lanterns ancient town Vietnam",
+    taipei: "Taipei 101 skyline Taiwan",
+    "hong-kong": "Hong Kong skyline harbour night",
+    "chiang-mai": "Chiang Mai temple Thailand mountains",
+    phuket: "Phuket beach islands Thailand",
+    singapore: "Singapore Marina Bay Sands skyline",
+    "kuala-lumpur": "Kuala Lumpur Petronas Towers skyline",
   };
   return custom[d.slug] || `${d.name} landmark scenic`;
 }
