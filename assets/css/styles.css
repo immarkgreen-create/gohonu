@@ -229,7 +229,7 @@ html,body{overflow-x:clip}
 .bhero--home{padding:54px 0 70px}
 .bfield select{border:0;outline:0;font-size:.98rem;width:100%;background:transparent;color:var(--ink);font-weight:600;-webkit-appearance:none;appearance:none;cursor:pointer}
 .homesearch[data-mode="tours"] .hs-date,.homesearch[data-mode="tours"] .hs-guests,.homesearch[data-mode="cars"] .hs-guests{display:none}
-.trust-strip{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;padding:18px 0;margin-top:-26px;position:relative;z-index:2}
+.trust-strip{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;padding:22px 0 6px;margin-top:0;position:relative;z-index:2}
 .trust-item{font-weight:700;font-size:.92rem;color:var(--ink)}
 .promo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .promo-tile{display:flex;align-items:center;gap:13px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;
@@ -245,7 +245,7 @@ html,body{overflow-x:clip}
 .step h3{margin:0 0 6px;font-size:1.08rem}
 .step p{margin:0;color:#6b7785;font-size:.93rem;line-height:1.5}
 @media(max-width:860px){.promo-grid{grid-template-columns:1fr 1fr}.steps-grid{grid-template-columns:1fr}}
-@media(max-width:480px){.promo-grid{grid-template-columns:1fr}.trust-strip{gap:8px 18px;margin-top:-10px}.trust-item{font-size:.84rem}}
+@media(max-width:480px){.promo-grid{grid-template-columns:1fr}.trust-strip{gap:8px 18px}.trust-item{font-size:.84rem}}
 /* where-to-stay area comparison cards */
 .area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .area-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px}
