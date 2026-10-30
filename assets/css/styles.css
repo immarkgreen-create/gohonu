@@ -271,6 +271,11 @@ h1,h2,h3,h4{line-height:1.2;margin:0 0 .4em}
   .hero h1{font-size:2rem}
   .section{padding:34px 0}
   .grid{grid-template-columns:1fr 1fr;gap:12px}
+  .hotel-grid{grid-template-columns:1fr;gap:16px}
+  .guide-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .guide-card{min-height:140px}
+  .guide-card-txt{padding:14px 15px}
+  .guide-card-txt b{font-size:1.1rem}
   .card-title{font-size:1rem}
   .card-body{padding:12px 13px 14px}
   .tour-hero h1{font-size:1.6rem}
