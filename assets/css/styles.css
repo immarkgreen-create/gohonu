@@ -10,7 +10,8 @@ html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   color:var(--ink);background:var(--white);line-height:1.5}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 22px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+@media(max-width:600px){.wrap{padding:0 26px}}
 .nav-scrim{display:none}
 .muted{color:var(--muted)}
 h1,h2,h3,h4{line-height:1.2;margin:0 0 .4em}
@@ -143,9 +144,11 @@ h1,h2,h3,h4{line-height:1.2;margin:0 0 .4em}
     background:rgba(255,255,255,.97);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);
     border-top:1px solid var(--line);box-shadow:0 -2px 14px rgba(0,0,0,.08);
     padding-bottom:env(safe-area-inset-bottom)}
-  .tabbar .tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;
-    padding:8px 2px 7px;text-decoration:none;color:#6b7785;font-size:.66rem;font-weight:700;
-    letter-spacing:.01em;transition:color .12s}
+  .tabbar .tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+    padding:9px 1px 8px;text-decoration:none;color:#6b7785;font-size:.64rem;font-weight:700;
+    letter-spacing:0;transition:color .12s,background .1s;-webkit-tap-highlight-color:transparent;touch-action:manipulation;cursor:pointer}
+  .tabbar .tab:active{background:rgba(10,126,164,.12)}
+  .tabbar .tab-lbl{white-space:nowrap}
   .tabbar .tab-ic{font-size:1.3rem;line-height:1;filter:grayscale(.35);opacity:.72;transition:all .12s}
   .tabbar .tab.active{color:var(--ocean)}
   .tabbar .tab.active .tab-ic{filter:none;opacity:1;transform:translateY(-1px)}
@@ -229,6 +232,7 @@ html,body{overflow-x:clip}
 .bhero--home{padding:54px 0 70px}
 .bfield select{border:0;outline:0;font-size:.98rem;width:100%;background:transparent;color:var(--ink);font-weight:600;-webkit-appearance:none;appearance:none;cursor:pointer}
 .homesearch[data-mode="tours"] .hs-date,.homesearch[data-mode="tours"] .hs-guests,.homesearch[data-mode="cars"] .hs-guests{display:none}
+.homesearch-tabs{margin-bottom:16px}
 .trust-strip{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;padding:22px 0 6px;margin-top:0;position:relative;z-index:2}
 .trust-item{font-weight:700;font-size:.92rem;color:var(--ink)}
 .promo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
