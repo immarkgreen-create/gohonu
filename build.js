@@ -325,23 +325,16 @@ function nav() {
   const prod = PRODUCTS.map(
     (p) => `<a class="nav-link nav-prod" href="${p.href}" data-k="${p.k}"><span class="nav-ic">${p.icon}</span>${p.label}</a>`
   ).join("");
-  const destLinks =
-    islands.map((i) => `<a href="/stays/${slugifyIsland(i)}/">${esc(i)}</a>`).join("") +
-    (POLY.length ? `<a href="/polynesia/">Polynesia</a>` : "") +
-    (WORLD.length ? `<a href="/beyond/">Beyond Hawaii</a>` : "");
   return `<header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="/"><img class="brand-logo" src="/assets/img/logo.png?v=${ICON_VER}" alt="" width="34" height="34"> Go<em>Honu</em></a>
     <button class="nav-toggle" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
     <nav class="nav-links">
       ${prod}
-      <div class="nav-group" tabindex="0">
-        <span class="nav-link nav-group-label">Destinations <i class="caret">▾</i></span>
-        <div class="nav-dropdown">${destLinks}</div>
-      </div>
     </nav>
   </div>
 </header>
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.nav-prod').forEach(function(a){var k=a.getAttribute('data-k');var re=new RegExp('^/'+k+'(/|$)');if((k==='attractions'&&/^\\/(attractions|islands|tours|beyond|polynesia)(\\/|$)/.test(p))||re.test(p))a.classList.add('active');});})();</script>`;
 }
 
