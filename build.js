@@ -1029,6 +1029,25 @@ ${curated}
 // DiscoverCars search widget (generated in the DiscoverCars affiliate panel, tracks a_aid=GoHonu).
 const CARS_WIDGET = `<div><script id="dchwidget" src="https://www.discovercars.com/widget.js?v1" data-dev-env="com" data-location="usa-hawaii" data-utm-source="GoHonu" data-utm-medium="widget" data-aff-code="a_aid" data-autocomplete="on" data-style-submit-bg-color="#ff5a36" data-style-submit-font-color="#ffffff" data-style-form-bg-color="#0a7ea4" data-style-form-font-color="#000000" data-style-submit-text="Search cars" data-style-title-color="#ffffff" data-title-text="Compare Hawaii car rentals — save up to 70%" async="async" data-style_rounded_corners="on" data-layout_benefits="on" data-layout_description="on" data-layout_description_text="We compare the best deals from top car-rental suppliers across Hawaii." data-layout_logo_style="on dark" data-layout_powered_by="on" data-layout_style_form_bg_color="#0a7ea4" data-layout_title="on"></script></div>`;
 
+// Popular rental-car suppliers we compare (via DiscoverCars). Rendered as styled
+// wordmarks (no hotlinked logos) so they're sharp, responsive and never break.
+const CAR_BRANDS = [
+  { name: "Budget", mark: "Budget", bg: "#ffffff", color: "#0a3d91", weight: 800 },
+  { name: "Alamo", mark: "Alamo", bg: "#002878", color: "#ffd200", weight: 800 },
+  { name: "Enterprise", mark: "Enterprise", bg: "#ffffff", color: "#00843d", weight: 800 },
+  { name: "Avis", mark: "AVIS", bg: "#ffffff", color: "#d4002a", weight: 800, ls: "1px" },
+  { name: "Sixt", mark: "SIXT", bg: "#ff5f00", color: "#111111", weight: 900, ls: "1px" },
+  { name: "Dollar", mark: "dollar", bg: "#ffffff", color: "#d4002a", weight: 800 },
+  { name: "Hertz", mark: "Hertz", bg: "#ffffff", color: "#111111", weight: 800, italic: true, underline: "#ffd600" },
+  { name: "Thrifty", mark: "Thrifty", bg: "#00539f", color: "#ffffff", weight: 800, italic: true },
+  { name: "Fox", mark: "fox", bg: "#ffffff", color: "#1b2a6b", weight: 900, italic: true },
+];
+function carLogo(b) {
+  const style = `background:${b.bg};color:${b.color};font-weight:${b.weight || 800};${b.italic ? "font-style:italic;" : ""}${b.ls ? `letter-spacing:${b.ls};` : ""}`;
+  const mark = b.underline ? `<span style="border-bottom:3px solid ${b.underline};padding-bottom:1px">${esc(b.mark)}</span>` : esc(b.mark);
+  return `<div class="carlogo-wrap"><div class="carlogo" style="${style}">${mark}</div><span class="carlogo-name">${esc(b.name)}</span></div>`;
+}
+
 // Expedia stays+flights search widget (affiliate; Expedia is merchant of record).
 const EXPEDIA_SEARCH = `<div class="eg-widget" data-widget="search" data-program="us-expedia" data-lobs="stays" data-network="pz" data-camref="${SITE.expediaCamref}" data-pubref=""></div>
 <script class="eg-widgets-script" src="https://creator.expediagroup.com/products/widgets/assets/eg-widgets.js" async></script>`;
@@ -1110,6 +1129,11 @@ function carsPage() {
 <section class="wrap section">
   <div class="cars-widget">${CARS_WIDGET}</div>
   <p class="muted" style="margin-top:14px;font-size:.84rem">Car-rental search powered by DiscoverCars · prices update live.</p>
+</section>
+<section class="wrap section">
+  <div class="section-head"><div><h2>Popular rental car companies</h2></div></div>
+  <div class="carlogos">${CAR_BRANDS.map(carLogo).join("")}</div>
+  <p class="muted" style="margin-top:16px;font-size:.84rem">We compare live prices across all the major suppliers so you don't have to check each one.</p>
 </section>`;
   return layout({
     title: `Rent a Car in Hawaii — Compare Prices | ${SITE.name}`,
