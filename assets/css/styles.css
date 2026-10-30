@@ -221,6 +221,58 @@ html,body{overflow-x:clip}
 .pkg-perk b{display:block;font-size:1.02rem;margin-bottom:4px}
 .pkg-perk span{color:#6b7785;font-size:.92rem}
 @media(max-width:760px){.pkg-perks{grid-template-columns:1fr}}
+/* tour card: operator rating + partner note + "See prices" */
+.card-op{font-size:.77rem;color:#6b7785;margin:3px 0 0;font-weight:600}
+.card-partner{font-size:.73rem;color:#8a94a0;margin:9px 0 0;border-top:1px solid var(--line);padding-top:8px}
+.price-see{font-weight:700;color:var(--ink);font-size:.92rem}
+/* home: search select, trust strip, promo tiles, how-it-works steps */
+.bhero--home{padding:54px 0 70px}
+.bfield select{border:0;outline:0;font-size:.98rem;width:100%;background:transparent;color:var(--ink);font-weight:600;-webkit-appearance:none;appearance:none;cursor:pointer}
+.homesearch[data-mode="tours"] .hs-date,.homesearch[data-mode="tours"] .hs-guests,.homesearch[data-mode="cars"] .hs-guests{display:none}
+.trust-strip{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;padding:18px 0;margin-top:-26px;position:relative;z-index:2}
+.trust-item{font-weight:700;font-size:.92rem;color:var(--ink)}
+.promo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.promo-tile{display:flex;align-items:center;gap:13px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;
+  background:var(--sand);text-decoration:none;color:var(--ink);transition:transform .12s,border-color .12s}
+.promo-tile:hover{transform:translateY(-3px);border-color:var(--ocean)}
+.promo-ic{font-size:1.8rem;flex:0 0 auto}
+.promo-txt b{display:block;font-size:1rem}.promo-txt small{color:#6b7785}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 20px}
+.step-num{position:absolute;top:-12px;left:20px;width:28px;height:28px;border-radius:50%;background:var(--ocean);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem}
+.step-ic{font-size:1.8rem;display:block;margin:6px 0 8px}
+.step h3{margin:0 0 6px;font-size:1.08rem}
+.step p{margin:0;color:#6b7785;font-size:.93rem;line-height:1.5}
+@media(max-width:860px){.promo-grid{grid-template-columns:1fr 1fr}.steps-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.promo-grid{grid-template-columns:1fr}.trust-strip{gap:8px 18px;margin-top:-10px}.trust-item{font-size:.84rem}}
+/* where-to-stay area comparison cards */
+.area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.area-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.area-card h3{margin:0 0 5px;font-size:1.15rem}
+.area-best{margin:0 0 8px;color:var(--ocean);font-weight:700;font-size:.9rem}
+.area-blurb{margin:0 0 12px;color:#4a5560;font-size:.92rem;line-height:1.5}
+.area-links a{font-weight:700;color:var(--coral);text-decoration:none;font-size:.9rem;margin-right:12px}
+.stay-note{font-size:.86rem;margin:16px 0 0}
+.ct-sub{margin:6px 0 16px;font-size:1.1rem}
+/* content / legal / FAQ / about pages */
+.prose{max-width:760px;font-size:1rem;line-height:1.7;color:#2a333c}
+.prose h2{margin:28px 0 10px;font-size:1.3rem}
+.prose p{margin:0 0 14px}
+.prose ul{margin:0 0 14px;padding-left:22px}
+.prose li{margin:0 0 6px}
+.prose a{color:var(--ocean);font-weight:600}
+.faq-item{border:1px solid var(--line);border-radius:12px;padding:2px 16px;margin-bottom:10px;background:#fff}
+.faq-item summary{cursor:pointer;font-weight:700;padding:13px 0;font-size:1.02rem;list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::before{content:"+ ";color:var(--coral);font-weight:800}
+.faq-item[open] summary::before{content:"– "}
+.faq-item p{margin:0 0 14px;color:#4a5560}
+.founder{display:flex;gap:24px;align-items:flex-start;margin-bottom:10px}
+.founder-photo{flex:0 0 180px;height:220px;border-radius:14px;background:var(--sand);border:2px dashed var(--line);
+  display:flex;align-items:center;justify-content:center;color:#8a94a0;font-weight:600;text-align:center;font-size:.9rem;padding:10px}
+.founder-txt{flex:1}
+@media(max-width:600px){.founder{flex-direction:column}.founder-photo{width:100%;flex-basis:auto}}
 
 /* Expedia search widget */
 .eg-wrap{min-height:90px}
@@ -325,7 +377,11 @@ html,body{overflow-x:clip}
 /* footer */
 .footer{background:var(--ink);color:#cfdbe1;margin-top:40px;padding:44px 0 26px}
 .footer a{color:#cfdbe1}.footer a:hover{color:#fff}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:30px}
+.footer-grid h4{margin:0 0 8px;font-size:.95rem}
+.footer-grid a{color:var(--ink);font-weight:600;line-height:1.9}
+.footer-grid a:hover{color:var(--ocean)}
+.footer-legal p{margin:0 0 8px}
 .footer h4{color:#fff;font-size:.95rem;margin-bottom:10px}
 .brand--footer{color:#fff;margin-bottom:8px}
 .footer-legal{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:18px;font-size:.84rem}

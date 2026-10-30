@@ -1,0 +1,25 @@
+{
+  "comment": "Where-to-stay area comparisons per island. stays = link to our curated/area stays page; otherwise falls back to the island stays page in build.js.",
+  "oahu": [
+    { "area": "Waikiki", "bestFor": "First-timers, nightlife & walkability", "blurb": "The classic Honolulu base — beach out front, hundreds of restaurants and shops, and most tours pick up here. Busy and central.", "stays": "/stays/waikiki/" },
+    { "area": "Ko Olina", "bestFor": "Families & resort relaxation", "blurb": "Calm, man-made swimming lagoons on the sunny leeward side. Four Seasons, Aulani and Marriott — great for families, quieter and a drive from Honolulu.", "stays": "/stays/ko-olina/" },
+    { "area": "North Shore", "bestFor": "Surf, nature & a slow pace", "blurb": "Legendary winter waves, food trucks and turtle beaches. Laid-back and rural — best if you want to escape the city and have a car.", "stays": "/stays/north-shore/" },
+    { "area": "Kailua", "bestFor": "Best beaches & a local feel", "blurb": "Powder-sand Kailua and Lanikai beaches on the windward side. Mostly vacation rentals, quiet and residential — a car is essential." }
+  ],
+  "maui": [
+    { "area": "Wailea", "bestFor": "Luxury & honeymooners", "blurb": "Upscale resorts, golden beaches and calm water on the sunny south shore. Polished, pricey and relaxed." },
+    { "area": "Kaanapali", "bestFor": "Resort families & activities", "blurb": "A long resort beach with the Whalers Village shops and easy snorkeling at Black Rock. Lively and convenient." },
+    { "area": "Lahaina / Kapalua", "bestFor": "History & quieter luxury", "blurb": "Historic harbor town (rebuilding) and the greener, more secluded resorts of Kapalua to the north." },
+    { "area": "Kihei", "bestFor": "Value & condos", "blurb": "Condos and casual eats along the south shore — the most budget-friendly Maui base, with sunny beaches and sunsets." }
+  ],
+  "kauai": [
+    { "area": "Poipu", "bestFor": "Sunny beaches & families", "blurb": "The south shore's reliably sunny resort area — great beaches, snorkeling and spinner dolphins. The easy all-rounder." },
+    { "area": "Princeville / Hanalei", "bestFor": "Dramatic scenery & romance", "blurb": "Lush north shore with jaw-dropping cliffs, waterfalls and Hanalei Bay. Stunning, rainier, and the gateway to the Nāpali Coast." },
+    { "area": "Kapaa / Lihue", "bestFor": "Central & value", "blurb": "The east 'Coconut Coast' — central to the whole island, more affordable, with easy access to the airport and both shores." }
+  ],
+  "big-island": [
+    { "area": "Kailua-Kona", "bestFor": "Sunshine, snorkeling & value", "blurb": "The sunny west-coast hub — walkable town, manta ray night dives and calm swimming. Central for most Kona-side tours." },
+    { "area": "Kohala Coast", "bestFor": "Luxury resorts & beaches", "blurb": "The island's top resorts (Waikoloa, Mauna Kea, Mauna Lani) on black-lava coastline with the best white-sand beaches." },
+    { "area": "Hilo / Volcano", "bestFor": "Rainforest & the volcano", "blurb": "The lush, rainy east side — waterfalls, gardens and the closest base to Hawai'i Volcanoes National Park. Fewer resorts, more local." }
+  ]
+}

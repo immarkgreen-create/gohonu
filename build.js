@@ -72,7 +72,7 @@ function booking(tour) {
   return {
     url: `mailto:${SITE.email}?subject=Booking%20enquiry:%20${encodeURIComponent(tour.name)}`,
     label: "Request to Book",
-    note: "We'll confirm availability within 24 hours",
+    note: "The operator confirms availability directly",
   };
 }
 
@@ -295,6 +295,8 @@ ${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ""}
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:type" content="website">
+${SITE.ga4Id ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${SITE.ga4Id}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${SITE.ga4Id}');</script>` : ""}
 <link rel="stylesheet" href="/assets/css/styles.css?v=${CSS_VER}">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/manifest.webmanifest">
@@ -316,6 +318,40 @@ ${body}
 ${footer()}
 ${tabBar()}
 <script src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
+<script>
+/* Outbound "book" click tracking — fires a GA4 'outbound_book' event (no-op if GA not set),
+   recording partner, product, item, island and the page it was clicked from. */
+(function(){
+  function ev(name,p){try{if(window.gtag)gtag('event',name,p);}catch(e){}}
+  function host(a){try{return a.hostname||'';}catch(e){return'';}}
+  function partnerFor(h){h=h||'';
+    if(h.indexOf('stay22')>-1)return'Stay22';if(h.indexOf('expedia')>-1)return'Expedia';
+    if(h.indexOf('viator')>-1)return'Viator';if(h.indexOf('aviasales')>-1)return'Aviasales';
+    if(h.indexOf('discovercars')>-1)return'DiscoverCars';if(h.indexOf('fareharbor')>-1)return'FareHarbor operator';
+    if(h.indexOf('booking.com')>-1)return'Booking.com';if(h.indexOf('hotels.com')>-1)return'Hotels.com';return h;}
+  function kindFor(h){h=h||'';
+    if(h.indexOf('fareharbor')>-1||h.indexOf('viator')>-1)return'tour';
+    if(h.indexOf('stay22')>-1||h.indexOf('expedia')>-1||h.indexOf('booking')>-1||h.indexOf('hotels.com')>-1)return'stay';
+    if(h.indexOf('aviasales')>-1)return'flight';if(h.indexOf('discovercars')>-1)return'car';return'other';}
+  function titleNear(a){var c=a.closest&&a.closest('.hotel-card,.card,.dest-card,.book-card,.tour-book,.promo-tile');
+    if(!c)return'';var h=c.querySelector('.card-title,h1,h3,.dest-name,.promo-txt b');return h?h.textContent.trim().slice(0,100):'';}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;
+    var out=false,h=host(a);try{out=h&&h!==location.hostname;}catch(_){}
+    if(!out&&!a.hasAttribute('data-book'))return;
+    ev('outbound_book',{
+      partner:a.getAttribute('data-partner')||partnerFor(h),
+      product:a.getAttribute('data-kind')||kindFor(h),
+      item:a.getAttribute('data-item')||titleNear(a),
+      island:a.getAttribute('data-island')||'',
+      page_path:location.pathname,
+      link_domain:h,
+      transport_type:'beacon'
+    });
+  },true);
+  window.__ghTrack=ev;
+})();
+</script>
 <script>if('serviceWorker'in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
 </body>
 </html>`;
@@ -362,21 +398,25 @@ function footer() {
     <div>
       <div class="brand brand--footer"><img class="brand-logo" src="/assets/img/logo.png?v=${ICON_VER}" alt="" width="34" height="34"> Go<em>Honu</em></div>
       <p class="muted">${esc(SITE.tagline)}</p>
+      <p class="muted" style="font-size:.82rem">Hand-picked Hawaii — booked with trusted partners.</p>
     </div>
     <div>
-      <h4>Contact</h4>
+      <h4>GoHonu</h4>
+      <p><a href="/about/">About</a><br><a href="/how-it-works/">How booking works</a><br><a href="/faq/">FAQ</a><br><a href="/contact/">Contact</a></p>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <p><a href="/disclosure/">Affiliate disclosure</a><br><a href="/terms/">Terms of Use</a><br><a href="/privacy/">Privacy Policy</a></p>
+    </div>
+    <div>
+      <h4>Connect</h4>
       <p><a href="mailto:${SITE.email}">${esc(SITE.email)}</a></p>
-    </div>
-    <div>
-      <h4>Follow</h4>
-      <p><a href="${esc(SITE.facebook)}" target="_blank" rel="noopener">Facebook</a><br>
-      <a href="${esc(SITE.instagram)}" target="_blank" rel="noopener">Instagram</a></p>
+      <p><a href="${esc(SITE.facebook)}" target="_blank" rel="noopener">Facebook</a> · <a href="${esc(SITE.instagram)}" target="_blank" rel="noopener">Instagram</a></p>
     </div>
   </div>
   <div class="wrap footer-legal muted">
-    © ${SITE.name}. Bookings powered by FareHarbor, Viator & partner operators.${
-      HAS_RATINGS ? " Visitor ratings by Google." : ""
-    }
+    <p>GoHonu is an independent recommendations site — <b>not the seller or operator of any booking</b>. Bookings, payment and support are handled by our partners (FareHarbor operators, Viator, hotel &amp; car partners). GoHonu may earn a commission when you book through our links, at no extra cost to you. <a href="/disclosure/">Disclosure</a>.</p>
+    <p>© ${SITE.name}. Experiences via FareHarbor, Viator &amp; partners.${HAS_RATINGS ? " Ratings by Google." : ""}</p>
   </div>
 </footer>`;
 }
@@ -409,8 +449,19 @@ function grid(tours) {
 }
 
 // Live FareHarbor catalog card — click opens the booking Lightframe (live price).
+// Visitor-friendly availability label from the FareHarbor slot count (no raw numbers).
+function availLabel(n) {
+  if (!n) return "";
+  if (n >= 25) return "Daily departures";
+  if (n >= 8) return "Available most days";
+  return "Select dates available";
+}
 function fhCard(t) {
-  const avail = t.availNext30 > 0 ? `<span class="card-flag">${t.availNext30} time slots · next 30 days</span>` : "";
+  const avail = t.availNext30 > 0 ? `<span class="card-flag">${availLabel(t.availNext30)}</span>` : "";
+  const opRating = t.rating
+    ? `<div class="card-meta"><span class="rating">${GOOGLE_G}${stars(t.rating)} <b>${Number(t.rating).toFixed(1)}</b></span></div>
+       <p class="card-op">Operator rating${t.reviews ? ` · ${Number(t.reviews).toLocaleString()} Google reviews` : ""}</p>`
+    : "";
   return `<a class="card" href="/tours/${t.slug}/" data-cat="${esc(t.category)}" data-tier="${t._tier}">
   <div class="card-img island-${slugifyIsland(t.island)}">${photo(t.image, t.name)}
     <span class="card-island">${esc(t.island)}</span>${avail}
@@ -418,14 +469,9 @@ function fhCard(t) {
   <div class="card-body">
     <span class="card-eyebrow">${esc(t.category)}</span>
     <h3 class="card-title">${esc(t.name)}</h3>
-    <div class="card-meta">${
-      t.rating
-        ? `<span class="rating">${GOOGLE_G}${stars(t.rating)} <b>${Number(t.rating).toFixed(1)}</b></span>${
-            t.reviews ? ` <span class="muted">(${Number(t.reviews).toLocaleString()})</span>` : ""
-          } <span class="muted">· ${esc(t.company)}</span>`
-        : `<span class="muted">${esc(t.company)}</span>`
-    }</div>
-    <div class="card-foot">${tierBadge(t._tier)}<span class="card-cta">Book now →</span></div>
+    ${opRating}
+    <div class="card-foot"><span class="price-see">See prices</span><span class="card-cta">Book now →</span></div>
+    <p class="card-partner">Booked &amp; supported by ${esc(t.company)}</p>
   </div>
 </a>`;
 }
@@ -437,7 +483,7 @@ const gridFor = (tours) => (USE_FH ? fhGrid(tours) : grid(tours));
 function fhTourPage(t) {
   const calScript = (t.calendarUrl || "").replace("/embeds/calendar/", "/embeds/script/calendar/");
   const ratingLine = t.rating
-    ? `<span class="rating">${GOOGLE_G}${stars(t.rating)} <b>${Number(t.rating).toFixed(1)}</b></span>${t.reviews ? ` <span class="muted">(${Number(t.reviews).toLocaleString()} Google reviews)</span>` : ""}`
+    ? `<span class="rating">${GOOGLE_G}${stars(t.rating)} <b>${Number(t.rating).toFixed(1)}</b></span> <span class="muted">operator rating${t.reviews ? ` · ${Number(t.reviews).toLocaleString()} Google reviews` : ""}</span>`
     : "";
   const ld = {
     "@context": "https://schema.org",
@@ -458,24 +504,25 @@ function fhTourPage(t) {
 </section>
 <section class="wrap tour-grid">
   <div class="tour-main">
-    <p class="lead">Operated by <b>${esc(t.company)}</b>. Pick a date below to see live prices & availability — all without leaving GoHonu.</p>
+    <p class="lead">Operated by <b>${esc(t.company)}</b>. See live prices &amp; availability below, then book securely with them — ${esc(t.company)} handles payment, confirmation &amp; support.</p>
     <h2>Check dates & prices</h2>
     <div class="fh-cal">${calScript ? `<script src="${esc(calScript)}"></script>` : ""}</div>
   </div>
   <aside class="tour-book">
     <div class="book-card">
       ${ratingLine ? `<div class="book-rating">${ratingLine}</div>` : ""}
-      <a class="btn btn--book" href="${esc(t.bookingUrl)}">Book now</a>
-      <p class="book-note">Secure booking · instant e-ticket</p>
+      <a class="btn btn--book" href="${esc(t.bookingUrl)}" target="_blank" rel="noopener sponsored" data-book data-partner="${esc(t.company)}" data-kind="tour" data-item="${esc(t.name)}" data-island="${esc(t.island)}">See prices & book</a>
+      <p class="book-note">Booked &amp; supported by <b>${esc(t.company)}</b> via FareHarbor</p>
       <ul class="book-perks">
-        ${t.freeCancellation ? "<li>✓ Free cancellation</li>" : ""}
-        <li>✓ Reserve now, pay later</li>
-        <li>✓ Live prices from the operator</li>
+        ${t.freeCancellation ? "<li>✓ Free cancellation (per operator policy)</li>" : ""}
+        <li>✓ Live prices shown by the operator</li>
+        <li>✓ ${esc(t.company)} handles payment, confirmation &amp; any changes</li>
       </ul>
       <a class="book-back" href="/islands/${slugifyIsland(t.island)}/">← More ${esc(t.island)} tours</a>
     </div>
   </aside>
-</section>`;
+</section>
+${completeTrip(t.island, { excludeSlug: t.slug, showStays: true, n: 4 })}`;
   return layout({
     title: `${t.name} — ${t.island} | ${SITE.name}`,
     description: `Book ${t.name} with ${t.company} in ${t.island}. Live prices, free cancellation on most, instant confirmation.`,
@@ -526,40 +573,94 @@ function filterScript() {
 }
 
 /* ---------- pages ---------- */
+// Booking-style home search: Island + dates + guests, with Stays / Tours / Cars tabs.
+function homeSearch() {
+  const opts = islands.map((i) => `<option value="${esc(i)}">${esc(i)}</option>`).join("");
+  const tabs = [["stays", "🏨", "Stays"], ["tours", "🎟️", "Tours"], ["cars", "🚗", "Cars"]];
+  const slugMap = JSON.stringify(Object.fromEntries(islands.map((i) => [i, slugifyIsland(i)])));
+  return `<div class="homesearch" data-mode="stays">
+  <div class="pstrip homesearch-tabs">${tabs.map(([k, ic, l], i) => `<button type="button" class="pchip hs-tab${i === 0 ? " active" : ""}" data-tab="${k}"><span>${ic}</span> ${l}</button>`).join("")}</div>
+  <form class="bsearch" id="homesearch">
+    <div class="bfield bfield--dest"><label>Island</label><div class="bwrap"><span class="bic">🏝️</span><select name="island">${opts}</select></div></div>
+    <div class="bfield hs-date"><label>Check-in</label><div class="bwrap"><span class="bic">📅</span><input name="chkin" type="date"></div></div>
+    <div class="bfield hs-date"><label>Check-out</label><div class="bwrap"><span class="bic">📅</span><input name="chkout" type="date"></div></div>
+    <div class="bfield bfield--sm hs-guests"><label>Guests</label><div class="bwrap"><span class="bic">👤</span><input name="guests" type="number" min="1" max="16" value="2"></div></div>
+    <button class="bsearch-go" type="submit">Search</button>
+  </form>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('homesearch');if(!f)return;
+  var tabs=document.querySelector('.homesearch-tabs');var box=document.querySelector('.homesearch');var tab='stays';
+  var slug=${slugMap};
+  try{var t=new Date().toISOString().slice(0,10);f.chkin.min=t;f.chkout.min=t;}catch(e){}
+  tabs.addEventListener('click',function(e){var b=e.target.closest('.hs-tab');if(!b)return;tabs.querySelectorAll('.hs-tab').forEach(function(x){x.classList.remove('active')});b.classList.add('active');tab=b.getAttribute('data-tab');box.setAttribute('data-mode',tab);});
+  f.addEventListener('submit',function(e){e.preventDefault();var s=slug[f.island.value]||'${slugifyIsland(PRIMARY)}';
+    if(tab==='tours'){location.href='/islands/'+s+'/';return;}
+    if(tab==='cars'){location.href='/cars/';return;}
+    var q=[];if(f.chkin.value)q.push('chkin='+f.chkin.value);if(f.chkout.value)q.push('chkout='+f.chkout.value);if(f.guests.value)q.push('guests='+f.guests.value);
+    location.href='/stays/'+s+'/'+(q.length?'?'+q.join('&'):'');
+  });
+})();
+</script>`;
+}
+const TRUST = ["🌺 Hand-picked by Hawaii locals", "✅ Free cancellation on most tours", "🔒 Book securely with trusted partners"];
+const trustStrip = () => `<div class="trust-strip">${TRUST.map((t) => `<span class="trust-item">${t}</span>`).join("")}</div>`;
+function promoTiles() {
+  const promos = [
+    { icon: "🧳", title: "Flight + Hotel deals", sub: "Bundle & save", href: "/packages/" },
+    { icon: "🏨", title: "Where to stay", sub: "Best areas on every island", href: "/stays/" },
+    { icon: "🎟️", title: "Top-rated tours", sub: "Snorkel, luau, volcano & more", href: "/attractions/" },
+    { icon: "🚗", title: "Rent a car", sub: "Compare all suppliers", href: "/cars/" },
+  ];
+  return `<div class="promo-grid">${promos
+    .map((p) => `<a class="promo-tile" href="${p.href}"><span class="promo-ic">${p.icon}</span><span class="promo-txt"><b>${esc(p.title)}</b><small>${esc(p.sub)}</small></span></a>`)
+    .join("")}</div>`;
+}
+function howBookingWorks() {
+  const steps = [
+    ["🔍", "Browse & compare", "Hand-picked Hawaii tours, stays, flights & cars — all in one place, with real traveler ratings."],
+    ["👉", "Book with the partner", "Tap “Book” and you’re handed to our trusted partner (a FareHarbor operator, Viator, or a hotel/car supplier) to pay securely."],
+    ["🌈", "They look after you", "Your confirmation, payment and any changes or support are handled by that partner — never by GoHonu."],
+  ];
+  return `<div class="steps-grid">${steps
+    .map(([ic, t, d], i) => `<div class="step"><span class="step-num">${i + 1}</span><span class="step-ic">${ic}</span><h3>${esc(t)}</h3><p>${esc(d)}</p></div>`)
+    .join("")}</div>`;
+}
 function homePage() {
-  const oahuTours = CATALOG.filter((t) => t.island === PRIMARY).slice(0, FEATURED_PER_ISLAND);
-  const restTours = CATALOG.filter((t) => t.island !== PRIMARY).slice(0, 8);
+  const perIsland = islands
+    .map((i) => ({ island: i, tours: CATALOG.filter((t) => t.island === i).slice(0, 8) }))
+    .filter((g) => g.tours.length);
   const body = `
-<section class="hero hero--photo" style="background:linear-gradient(120deg,rgba(6,43,56,.74),rgba(10,126,164,.5)),url('/assets/img/hero-napali.jpg');background-size:cover;background-position:center">
+<section class="bhero bhero--home" style="background:linear-gradient(120deg,rgba(6,43,56,.78),rgba(10,126,164,.55)),url('/assets/img/hero-napali.jpg');background-size:cover;background-position:center">
   <div class="wrap">
-    <span class="hero-badge">🌴 Local ${esc(PRIMARY)} experts</span>
-    <h1>The best of ${esc(PRIMARY)}, booked in seconds</h1>
-    <p class="hero-sub">We live here — these are the ${esc(PRIMARY)} tours we'd send our own friends on. Free cancellation on most, reserve now & pay later.</p>
-    <div class="hero-islands">
-      <a href="/islands/${slugifyIsland(PRIMARY)}/" class="pill pill--solid">Explore ${esc(PRIMARY)} →</a>
-      ${otherIslands.map((i) => `<a href="/islands/${slugifyIsland(i)}/" class="pill">${esc(i)}</a>`).join("")}
-    </div>
+    <h1 class="bhero-h1">Your whole Hawaii trip, in one place</h1>
+    <p class="bhero-sub">Hand-picked tours, hotels, flights &amp; cars across the islands — booked with trusted local partners.</p>
+    <div class="bsearch-wrap">${homeSearch()}</div>
   </div>
 </section>
+<div class="wrap">${trustStrip()}</div>
 <section class="wrap section">
-  <div class="section-head">
-    <div><span class="kicker">Our backyard</span><h2>Featured on ${esc(PRIMARY)}</h2></div>
-    <a class="seeall" href="/islands/${slugifyIsland(PRIMARY)}/">See all ${esc(PRIMARY)} tours →</a>
-  </div>
-  ${gridFor(oahuTours)}
+  <div class="section-head"><div><span class="kicker">Plan your trip</span><h2>Everything for your Hawaii getaway</h2></div></div>
+  ${promoTiles()}
 </section>
-<section class="band">
-  <div class="wrap section">
-    <div class="section-head">
-      <div><span class="kicker">Island-hopping?</span><h2>Also booking across Hawaii</h2>
-      <p class="muted">Maui, Kauai & the Big Island — booked through the same trusted operators.</p></div>
-    </div>
-    ${gridFor(restTours)}
-  </div>
-</section>`;
+${perIsland
+    .map(
+      (g) => `<section class="wrap section">
+  <div class="section-head"><div><span class="kicker">${g.island === PRIMARY ? "Our backyard" : "Across Hawaii"}</span><h2>Top-rated tours on ${esc(g.island)}</h2></div>
+    <a class="seeall" href="/islands/${slugifyIsland(g.island)}/">See all ${esc(g.island)} tours →</a></div>
+  ${gridFor(g.tours)}
+</section>`
+    )
+    .join("")}
+<section class="band"><div class="wrap section">
+  <div class="section-head"><div><span class="kicker">Simple &amp; transparent</span><h2>How booking works</h2></div></div>
+  ${howBookingWorks()}
+  <p class="muted" style="margin-top:14px">GoHonu is a Hawaii-based recommendations site — we don't process payments or bookings. <a href="/how-it-works/">Learn how it works →</a></p>
+</div></section>`;
   return layout({
-    title: `${PRIMARY} Tours & Activities — ${SITE.name}`,
-    description: `Local ${PRIMARY} experts. ${SITE.tagline} Hand-picked ${PRIMARY} tours with free cancellation on most.`,
+    title: `Hawaii Tours, Hotels, Flights & Cars — ${SITE.name}`,
+    description: `Plan your whole Hawaii trip with GoHonu — hand-picked tours, hotels, flights and cars across Oahu, Maui, Kauai and the Big Island, booked with trusted local partners.`,
     canonical: SITE.domain + "/",
     body,
   });
@@ -653,7 +754,7 @@ function extCard(tour) {
   const flag = tour.sample
     ? `<span class="card-flag card-flag--sample">Sample</span>`
     : tour.freeCancellation ? `<span class="card-flag">Free cancellation</span>` : "";
-  return `<a class="card" href="${esc(tour.bookingUrl)}" target="_blank" rel="noopener sponsored">
+  return `<a class="card" href="${esc(tour.bookingUrl)}" target="_blank" rel="noopener sponsored" data-kind="tour" data-item="${esc(tour.name)}" data-island="${esc(tour.destination)}">
   <div class="card-img ext">${photo(tour.image, tour.name)}<span class="card-island">${esc(tour.destination)}</span>${flag}</div>
   <div class="card-body">
     <span class="card-eyebrow">${esc(tour.category)}</span>
@@ -807,6 +908,7 @@ function flightSearchForm() {
     if(o.length!==3||d.length!==3||!dep){alert('Please enter a valid origin, destination and departure date.');return;}
     if(round()&&!ret){alert('Please choose a return date (or switch to One way).');return;}
     var url='https://www.aviasales.com/search/'+o+dep+d+ret+pax+'?marker=${SITE.tpMarker}';
+    if(window.__ghTrack)window.__ghTrack('outbound_book',{partner:'Aviasales',product:'flight',page_path:location.pathname,link_domain:'aviasales.com',destination:url});
     window.open(url,'_blank','noopener');
   });
 })();
@@ -1008,13 +1110,16 @@ ${searchHero("stays", {
     crumbs: `<nav class="crumbs crumbs--light"><a href="/">Home</a> / <a href="/stays/">Stays</a> / <span>${esc(p.name)}</span></nav>`,
   })}
 ${todo ? `<section class="wrap" style="margin-top:18px">${todo}</section>` : ""}
+${p.kind === "island" ? areaGuide(p.slug, p.name) : ""}
 ${curated}${discovered}
+${isOahu || discoveredList.length ? `<div class="wrap">${resortNote}</div>` : ""}
 <section class="band"><div class="wrap section">
   <div class="section-head"><div><span class="kicker">${isOahu || discoveredList.length ? "Browse on the map" : "Hotels in " + esc(p.name)}</span><h2>${isOahu || discoveredList.length ? "More " + esc(p.name) + " stays" : "Where to stay in " + esc(p.name)}</h2></div>
     <a class="seeall" id="exp-all" href="${esc(expSearch)}" target="_blank" rel="noopener sponsored">See all on Expedia →</a></div>
   <iframe id="s22" class="stay-map" title="Hotels in ${esc(p.name)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-lat="${p.lat}" data-lng="${p.lng}" data-venue="${esc(p.name)}"></iframe>
   <p class="muted" style="margin-top:12px;font-size:.84rem">Map search powered by Stay22 · hotel search &amp; booking via Expedia. Prices update live.</p>
 </div></section>
+${p.kind === "island" ? completeTrip(p.name, { n: 4 }) : ""}
 <script>
 (function(){
   var qp=new URLSearchParams(location.search);
@@ -1088,6 +1193,49 @@ const DEST_HOTELS = (() => {
     return {};
   }
 })();
+// Per-island "where to stay" area comparisons (data/island-areas.json).
+const ISLAND_AREAS = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "island-areas.json"), "utf8"));
+  } catch {
+    return {};
+  }
+})();
+function areaGuide(islandSlug, islandName) {
+  const areas = ISLAND_AREAS[islandSlug];
+  if (!Array.isArray(areas) || !areas.length) return "";
+  return `<section class="wrap section">
+  <div class="section-head"><div><span class="kicker">Where to stay</span><h2>Best areas on ${esc(islandName)} — and who they suit</h2></div></div>
+  <div class="area-grid">${areas
+    .map(
+      (a) => `<div class="area-card">
+    <h3>${esc(a.area)}</h3>
+    <p class="area-best">👍 ${esc(a.bestFor)}</p>
+    <p class="area-blurb">${esc(a.blurb)}</p>
+    <div class="area-links"><a href="${esc(a.stays || "/stays/" + islandSlug + "/")}">See stays →</a> <a href="/islands/${islandSlug}/">Things to do →</a></div>
+  </div>`
+    )
+    .join("")}</div>
+</section>`;
+}
+// Partner-data honesty note (we don't hold resort-fee / parking data).
+const resortNote = `<p class="muted stay-note">💡 Resort fees and parking vary by property — check them on the partner's page before booking.</p>`;
+// Cross-sell: "Complete your trip" — tours on the same island + stay/car tiles.
+function completeTrip(island, opts = {}) {
+  if (!island) return "";
+  const slug = slugifyIsland(island);
+  const tours = CATALOG.filter((t) => t.island === island && t.slug !== opts.excludeSlug).slice(0, opts.n || 4);
+  const tiles = [];
+  if (opts.showStays) tiles.push(`<a class="promo-tile" href="/stays/${slug}/"><span class="promo-ic">🏨</span><span class="promo-txt"><b>Where to stay on ${esc(island)}</b><small>Hotels &amp; resorts</small></span></a>`);
+  tiles.push(`<a class="promo-tile" href="/cars/"><span class="promo-ic">🚗</span><span class="promo-txt"><b>Rent a car</b><small>Compare ${esc(island)} suppliers</small></span></a>`);
+  tiles.push(`<a class="promo-tile" href="/packages/"><span class="promo-ic">🧳</span><span class="promo-txt"><b>Flight + Hotel</b><small>Bundle &amp; save</small></span></a>`);
+  if (!tours.length && !opts.showStays) return "";
+  return `<section class="band"><div class="wrap section">
+  <div class="section-head"><div><span class="kicker">Complete your trip</span><h2>Make the most of ${esc(island)}</h2></div></div>
+  <div class="promo-grid" style="margin-bottom:24px">${tiles.join("")}</div>
+  ${tours.length ? `<h3 class="ct-sub">Top-rated ${esc(island)} tours &amp; activities</h3>${gridFor(tours)}<p class="muted" style="margin-top:12px;font-size:.84rem">Availability for your dates is shown on each operator's booking page.</p>` : ""}
+</div></section>`;
+}
 // Pretty labels for each guide area (key in hotels.json -> display name).
 const AREA_LABELS = { waikiki: "Waikiki", "north-shore": "North Shore", "ko-olina": "Ko Olina" };
 const hotelAreas = Object.keys(HOTELS).map((k) => ({
@@ -1144,7 +1292,7 @@ function hotelCard(h) {
     ${blurb}
     <div class="card-foot">
       ${priceEl}
-      <a class="btn btn--book hotel-btn" href="${esc(hotelLink(h))}" target="_blank" rel="noopener sponsored">Check price →</a>
+      <a class="btn btn--book hotel-btn" href="${esc(hotelLink(h))}" target="_blank" rel="noopener sponsored" data-kind="stay" data-item="${esc(h.name)}" data-island="${esc(h.area || "")}">Check price →</a>
     </div>
   </div>
 </div>`;
@@ -1231,6 +1379,151 @@ ${searchHero("transfers", {
   });
 }
 
+/* ---------- Trust & transparency pages ---------- */
+function infoPage(slug, title, lead, bodyHtml, desc, badge) {
+  return layout({
+    title: `${title} — ${SITE.name}`,
+    description: desc || title,
+    canonical: `${SITE.domain}/${slug}/`,
+    body: `<section class="hero hero--sm"><div class="wrap">
+  <nav class="crumbs crumbs--light"><a href="/">Home</a> / <span>${esc(title)}</span></nav>
+  ${badge ? `<span class="hero-badge">${badge}</span>` : ""}
+  <h1>${esc(title)}</h1>
+  ${lead ? `<p class="hero-sub">${esc(lead)}</p>` : ""}
+</div></section>
+<section class="wrap section"><div class="prose">${bodyHtml}</div></section>`,
+  });
+}
+function howItWorksPage() {
+  return infoPage(
+    "how-it-works",
+    "How booking works",
+    "GoHonu helps you find the best of Hawaii. You book directly with our trusted partners — they handle everything from there.",
+    `${howBookingWorks()}
+<h2>Who you actually book with</h2>
+<p>GoHonu is a Hawaii-based recommendations and comparison site. We don't run tours, own hotels, or process any payments. When you tap <b>Book</b> or <b>See prices</b>, you're taken to one of our trusted partners to complete your booking:</p>
+<ul>
+  <li><b>Tours &amp; activities</b> — the local operator, via FareHarbor</li>
+  <li><b>Hotels &amp; resorts</b> — Expedia, Booking.com, Hotels.com and other partners (via Stay22)</li>
+  <li><b>Flights</b> — Aviasales and the airlines/agencies it compares</li>
+  <li><b>Car rentals</b> — DiscoverCars and its suppliers</li>
+  <li><b>Worldwide tours &amp; airport transfers</b> — Viator</li>
+</ul>
+<h2>Payment, confirmation &amp; support</h2>
+<p>Your payment, booking confirmation, and any changes, cancellations, refunds or customer support are handled entirely by the partner shown on your confirmation — never by GoHonu. The partner is the seller and operator of your booking. If you need help with a booking, contact the partner on your confirmation email.</p>
+<h2>Why book through GoHonu?</h2>
+<p>We're locals who hand-pick experiences worth your time, show real traveler ratings, and bring everything — tours, stays, flights and cars — into one place so you don't have to hunt across a dozen sites. It costs you nothing extra: see our <a href="/disclosure/">affiliate disclosure</a>.</p>`,
+    "How booking works on GoHonu — you book directly with our trusted partners, who handle payment, confirmation and support.",
+    "ℹ️ How it works"
+  );
+}
+function faqPage() {
+  const faqs = [
+    ["Do I book and pay on GoHonu?", "No. GoHonu is a recommendations and comparison site. You book and pay directly with our trusted partner (the tour operator, hotel, airline or car supplier). We don't process payments or hold your booking."],
+    ["Who handles my confirmation, changes or refunds?", "The partner shown on your confirmation. All confirmations, changes, cancellations, refunds and customer support are handled by them, not by GoHonu. Keep your confirmation email — it has their contact details."],
+    ["Is it more expensive to book through GoHonu?", "No — you pay the same price as booking with the partner directly. GoHonu may earn a small commission from the partner at no extra cost to you. See our affiliate disclosure."],
+    ["Are the prices and availability live?", "Yes. Prices and availability are shown on the partner's page at the moment you book, so nothing here goes stale. Tour cards say “See prices” because the live price is on the operator's booking screen."],
+    ["Can I cancel for free?", "Many tours and hotels offer free cancellation, but it depends on the partner's policy for that specific booking. The cancellation terms are shown before you pay on the partner's page."],
+    ["How do I contact a tour operator or hotel?", "Use the contact details on your booking confirmation from that partner. For questions about GoHonu itself or partnerships, email us at " + SITE.email + "."],
+    ["Are these real reviews?", "Ratings shown are the operator's Google rating and review count, clearly labeled as such. They reflect the operator overall, not necessarily that single tour."],
+  ];
+  return infoPage(
+    "faq",
+    "Frequently asked questions",
+    "Short answers to the common questions. The short version: you book directly with our partners, and they look after everything.",
+    `<div class="faq">${faqs
+      .map((f) => `<details class="faq-item"><summary>${esc(f[0])}</summary><p>${esc(f[1])}</p></details>`)
+      .join("")}</div>`,
+    "GoHonu FAQ — how booking, payments, cancellations and support work with our partners.",
+    "❓ FAQ"
+  );
+}
+function aboutPage() {
+  return infoPage(
+    "about",
+    "About GoHonu",
+    "Hand-picked Hawaii, by people who live here.",
+    `<div class="founder">
+  <div class="founder-photo">[ Your photo here ]</div>
+  <div class="founder-txt">
+    <h2>Aloha — I'm [Your name]</h2>
+    <p>[Placeholder — your story goes here.] I'm a Honolulu local, and I built GoHonu to share the Hawaii experiences I'd actually send my own friends and family on. After years of exploring every island, I got tired of tourists overpaying for forgettable tours — so I started hand-picking the operators, stays and activities that are genuinely worth it.</p>
+    <p>GoHonu brings the best of the islands into one place, with honest ratings and no fluff. You book directly with the local operators and trusted partners — I just help you find the good stuff.</p>
+  </div>
+</div>
+<h2>What GoHonu is (and isn't)</h2>
+<p>GoHonu is an independent Hawaii recommendations and comparison site. We're <b>not</b> a travel agency, tour operator or hotel — we don't sell or run any booking. Everything you book is fulfilled by the partner shown on your confirmation. <a href="/how-it-works/">See how booking works →</a></p>`,
+    "About GoHonu — hand-picked Hawaii tours, stays and activities from a Honolulu local.",
+    "🌺 About"
+  );
+}
+function contactPage() {
+  return infoPage(
+    "contact",
+    "Contact us",
+    "For partnerships and general enquiries. For help with a booking, please contact the partner on your confirmation.",
+    `<p><b>Email:</b> <a href="mailto:${SITE.email}">${SITE.email}</a></p>
+<p>Use this address for partnership opportunities, press, feedback or general questions about GoHonu.</p>
+<h2>Need help with a booking?</h2>
+<p>GoHonu doesn't process bookings or payments, so we can't look up or change your reservation. Your booking is handled by the partner shown on your confirmation email (the tour operator, hotel, airline or car supplier). Please contact them directly using the details on that confirmation — they can help with changes, cancellations, refunds and any questions about your booking.</p>
+<p class="muted">We don't offer phone support. Email is the best way to reach the GoHonu team.</p>`,
+    "Contact GoHonu for partnerships and general enquiries. Booking support is handled by the partner on your confirmation.",
+    "✉️ Contact"
+  );
+}
+function disclosurePage() {
+  return infoPage(
+    "disclosure",
+    "Affiliate disclosure",
+    "Transparency matters. Here's how GoHonu makes money.",
+    `<p>GoHonu is an affiliate website. When you book through links on our site, GoHonu may earn a commission from the partner (for example a tour operator via FareHarbor, Viator, a hotel partner via Expedia, Booking.com or Stay22, an airline/agency via Aviasales, or a car supplier via DiscoverCars).</p>
+<p><b>This is always at no extra cost to you</b> — you pay the same price as booking with the partner directly. Commissions help us keep GoHonu running and free to use.</p>
+<p>We hand-pick what we feature based on quality and traveler ratings, not commission. GoHonu is not the seller or operator of any booking — see our <a href="/terms/">Terms</a> and <a href="/how-it-works/">How booking works</a>.</p>`,
+    "GoHonu affiliate disclosure — we may earn a commission when you book through our links, at no extra cost to you.",
+    "🔎 Disclosure"
+  );
+}
+function termsPage() {
+  return infoPage(
+    "terms",
+    "Terms of Use",
+    "The basics of using GoHonu. Please read alongside our Privacy Policy and Affiliate Disclosure.",
+    `<p class="muted">Last updated: October 2026. This is a plain-English summary provided as a starting point and is not legal advice — please have it reviewed before relying on it.</p>
+<h2>1. What GoHonu is</h2>
+<p>GoHonu (gohonu.com) is an independent recommendations and comparison website for Hawaii travel. <b>GoHonu is not the seller, travel agent, tour operator, hotel, airline or car-rental supplier for any booking.</b> We do not process payments or fulfil bookings.</p>
+<h2>2. Bookings are with our partners</h2>
+<p>When you book, you enter into a contract directly with the relevant partner (the operator, hotel, airline, car supplier or booking platform). That partner is solely responsible for the product or service, your payment, confirmation, and any changes, cancellations, refunds, insurance and customer support. Their terms and conditions apply to your booking.</p>
+<h2>3. Information &amp; accuracy</h2>
+<p>We work to keep information accurate, but prices, availability, ratings and details are provided by partners and can change. Always confirm the final price, inclusions and cancellation policy on the partner's page before you pay.</p>
+<h2>4. Affiliate relationships</h2>
+<p>GoHonu may earn a commission when you book through our links, at no extra cost to you. See our <a href="/disclosure/">Affiliate Disclosure</a>.</p>
+<h2>5. Limitation of liability</h2>
+<p>To the fullest extent permitted by law, GoHonu is not liable for the acts, omissions, products or services of any partner, or for any loss arising from your booking or travel. Your booking is a matter between you and the partner.</p>
+<h2>6. Contact</h2>
+<p>Questions about these terms: <a href="mailto:${SITE.email}">${SITE.email}</a>.</p>`,
+    "GoHonu Terms of Use — GoHonu is not the seller or operator of any booking; bookings are made directly with our partners.",
+    "📄 Terms"
+  );
+}
+function privacyPage() {
+  return infoPage(
+    "privacy",
+    "Privacy Policy",
+    "How GoHonu handles your information.",
+    `<p class="muted">Last updated: October 2026. This is a plain-English summary provided as a starting point and is not legal advice — please have it reviewed before relying on it.</p>
+<h2>What we collect</h2>
+<p>GoHonu is a static website. We don't ask you to create an account and we don't collect payment details (you enter those on the partner's site, not ours). We use privacy-friendly analytics to understand which pages and links are popular, in aggregate.</p>
+<h2>Cookies &amp; analytics</h2>
+<p>We use analytics to measure traffic and which outbound links are clicked, so we can improve the site. Our partners may set their own cookies to attribute your booking to GoHonu (how affiliate commissions work) — this doesn't cost you anything and is governed by their privacy policies once you leave our site.</p>
+<h2>When you contact us</h2>
+<p>If you email us, we use your message and email address only to reply and, where relevant, to discuss a partnership. We don't sell your information.</p>
+<h2>Your choices</h2>
+<p>You can block cookies in your browser. When you follow a link to a partner, their privacy policy applies. Questions: <a href="mailto:${SITE.email}">${SITE.email}</a>.</p>`,
+    "GoHonu Privacy Policy — we don't collect payment details; bookings and payments happen on our partners' sites.",
+    "🔒 Privacy"
+  );
+}
+
 function carsPage() {
   const body = `
 <section class="hero hero--sm">
@@ -1302,6 +1595,14 @@ write("attractions/index.html", attractionsLandingPage());
 write("packages/index.html", packagesPage());
 write("transfers/index.html", transfersPage());
 write("cars/index.html", carsPage());
+// Trust & transparency pages
+write("how-it-works/index.html", howItWorksPage());
+write("faq/index.html", faqPage());
+write("about/index.html", aboutPage());
+write("contact/index.html", contactPage());
+write("disclosure/index.html", disclosurePage());
+write("terms/index.html", termsPage());
+write("privacy/index.html", privacyPage());
 
 // 404
 write(
@@ -1336,6 +1637,7 @@ const urls = [
   `${SITE.domain}/packages/`,
   `${SITE.domain}/transfers/`,
   `${SITE.domain}/cars/`,
+  ...["how-it-works", "faq", "about", "contact", "disclosure", "terms", "privacy"].map((s) => `${SITE.domain}/${s}/`),
 ];
 write(
   "sitemap.xml",
