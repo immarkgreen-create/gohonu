@@ -1,0 +1,76 @@
+{
+  "waikiki": [
+    {
+      "slug": "halekulani",
+      "name": "Halekulani",
+      "area": "Waikiki",
+      "bestFor": "Luxury",
+      "priceFrom": 650,
+      "blurb": "Waikiki's serene grande dame — oceanfront elegance, impeccable service, and the famous orchid-tiled pool.",
+      "rating": 4.7,
+      "reviews": 4327,
+      "image": "/assets/img/hotels/halekulani.jpg",
+      "expediaDest": "Halekulani, Honolulu, Hawaii"
+    },
+    {
+      "slug": "the-royal-hawaiian-a-luxury-collection-r",
+      "name": "The Royal Hawaiian, a Luxury Collection Resort",
+      "area": "Waikiki",
+      "bestFor": "Iconic",
+      "priceFrom": 520,
+      "blurb": "The 'Pink Palace of the Pacific' — a 1927 beachfront landmark right on Waikiki Beach.",
+      "rating": 4.4,
+      "reviews": 4772,
+      "image": "/assets/img/hotels/the-royal-hawaiian-a-luxury-collection-r.jpg",
+      "expediaDest": "The Royal Hawaiian, a Luxury Collection Resort, Honolulu, Hawaii"
+    },
+    {
+      "slug": "moana-surfrider-a-westin-resort-spa",
+      "name": "Moana Surfrider, A Westin Resort & Spa",
+      "area": "Waikiki",
+      "bestFor": "Historic charm",
+      "priceFrom": 460,
+      "blurb": "The 'First Lady of Waikiki' (1901) — colonial elegance and a beachfront banyan courtyard.",
+      "rating": 4.4,
+      "reviews": 6226,
+      "image": "/assets/img/hotels/moana-surfrider-a-westin-resort-spa.jpg",
+      "expediaDest": "Moana Surfrider, A Westin Resort & Spa, Honolulu, Hawaii"
+    },
+    {
+      "slug": "hilton-hawaiian-village-waikiki-beach-re",
+      "name": "Hilton Hawaiian Village Waikiki Beach Resort",
+      "area": "Waikiki",
+      "bestFor": "Families",
+      "priceFrom": 350,
+      "blurb": "A 22-acre beachfront village with a lagoon, pools, and Friday-night fireworks — the ultimate family base.",
+      "rating": 4.2,
+      "reviews": 27405,
+      "image": "/assets/img/hotels/hilton-hawaiian-village-waikiki-beach-re.jpg",
+      "expediaDest": "Hilton Hawaiian Village Waikiki Beach Resort, Honolulu, Hawaii"
+    },
+    {
+      "slug": "outrigger-waikiki-beach-resort",
+      "name": "Outrigger Waikiki Beach Resort",
+      "area": "Waikiki",
+      "bestFor": "Beachfront location",
+      "priceFrom": 320,
+      "blurb": "Right on the sand in the heart of Waikiki, steps from Duke's, dining and shopping.",
+      "rating": 4.5,
+      "reviews": 7914,
+      "image": "/assets/img/hotels/outrigger-waikiki-beach-resort.jpg",
+      "expediaDest": "Outrigger Waikiki Beach Resort, Honolulu, Hawaii"
+    },
+    {
+      "slug": "queen-kapiolani-hotel",
+      "name": "Queen Kapiolani Hotel",
+      "area": "Waikiki",
+      "bestFor": "Best value",
+      "priceFrom": 190,
+      "blurb": "Stylish, great-value stay by Diamond Head and the calmer end of Waikiki, with a rooftop pool.",
+      "rating": 4.1,
+      "reviews": 2883,
+      "image": "/assets/img/hotels/queen-kapiolani-hotel.jpg",
+      "expediaDest": "Queen Kapiolani Hotel, Honolulu, Hawaii"
+    }
+  ]
+}

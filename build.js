@@ -792,6 +792,9 @@ function stayPage() {
   <div class="section-head"><div><span class="kicker">Search</span><h2>Hotels & flights</h2></div></div>
   <div class="eg-wrap">${EXPEDIA_SEARCH}</div>
 </section>
+<section class="wrap">
+  <a class="guide-banner" href="/stay/waikiki/">🏨 <b>Our hand-picked Waikiki hotels</b> — rated by real travelers, compare & book <span class="guide-arrow">→</span></a>
+</section>
 <section class="band"><div class="wrap section">
   <div class="section-head"><div><span class="kicker">Or browse on a map</span><h2>Where to stay by area</h2></div></div>
   <div class="filters" id="stay-areas">${buttons}</div>
@@ -827,6 +830,58 @@ const CARS_WIDGET = `<div><script id="dchwidget" src="https://www.discovercars.c
 // Expedia stays+flights search widget (affiliate; Expedia is merchant of record).
 const EXPEDIA_SEARCH = `<div class="eg-widget" data-widget="search" data-program="us-expedia" data-lobs="stays,flights" data-network="pz" data-camref="${SITE.expediaCamref}" data-pubref=""></div>
 <script class="eg-widgets-script" src="https://creator.expediagroup.com/products/widgets/assets/eg-widgets.js" async></script>`;
+
+// Curated hotel guides (data/hotels.json). Tracked Expedia links via your camref.
+const HOTELS = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "hotels.json"), "utf8"));
+  } catch {
+    return {};
+  }
+})();
+const expediaLink = (dest) =>
+  `https://prf.hn/click/camref:${SITE.expediaCamref}/destination:${encodeURIComponent(
+    "https://www.expedia.com/Hotel-Search?destination=" + encodeURIComponent(dest)
+  )}`;
+
+function hotelCard(h) {
+  const rating = h.rating
+    ? `<span class="rating">${GOOGLE_G}${stars(h.rating)} <b>${Number(h.rating).toFixed(1)}</b></span>${h.reviews ? ` <span class="muted">(${Number(h.reviews).toLocaleString()})</span>` : ""}`
+    : "";
+  return `<div class="hotel-card">
+  <div class="card-img"${bg(h.image)}><span class="card-island">${esc(h.bestFor)}</span></div>
+  <div class="card-body">
+    <h3 class="card-title">${esc(h.name)}</h3>
+    <div class="card-meta">${rating}</div>
+    <p class="hotel-blurb">${esc(h.blurb)}</p>
+    <div class="card-foot">
+      <span class="price"><span class="muted">from</span> <b>$${h.priceFrom}</b> <span class="muted">/ night</span></span>
+      <a class="btn btn--book hotel-btn" href="${esc(expediaLink(h.expediaDest))}" target="_blank" rel="noopener sponsored">Check price →</a>
+    </div>
+  </div>
+</div>`;
+}
+function hotelGuidePage(areaKey, areaName, hotels) {
+  const body = `
+<section class="hero hero--sm"${heroImg(hotels[0] && hotels[0].image)}>
+  <div class="wrap">
+    <nav class="crumbs crumbs--light"><a href="/">Home</a> / <a href="/stay/">Where to stay</a> / <span>${esc(areaName)}</span></nav>
+    <span class="hero-badge">🏨 Hand-picked hotels</span>
+    <h1>Best places to stay in ${esc(areaName)}</h1>
+    <p class="hero-sub">Our favourite ${esc(areaName)} hotels — rated by real travelers. Compare them here, book on Expedia with free cancellation on most rooms.</p>
+  </div>
+</section>
+<section class="wrap section">
+  <div class="grid hotel-grid">${hotels.map(hotelCard).join("")}</div>
+  <p class="muted" style="margin-top:16px;font-size:.84rem">Ratings by Google · prices & booking via Expedia. Rates shown are typical nightly starting prices.</p>
+</section>`;
+  return layout({
+    title: `Best Places to Stay in ${areaName} — Hotels | ${SITE.name}`,
+    description: `Our hand-picked ${areaName} hotels, rated by real travelers — compare and book the best places to stay.`,
+    canonical: `${SITE.domain}/stay/${areaKey}/`,
+    body,
+  });
+}
 
 function carsPage() {
   const body = `
@@ -886,6 +941,7 @@ if (POLY.length) {
 }
 if (FLIGHTS) write("flights/index.html", flightsPage());
 if (SITE.stay22Aid) write("stay/index.html", stayPage());
+if (HOTELS.waikiki) write("stay/waikiki/index.html", hotelGuidePage("waikiki", "Waikiki", HOTELS.waikiki));
 write("cars/index.html", carsPage());
 
 // 404
@@ -915,6 +971,7 @@ const urls = [
   ...POLY.map((d) => `${SITE.domain}/polynesia/${d.slug}/`),
   ...(FLIGHTS ? [`${SITE.domain}/flights/`] : []),
   ...(SITE.stay22Aid ? [`${SITE.domain}/stay/`] : []),
+  ...(HOTELS.waikiki ? [`${SITE.domain}/stay/waikiki/`] : []),
   `${SITE.domain}/cars/`,
 ];
 write(
