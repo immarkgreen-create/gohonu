@@ -222,14 +222,22 @@ ${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ""}
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="/assets/css/styles.css?v=${CSS_VER}">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/assets/img/logo.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0a7ea4">
+<link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GoHonu">
 ${extraHead}
 </head>
 <body>
 ${nav()}
 ${body}
 ${footer()}
+${tabBar()}
 <script src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
+<script>if('serviceWorker'in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
 </body>
 </html>`;
 }
@@ -253,6 +261,24 @@ function nav() {
     </nav>
   </div>
 </header>`;
+}
+
+// App-style bottom tab bar (shows on phones only; see .tabbar CSS). Active tab is
+// set client-side by matching location.pathname against each tab's data-match regex.
+function tabBar() {
+  const tours = `/islands/${slugifyIsland(PRIMARY)}/`;
+  const tabs = [
+    { href: "/", label: "Home", icon: "🏠", match: "^/$" },
+    { href: tours, label: "Tours", icon: "🎟️", match: "^/(islands|tours)/" },
+    ...(WORLD.length || POLY.length ? [{ href: WORLD.length ? "/beyond/" : "/polynesia/", label: "Beyond", icon: "🌎", match: "^/(beyond|polynesia)/" }] : []),
+    ...(SITE.stay22Aid ? [{ href: "/stay/", label: "Stay", icon: "🏨", match: "^/stay/" }] : []),
+  ];
+  return `<nav class="tabbar" aria-label="Quick navigation">
+  ${tabs
+    .map((t) => `<a class="tab" href="${t.href}" data-match="${t.match}"><span class="tab-ic">${t.icon}</span><span class="tab-lbl">${t.label}</span></a>`)
+    .join("")}
+</nav>
+<script>(function(){var p=location.pathname;document.querySelectorAll('.tabbar .tab').forEach(function(a){try{if(new RegExp(a.getAttribute('data-match')).test(p))a.classList.add('active')}catch(e){}})})();</script>`;
 }
 
 function footer() {
@@ -1000,6 +1026,91 @@ write(
     .join("\n")}\n</urlset>\n`
 );
 write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${SITE.domain}/sitemap.xml\n`);
+
+// ---------- PWA: installable app (manifest + service worker + offline page) ----------
+write(
+  "manifest.webmanifest",
+  JSON.stringify(
+    {
+      name: `${SITE.name} — Hawaii Tours & Activities`,
+      short_name: SITE.name,
+      description: "Book the best Hawaii tours, activities and places to stay — handed off to trusted partners at checkout.",
+      start_url: "/?src=pwa",
+      scope: "/",
+      display: "standalone",
+      orientation: "portrait-primary",
+      background_color: "#ffffff",
+      theme_color: "#0a7ea4",
+      categories: ["travel", "lifestyle"],
+      icons: [
+        { src: "/assets/img/icons/icon-192.png", sizes: "192x192", type: "image/png", purpose: "any maskable" },
+        { src: "/assets/img/icons/icon-512.png", sizes: "512x512", type: "image/png", purpose: "any maskable" },
+      ],
+    },
+    null,
+    2
+  ) + "\n"
+);
+
+const SW_CACHE = `gohonu-${CSS_VER}`;
+write(
+  "sw.js",
+  `/* GoHonu service worker — app shell cache + offline fallback. Cache key bumps with the CSS hash. */
+const CACHE = ${JSON.stringify(SW_CACHE)};
+const CORE = [
+  "/",
+  "/assets/css/styles.css?v=${CSS_VER}",
+  "/assets/img/logo.png",
+  "/assets/img/icons/icon-192.png",
+  "/offline.html",
+  ${SITE.stay22Aid ? '"/stay/",' : ""}
+  ${WORLD.length ? '"/beyond/",' : ""}
+];
+self.addEventListener("install", (e) => {
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE)).then(() => self.skipWaiting()));
+});
+self.addEventListener("activate", (e) => {
+  e.waitUntil(
+    caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())
+  );
+});
+self.addEventListener("fetch", (e) => {
+  const req = e.request;
+  if (req.method !== "GET") return;
+  const url = new URL(req.url);
+  if (url.origin !== location.origin) return; // never touch affiliate / third-party requests
+  if (req.mode === "navigate") {
+    // Network-first for pages so content stays fresh; fall back to cache, then offline page.
+    e.respondWith(
+      fetch(req)
+        .then((r) => { const cp = r.clone(); caches.open(CACHE).then((c) => c.put(req, cp)); return r; })
+        .catch(() => caches.match(req).then((m) => m || caches.match("/offline.html")))
+    );
+    return;
+  }
+  // Stale-while-revalidate for same-origin assets (css/img).
+  e.respondWith(
+    caches.match(req).then((m) => {
+      const fetching = fetch(req)
+        .then((r) => { if (r && r.status === 200) { const cp = r.clone(); caches.open(CACHE).then((c) => c.put(req, cp)); } return r; })
+        .catch(() => m);
+      return m || fetching;
+    })
+  );
+});
+`
+);
+
+write(
+  "offline.html",
+  layout({
+    title: `Offline — ${SITE.name}`,
+    description: "You're offline.",
+    body: `<section class="hero hero--sm"><div class="wrap"><h1>You're offline 🐢</h1>
+      <p class="hero-sub">No connection right now. Pages you've already visited will still open — reconnect to browse tours, stays and flights.</p>
+      <div class="hero-islands"><a class="pill pill--solid" href="/">Try the home page →</a></div></div></section>`,
+  })
+);
 
 const beyondPages = BEYOND.length ? BEYOND.length + 1 : 0;
 const tourPages = USE_FH ? FH.length : DATA.tours.length;
