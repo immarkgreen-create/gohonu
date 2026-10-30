@@ -13,3 +13,16 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# PWA manifest must be served as JSON or Chrome rejects it (Netlify defaults to octet-stream).
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json; charset=utf-8"
+
+# Service worker: correct JS type, and never cache it so updates ship immediately.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Content-Type = "text/javascript; charset=utf-8"
+    Cache-Control = "public, max-age=0, must-revalidate"
