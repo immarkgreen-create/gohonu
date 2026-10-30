@@ -747,7 +747,14 @@ function flightsPage() {
     <p class="hero-sub">Lowest recent fares from major cities. Prices update from live search — tap any route to see current deals.</p>
   </div>
 </section>
-<section class="wrap" style="padding-top:28px">${flightSearchForm()}</section>
+<section class="wrap section">
+  <div class="section-head"><div><span class="kicker">Search</span><h2>Flights & hotels</h2></div></div>
+  <div class="eg-wrap">${EXPEDIA_SEARCH}</div>
+</section>
+<section class="band"><div class="wrap section">
+  <div class="section-head"><div><span class="kicker">Compare cheap fares</span><h2>Or search with Aviasales</h2></div></div>
+  ${flightSearchForm()}
+</div></section>
 ${sample ? `<div class="wrap"><p class="notice">Sample fares shown — add your Travelpayouts token (TP_TOKEN) to show live prices.</p></div>` : ""}
 <section class="wrap section">
   <div class="section-head"><div><span class="kicker">Quick picks</span><h2>Cheapest recent fares to ${esc(FLIGHTS.destinationName)}</h2></div></div>
@@ -782,10 +789,15 @@ function stayPage() {
   </div>
 </section>
 <section class="wrap section">
+  <div class="section-head"><div><span class="kicker">Search</span><h2>Hotels & flights</h2></div></div>
+  <div class="eg-wrap">${EXPEDIA_SEARCH}</div>
+</section>
+<section class="band"><div class="wrap section">
+  <div class="section-head"><div><span class="kicker">Or browse on a map</span><h2>Where to stay by area</h2></div></div>
   <div class="filters" id="stay-areas">${buttons}</div>
   <iframe id="s22" class="stay-map" title="Hotels map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  <p class="muted" style="margin-top:12px;font-size:.84rem">Accommodation search powered by Stay22. Prices update live; free cancellation varies by property.</p>
-</section>
+  <p class="muted" style="margin-top:12px;font-size:.84rem">Map search powered by Stay22 · hotel/flight search by Expedia. Prices update live.</p>
+</div></section>
 <script>
 (function(){
   var map=document.getElementById('s22'), bar=document.getElementById('stay-areas');
@@ -811,6 +823,10 @@ function stayPage() {
 
 // DiscoverCars search widget (generated in the DiscoverCars affiliate panel, tracks a_aid=GoHonu).
 const CARS_WIDGET = `<div><script id="dchwidget" src="https://www.discovercars.com/widget.js?v1" data-dev-env="com" data-location="usa-hawaii" data-utm-source="GoHonu" data-utm-medium="widget" data-aff-code="a_aid" data-autocomplete="on" data-style-submit-bg-color="#ff5a36" data-style-submit-font-color="#ffffff" data-style-form-bg-color="#0a7ea4" data-style-form-font-color="#000000" data-style-submit-text="Search cars" data-style-title-color="#ffffff" data-title-text="Compare Hawaii car rentals — save up to 70%" async="async" data-style_rounded_corners="on" data-layout_benefits="on" data-layout_description="on" data-layout_description_text="We compare the best deals from top car-rental suppliers across Hawaii." data-layout_logo_style="on dark" data-layout_powered_by="on" data-layout_style_form_bg_color="#0a7ea4" data-layout_title="on"></script></div>`;
+
+// Expedia stays+flights search widget (affiliate; Expedia is merchant of record).
+const EXPEDIA_SEARCH = `<div class="eg-widget" data-widget="search" data-program="us-expedia" data-lobs="stays,flights" data-network="pz" data-camref="${SITE.expediaCamref}" data-pubref=""></div>
+<script class="eg-widgets-script" src="https://creator.expediagroup.com/products/widgets/assets/eg-widgets.js" async></script>`;
 
 function carsPage() {
   const body = `
