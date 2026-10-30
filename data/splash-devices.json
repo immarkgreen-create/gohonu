@@ -1,0 +1,21 @@
+{
+  "comment": "iOS apple-touch-startup-image targets (portrait). w/h are CSS points, dpr the device-pixel-ratio; the PNG is rendered at w*dpr x h*dpr. build.js emits a <link> per device; fetch/splash.js renders the images.",
+  "devices": [
+    { "label": "iphone-se",        "w": 375, "h": 667,  "dpr": 2 },
+    { "label": "iphone-xr-11",     "w": 414, "h": 896,  "dpr": 2 },
+    { "label": "iphone-x-11pro",   "w": 375, "h": 812,  "dpr": 3 },
+    { "label": "iphone-xsmax",     "w": 414, "h": 896,  "dpr": 3 },
+    { "label": "iphone-mini",      "w": 360, "h": 780,  "dpr": 3 },
+    { "label": "iphone-12-14",     "w": 390, "h": 844,  "dpr": 3 },
+    { "label": "iphone-14pro-16",  "w": 393, "h": 852,  "dpr": 3 },
+    { "label": "iphone-16pro",     "w": 402, "h": 874,  "dpr": 3 },
+    { "label": "iphone-plus-max",  "w": 428, "h": 926,  "dpr": 3 },
+    { "label": "iphone-15-16-max", "w": 430, "h": 932,  "dpr": 3 },
+    { "label": "iphone-16promax",  "w": 440, "h": 956,  "dpr": 3 },
+    { "label": "ipad-mini",        "w": 744, "h": 1133, "dpr": 2 },
+    { "label": "ipad-10",          "w": 810, "h": 1080, "dpr": 2 },
+    { "label": "ipad-air",         "w": 820, "h": 1180, "dpr": 2 },
+    { "label": "ipad-pro-11",      "w": 834, "h": 1194, "dpr": 2 },
+    { "label": "ipad-pro-13",      "w": 1024, "h": 1366, "dpr": 2 }
+  ]
+}
