@@ -1,0 +1,2964 @@
+{
+  "maui": [
+    {
+      "slug": "maui-wailea-beach-resort-marriott-maui",
+      "name": "Wailea Beach Resort - Marriott, Maui",
+      "area": "Maui",
+      "rating": 4.6,
+      "reviews": 4241,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/maui/1.jpg",
+      "expediaDest": "Wailea Beach Resort - Marriott, Maui, Maui"
+    },
+    {
+      "slug": "maui-hyatt-regency-maui-resort-and-spa",
+      "name": "Hyatt Regency Maui Resort and Spa",
+      "area": "Maui",
+      "rating": 4.5,
+      "reviews": 5003,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/maui/2.jpg",
+      "expediaDest": "Hyatt Regency Maui Resort and Spa, Maui"
+    },
+    {
+      "slug": "maui-hyatt-vacation-club-at-ka-anapali-beach",
+      "name": "Hyatt Vacation Club at Ka’anapali Beach",
+      "area": "Maui",
+      "rating": 4.6,
+      "reviews": 3968,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/maui/3.jpg",
+      "expediaDest": "Hyatt Vacation Club at Ka’anapali Beach, Maui"
+    },
+    {
+      "slug": "maui-fairmont-kea-lani-maui",
+      "name": "Fairmont Kea Lani, Maui",
+      "area": "Maui",
+      "rating": 4.7,
+      "reviews": 3273,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/maui/4.jpg",
+      "expediaDest": "Fairmont Kea Lani, Maui, Maui"
+    },
+    {
+      "slug": "maui-grand-wailea-a-waldorf-astoria-resort",
+      "name": "Grand Wailea, A Waldorf Astoria Resort",
+      "area": "Maui",
+      "rating": 4.4,
+      "reviews": 5559,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/maui/5.jpg",
+      "expediaDest": "Grand Wailea, A Waldorf Astoria Resort, Maui"
+    },
+    {
+      "slug": "maui-four-seasons-resort-maui-at-wailea",
+      "name": "Four Seasons Resort Maui at Wailea",
+      "area": "Maui",
+      "rating": 4.7,
+      "reviews": 2738,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/maui/6.jpg",
+      "expediaDest": "Four Seasons Resort Maui at Wailea, Maui"
+    },
+    {
+      "slug": "maui-the-ritz-carlton-maui-kapalua",
+      "name": "The Ritz-Carlton Maui, Kapalua",
+      "area": "Maui",
+      "rating": 4.5,
+      "reviews": 3091,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/maui/7.jpg",
+      "expediaDest": "The Ritz-Carlton Maui, Kapalua, Maui"
+    },
+    {
+      "slug": "maui-andaz-maui-at-wailea-resort-by-hyatt",
+      "name": "Andaz Maui at Wailea Resort, by Hyatt",
+      "area": "Maui",
+      "rating": 4.6,
+      "reviews": 2465,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/maui/8.jpg",
+      "expediaDest": "Andaz Maui at Wailea Resort, by Hyatt, Maui"
+    }
+  ],
+  "kauai": [
+    {
+      "slug": "kauai-grand-hyatt-kauai-resort-spa",
+      "name": "Grand Hyatt Kauai Resort & Spa",
+      "area": "Kauai",
+      "rating": 4.7,
+      "reviews": 4785,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kauai/1.jpg",
+      "expediaDest": "Grand Hyatt Kauai Resort & Spa, Kauai"
+    },
+    {
+      "slug": "kauai-the-royal-sonesta-kaua-i-resort-lihue",
+      "name": "The Royal Sonesta Kaua'i Resort Lihue",
+      "area": "Kauai",
+      "rating": 4.5,
+      "reviews": 3553,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kauai/2.jpg",
+      "expediaDest": "The Royal Sonesta Kaua'i Resort Lihue, Kauai"
+    },
+    {
+      "slug": "kauai-outrigger-kauai-beach-resort-spa",
+      "name": "OUTRIGGER Kauai Beach Resort & Spa",
+      "area": "Kauai",
+      "rating": 4.2,
+      "reviews": 4032,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kauai/3.jpg",
+      "expediaDest": "OUTRIGGER Kauai Beach Resort & Spa, Kauai"
+    },
+    {
+      "slug": "kauai-koloa-landing-resort-at-poipu-autograph-",
+      "name": "Koloa Landing Resort at Poipu, Autograph Collection",
+      "area": "Kauai",
+      "rating": 4.6,
+      "reviews": 1837,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kauai/4.jpg",
+      "expediaDest": "Koloa Landing Resort at Poipu, Autograph Collection, Kauai"
+    },
+    {
+      "slug": "kauai-kauai-shores-hotel",
+      "name": "Kauai Shores Hotel",
+      "area": "Kauai",
+      "rating": 4.4,
+      "reviews": 2457,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kauai/5.jpg",
+      "expediaDest": "Kauai Shores Hotel, Kauai"
+    },
+    {
+      "slug": "kauai-1-hotel-hanalei-bay",
+      "name": "1 Hotel Hanalei Bay",
+      "area": "Kauai",
+      "rating": 4.6,
+      "reviews": 1676,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kauai/6.jpg",
+      "expediaDest": "1 Hotel Hanalei Bay, Kauai"
+    },
+    {
+      "slug": "kauai-hanalei-bay-resort",
+      "name": "Hanalei Bay Resort",
+      "area": "Kauai",
+      "rating": 4.5,
+      "reviews": 1838,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kauai/7.jpg",
+      "expediaDest": "Hanalei Bay Resort, Kauai"
+    },
+    {
+      "slug": "kauai-marriott-s-kaua-i-beach-club",
+      "name": "Marriott's Kaua'i Beach Club",
+      "area": "Kauai",
+      "rating": 4.4,
+      "reviews": 2169,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kauai/8.jpg",
+      "expediaDest": "Marriott's Kaua'i Beach Club, Kauai"
+    }
+  ],
+  "big-island": [
+    {
+      "slug": "big-island-fairmont-orchid",
+      "name": "Fairmont Orchid",
+      "area": "Big Island",
+      "rating": 4.6,
+      "reviews": 3984,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/big-island/1.jpg",
+      "expediaDest": "Fairmont Orchid, Big Island"
+    },
+    {
+      "slug": "big-island-hilton-waikoloa-village",
+      "name": "Hilton Waikoloa Village",
+      "area": "Big Island",
+      "rating": 4.1,
+      "reviews": 8743,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/big-island/2.jpg",
+      "expediaDest": "Hilton Waikoloa Village, Big Island"
+    },
+    {
+      "slug": "big-island-royal-kona-resort",
+      "name": "Royal Kona Resort",
+      "area": "Big Island",
+      "rating": 4.1,
+      "reviews": 7178,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/big-island/3.jpg",
+      "expediaDest": "Royal Kona Resort, Big Island"
+    },
+    {
+      "slug": "big-island-waikoloa-beach-marriott-resort-spa",
+      "name": "Waikoloa Beach Marriott Resort & Spa",
+      "area": "Big Island",
+      "rating": 4.4,
+      "reviews": 3904,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/big-island/4.jpg",
+      "expediaDest": "Waikoloa Beach Marriott Resort & Spa, Big Island"
+    },
+    {
+      "slug": "big-island-hilton-grand-vacations-club-kings-land-w",
+      "name": "Hilton Grand Vacations Club Kings’ Land Waikoloa",
+      "area": "Big Island",
+      "rating": 4.4,
+      "reviews": 2979,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/big-island/5.jpg",
+      "expediaDest": "Hilton Grand Vacations Club Kings’ Land Waikoloa, Big Island"
+    },
+    {
+      "slug": "big-island-four-seasons-resort-hualalai",
+      "name": "Four Seasons Resort Hualalai",
+      "area": "Big Island",
+      "rating": 4.7,
+      "reviews": 1699,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/big-island/6.jpg",
+      "expediaDest": "Four Seasons Resort Hualalai, Big Island"
+    },
+    {
+      "slug": "big-island-the-westin-hapuna-beach-resort",
+      "name": "The Westin Hapuna Beach Resort",
+      "area": "Big Island",
+      "rating": 4.5,
+      "reviews": 2240,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/big-island/7.jpg",
+      "expediaDest": "The Westin Hapuna Beach Resort, Big Island"
+    },
+    {
+      "slug": "big-island-outrigger-kona-resort-spa",
+      "name": "OUTRIGGER Kona Resort & Spa",
+      "area": "Big Island",
+      "rating": 4.1,
+      "reviews": 4579,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/big-island/8.jpg",
+      "expediaDest": "OUTRIGGER Kona Resort & Spa, Big Island"
+    }
+  ],
+  "cancun": [
+    {
+      "slug": "cancun-iberostar-selection-canc-n",
+      "name": "Iberostar Selection Cancún",
+      "area": "Cancún",
+      "rating": 4.7,
+      "reviews": 30763,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/cancun/1.jpg",
+      "expediaDest": "Iberostar Selection Cancún, Cancún"
+    },
+    {
+      "slug": "cancun-hilton-cancun-an-all-inclusive-resort",
+      "name": "Hilton Cancun, an All-Inclusive Resort",
+      "area": "Cancún",
+      "rating": 4.6,
+      "reviews": 13011,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/cancun/2.jpg",
+      "expediaDest": "Hilton Cancun, an All-Inclusive Resort, Cancún"
+    },
+    {
+      "slug": "cancun-marriott-cancun-an-all-inclusive-resort",
+      "name": "Marriott Cancun, An All-Inclusive Resort",
+      "area": "Cancún",
+      "rating": 4.6,
+      "reviews": 6469,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/cancun/3.jpg",
+      "expediaDest": "Marriott Cancun, An All-Inclusive Resort, Cancún"
+    },
+    {
+      "slug": "cancun-jw-marriott-cancun-resort-spa",
+      "name": "JW Marriott Cancun Resort & Spa",
+      "area": "Cancún",
+      "rating": 4.6,
+      "reviews": 3970,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/cancun/4.jpg",
+      "expediaDest": "JW Marriott Cancun Resort & Spa, Cancún"
+    },
+    {
+      "slug": "cancun-kempinski-hotel-canc-n",
+      "name": "Kempinski Hotel Cancún",
+      "area": "Cancún",
+      "rating": 4.6,
+      "reviews": 3013,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/cancun/5.jpg",
+      "expediaDest": "Kempinski Hotel Cancún, Cancún"
+    },
+    {
+      "slug": "cancun-nizuc-resort-spa",
+      "name": "NIZUC Resort & Spa",
+      "area": "Cancún",
+      "rating": 4.6,
+      "reviews": 2734,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/cancun/6.jpg",
+      "expediaDest": "NIZUC Resort & Spa, Cancún"
+    }
+  ],
+  "las-vegas": [
+    {
+      "slug": "las-vegas-bellagio-hotel-casino",
+      "name": "Bellagio Hotel & Casino",
+      "area": "Las Vegas",
+      "rating": 4.7,
+      "reviews": 144327,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/las-vegas/1.jpg",
+      "expediaDest": "Bellagio Hotel & Casino, Las Vegas"
+    },
+    {
+      "slug": "las-vegas-the-venetian-las-vegas",
+      "name": "The Venetian Las Vegas",
+      "area": "Las Vegas",
+      "rating": 4.6,
+      "reviews": 122407,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/las-vegas/2.jpg",
+      "expediaDest": "The Venetian Las Vegas, Las Vegas"
+    },
+    {
+      "slug": "las-vegas-caesars-palace",
+      "name": "Caesars Palace",
+      "area": "Las Vegas",
+      "rating": 4.5,
+      "reviews": 138668,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/las-vegas/3.jpg",
+      "expediaDest": "Caesars Palace, Las Vegas"
+    },
+    {
+      "slug": "las-vegas-wynn-las-vegas",
+      "name": "Wynn Las Vegas",
+      "area": "Las Vegas",
+      "rating": 4.7,
+      "reviews": 66455,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/las-vegas/4.jpg",
+      "expediaDest": "Wynn Las Vegas, Las Vegas"
+    },
+    {
+      "slug": "las-vegas-the-cosmopolitan-of-las-vegas",
+      "name": "The Cosmopolitan of Las Vegas",
+      "area": "Las Vegas",
+      "rating": 4.6,
+      "reviews": 79154,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/las-vegas/5.jpg",
+      "expediaDest": "The Cosmopolitan of Las Vegas, Las Vegas"
+    },
+    {
+      "slug": "las-vegas-mgm-grand",
+      "name": "MGM Grand",
+      "area": "Las Vegas",
+      "rating": 4.3,
+      "reviews": 113029,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/las-vegas/6.jpg",
+      "expediaDest": "MGM Grand, Las Vegas"
+    },
+    {
+      "slug": "las-vegas-mandalay-bay",
+      "name": "Mandalay Bay",
+      "area": "Las Vegas",
+      "rating": 4.4,
+      "reviews": 70127,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/las-vegas/7.jpg",
+      "expediaDest": "Mandalay Bay, Las Vegas"
+    },
+    {
+      "slug": "las-vegas-paris-las-vegas",
+      "name": "Paris Las Vegas",
+      "area": "Las Vegas",
+      "rating": 4.3,
+      "reviews": 83906,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/las-vegas/8.jpg",
+      "expediaDest": "Paris Las Vegas, Las Vegas"
+    }
+  ],
+  "rome": [
+    {
+      "slug": "rome-rome-cavalieri-a-waldorf-astoria-hotel",
+      "name": "Rome Cavalieri, A Waldorf Astoria Hotel",
+      "area": "Rome",
+      "rating": 4.6,
+      "reviews": 5688,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/rome/1.jpg",
+      "expediaDest": "Rome Cavalieri, A Waldorf Astoria Hotel, Rome"
+    },
+    {
+      "slug": "rome-anantara-palazzo-naiadi-rome-hotel",
+      "name": "Anantara Palazzo Naiadi Rome Hotel",
+      "area": "Rome",
+      "rating": 4.7,
+      "reviews": 2791,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/rome/2.jpg",
+      "expediaDest": "Anantara Palazzo Naiadi Rome Hotel, Rome"
+    },
+    {
+      "slug": "rome-hotel-artemide",
+      "name": "Hotel Artemide",
+      "area": "Rome",
+      "rating": 4.8,
+      "reviews": 2040,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/rome/3.jpg",
+      "expediaDest": "Hotel Artemide, Rome"
+    },
+    {
+      "slug": "rome-the-st-regis-rome",
+      "name": "The St. Regis Rome",
+      "area": "Rome",
+      "rating": 4.7,
+      "reviews": 2088,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/rome/4.jpg",
+      "expediaDest": "The St. Regis Rome, Rome"
+    },
+    {
+      "slug": "rome-hotel-albergo-del-senato",
+      "name": "Hotel Albergo del Senato",
+      "area": "Rome",
+      "rating": 4.8,
+      "reviews": 1540,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/rome/5.jpg",
+      "expediaDest": "Hotel Albergo del Senato, Rome"
+    },
+    {
+      "slug": "rome-the-liberty-boutique-hotel",
+      "name": "The Liberty Boutique Hotel",
+      "area": "Rome",
+      "rating": 4.9,
+      "reviews": 889,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/rome/6.jpg",
+      "expediaDest": "The Liberty Boutique Hotel, Rome"
+    },
+    {
+      "slug": "rome-doubletree-by-hilton-rome-monti",
+      "name": "DoubleTree by Hilton Rome Monti",
+      "area": "Rome",
+      "rating": 4.6,
+      "reviews": 1295,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/rome/7.jpg",
+      "expediaDest": "DoubleTree by Hilton Rome Monti, Rome"
+    },
+    {
+      "slug": "rome-rome-marriott-grand-hotel-flora",
+      "name": "Rome Marriott Grand Hotel Flora",
+      "area": "Rome",
+      "rating": 4.5,
+      "reviews": 1442,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/rome/8.jpg",
+      "expediaDest": "Rome Marriott Grand Hotel Flora, Rome"
+    }
+  ],
+  "bali": [
+    {
+      "slug": "bali-the-apurva-kempinski-bali",
+      "name": "The Apurva Kempinski Bali",
+      "area": "Bali",
+      "rating": 4.8,
+      "reviews": 16947,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bali/1.jpg",
+      "expediaDest": "The Apurva Kempinski Bali, Bali"
+    },
+    {
+      "slug": "bali-hilton-bali-resort",
+      "name": "Hilton Bali Resort",
+      "area": "Bali",
+      "rating": 4.6,
+      "reviews": 11232,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bali/2.jpg",
+      "expediaDest": "Hilton Bali Resort, Bali"
+    },
+    {
+      "slug": "bali-mulia-resort-nusa-dua-bali",
+      "name": "Mulia Resort - Nusa Dua, Bali",
+      "area": "Bali",
+      "rating": 4.6,
+      "reviews": 9350,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bali/3.jpg",
+      "expediaDest": "Mulia Resort - Nusa Dua, Bali, Bali"
+    },
+    {
+      "slug": "bali-conrad-bali",
+      "name": "Conrad Bali",
+      "area": "Bali",
+      "rating": 4.7,
+      "reviews": 6991,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bali/4.jpg",
+      "expediaDest": "Conrad Bali, Bali"
+    },
+    {
+      "slug": "bali-grand-hyatt-bali",
+      "name": "Grand Hyatt Bali",
+      "area": "Bali",
+      "rating": 4.5,
+      "reviews": 9113,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bali/5.jpg",
+      "expediaDest": "Grand Hyatt Bali, Bali"
+    },
+    {
+      "slug": "bali-intercontinental-bali-resort-by-ihg",
+      "name": "InterContinental Bali Resort by IHG",
+      "area": "Bali",
+      "rating": 4.7,
+      "reviews": 4858,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bali/6.jpg",
+      "expediaDest": "InterContinental Bali Resort by IHG, Bali"
+    },
+    {
+      "slug": "bali-novotel-bali-benoa",
+      "name": "Novotel Bali Benoa",
+      "area": "Bali",
+      "rating": 4.7,
+      "reviews": 4408,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bali/7.jpg",
+      "expediaDest": "Novotel Bali Benoa, Bali"
+    },
+    {
+      "slug": "bali-the-ritz-carlton-bali",
+      "name": "The Ritz-Carlton, Bali",
+      "area": "Bali",
+      "rating": 4.6,
+      "reviews": 4585,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bali/8.jpg",
+      "expediaDest": "The Ritz-Carlton, Bali, Bali"
+    }
+  ],
+  "paris": [
+    {
+      "slug": "paris-pullman-paris-tour-eiffel",
+      "name": "Pullman Paris Tour Eiffel",
+      "area": "Paris",
+      "rating": 4.6,
+      "reviews": 17601,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/paris/1.jpg",
+      "expediaDest": "Pullman Paris Tour Eiffel, Paris"
+    },
+    {
+      "slug": "paris-four-seasons-hotel-george-v-paris",
+      "name": "Four Seasons Hotel George V, Paris",
+      "area": "Paris",
+      "rating": 4.8,
+      "reviews": 7411,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/paris/2.jpg",
+      "expediaDest": "Four Seasons Hotel George V, Paris, Paris"
+    },
+    {
+      "slug": "paris-hotel-eiffel-seine",
+      "name": "Hotel Eiffel Seine",
+      "area": "Paris",
+      "rating": 4.7,
+      "reviews": 6054,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/paris/3.jpg",
+      "expediaDest": "Hotel Eiffel Seine, Paris"
+    },
+    {
+      "slug": "paris-the-peninsula-paris",
+      "name": "The Peninsula Paris",
+      "area": "Paris",
+      "rating": 4.7,
+      "reviews": 4095,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/paris/4.jpg",
+      "expediaDest": "The Peninsula Paris, Paris"
+    },
+    {
+      "slug": "paris-ritz-paris",
+      "name": "Ritz Paris",
+      "area": "Paris",
+      "rating": 4.6,
+      "reviews": 4657,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/paris/5.jpg",
+      "expediaDest": "Ritz Paris, Paris"
+    },
+    {
+      "slug": "paris-h-tel-de-crillon-a-rosewood-hotel",
+      "name": "Hôtel de Crillon, A Rosewood Hotel",
+      "area": "Paris",
+      "rating": 4.7,
+      "reviews": 3594,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/paris/6.jpg",
+      "expediaDest": "Hôtel de Crillon, A Rosewood Hotel, Paris"
+    },
+    {
+      "slug": "paris-shangri-la-paris",
+      "name": "Shangri-La Paris",
+      "area": "Paris",
+      "rating": 4.7,
+      "reviews": 3471,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/paris/7.jpg",
+      "expediaDest": "Shangri-La Paris, Paris"
+    },
+    {
+      "slug": "paris-le-bristol-paris-oetker-hotels",
+      "name": "Le Bristol Paris, Oetker Hotels",
+      "area": "Paris",
+      "rating": 4.7,
+      "reviews": 3266,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/paris/8.jpg",
+      "expediaDest": "Le Bristol Paris, Oetker Hotels, Paris"
+    }
+  ],
+  "london": [
+    {
+      "slug": "london-the-savoy",
+      "name": "The Savoy",
+      "area": "London",
+      "rating": 4.7,
+      "reviews": 11139,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/london/1.jpg",
+      "expediaDest": "The Savoy, London"
+    },
+    {
+      "slug": "london-park-plaza-london-westminster-bridge",
+      "name": "Park Plaza London Westminster Bridge",
+      "area": "London",
+      "rating": 4.5,
+      "reviews": 14677,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/london/2.jpg",
+      "expediaDest": "Park Plaza London Westminster Bridge, London"
+    },
+    {
+      "slug": "london-the-ritz-london",
+      "name": "The Ritz London",
+      "area": "London",
+      "rating": 4.6,
+      "reviews": 7937,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/london/3.jpg",
+      "expediaDest": "The Ritz London, London"
+    },
+    {
+      "slug": "london-the-ned-london",
+      "name": "The Ned London",
+      "area": "London",
+      "rating": 4.5,
+      "reviews": 8040,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/london/4.jpg",
+      "expediaDest": "The Ned London, London"
+    },
+    {
+      "slug": "london-the-langham-london",
+      "name": "The Langham, London",
+      "area": "London",
+      "rating": 4.7,
+      "reviews": 4327,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/london/5.jpg",
+      "expediaDest": "The Langham, London, London"
+    },
+    {
+      "slug": "london-royal-lancaster-london",
+      "name": "Royal Lancaster London",
+      "area": "London",
+      "rating": 4.6,
+      "reviews": 4599,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/london/6.jpg",
+      "expediaDest": "Royal Lancaster London, London"
+    },
+    {
+      "slug": "london-corinthia-london",
+      "name": "Corinthia London",
+      "area": "London",
+      "rating": 4.7,
+      "reviews": 3796,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/london/7.jpg",
+      "expediaDest": "Corinthia London, London"
+    },
+    {
+      "slug": "london-the-tower-hotel-by-thistle",
+      "name": "The Tower Hotel, by Thistle",
+      "area": "London",
+      "rating": 4.1,
+      "reviews": 12549,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/london/8.jpg",
+      "expediaDest": "The Tower Hotel, by Thistle, London"
+    }
+  ],
+  "tokyo": [
+    {
+      "slug": "tokyo-hotel-chinzanso-tokyo",
+      "name": "Hotel Chinzanso Tokyo",
+      "area": "Tokyo",
+      "rating": 4.4,
+      "reviews": 10601,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/tokyo/1.jpg",
+      "expediaDest": "Hotel Chinzanso Tokyo, Tokyo"
+    },
+    {
+      "slug": "tokyo-hilton-tokyo",
+      "name": "Hilton Tokyo",
+      "area": "Tokyo",
+      "rating": 4.3,
+      "reviews": 9684,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/tokyo/2.jpg",
+      "expediaDest": "Hilton Tokyo, Tokyo"
+    },
+    {
+      "slug": "tokyo-mandarin-oriental-tokyo",
+      "name": "Mandarin Oriental, Tokyo",
+      "area": "Tokyo",
+      "rating": 4.5,
+      "reviews": 4814,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/tokyo/3.jpg",
+      "expediaDest": "Mandarin Oriental, Tokyo, Tokyo"
+    },
+    {
+      "slug": "tokyo-park-hyatt-tokyo",
+      "name": "Park Hyatt Tokyo",
+      "area": "Tokyo",
+      "rating": 4.5,
+      "reviews": 4620,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/tokyo/4.jpg",
+      "expediaDest": "Park Hyatt Tokyo, Tokyo"
+    },
+    {
+      "slug": "tokyo-the-ritz-carlton-tokyo",
+      "name": "The Ritz-Carlton, Tokyo",
+      "area": "Tokyo",
+      "rating": 4.5,
+      "reviews": 4478,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/tokyo/5.jpg",
+      "expediaDest": "The Ritz-Carlton, Tokyo, Tokyo"
+    },
+    {
+      "slug": "tokyo-grand-hyatt-tokyo",
+      "name": "Grand Hyatt Tokyo",
+      "area": "Tokyo",
+      "rating": 4.4,
+      "reviews": 5256,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/tokyo/6.jpg",
+      "expediaDest": "Grand Hyatt Tokyo, Tokyo"
+    },
+    {
+      "slug": "tokyo-the-peninsula-tokyo",
+      "name": "The Peninsula Tokyo",
+      "area": "Tokyo",
+      "rating": 4.4,
+      "reviews": 4400,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/tokyo/7.jpg",
+      "expediaDest": "The Peninsula Tokyo, Tokyo"
+    },
+    {
+      "slug": "tokyo-shangri-la-tokyo",
+      "name": "Shangri-La Tokyo",
+      "area": "Tokyo",
+      "rating": 4.5,
+      "reviews": 3260,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/tokyo/8.jpg",
+      "expediaDest": "Shangri-La Tokyo, Tokyo"
+    }
+  ],
+  "new-york": [
+    {
+      "slug": "new-york-the-plaza",
+      "name": "The Plaza",
+      "area": "New York City",
+      "rating": 4.5,
+      "reviews": 6761,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/new-york/1.jpg",
+      "expediaDest": "The Plaza, New York City"
+    },
+    {
+      "slug": "new-york-four-seasons-hotel-new-york-downtown",
+      "name": "Four Seasons Hotel New York Downtown",
+      "area": "New York City",
+      "rating": 4.7,
+      "reviews": 1327,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/new-york/2.jpg",
+      "expediaDest": "Four Seasons Hotel New York Downtown, New York City"
+    },
+    {
+      "slug": "new-york-waldorf-astoria-new-york",
+      "name": "Waldorf Astoria New York",
+      "area": "New York City",
+      "rating": 4.4,
+      "reviews": 2143,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/new-york/3.jpg",
+      "expediaDest": "Waldorf Astoria New York, New York City"
+    },
+    {
+      "slug": "new-york-four-seasons-hotel-new-york",
+      "name": "Four Seasons Hotel New York",
+      "area": "New York City",
+      "rating": 4.6,
+      "reviews": 1225,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/new-york/4.jpg",
+      "expediaDest": "Four Seasons Hotel New York, New York City"
+    },
+    {
+      "slug": "new-york-the-ritz-carlton-new-york-nomad",
+      "name": "The Ritz-Carlton New York, NoMad",
+      "area": "New York City",
+      "rating": 4.4,
+      "reviews": 670,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/new-york/5.jpg",
+      "expediaDest": "The Ritz-Carlton New York, NoMad, New York City"
+    },
+    {
+      "slug": "new-york-aman-new-york",
+      "name": "Aman New York",
+      "area": "New York City",
+      "rating": 4.3,
+      "reviews": 368,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/new-york/6.jpg",
+      "expediaDest": "Aman New York, New York City"
+    }
+  ],
+  "barcelona": [
+    {
+      "slug": "barcelona-w-barcelona",
+      "name": "W Barcelona",
+      "area": "Barcelona",
+      "rating": 4.4,
+      "reviews": 19068,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/barcelona/1.jpg",
+      "expediaDest": "W Barcelona, Barcelona"
+    },
+    {
+      "slug": "barcelona-hotel-condes-de-barcelona",
+      "name": "Hotel Condes de Barcelona",
+      "area": "Barcelona",
+      "rating": 4.7,
+      "reviews": 7224,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/barcelona/2.jpg",
+      "expediaDest": "Hotel Condes de Barcelona, Barcelona"
+    },
+    {
+      "slug": "barcelona-majestic-hotel-spa-barcelona",
+      "name": "Majestic Hotel & Spa Barcelona",
+      "area": "Barcelona",
+      "rating": 4.6,
+      "reviews": 6315,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/barcelona/3.jpg",
+      "expediaDest": "Majestic Hotel & Spa Barcelona, Barcelona"
+    },
+    {
+      "slug": "barcelona-mandarin-oriental-barcelona",
+      "name": "Mandarin Oriental, Barcelona",
+      "area": "Barcelona",
+      "rating": 4.7,
+      "reviews": 4278,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/barcelona/4.jpg",
+      "expediaDest": "Mandarin Oriental, Barcelona, Barcelona"
+    },
+    {
+      "slug": "barcelona-hotel-arts-barcelona",
+      "name": "Hotel Arts Barcelona",
+      "area": "Barcelona",
+      "rating": 4.5,
+      "reviews": 4803,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/barcelona/5.jpg",
+      "expediaDest": "Hotel Arts Barcelona, Barcelona"
+    },
+    {
+      "slug": "barcelona-hotel-nh-collection-barcelona-gran-hotel",
+      "name": "Hotel NH Collection Barcelona Gran Hotel Calderón",
+      "area": "Barcelona",
+      "rating": 4.5,
+      "reviews": 4753,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/barcelona/6.jpg",
+      "expediaDest": "Hotel NH Collection Barcelona Gran Hotel Calderón, Barcelona"
+    },
+    {
+      "slug": "barcelona-olivia-balmes-hotel-trabajo",
+      "name": "Olivia Balmes Hotel Trabajo",
+      "area": "Barcelona",
+      "rating": 4.8,
+      "reviews": 2753,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/barcelona/7.jpg",
+      "expediaDest": "Olivia Balmes Hotel Trabajo, Barcelona"
+    },
+    {
+      "slug": "barcelona-hotel-1898",
+      "name": "Hotel 1898",
+      "area": "Barcelona",
+      "rating": 4.6,
+      "reviews": 3531,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/barcelona/8.jpg",
+      "expediaDest": "Hotel 1898, Barcelona"
+    }
+  ],
+  "dubai": [
+    {
+      "slug": "dubai-sofitel-dubai-jumeirah-beach",
+      "name": "Sofitel Dubai Jumeirah Beach",
+      "area": "Dubai",
+      "rating": 4.8,
+      "reviews": 22767,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/dubai/1.jpg",
+      "expediaDest": "Sofitel Dubai Jumeirah Beach, Dubai"
+    },
+    {
+      "slug": "dubai-five-palm-jumeirah-hotel",
+      "name": "FIVE Palm Jumeirah Hotel",
+      "area": "Dubai",
+      "rating": 4.7,
+      "reviews": 24807,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/dubai/2.jpg",
+      "expediaDest": "FIVE Palm Jumeirah Hotel, Dubai"
+    },
+    {
+      "slug": "dubai-jw-marriott-marquis-hotel-dubai",
+      "name": "JW Marriott Marquis Hotel Dubai",
+      "area": "Dubai",
+      "rating": 4.6,
+      "reviews": 22627,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/dubai/3.jpg",
+      "expediaDest": "JW Marriott Marquis Hotel Dubai, Dubai"
+    },
+    {
+      "slug": "dubai-rixos-the-palm-hotel-suites-ultra-all-in",
+      "name": "Rixos The Palm Hotel & Suites - Ultra All Inclusive",
+      "area": "Dubai",
+      "rating": 4.8,
+      "reviews": 13342,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/dubai/4.jpg",
+      "expediaDest": "Rixos The Palm Hotel & Suites - Ultra All Inclusive, Dubai"
+    },
+    {
+      "slug": "dubai-radisson-blu-hotel-dubai-waterfront",
+      "name": "Radisson Blu Hotel, Dubai Waterfront",
+      "area": "Dubai",
+      "rating": 4.7,
+      "reviews": 11153,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/dubai/5.jpg",
+      "expediaDest": "Radisson Blu Hotel, Dubai Waterfront, Dubai"
+    },
+    {
+      "slug": "dubai-jumeirah-emirates-towers",
+      "name": "Jumeirah Emirates Towers",
+      "area": "Dubai",
+      "rating": 4.7,
+      "reviews": 9924,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/dubai/6.jpg",
+      "expediaDest": "Jumeirah Emirates Towers, Dubai"
+    },
+    {
+      "slug": "dubai-four-seasons-resort-dubai-at-jumeirah-be",
+      "name": "Four Seasons Resort Dubai at Jumeirah Beach",
+      "area": "Dubai",
+      "rating": 4.7,
+      "reviews": 9699,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/dubai/7.jpg",
+      "expediaDest": "Four Seasons Resort Dubai at Jumeirah Beach, Dubai"
+    },
+    {
+      "slug": "dubai-rixos-premium-dubai-jbr",
+      "name": "Rixos Premium Dubai JBR",
+      "area": "Dubai",
+      "rating": 4.7,
+      "reviews": 9689,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/dubai/8.jpg",
+      "expediaDest": "Rixos Premium Dubai JBR, Dubai"
+    }
+  ],
+  "bangkok": [
+    {
+      "slug": "bangkok-banyan-tree-bangkok",
+      "name": "Banyan Tree Bangkok",
+      "area": "Bangkok",
+      "rating": 4.8,
+      "reviews": 17266,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bangkok/1.jpg",
+      "expediaDest": "Banyan Tree Bangkok, Bangkok"
+    },
+    {
+      "slug": "bangkok-kimpton-maa-lai-bangkok",
+      "name": "Kimpton Maa-Lai Bangkok",
+      "area": "Bangkok",
+      "rating": 4.9,
+      "reviews": 7981,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bangkok/2.jpg",
+      "expediaDest": "Kimpton Maa-Lai Bangkok, Bangkok"
+    },
+    {
+      "slug": "bangkok-millennium-hilton-bangkok",
+      "name": "Millennium Hilton Bangkok",
+      "area": "Bangkok",
+      "rating": 4.6,
+      "reviews": 13460,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bangkok/3.jpg",
+      "expediaDest": "Millennium Hilton Bangkok, Bangkok"
+    },
+    {
+      "slug": "bangkok-shangri-la-bangkok",
+      "name": "Shangri-La Bangkok",
+      "area": "Bangkok",
+      "rating": 4.6,
+      "reviews": 11571,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bangkok/4.jpg",
+      "expediaDest": "Shangri-La Bangkok, Bangkok"
+    },
+    {
+      "slug": "bangkok-siam-kempinski-hotel-bangkok",
+      "name": "Siam Kempinski Hotel Bangkok",
+      "area": "Bangkok",
+      "rating": 4.7,
+      "reviews": 7117,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bangkok/5.jpg",
+      "expediaDest": "Siam Kempinski Hotel Bangkok, Bangkok"
+    },
+    {
+      "slug": "bangkok-mandarin-oriental-bangkok",
+      "name": "Mandarin Oriental, Bangkok",
+      "area": "Bangkok",
+      "rating": 4.7,
+      "reviews": 6840,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bangkok/6.jpg",
+      "expediaDest": "Mandarin Oriental, Bangkok, Bangkok"
+    },
+    {
+      "slug": "bangkok-sheraton-grande-sukhumvit-a-luxury-colle",
+      "name": "Sheraton Grande Sukhumvit, a Luxury Collection Hotel, Bangkok",
+      "area": "Bangkok",
+      "rating": 4.7,
+      "reviews": 6048,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bangkok/7.jpg",
+      "expediaDest": "Sheraton Grande Sukhumvit, a Luxury Collection Hotel, Bangkok, Bangkok"
+    },
+    {
+      "slug": "bangkok-the-peninsula-bangkok",
+      "name": "The Peninsula Bangkok",
+      "area": "Bangkok",
+      "rating": 4.7,
+      "reviews": 5024,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bangkok/8.jpg",
+      "expediaDest": "The Peninsula Bangkok, Bangkok"
+    }
+  ],
+  "sydney": [
+    {
+      "slug": "sydney-shangri-la-sydney",
+      "name": "Shangri-La Sydney",
+      "area": "Sydney",
+      "rating": 4.3,
+      "reviews": 10071,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/sydney/1.jpg",
+      "expediaDest": "Shangri-La Sydney, Sydney"
+    },
+    {
+      "slug": "sydney-four-seasons-hotel-sydney",
+      "name": "Four Seasons Hotel Sydney",
+      "area": "Sydney",
+      "rating": 4.5,
+      "reviews": 6403,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/sydney/2.jpg",
+      "expediaDest": "Four Seasons Hotel Sydney, Sydney"
+    },
+    {
+      "slug": "sydney-hilton-sydney",
+      "name": "Hilton Sydney",
+      "area": "Sydney",
+      "rating": 4.4,
+      "reviews": 6925,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/sydney/3.jpg",
+      "expediaDest": "Hilton Sydney, Sydney"
+    },
+    {
+      "slug": "sydney-sofitel-sydney-darling-harbour",
+      "name": "Sofitel Sydney Darling Harbour",
+      "area": "Sydney",
+      "rating": 4.4,
+      "reviews": 5843,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/sydney/4.jpg",
+      "expediaDest": "Sofitel Sydney Darling Harbour, Sydney"
+    },
+    {
+      "slug": "sydney-intercontinental-sydney-by-ihg",
+      "name": "InterContinental Sydney by IHG",
+      "area": "Sydney",
+      "rating": 4.4,
+      "reviews": 5376,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/sydney/5.jpg",
+      "expediaDest": "InterContinental Sydney by IHG, Sydney"
+    },
+    {
+      "slug": "sydney-hyatt-regency-sydney",
+      "name": "Hyatt Regency Sydney",
+      "area": "Sydney",
+      "rating": 4.2,
+      "reviews": 7652,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/sydney/6.jpg",
+      "expediaDest": "Hyatt Regency Sydney, Sydney"
+    },
+    {
+      "slug": "sydney-novotel-sydney-on-darling-harbour",
+      "name": "Novotel Sydney on Darling Harbour",
+      "area": "Sydney",
+      "rating": 4.2,
+      "reviews": 5657,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/sydney/7.jpg",
+      "expediaDest": "Novotel Sydney on Darling Harbour, Sydney"
+    },
+    {
+      "slug": "sydney-sydney-harbour-marriott-hotel-at-circula",
+      "name": "Sydney Harbour Marriott Hotel at Circular Quay",
+      "area": "Sydney",
+      "rating": 4.3,
+      "reviews": 4492,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/sydney/8.jpg",
+      "expediaDest": "Sydney Harbour Marriott Hotel at Circular Quay, Sydney"
+    }
+  ],
+  "reykjavik": [
+    {
+      "slug": "reykjavik-hilton-reykjavik",
+      "name": "Hilton Reykjavik",
+      "area": "Reykjavik",
+      "rating": 4.4,
+      "reviews": 2323,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/reykjavik/1.jpg",
+      "expediaDest": "Hilton Reykjavik, Reykjavik"
+    },
+    {
+      "slug": "reykjavik-canopy-by-hilton-reykjavik-city-centre",
+      "name": "Canopy by Hilton Reykjavik City Centre",
+      "area": "Reykjavik",
+      "rating": 4.6,
+      "reviews": 1202,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/reykjavik/2.jpg",
+      "expediaDest": "Canopy by Hilton Reykjavik City Centre, Reykjavik"
+    },
+    {
+      "slug": "reykjavik-the-reykjavik-edition",
+      "name": "The Reykjavik EDITION",
+      "area": "Reykjavik",
+      "rating": 4.5,
+      "reviews": 935,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/reykjavik/3.jpg",
+      "expediaDest": "The Reykjavik EDITION, Reykjavik"
+    },
+    {
+      "slug": "reykjavik-the-retreat-at-blue-lagoon-iceland",
+      "name": "The Retreat at Blue Lagoon Iceland",
+      "area": "Reykjavik",
+      "rating": 4.6,
+      "reviews": 647,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/reykjavik/4.jpg",
+      "expediaDest": "The Retreat at Blue Lagoon Iceland, Reykjavik"
+    },
+    {
+      "slug": "reykjavik-iceland-parliament-hotel-curio-collectio",
+      "name": "Iceland Parliament Hotel, Curio Collection by Hilton",
+      "area": "Reykjavik",
+      "rating": 4.7,
+      "reviews": 422,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/reykjavik/5.jpg",
+      "expediaDest": "Iceland Parliament Hotel, Curio Collection by Hilton, Reykjavik"
+    }
+  ],
+  "athens": [
+    {
+      "slug": "athens-hotel-grande-bretagne",
+      "name": "Hotel Grande Bretagne",
+      "area": "Athens",
+      "rating": 4.8,
+      "reviews": 6831,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/athens/1.jpg",
+      "expediaDest": "Hotel Grande Bretagne, Athens"
+    },
+    {
+      "slug": "athens-four-seasons-astir-palace-hotel-athens",
+      "name": "Four Seasons Astir Palace Hotel Athens",
+      "area": "Athens",
+      "rating": 4.8,
+      "reviews": 3590,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/athens/2.jpg",
+      "expediaDest": "Four Seasons Astir Palace Hotel Athens, Athens"
+    },
+    {
+      "slug": "athens-grand-hyatt-athens",
+      "name": "Grand Hyatt Athens",
+      "area": "Athens",
+      "rating": 4.3,
+      "reviews": 7347,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/athens/3.jpg",
+      "expediaDest": "Grand Hyatt Athens, Athens"
+    }
+  ],
+  "amsterdam": [
+    {
+      "slug": "amsterdam-anantara-grand-hotel-krasnapolsky-amster",
+      "name": "Anantara Grand Hotel Krasnapolsky Amsterdam",
+      "area": "Amsterdam",
+      "rating": 4.6,
+      "reviews": 7047,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/amsterdam/1.jpg",
+      "expediaDest": "Anantara Grand Hotel Krasnapolsky Amsterdam, Amsterdam"
+    },
+    {
+      "slug": "amsterdam-doubletree-by-hilton-amsterdam-centraal-",
+      "name": "DoubleTree by Hilton Amsterdam Centraal Station",
+      "area": "Amsterdam",
+      "rating": 4.3,
+      "reviews": 8776,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/amsterdam/2.jpg",
+      "expediaDest": "DoubleTree by Hilton Amsterdam Centraal Station, Amsterdam"
+    },
+    {
+      "slug": "amsterdam-hotel-jakarta",
+      "name": "Hotel Jakarta",
+      "area": "Amsterdam",
+      "rating": 4.6,
+      "reviews": 3699,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/amsterdam/3.jpg",
+      "expediaDest": "Hotel Jakarta, Amsterdam"
+    },
+    {
+      "slug": "amsterdam-sofitel-legend-the-grand-amsterdam",
+      "name": "Sofitel Legend The Grand Amsterdam",
+      "area": "Amsterdam",
+      "rating": 4.7,
+      "reviews": 2913,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/amsterdam/4.jpg",
+      "expediaDest": "Sofitel Legend The Grand Amsterdam, Amsterdam"
+    },
+    {
+      "slug": "amsterdam-pulitzer-amsterdam",
+      "name": "Pulitzer Amsterdam",
+      "area": "Amsterdam",
+      "rating": 4.6,
+      "reviews": 2447,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/amsterdam/5.jpg",
+      "expediaDest": "Pulitzer Amsterdam, Amsterdam"
+    },
+    {
+      "slug": "amsterdam-the-hoxton-amsterdam",
+      "name": "The Hoxton, Amsterdam",
+      "area": "Amsterdam",
+      "rating": 4.5,
+      "reviews": 2694,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/amsterdam/6.jpg",
+      "expediaDest": "The Hoxton, Amsterdam, Amsterdam"
+    },
+    {
+      "slug": "amsterdam-waldorf-astoria-amsterdam",
+      "name": "Waldorf Astoria Amsterdam",
+      "area": "Amsterdam",
+      "rating": 4.8,
+      "reviews": 1606,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/amsterdam/7.jpg",
+      "expediaDest": "Waldorf Astoria Amsterdam, Amsterdam"
+    },
+    {
+      "slug": "amsterdam-andaz-amsterdam-prinsengracht-by-hyatt",
+      "name": "Andaz Amsterdam Prinsengracht, by Hyatt",
+      "area": "Amsterdam",
+      "rating": 4.7,
+      "reviews": 1621,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/amsterdam/8.jpg",
+      "expediaDest": "Andaz Amsterdam Prinsengracht, by Hyatt, Amsterdam"
+    }
+  ],
+  "marrakech": [
+    {
+      "slug": "marrakech-movenpick-hotel-mansour-eddahbi",
+      "name": "Movenpick Hotel Mansour Eddahbi",
+      "area": "Marrakech",
+      "rating": 4.7,
+      "reviews": 12959,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/marrakech/1.jpg",
+      "expediaDest": "Movenpick Hotel Mansour Eddahbi, Marrakech"
+    },
+    {
+      "slug": "marrakech-sofitel-marrakech-palais-imperial-spa",
+      "name": "Sofitel Marrakech Palais Imperial & Spa",
+      "area": "Marrakech",
+      "rating": 4.7,
+      "reviews": 10587,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/marrakech/2.jpg",
+      "expediaDest": "Sofitel Marrakech Palais Imperial & Spa, Marrakech"
+    },
+    {
+      "slug": "marrakech-la-mamounia",
+      "name": "La Mamounia",
+      "area": "Marrakech",
+      "rating": 4.5,
+      "reviews": 9576,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/marrakech/3.jpg",
+      "expediaDest": "La Mamounia, Marrakech"
+    },
+    {
+      "slug": "marrakech-es-saadi-palace",
+      "name": "Es Saadi palace",
+      "area": "Marrakech",
+      "rating": 4.5,
+      "reviews": 3005,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/marrakech/4.jpg",
+      "expediaDest": "Es Saadi palace, Marrakech"
+    },
+    {
+      "slug": "marrakech-royal-mansour-marrakech",
+      "name": "Royal Mansour Marrakech",
+      "area": "Marrakech",
+      "rating": 4.6,
+      "reviews": 2451,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/marrakech/5.jpg",
+      "expediaDest": "Royal Mansour Marrakech, Marrakech"
+    },
+    {
+      "slug": "marrakech-four-seasons-resort-marrakech",
+      "name": "Four Seasons Resort Marrakech",
+      "area": "Marrakech",
+      "rating": 4.6,
+      "reviews": 2262,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/marrakech/6.jpg",
+      "expediaDest": "Four Seasons Resort Marrakech, Marrakech"
+    },
+    {
+      "slug": "marrakech-fairmont-royal-palm-marrakesh",
+      "name": "Fairmont Royal Palm Marrakesh",
+      "area": "Marrakech",
+      "rating": 4.7,
+      "reviews": 1639,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/marrakech/7.jpg",
+      "expediaDest": "Fairmont Royal Palm Marrakesh, Marrakech"
+    },
+    {
+      "slug": "marrakech-riad-monceau-le",
+      "name": "Riad Monceau (Le)",
+      "area": "Marrakech",
+      "rating": 4.7,
+      "reviews": 1046,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/marrakech/8.jpg",
+      "expediaDest": "Riad Monceau (Le), Marrakech"
+    }
+  ],
+  "seoul": [
+    {
+      "slug": "seoul-the-shilla-seoul",
+      "name": "THE SHILLA Seoul",
+      "area": "Seoul",
+      "rating": 4.6,
+      "reviews": 7610,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/seoul/1.jpg",
+      "expediaDest": "THE SHILLA Seoul, Seoul"
+    },
+    {
+      "slug": "seoul-four-seasons-hotel-seoul",
+      "name": "Four Seasons Hotel Seoul",
+      "area": "Seoul",
+      "rating": 4.6,
+      "reviews": 7433,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/seoul/2.jpg",
+      "expediaDest": "Four Seasons Hotel Seoul, Seoul"
+    },
+    {
+      "slug": "seoul-the-grand-lotte-seoul",
+      "name": "The Grand Lotte Seoul",
+      "area": "Seoul",
+      "rating": 4.5,
+      "reviews": 8887,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/seoul/3.jpg",
+      "expediaDest": "The Grand Lotte Seoul, Seoul"
+    },
+    {
+      "slug": "seoul-grand-intercontinental-seoul-parnas",
+      "name": "Grand InterContinental Seoul Parnas",
+      "area": "Seoul",
+      "rating": 4.5,
+      "reviews": 7787,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/seoul/4.jpg",
+      "expediaDest": "Grand InterContinental Seoul Parnas, Seoul"
+    },
+    {
+      "slug": "seoul-grand-hyatt-seoul",
+      "name": "Grand Hyatt Seoul",
+      "area": "Seoul",
+      "rating": 4.4,
+      "reviews": 8753,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/seoul/5.jpg",
+      "expediaDest": "Grand Hyatt Seoul, Seoul"
+    },
+    {
+      "slug": "seoul-the-westin-josun-seoul",
+      "name": "The Westin Josun Seoul",
+      "area": "Seoul",
+      "rating": 4.5,
+      "reviews": 6624,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/seoul/6.jpg",
+      "expediaDest": "The Westin Josun Seoul, Seoul"
+    },
+    {
+      "slug": "seoul-conrad-seoul",
+      "name": "Conrad Seoul",
+      "area": "Seoul",
+      "rating": 4.4,
+      "reviews": 7137,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/seoul/7.jpg",
+      "expediaDest": "Conrad Seoul, Seoul"
+    },
+    {
+      "slug": "seoul-jw-marriott-hotel-seoul",
+      "name": "JW Marriott Hotel Seoul",
+      "area": "Seoul",
+      "rating": 4.4,
+      "reviews": 6429,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/seoul/8.jpg",
+      "expediaDest": "JW Marriott Hotel Seoul, Seoul"
+    }
+  ],
+  "busan": [
+    {
+      "slug": "busan-ananti-at-busan-cove",
+      "name": "Ananti at Busan Cove",
+      "area": "Busan",
+      "rating": 4.6,
+      "reviews": 11248,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/busan/1.jpg",
+      "expediaDest": "Ananti at Busan Cove, Busan"
+    },
+    {
+      "slug": "busan-paradise-hotel-busan",
+      "name": "Paradise Hotel Busan",
+      "area": "Busan",
+      "rating": 4.5,
+      "reviews": 6924,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/busan/2.jpg",
+      "expediaDest": "Paradise Hotel Busan, Busan"
+    },
+    {
+      "slug": "busan-the-westin-josun-busan",
+      "name": "The Westin Josun Busan",
+      "area": "Busan",
+      "rating": 4.5,
+      "reviews": 5059,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/busan/3.jpg",
+      "expediaDest": "The Westin Josun Busan, Busan"
+    },
+    {
+      "slug": "busan-park-hyatt-busan",
+      "name": "Park Hyatt Busan",
+      "area": "Busan",
+      "rating": 4.6,
+      "reviews": 3744,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/busan/4.jpg",
+      "expediaDest": "Park Hyatt Busan, Busan"
+    },
+    {
+      "slug": "busan-lotte-hotel-busan",
+      "name": "LOTTE HOTEL BUSAN",
+      "area": "Busan",
+      "rating": 4.4,
+      "reviews": 5259,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/busan/5.jpg",
+      "expediaDest": "LOTTE HOTEL BUSAN, Busan"
+    },
+    {
+      "slug": "busan-ananti-at-busan-village",
+      "name": "Ananti at Busan Village",
+      "area": "Busan",
+      "rating": 4.9,
+      "reviews": 1418,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/busan/6.jpg",
+      "expediaDest": "Ananti at Busan Village, Busan"
+    },
+    {
+      "slug": "busan-signiel-busan",
+      "name": "SIGNIEL BUSAN",
+      "area": "Busan",
+      "rating": 4.6,
+      "reviews": 1475,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/busan/7.jpg",
+      "expediaDest": "SIGNIEL BUSAN, Busan"
+    }
+  ],
+  "jeju": [
+    {
+      "slug": "jeju-the-shilla-jeju",
+      "name": "The Shilla Jeju",
+      "area": "Jeju",
+      "rating": 4.6,
+      "reviews": 5399,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/jeju/1.jpg",
+      "expediaDest": "The Shilla Jeju, Jeju"
+    },
+    {
+      "slug": "jeju-haevichi-hotel-resort-jeju",
+      "name": "Haevichi Hotel&Resort Jeju",
+      "area": "Jeju",
+      "rating": 4.5,
+      "reviews": 5880,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/jeju/2.jpg",
+      "expediaDest": "Haevichi Hotel&Resort Jeju, Jeju"
+    },
+    {
+      "slug": "jeju-lotte-hotel-jeju",
+      "name": "LOTTE HOTEL JEJU",
+      "area": "Jeju",
+      "rating": 4.5,
+      "reviews": 4864,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/jeju/3.jpg",
+      "expediaDest": "LOTTE HOTEL JEJU, Jeju"
+    },
+    {
+      "slug": "jeju-jeju-shinhwa-world-marriott-resort",
+      "name": "Jeju Shinhwa World Marriott Resort",
+      "area": "Jeju",
+      "rating": 4.2,
+      "reviews": 7619,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/jeju/4.jpg",
+      "expediaDest": "Jeju Shinhwa World Marriott Resort, Jeju"
+    },
+    {
+      "slug": "jeju-grand-hyatt-jeju",
+      "name": "Grand Hyatt Jeju",
+      "area": "Jeju",
+      "rating": 4.6,
+      "reviews": 3285,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/jeju/5.jpg",
+      "expediaDest": "Grand Hyatt Jeju, Jeju"
+    },
+    {
+      "slug": "jeju-jeju-booyoung-hotel-resort",
+      "name": "Jeju Booyoung Hotel & Resort",
+      "area": "Jeju",
+      "rating": 4.4,
+      "reviews": 3021,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/jeju/6.jpg",
+      "expediaDest": "Jeju Booyoung Hotel & Resort, Jeju"
+    },
+    {
+      "slug": "jeju-sono-calm-jeju",
+      "name": "Sono Calm Jeju",
+      "area": "Jeju",
+      "rating": 4.2,
+      "reviews": 4007,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/jeju/7.jpg",
+      "expediaDest": "Sono Calm Jeju, Jeju"
+    },
+    {
+      "slug": "jeju-hidden-cliff-hotel-nature-jeju",
+      "name": "Hidden Cliff Hotel & Nature Jeju",
+      "area": "Jeju",
+      "rating": 4.3,
+      "reviews": 2023,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/jeju/8.jpg",
+      "expediaDest": "Hidden Cliff Hotel & Nature Jeju, Jeju"
+    }
+  ],
+  "kyoto": [
+    {
+      "slug": "kyoto-sakura-cross-hotel-kyoto-kiyomizudera",
+      "name": "Sakura Cross Hotel Kyoto Kiyomizudera",
+      "area": "Kyoto",
+      "rating": 4.9,
+      "reviews": 2626,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kyoto/1.jpg",
+      "expediaDest": "Sakura Cross Hotel Kyoto Kiyomizudera, Kyoto"
+    },
+    {
+      "slug": "kyoto-the-ritz-carlton-kyoto",
+      "name": "The Ritz-Carlton, Kyoto",
+      "area": "Kyoto",
+      "rating": 4.6,
+      "reviews": 2543,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kyoto/2.jpg",
+      "expediaDest": "The Ritz-Carlton, Kyoto, Kyoto"
+    },
+    {
+      "slug": "kyoto-the-blossom-kyoto",
+      "name": "THE BLOSSOM KYOTO",
+      "area": "Kyoto",
+      "rating": 4.6,
+      "reviews": 1359,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kyoto/3.jpg",
+      "expediaDest": "THE BLOSSOM KYOTO, Kyoto"
+    },
+    {
+      "slug": "kyoto-the-celestine-hotel-gion",
+      "name": "The Celestine Hotel Gion",
+      "area": "Kyoto",
+      "rating": 4.6,
+      "reviews": 1346,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kyoto/4.jpg",
+      "expediaDest": "The Celestine Hotel Gion, Kyoto"
+    },
+    {
+      "slug": "kyoto-four-seasons-hotel-kyoto",
+      "name": "Four Seasons Hotel Kyoto",
+      "area": "Kyoto",
+      "rating": 4.4,
+      "reviews": 1872,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kyoto/5.jpg",
+      "expediaDest": "Four Seasons Hotel Kyoto, Kyoto"
+    },
+    {
+      "slug": "kyoto-roku-kyoto-lxr-hotels-resorts",
+      "name": "ROKU KYOTO, LXR Hotels & Resorts",
+      "area": "Kyoto",
+      "rating": 4.5,
+      "reviews": 1321,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kyoto/6.jpg",
+      "expediaDest": "ROKU KYOTO, LXR Hotels & Resorts, Kyoto"
+    },
+    {
+      "slug": "kyoto-mitsui-garden-hotel-kyoto-kawaramachi-jo",
+      "name": "Mitsui Garden Hotel Kyoto Kawaramachi Jokyoji",
+      "area": "Kyoto",
+      "rating": 4.5,
+      "reviews": 1036,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kyoto/7.jpg",
+      "expediaDest": "Mitsui Garden Hotel Kyoto Kawaramachi Jokyoji, Kyoto"
+    },
+    {
+      "slug": "kyoto-hotel-resol-trinity-kyoto",
+      "name": "Hotel Resol Trinity Kyoto",
+      "area": "Kyoto",
+      "rating": 4.3,
+      "reviews": 1374,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kyoto/8.jpg",
+      "expediaDest": "Hotel Resol Trinity Kyoto, Kyoto"
+    }
+  ],
+  "osaka": [
+    {
+      "slug": "osaka-conrad-osaka",
+      "name": "Conrad Osaka",
+      "area": "Osaka",
+      "rating": 4.6,
+      "reviews": 3944,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/osaka/1.jpg",
+      "expediaDest": "Conrad Osaka, Osaka"
+    },
+    {
+      "slug": "osaka-the-ritz-carlton-osaka",
+      "name": "The Ritz-Carlton, Osaka",
+      "area": "Osaka",
+      "rating": 4.4,
+      "reviews": 5415,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/osaka/2.jpg",
+      "expediaDest": "The Ritz-Carlton, Osaka, Osaka"
+    },
+    {
+      "slug": "osaka-osaka-marriott-miyako-hotel",
+      "name": "Osaka Marriott Miyako Hotel",
+      "area": "Osaka",
+      "rating": 4.5,
+      "reviews": 3777,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/osaka/3.jpg",
+      "expediaDest": "Osaka Marriott Miyako Hotel, Osaka"
+    },
+    {
+      "slug": "osaka-hotel-new-otani-osaka",
+      "name": "Hotel New Otani Osaka",
+      "area": "Osaka",
+      "rating": 4.2,
+      "reviews": 6770,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/osaka/4.jpg",
+      "expediaDest": "Hotel New Otani Osaka, Osaka"
+    },
+    {
+      "slug": "osaka-cross-hotel-osaka",
+      "name": "Cross Hotel Osaka",
+      "area": "Osaka",
+      "rating": 4.5,
+      "reviews": 3569,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/osaka/5.jpg",
+      "expediaDest": "Cross Hotel Osaka, Osaka"
+    },
+    {
+      "slug": "osaka-hilton-osaka",
+      "name": "Hilton Osaka",
+      "area": "Osaka",
+      "rating": 4.2,
+      "reviews": 6242,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/osaka/6.jpg",
+      "expediaDest": "Hilton Osaka, Osaka"
+    },
+    {
+      "slug": "osaka-intercontinental-osaka-by-ihg",
+      "name": "InterContinental Osaka by IHG",
+      "area": "Osaka",
+      "rating": 4.5,
+      "reviews": 2839,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/osaka/7.jpg",
+      "expediaDest": "InterContinental Osaka by IHG, Osaka"
+    },
+    {
+      "slug": "osaka-citadines-namba-osaka",
+      "name": "Citadines Namba Osaka",
+      "area": "Osaka",
+      "rating": 4.7,
+      "reviews": 1484,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/osaka/8.jpg",
+      "expediaDest": "Citadines Namba Osaka, Osaka"
+    }
+  ],
+  "beijing": [
+    {
+      "slug": "beijing-new-world-beijing-hotel",
+      "name": "New World Beijing Hotel",
+      "area": "Beijing",
+      "rating": 4.4,
+      "reviews": 669,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/beijing/1.jpg",
+      "expediaDest": "New World Beijing Hotel, Beijing"
+    },
+    {
+      "slug": "beijing-kerry-hotel-beijing",
+      "name": "Kerry Hotel Beijing",
+      "area": "Beijing",
+      "rating": 4.6,
+      "reviews": 431,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/beijing/2.jpg",
+      "expediaDest": "Kerry Hotel Beijing, Beijing"
+    },
+    {
+      "slug": "beijing-hotel-jen-beijing-by-shangri-la",
+      "name": "Hotel Jen Beijing by Shangri-La",
+      "area": "Beijing",
+      "rating": 4.5,
+      "reviews": 430,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/beijing/3.jpg",
+      "expediaDest": "Hotel Jen Beijing by Shangri-La, Beijing"
+    },
+    {
+      "slug": "beijing-hilton-beijing-wangfujing",
+      "name": "Hilton Beijing Wangfujing",
+      "area": "Beijing",
+      "rating": 4.5,
+      "reviews": 416,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/beijing/4.jpg",
+      "expediaDest": "Hilton Beijing Wangfujing, Beijing"
+    },
+    {
+      "slug": "beijing-four-seasons-beijing",
+      "name": "Four Seasons Beijing",
+      "area": "Beijing",
+      "rating": 4.6,
+      "reviews": 310,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/beijing/5.jpg",
+      "expediaDest": "Four Seasons Beijing, Beijing"
+    },
+    {
+      "slug": "beijing-park-plaza-beijing-wangfujing",
+      "name": "Park Plaza Beijing Wangfujing",
+      "area": "Beijing",
+      "rating": 4.5,
+      "reviews": 345,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/beijing/6.jpg",
+      "expediaDest": "Park Plaza Beijing Wangfujing, Beijing"
+    },
+    {
+      "slug": "beijing-legendale-hotel-beijing",
+      "name": "Legendale Hotel Beijing",
+      "area": "Beijing",
+      "rating": 4.6,
+      "reviews": 270,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/beijing/7.jpg",
+      "expediaDest": "Legendale Hotel Beijing, Beijing"
+    },
+    {
+      "slug": "beijing-nuo-hotel-beijing",
+      "name": "NUO Hotel Beijing",
+      "area": "Beijing",
+      "rating": 4.7,
+      "reviews": 194,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/beijing/8.jpg",
+      "expediaDest": "NUO Hotel Beijing, Beijing"
+    }
+  ],
+  "shanghai": [
+    {
+      "slug": "shanghai-shanghai-marriott-hotel-city-centre",
+      "name": "Shanghai Marriott Hotel City Centre",
+      "area": "Shanghai",
+      "rating": 4.5,
+      "reviews": 2287,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/shanghai/1.jpg",
+      "expediaDest": "Shanghai Marriott Hotel City Centre, Shanghai"
+    },
+    {
+      "slug": "shanghai-fairmont-peace-hotel",
+      "name": "Fairmont Peace Hotel",
+      "area": "Shanghai",
+      "rating": 4.7,
+      "reviews": 978,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/shanghai/2.jpg",
+      "expediaDest": "Fairmont Peace Hotel, Shanghai"
+    },
+    {
+      "slug": "shanghai-pudong-shangri-la",
+      "name": "Pudong Shangri-La",
+      "area": "Shanghai",
+      "rating": 4.4,
+      "reviews": 1425,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/shanghai/3.jpg",
+      "expediaDest": "Pudong Shangri-La, Shanghai"
+    },
+    {
+      "slug": "shanghai-the-ritz-carlton-shanghai-pudong",
+      "name": "The Ritz-Carlton Shanghai, Pudong",
+      "area": "Shanghai",
+      "rating": 4.6,
+      "reviews": 900,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/shanghai/4.jpg",
+      "expediaDest": "The Ritz-Carlton Shanghai, Pudong, Shanghai"
+    },
+    {
+      "slug": "shanghai-the-portman-ritz-carlton-shanghai",
+      "name": "The Portman Ritz-Carlton, Shanghai",
+      "area": "Shanghai",
+      "rating": 4.4,
+      "reviews": 803,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/shanghai/5.jpg",
+      "expediaDest": "The Portman Ritz-Carlton, Shanghai, Shanghai"
+    },
+    {
+      "slug": "shanghai-waldorf-astoria-shanghai-on-the-bund",
+      "name": "Waldorf Astoria Shanghai on the Bund",
+      "area": "Shanghai",
+      "rating": 4.5,
+      "reviews": 612,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/shanghai/6.jpg",
+      "expediaDest": "Waldorf Astoria Shanghai on the Bund, Shanghai"
+    },
+    {
+      "slug": "shanghai-jing-an-shangri-la-west-shanghai",
+      "name": "Jing An Shangri-La, West Shanghai",
+      "area": "Shanghai",
+      "rating": 4.5,
+      "reviews": 592,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/shanghai/7.jpg",
+      "expediaDest": "Jing An Shangri-La, West Shanghai, Shanghai"
+    },
+    {
+      "slug": "shanghai-conrad-shanghai",
+      "name": "Conrad Shanghai",
+      "area": "Shanghai",
+      "rating": 4.2,
+      "reviews": 854,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/shanghai/8.jpg",
+      "expediaDest": "Conrad Shanghai, Shanghai"
+    }
+  ],
+  "hanoi": [
+    {
+      "slug": "hanoi-intercontinental-hanoi-westlake-by-ihg",
+      "name": "InterContinental Hanoi Westlake by IHG",
+      "area": "Hanoi",
+      "rating": 4.7,
+      "reviews": 6822,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hanoi/1.jpg",
+      "expediaDest": "InterContinental Hanoi Westlake by IHG, Hanoi"
+    },
+    {
+      "slug": "hanoi-meli-hanoi",
+      "name": "Meliá Hanoi",
+      "area": "Hanoi",
+      "rating": 4.6,
+      "reviews": 8176,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hanoi/2.jpg",
+      "expediaDest": "Meliá Hanoi, Hanoi"
+    },
+    {
+      "slug": "hanoi-sofitel-legend-metropole-hanoi",
+      "name": "Sofitel Legend Metropole Hanoi",
+      "area": "Hanoi",
+      "rating": 4.7,
+      "reviews": 6266,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hanoi/3.jpg",
+      "expediaDest": "Sofitel Legend Metropole Hanoi, Hanoi"
+    },
+    {
+      "slug": "hanoi-lotte-hotel-hanoi",
+      "name": "Lotte Hotel Hanoi",
+      "area": "Hanoi",
+      "rating": 4.7,
+      "reviews": 4284,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hanoi/4.jpg",
+      "expediaDest": "Lotte Hotel Hanoi, Hanoi"
+    },
+    {
+      "slug": "hanoi-meritel-hanoi",
+      "name": "Meritel Hanoi",
+      "area": "Hanoi",
+      "rating": 4.9,
+      "reviews": 2550,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hanoi/5.jpg",
+      "expediaDest": "Meritel Hanoi, Hanoi"
+    },
+    {
+      "slug": "hanoi-the-oriental-jade-hotel",
+      "name": "The Oriental Jade Hotel",
+      "area": "Hanoi",
+      "rating": 4.9,
+      "reviews": 2090,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hanoi/6.jpg",
+      "expediaDest": "The Oriental Jade Hotel, Hanoi"
+    },
+    {
+      "slug": "hanoi-peridot-grand-luxury-boutique-hotel",
+      "name": "Peridot Grand Luxury Boutique Hotel",
+      "area": "Hanoi",
+      "rating": 4.8,
+      "reviews": 1614,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hanoi/7.jpg",
+      "expediaDest": "Peridot Grand Luxury Boutique Hotel, Hanoi"
+    },
+    {
+      "slug": "hanoi-hanoi-le-chateau-hotel-spa",
+      "name": "Hanoi Le Chateau Hotel & Spa",
+      "area": "Hanoi",
+      "rating": 4.8,
+      "reviews": 1491,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hanoi/8.jpg",
+      "expediaDest": "Hanoi Le Chateau Hotel & Spa, Hanoi"
+    }
+  ],
+  "ho-chi-minh-city": [
+    {
+      "slug": "ho-chi-minh-city-hotel-nikko-saigon",
+      "name": "Hotel Nikko Saigon",
+      "area": "Ho Chi Minh City",
+      "rating": 4.7,
+      "reviews": 10006,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/ho-chi-minh-city/1.jpg",
+      "expediaDest": "Hotel Nikko Saigon, Ho Chi Minh City"
+    },
+    {
+      "slug": "ho-chi-minh-city-sofitel-saigon-plaza",
+      "name": "Sofitel Saigon Plaza",
+      "area": "Ho Chi Minh City",
+      "rating": 4.7,
+      "reviews": 8097,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/ho-chi-minh-city/2.jpg",
+      "expediaDest": "Sofitel Saigon Plaza, Ho Chi Minh City"
+    },
+    {
+      "slug": "ho-chi-minh-city-sheraton-saigon-grand-opera-hotel",
+      "name": "Sheraton Saigon Grand Opera Hotel",
+      "area": "Ho Chi Minh City",
+      "rating": 4.6,
+      "reviews": 9639,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/ho-chi-minh-city/3.jpg",
+      "expediaDest": "Sheraton Saigon Grand Opera Hotel, Ho Chi Minh City"
+    },
+    {
+      "slug": "ho-chi-minh-city-pullman-saigon-centre",
+      "name": "Pullman Saigon Centre",
+      "area": "Ho Chi Minh City",
+      "rating": 4.5,
+      "reviews": 7010,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/ho-chi-minh-city/4.jpg",
+      "expediaDest": "Pullman Saigon Centre, Ho Chi Minh City"
+    },
+    {
+      "slug": "ho-chi-minh-city-mai-house-saigon-hotel",
+      "name": "Mai House Saigon Hotel",
+      "area": "Ho Chi Minh City",
+      "rating": 4.8,
+      "reviews": 3607,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/ho-chi-minh-city/5.jpg",
+      "expediaDest": "Mai House Saigon Hotel, Ho Chi Minh City"
+    },
+    {
+      "slug": "ho-chi-minh-city-jw-marriott-hotel-suites-saigon",
+      "name": "JW Marriott Hotel & Suites Saigon",
+      "area": "Ho Chi Minh City",
+      "rating": 4.6,
+      "reviews": 4802,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/ho-chi-minh-city/6.jpg",
+      "expediaDest": "JW Marriott Hotel & Suites Saigon, Ho Chi Minh City"
+    },
+    {
+      "slug": "ho-chi-minh-city-h-tel-des-arts-saigon-mgallery-collectio",
+      "name": "Hôtel des Arts Saigon - MGallery Collection",
+      "area": "Ho Chi Minh City",
+      "rating": 4.7,
+      "reviews": 3967,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/ho-chi-minh-city/7.jpg",
+      "expediaDest": "Hôtel des Arts Saigon - MGallery Collection, Ho Chi Minh City"
+    },
+    {
+      "slug": "ho-chi-minh-city-le-m-ridien-saigon",
+      "name": "Le Méridien Saigon",
+      "area": "Ho Chi Minh City",
+      "rating": 4.5,
+      "reviews": 5004,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/ho-chi-minh-city/8.jpg",
+      "expediaDest": "Le Méridien Saigon, Ho Chi Minh City"
+    }
+  ],
+  "hoi-an": [
+    {
+      "slug": "hoi-an-la-siesta-hoi-an-resort-spa",
+      "name": "La Siesta Hoi An Resort & Spa",
+      "area": "Hoi An",
+      "rating": 4.8,
+      "reviews": 5801,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hoi-an/1.jpg",
+      "expediaDest": "La Siesta Hoi An Resort & Spa, Hoi An"
+    },
+    {
+      "slug": "hoi-an-legacy-hoi-an-resort",
+      "name": "Legacy Hoi An Resort",
+      "area": "Hoi An",
+      "rating": 4.9,
+      "reviews": 4653,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hoi-an/2.jpg",
+      "expediaDest": "Legacy Hoi An Resort, Hoi An"
+    },
+    {
+      "slug": "hoi-an-grand-sunrise-palace-hotel",
+      "name": "Grand Sunrise Palace Hotel",
+      "area": "Hoi An",
+      "rating": 4.9,
+      "reviews": 3688,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hoi-an/3.jpg",
+      "expediaDest": "Grand Sunrise Palace Hotel, Hoi An"
+    },
+    {
+      "slug": "hoi-an-hotel-royal-hoi-an-the-legacy-by-the-riv",
+      "name": "Hotel Royal Hoi An. The Legacy By The River",
+      "area": "Hoi An",
+      "rating": 4.8,
+      "reviews": 3875,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hoi-an/4.jpg",
+      "expediaDest": "Hotel Royal Hoi An. The Legacy By The River, Hoi An"
+    },
+    {
+      "slug": "hoi-an-hoi-an-coco-river-resort-spa",
+      "name": "Hoi An Coco River Resort & Spa",
+      "area": "Hoi An",
+      "rating": 4.8,
+      "reviews": 2600,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hoi-an/5.jpg",
+      "expediaDest": "Hoi An Coco River Resort & Spa, Hoi An"
+    },
+    {
+      "slug": "hoi-an-anio-boutique-hotel-hoian",
+      "name": "Anio Boutique Hotel Hoian",
+      "area": "Hoi An",
+      "rating": 4.9,
+      "reviews": 2194,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hoi-an/6.jpg",
+      "expediaDest": "Anio Boutique Hotel Hoian, Hoi An"
+    },
+    {
+      "slug": "hoi-an-allegro-hoi-an",
+      "name": "Allegro Hoi An",
+      "area": "Hoi An",
+      "rating": 4.8,
+      "reviews": 2439,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hoi-an/7.jpg",
+      "expediaDest": "Allegro Hoi An, Hoi An"
+    },
+    {
+      "slug": "hoi-an-hoi-an-memories-resort-spa",
+      "name": "Hoi An Memories Resort & Spa",
+      "area": "Hoi An",
+      "rating": 4.7,
+      "reviews": 2584,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hoi-an/8.jpg",
+      "expediaDest": "Hoi An Memories Resort & Spa, Hoi An"
+    }
+  ],
+  "taipei": [
+    {
+      "slug": "taipei-regent-taipei",
+      "name": "Regent Taipei",
+      "area": "Taipei",
+      "rating": 4.6,
+      "reviews": 27932,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/taipei/1.jpg",
+      "expediaDest": "Regent Taipei, Taipei"
+    },
+    {
+      "slug": "taipei-the-grand-hotel",
+      "name": "The Grand Hotel",
+      "area": "Taipei",
+      "rating": 4.4,
+      "reviews": 25914,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/taipei/2.jpg",
+      "expediaDest": "The Grand Hotel, Taipei"
+    },
+    {
+      "slug": "taipei-mandarin-oriental-taipei",
+      "name": "Mandarin Oriental, Taipei",
+      "area": "Taipei",
+      "rating": 4.6,
+      "reviews": 12224,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/taipei/3.jpg",
+      "expediaDest": "Mandarin Oriental, Taipei, Taipei"
+    },
+    {
+      "slug": "taipei-grand-hyatt-taipei",
+      "name": "Grand Hyatt Taipei",
+      "area": "Taipei",
+      "rating": 4.4,
+      "reviews": 15976,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/taipei/4.jpg",
+      "expediaDest": "Grand Hyatt Taipei, Taipei"
+    },
+    {
+      "slug": "taipei-the-howard-plaza-hotel-taipei",
+      "name": "The Howard Plaza Hotel Taipei",
+      "area": "Taipei",
+      "rating": 4.4,
+      "reviews": 14323,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/taipei/5.jpg",
+      "expediaDest": "The Howard Plaza Hotel Taipei, Taipei"
+    },
+    {
+      "slug": "taipei-taipei-marriott-hotel",
+      "name": "Taipei Marriott Hotel",
+      "area": "Taipei",
+      "rating": 4.4,
+      "reviews": 14120,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/taipei/6.jpg",
+      "expediaDest": "Taipei Marriott Hotel, Taipei"
+    },
+    {
+      "slug": "taipei-sheraton-grand-taipei-hotel",
+      "name": "Sheraton Grand Taipei Hotel",
+      "area": "Taipei",
+      "rating": 4.3,
+      "reviews": 15052,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/taipei/7.jpg",
+      "expediaDest": "Sheraton Grand Taipei Hotel, Taipei"
+    },
+    {
+      "slug": "taipei-grand-mayfull-hotel-taipei",
+      "name": "Grand Mayfull Hotel Taipei",
+      "area": "Taipei",
+      "rating": 4.4,
+      "reviews": 11608,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/taipei/8.jpg",
+      "expediaDest": "Grand Mayfull Hotel Taipei, Taipei"
+    }
+  ],
+  "hong-kong": [
+    {
+      "slug": "hong-kong-the-peninsula-hong-kong",
+      "name": "The Peninsula Hong Kong",
+      "area": "Hong Kong",
+      "rating": 4.6,
+      "reviews": 7668,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hong-kong/1.jpg",
+      "expediaDest": "The Peninsula Hong Kong, Hong Kong"
+    },
+    {
+      "slug": "hong-kong-mandarin-oriental-hong-kong",
+      "name": "Mandarin Oriental, Hong Kong",
+      "area": "Hong Kong",
+      "rating": 4.6,
+      "reviews": 5262,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hong-kong/2.jpg",
+      "expediaDest": "Mandarin Oriental, Hong Kong, Hong Kong"
+    },
+    {
+      "slug": "hong-kong-four-seasons-hotel-hong-kong",
+      "name": "Four Seasons Hotel Hong Kong",
+      "area": "Hong Kong",
+      "rating": 4.6,
+      "reviews": 3750,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hong-kong/3.jpg",
+      "expediaDest": "Four Seasons Hotel Hong Kong, Hong Kong"
+    },
+    {
+      "slug": "hong-kong-the-ritz-carlton-hong-kong",
+      "name": "The Ritz-Carlton, Hong Kong",
+      "area": "Hong Kong",
+      "rating": 4.6,
+      "reviews": 2966,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/hong-kong/4.jpg",
+      "expediaDest": "The Ritz-Carlton, Hong Kong, Hong Kong"
+    }
+  ],
+  "chiang-mai": [
+    {
+      "slug": "chiang-mai-shangri-la-chiang-mai-hotel",
+      "name": "Shangri-La Chiang Mai Hotel",
+      "area": "Chiang Mai",
+      "rating": 4.6,
+      "reviews": 4350,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/chiang-mai/1.jpg",
+      "expediaDest": "Shangri-La Chiang Mai Hotel, Chiang Mai"
+    },
+    {
+      "slug": "chiang-mai-chiang-mai-marriott-hotel",
+      "name": "Chiang Mai Marriott Hotel",
+      "area": "Chiang Mai",
+      "rating": 4.6,
+      "reviews": 3893,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/chiang-mai/2.jpg",
+      "expediaDest": "Chiang Mai Marriott Hotel, Chiang Mai"
+    },
+    {
+      "slug": "chiang-mai-u-chiang-mai-hotel",
+      "name": "U Chiang Mai Hotel",
+      "area": "Chiang Mai",
+      "rating": 4.8,
+      "reviews": 2048,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/chiang-mai/3.jpg",
+      "expediaDest": "U Chiang Mai Hotel, Chiang Mai"
+    },
+    {
+      "slug": "chiang-mai-anantara-chiang-mai-resort",
+      "name": "Anantara Chiang Mai Resort",
+      "area": "Chiang Mai",
+      "rating": 4.7,
+      "reviews": 2405,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/chiang-mai/4.jpg",
+      "expediaDest": "Anantara Chiang Mai Resort, Chiang Mai"
+    },
+    {
+      "slug": "chiang-mai-na-nirand-romantic-boutique-resort",
+      "name": "Na Nirand Romantic Boutique Resort",
+      "area": "Chiang Mai",
+      "rating": 4.7,
+      "reviews": 1203,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/chiang-mai/5.jpg",
+      "expediaDest": "Na Nirand Romantic Boutique Resort, Chiang Mai"
+    },
+    {
+      "slug": "chiang-mai-cross-chiang-mai-riverside",
+      "name": "Cross Chiang Mai Riverside",
+      "area": "Chiang Mai",
+      "rating": 4.8,
+      "reviews": 1012,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/chiang-mai/6.jpg",
+      "expediaDest": "Cross Chiang Mai Riverside, Chiang Mai"
+    },
+    {
+      "slug": "chiang-mai-the-inside-house",
+      "name": "The Inside House",
+      "area": "Chiang Mai",
+      "rating": 4.8,
+      "reviews": 726,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/chiang-mai/7.jpg",
+      "expediaDest": "The Inside House, Chiang Mai"
+    },
+    {
+      "slug": "chiang-mai-amanor-hotel-chiang-mai",
+      "name": "AMANOR Hotel Chiang Mai",
+      "area": "Chiang Mai",
+      "rating": 4.6,
+      "reviews": 860,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/chiang-mai/8.jpg",
+      "expediaDest": "AMANOR Hotel Chiang Mai, Chiang Mai"
+    }
+  ],
+  "phuket": [
+    {
+      "slug": "phuket-phuket-marriott-resort-spa-merlin-beach",
+      "name": "Phuket Marriott Resort & Spa, Merlin Beach",
+      "area": "Phuket",
+      "rating": 4.7,
+      "reviews": 5947,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/phuket/1.jpg",
+      "expediaDest": "Phuket Marriott Resort & Spa, Merlin Beach, Phuket"
+    },
+    {
+      "slug": "phuket-banyan-tree-phuket",
+      "name": "Banyan Tree Phuket",
+      "area": "Phuket",
+      "rating": 4.8,
+      "reviews": 4689,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/phuket/2.jpg",
+      "expediaDest": "Banyan Tree Phuket, Phuket"
+    },
+    {
+      "slug": "phuket-jw-marriott-phuket-resort-spa",
+      "name": "JW Marriott Phuket Resort & Spa",
+      "area": "Phuket",
+      "rating": 4.6,
+      "reviews": 3518,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/phuket/3.jpg",
+      "expediaDest": "JW Marriott Phuket Resort & Spa, Phuket"
+    },
+    {
+      "slug": "phuket-anantara-mai-khao-phuket-villas",
+      "name": "Anantara Mai Khao Phuket Villas",
+      "area": "Phuket",
+      "rating": 4.7,
+      "reviews": 1905,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/phuket/4.jpg",
+      "expediaDest": "Anantara Mai Khao Phuket Villas, Phuket"
+    },
+    {
+      "slug": "phuket-sunsuri-phuket",
+      "name": "SUNSURI PHUKET",
+      "area": "Phuket",
+      "rating": 4.6,
+      "reviews": 1710,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/phuket/5.jpg",
+      "expediaDest": "SUNSURI PHUKET, Phuket"
+    },
+    {
+      "slug": "phuket-anantara-layan-phuket-resort",
+      "name": "Anantara Layan Phuket Resort",
+      "area": "Phuket",
+      "rating": 4.8,
+      "reviews": 1060,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/phuket/6.jpg",
+      "expediaDest": "Anantara Layan Phuket Resort, Phuket"
+    },
+    {
+      "slug": "phuket-the-naka-island-a-luxury-collection-reso",
+      "name": "The Naka Island, a Luxury Collection Resort & Spa, Phuket",
+      "area": "Phuket",
+      "rating": 4.7,
+      "reviews": 1022,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/phuket/7.jpg",
+      "expediaDest": "The Naka Island, a Luxury Collection Resort & Spa, Phuket, Phuket"
+    }
+  ],
+  "singapore": [
+    {
+      "slug": "singapore-marina-bay-sands-singapore",
+      "name": "Marina Bay Sands Singapore",
+      "area": "Singapore",
+      "rating": 4.7,
+      "reviews": 65123,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/singapore/1.jpg",
+      "expediaDest": "Marina Bay Sands Singapore, Singapore"
+    },
+    {
+      "slug": "singapore-shangri-la-singapore",
+      "name": "Shangri-La Singapore",
+      "area": "Singapore",
+      "rating": 4.6,
+      "reviews": 13261,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/singapore/2.jpg",
+      "expediaDest": "Shangri-La Singapore, Singapore"
+    },
+    {
+      "slug": "singapore-the-fullerton-hotel-singapore",
+      "name": "The Fullerton Hotel Singapore",
+      "area": "Singapore",
+      "rating": 4.6,
+      "reviews": 9310,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/singapore/3.jpg",
+      "expediaDest": "The Fullerton Hotel Singapore, Singapore"
+    },
+    {
+      "slug": "singapore-pan-pacific-singapore",
+      "name": "Pan Pacific Singapore",
+      "area": "Singapore",
+      "rating": 4.6,
+      "reviews": 7840,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/singapore/4.jpg",
+      "expediaDest": "Pan Pacific Singapore, Singapore"
+    },
+    {
+      "slug": "singapore-swiss-tel-the-stamford-singapore",
+      "name": "Swissôtel The Stamford Singapore",
+      "area": "Singapore",
+      "rating": 4.5,
+      "reviews": 9445,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/singapore/5.jpg",
+      "expediaDest": "Swissôtel The Stamford Singapore, Singapore"
+    },
+    {
+      "slug": "singapore-mandarin-oriental-singapore",
+      "name": "Mandarin Oriental, Singapore",
+      "area": "Singapore",
+      "rating": 4.6,
+      "reviews": 7525,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/singapore/6.jpg",
+      "expediaDest": "Mandarin Oriental, Singapore, Singapore"
+    },
+    {
+      "slug": "singapore-raffles-singapore",
+      "name": "Raffles Singapore",
+      "area": "Singapore",
+      "rating": 4.6,
+      "reviews": 6840,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/singapore/7.jpg",
+      "expediaDest": "Raffles Singapore, Singapore"
+    },
+    {
+      "slug": "singapore-the-ritz-carlton-millenia-singapore",
+      "name": "The Ritz-Carlton, Millenia Singapore",
+      "area": "Singapore",
+      "rating": 4.6,
+      "reviews": 6439,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/singapore/8.jpg",
+      "expediaDest": "The Ritz-Carlton, Millenia Singapore, Singapore"
+    }
+  ],
+  "kuala-lumpur": [
+    {
+      "slug": "kuala-lumpur-shangri-la-kuala-lumpur",
+      "name": "Shangri-La Kuala Lumpur",
+      "area": "Kuala Lumpur",
+      "rating": 4.6,
+      "reviews": 11453,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kuala-lumpur/1.jpg",
+      "expediaDest": "Shangri-La Kuala Lumpur, Kuala Lumpur"
+    },
+    {
+      "slug": "kuala-lumpur-hilton-kuala-lumpur",
+      "name": "Hilton Kuala Lumpur",
+      "area": "Kuala Lumpur",
+      "rating": 4.6,
+      "reviews": 10973,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kuala-lumpur/2.jpg",
+      "expediaDest": "Hilton Kuala Lumpur, Kuala Lumpur"
+    },
+    {
+      "slug": "kuala-lumpur-mandarin-oriental-kuala-lumpur",
+      "name": "Mandarin Oriental, Kuala Lumpur",
+      "area": "Kuala Lumpur",
+      "rating": 4.6,
+      "reviews": 9319,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kuala-lumpur/3.jpg",
+      "expediaDest": "Mandarin Oriental, Kuala Lumpur, Kuala Lumpur"
+    },
+    {
+      "slug": "kuala-lumpur-doubletree-by-hilton-kuala-lumpur",
+      "name": "DoubleTree by Hilton Kuala Lumpur",
+      "area": "Kuala Lumpur",
+      "rating": 4.5,
+      "reviews": 11233,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kuala-lumpur/4.jpg",
+      "expediaDest": "DoubleTree by Hilton Kuala Lumpur, Kuala Lumpur"
+    },
+    {
+      "slug": "kuala-lumpur-grand-hyatt-kuala-lumpur",
+      "name": "Grand Hyatt Kuala Lumpur",
+      "area": "Kuala Lumpur",
+      "rating": 4.6,
+      "reviews": 7363,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kuala-lumpur/5.jpg",
+      "expediaDest": "Grand Hyatt Kuala Lumpur, Kuala Lumpur"
+    },
+    {
+      "slug": "kuala-lumpur-jw-marriott-hotel-kuala-lumpur",
+      "name": "JW Marriott Hotel Kuala Lumpur",
+      "area": "Kuala Lumpur",
+      "rating": 4.5,
+      "reviews": 8938,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kuala-lumpur/6.jpg",
+      "expediaDest": "JW Marriott Hotel Kuala Lumpur, Kuala Lumpur"
+    },
+    {
+      "slug": "kuala-lumpur-intercontinental-kuala-lumpur-by-ihg",
+      "name": "InterContinental Kuala Lumpur by IHG",
+      "area": "Kuala Lumpur",
+      "rating": 4.5,
+      "reviews": 8081,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kuala-lumpur/7.jpg",
+      "expediaDest": "InterContinental Kuala Lumpur by IHG, Kuala Lumpur"
+    },
+    {
+      "slug": "kuala-lumpur-four-seasons-hotel-kuala-lumpur",
+      "name": "Four Seasons Hotel Kuala Lumpur",
+      "area": "Kuala Lumpur",
+      "rating": 4.6,
+      "reviews": 5733,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/kuala-lumpur/8.jpg",
+      "expediaDest": "Four Seasons Hotel Kuala Lumpur, Kuala Lumpur"
+    }
+  ],
+  "bora-bora": [
+    {
+      "slug": "bora-bora-le-bora-bora-by-pearl-resorts",
+      "name": "Le Bora Bora by Pearl Resorts",
+      "area": "Bora Bora",
+      "rating": 4.7,
+      "reviews": 1495,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bora-bora/1.jpg",
+      "expediaDest": "Le Bora Bora by Pearl Resorts, Bora Bora"
+    },
+    {
+      "slug": "bora-bora-the-st-regis-bora-bora-resort",
+      "name": "The St. Regis Bora Bora Resort",
+      "area": "Bora Bora",
+      "rating": 4.8,
+      "reviews": 881,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bora-bora/2.jpg",
+      "expediaDest": "The St. Regis Bora Bora Resort, Bora Bora"
+    },
+    {
+      "slug": "bora-bora-intercontinental-le-moana-bora-bora-reso",
+      "name": "InterContinental Le Moana Bora Bora Resort",
+      "area": "Bora Bora",
+      "rating": 4.6,
+      "reviews": 1149,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bora-bora/3.jpg",
+      "expediaDest": "InterContinental Le Moana Bora Bora Resort, Bora Bora"
+    },
+    {
+      "slug": "bora-bora-intercontinental-bora-bora-resort-thalas",
+      "name": "InterContinental Bora Bora Resort Thalasso Spa",
+      "area": "Bora Bora",
+      "rating": 4.7,
+      "reviews": 982,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bora-bora/4.jpg",
+      "expediaDest": "InterContinental Bora Bora Resort Thalasso Spa, Bora Bora"
+    },
+    {
+      "slug": "bora-bora-conrad-bora-bora-nui",
+      "name": "Conrad Bora Bora Nui",
+      "area": "Bora Bora",
+      "rating": 4.6,
+      "reviews": 1102,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bora-bora/5.jpg",
+      "expediaDest": "Conrad Bora Bora Nui, Bora Bora"
+    },
+    {
+      "slug": "bora-bora-four-seasons-resort-bora-bora",
+      "name": "Four Seasons Resort Bora Bora",
+      "area": "Bora Bora",
+      "rating": 4.7,
+      "reviews": 920,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bora-bora/6.jpg",
+      "expediaDest": "Four Seasons Resort Bora Bora, Bora Bora"
+    },
+    {
+      "slug": "bora-bora-the-westin-bora-bora-resort-spa",
+      "name": "The Westin Bora Bora Resort & Spa",
+      "area": "Bora Bora",
+      "rating": 4.6,
+      "reviews": 343,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bora-bora/7.jpg",
+      "expediaDest": "The Westin Bora Bora Resort & Spa, Bora Bora"
+    }
+  ],
+  "tahiti": [
+    {
+      "slug": "tahiti-intercontinental-tahiti-resort-spa",
+      "name": "InterContinental Tahiti Resort & Spa",
+      "area": "Tahiti",
+      "rating": 4.4,
+      "reviews": 2249,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/tahiti/1.jpg",
+      "expediaDest": "InterContinental Tahiti Resort & Spa, Tahiti"
+    }
+  ],
+  "moorea": [
+    {
+      "slug": "moorea-sofitel-kia-ora-moorea-beach-resort",
+      "name": "Sofitel Kia Ora Moorea Beach Resort",
+      "area": "Moorea",
+      "rating": 4.5,
+      "reviews": 1702,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/moorea/1.jpg",
+      "expediaDest": "Sofitel Kia Ora Moorea Beach Resort, Moorea"
+    },
+    {
+      "slug": "moorea-hotel-manava-beach-resort-spa-moorea",
+      "name": "Hotel Manava Beach Resort & Spa Moorea",
+      "area": "Moorea",
+      "rating": 4.4,
+      "reviews": 1368,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/moorea/2.jpg",
+      "expediaDest": "Hotel Manava Beach Resort & Spa Moorea, Moorea"
+    },
+    {
+      "slug": "moorea-hilton-moorea-lagoon-resort-spa",
+      "name": "Hilton Moorea Lagoon Resort & Spa",
+      "area": "Moorea",
+      "rating": 4.2,
+      "reviews": 1718,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/moorea/3.jpg",
+      "expediaDest": "Hilton Moorea Lagoon Resort & Spa, Moorea"
+    },
+    {
+      "slug": "moorea-moorea-island-beach",
+      "name": "Moorea Island Beach",
+      "area": "Moorea",
+      "rating": 4.8,
+      "reviews": 273,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/moorea/4.jpg",
+      "expediaDest": "Moorea Island Beach, Moorea"
+    }
+  ],
+  "fiji": [
+    {
+      "slug": "fiji-shangri-la-yanuca-island-fiji",
+      "name": "Shangri-La Yanuca Island, Fiji",
+      "area": "Fiji",
+      "rating": 4.4,
+      "reviews": 5594,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/fiji/1.jpg",
+      "expediaDest": "Shangri-La Yanuca Island, Fiji, Fiji"
+    },
+    {
+      "slug": "fiji-sofitel-fiji-resort-and-spa",
+      "name": "Sofitel Fiji Resort and Spa",
+      "area": "Fiji",
+      "rating": 4.5,
+      "reviews": 3790,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/fiji/2.jpg",
+      "expediaDest": "Sofitel Fiji Resort and Spa, Fiji"
+    },
+    {
+      "slug": "fiji-fiji-marriott-resort-momi-bay",
+      "name": "Fiji Marriott Resort Momi Bay",
+      "area": "Fiji",
+      "rating": 4.5,
+      "reviews": 2614,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/fiji/3.jpg",
+      "expediaDest": "Fiji Marriott Resort Momi Bay, Fiji"
+    },
+    {
+      "slug": "fiji-outrigger-fiji-beach-resort",
+      "name": "OUTRIGGER Fiji Beach Resort",
+      "area": "Fiji",
+      "rating": 4.4,
+      "reviews": 2190,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/fiji/4.jpg",
+      "expediaDest": "OUTRIGGER Fiji Beach Resort, Fiji"
+    },
+    {
+      "slug": "fiji-hilton-fiji-beach-resort-and-spa",
+      "name": "Hilton Fiji Beach Resort and Spa",
+      "area": "Fiji",
+      "rating": 4.2,
+      "reviews": 2947,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/fiji/5.jpg",
+      "expediaDest": "Hilton Fiji Beach Resort and Spa, Fiji"
+    },
+    {
+      "slug": "fiji-tokoriki-island-resort-tokoriki-island-f",
+      "name": "Tokoriki Island Resort, Tokoriki Island, Fiji",
+      "area": "Fiji",
+      "rating": 4.8,
+      "reviews": 422,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/fiji/6.jpg",
+      "expediaDest": "Tokoriki Island Resort, Tokoriki Island, Fiji, Fiji"
+    },
+    {
+      "slug": "fiji-sheraton-denarau-villas",
+      "name": "Sheraton Denarau Villas",
+      "area": "Fiji",
+      "rating": 4.6,
+      "reviews": 538,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/fiji/7.jpg",
+      "expediaDest": "Sheraton Denarau Villas, Fiji"
+    },
+    {
+      "slug": "fiji-six-senses-fiji",
+      "name": "Six Senses Fiji",
+      "area": "Fiji",
+      "rating": 4.4,
+      "reviews": 277,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/fiji/8.jpg",
+      "expediaDest": "Six Senses Fiji, Fiji"
+    }
+  ],
+  "rarotonga": [
+    {
+      "slug": "rarotonga-pacific-resort-rarotonga",
+      "name": "Pacific Resort Rarotonga",
+      "area": "Rarotonga",
+      "rating": 4.6,
+      "reviews": 550,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/rarotonga/1.jpg",
+      "expediaDest": "Pacific Resort Rarotonga, Rarotonga"
+    },
+    {
+      "slug": "rarotonga-muri-beach-club-hotel-rarotonga",
+      "name": "Muri Beach Club Hotel Rarotonga",
+      "area": "Rarotonga",
+      "rating": 4.7,
+      "reviews": 282,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/rarotonga/2.jpg",
+      "expediaDest": "Muri Beach Club Hotel Rarotonga, Rarotonga"
+    }
+  ],
+  "samoa": [
+    {
+      "slug": "samoa-saletoga-sands-resort-spa",
+      "name": "Saletoga Sands Resort & Spa",
+      "area": "Samoa",
+      "rating": 4.5,
+      "reviews": 583,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/samoa/1.jpg",
+      "expediaDest": "Saletoga Sands Resort & Spa, Samoa"
+    },
+    {
+      "slug": "samoa-taumeasina-island-resort",
+      "name": "Taumeasina Island Resort",
+      "area": "Samoa",
+      "rating": 4.2,
+      "reviews": 817,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/samoa/2.jpg",
+      "expediaDest": "Taumeasina Island Resort, Samoa"
+    },
+    {
+      "slug": "samoa-le-lagoto-resort-spa",
+      "name": "Le Lagoto Resort & Spa",
+      "area": "Samoa",
+      "rating": 4.6,
+      "reviews": 205,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/samoa/3.jpg",
+      "expediaDest": "Le Lagoto Resort & Spa, Samoa"
+    },
+    {
+      "slug": "samoa-sinalei-reef-resort-spa",
+      "name": "Sinalei Reef Resort & Spa",
+      "area": "Samoa",
+      "rating": 4.3,
+      "reviews": 247,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/samoa/4.jpg",
+      "expediaDest": "Sinalei Reef Resort & Spa, Samoa"
+    }
+  ]
+}

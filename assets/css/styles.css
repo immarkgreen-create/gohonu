@@ -211,6 +211,15 @@ html,body{overflow-x:clip}
   font-size:1.3rem;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden}
 .carlogo-name{font-size:.82rem;color:#6b7785;font-weight:600}
 @media(max-width:560px){.carlogo-wrap{width:30%;min-width:92px}.carlogo{width:100%;height:54px;font-size:1.05rem}}
+/* Packages page */
+.bsearch-cta{display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-weight:800;
+  font-size:1.05rem;padding:15px 28px;border-radius:12px;text-decoration:none;box-shadow:0 12px 32px rgba(0,0,0,.22)}
+.bsearch-cta:hover{filter:brightness(1.06)}
+.pkg-perks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pkg-perk{background:var(--sand);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.pkg-perk b{display:block;font-size:1.02rem;margin-bottom:4px}
+.pkg-perk span{color:#6b7785;font-size:.92rem}
+@media(max-width:760px){.pkg-perks{grid-template-columns:1fr}}
 
 /* Expedia search widget */
 .eg-wrap{min-height:90px}

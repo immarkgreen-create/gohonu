@@ -263,10 +263,15 @@ const SEARCH_INDEX = PLACES.map((p) => ({ n: p.name, s: p.slug, t: p.toursUrl })
 // Product tabs (Booking-style) shown in the header + search hero.
 const PRODUCTS = [
   { k: "stays", label: "Stays", icon: "🏨", href: "/stays/" },
-  { k: "attractions", label: "Attractions", icon: "🎟️", href: "/attractions/" },
+  { k: "packages", label: "Packages", icon: "🧳", href: "/packages/" },
   { k: "flights", label: "Flights", icon: "✈️", href: "/flights/" },
   { k: "cars", label: "Cars", icon: "🚗", href: "/cars/" },
+  { k: "attractions", label: "Attractions", icon: "🎟️", href: "/attractions/" },
+  { k: "transfers", label: "Transfers", icon: "🚕", href: "/transfers/" },
 ];
+// Viator airport-transfer search (affiliate-tracked, same pid/mcid as our tour links).
+const viatorSearch = (name) =>
+  `https://www.viator.com/searchResults/all?text=${encodeURIComponent("airport transfer " + name)}&pid=P00111627&mcid=42383&medium=link`;
 
 const FLIGHTS = (() => {
   try {
@@ -345,7 +350,8 @@ function nav() {
 function tabBar() {
   const tabs = [
     { href: "/stays/", label: "Stays", icon: "🏨", match: "^/stays" },
-    { href: "/attractions/", label: "Attractions", icon: "🎟️", match: "^/(attractions|islands|tours|beyond|polynesia)" },
+    { href: "/packages/", label: "Packages", icon: "🧳", match: "^/packages" },
+    { href: "/attractions/", label: "Tours", icon: "🎟️", match: "^/(attractions|islands|tours|beyond|polynesia)" },
     ...(FLIGHTS ? [{ href: "/flights/", label: "Flights", icon: "✈️", match: "^/flights" }] : []),
     { href: "/cars/", label: "Cars", icon: "🚗", match: "^/cars" },
   ];
@@ -864,13 +870,15 @@ function productStrip(active) {
 // or 'attractions' (destination -> that place's tours page).
 function searchForm(mode) {
   const list = PLACES.map((p) => `<option value="${esc(p.name)}">`).join("");
-  const dateIn = `<div class="bfield"><label>${mode === "stays" ? "Check-in" : "Date (optional)"}</label><div class="bwrap"><span class="bic">📅</span><input name="chkin" type="date"></div></div>`;
+  const showDate = mode === "stays" || mode === "attractions";
+  const dateIn = showDate ? `<div class="bfield"><label>${mode === "stays" ? "Check-in" : "Date (optional)"}</label><div class="bwrap"><span class="bic">📅</span><input name="chkin" type="date"></div></div>` : "";
   const dateOut = mode === "stays" ? `<div class="bfield"><label>Check-out</label><div class="bwrap"><span class="bic">📅</span><input name="chkout" type="date"></div></div>` : "";
   const guests = mode === "stays" ? `<div class="bfield bfield--sm"><label>Guests</label><div class="bwrap"><span class="bic">👤</span><input name="guests" type="number" min="1" max="16" value="2"></div></div>` : "";
+  const btn = mode === "transfers" ? "Find transfers" : "Search";
   return `<form class="bsearch" data-mode="${mode}" id="bsearch">
     <div class="bfield bfield--dest"><label>Destination</label><div class="bwrap"><span class="bic">📍</span><input name="dest" list="places" placeholder="Where are you going?" autocomplete="off" required></div></div>
     ${dateIn}${dateOut}${guests}
-    <button class="bsearch-go" type="submit">Search</button>
+    <button class="bsearch-go" type="submit">${btn}</button>
     <datalist id="places">${list}</datalist>
   </form>
 <script>
@@ -886,7 +894,9 @@ function searchForm(mode) {
     e.preventDefault();
     var m=find(f.dest.value);
     if(!m){alert('Please choose a destination from the list.');return;}
-    if(f.getAttribute('data-mode')==='attractions'){location.href=m.t;return;}
+    var mode=f.getAttribute('data-mode');
+    if(mode==='attractions'){location.href=m.t;return;}
+    if(mode==='transfers'){window.open('https://www.viator.com/searchResults/all?text='+encodeURIComponent('airport transfer '+m.n)+'&pid=P00111627&mcid=42383&medium=link','_blank','noopener');return;}
     var q=[];if(f.chkin&&f.chkin.value)q.push('chkin='+f.chkin.value);if(f.chkout&&f.chkout.value)q.push('chkout='+f.chkout.value);if(f.guests&&f.guests.value)q.push('guests='+f.guests.value);
     location.href='/stays/'+m.s+'/'+(q.length?'?'+q.join('&'):'');
   });
@@ -987,6 +997,15 @@ function placeStaysPage(p) {
   <div class="grid hotel-grid">${hotelAreas.flatMap(({ list }) => list).map(hotelCard).join("")}</div>
 </section>`
     : "";
+  // Non-Oahu places: real hotel cards auto-discovered by rating (like the Waikiki guide).
+  const discoveredList = !isOahu ? DEST_HOTELS[p.slug] || [] : [];
+  const discovered = discoveredList.length
+    ? `<section class="wrap section">
+  <div class="section-head"><div><span class="kicker">Top-rated by travelers</span><h2>Best hotels in ${esc(p.name)}</h2></div></div>
+  <div class="grid hotel-grid">${discoveredList.map(hotelCard).join("")}</div>
+  <p class="muted" style="margin-top:14px;font-size:.84rem">The highest-rated stays in ${esc(p.name)} · ratings &amp; photos by Google · live prices &amp; booking via Expedia.</p>
+</section>`
+    : "";
   const body = `
 ${searchHero("stays", {
     title: `Stays in ${p.name}`,
@@ -996,9 +1015,9 @@ ${searchHero("stays", {
     crumbs: `<nav class="crumbs crumbs--light"><a href="/">Home</a> / <a href="/stays/">Stays</a> / <span>${esc(p.name)}</span></nav>`,
   })}
 ${todo ? `<section class="wrap" style="margin-top:18px">${todo}</section>` : ""}
-${curated}
+${curated}${discovered}
 <section class="band"><div class="wrap section">
-  <div class="section-head"><div><span class="kicker">${isOahu ? "Browse on the map" : "Hotels in " + esc(p.name)}</span><h2>${isOahu ? "More " + esc(p.name) + " stays" : "Where to stay in " + esc(p.name)}</h2></div>
+  <div class="section-head"><div><span class="kicker">${isOahu || discoveredList.length ? "Browse on the map" : "Hotels in " + esc(p.name)}</span><h2>${isOahu || discoveredList.length ? "More " + esc(p.name) + " stays" : "Where to stay in " + esc(p.name)}</h2></div>
     <a class="seeall" id="exp-all" href="${esc(expSearch)}" target="_blank" rel="noopener sponsored">See all on Expedia →</a></div>
   <iframe id="s22" class="stay-map" title="Hotels in ${esc(p.name)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-lat="${p.lat}" data-lng="${p.lng}" data-venue="${esc(p.name)}"></iframe>
   <p class="muted" style="margin-top:12px;font-size:.84rem">Map search powered by Stay22 · hotel search &amp; booking via Expedia. Prices update live.</p>
@@ -1051,11 +1070,23 @@ function carLogo(b) {
 // Expedia stays+flights search widget (affiliate; Expedia is merchant of record).
 const EXPEDIA_SEARCH = `<div class="eg-widget" data-widget="search" data-program="us-expedia" data-lobs="stays" data-network="pz" data-camref="${SITE.expediaCamref}" data-pubref=""></div>
 <script class="eg-widgets-script" src="https://creator.expediagroup.com/products/widgets/assets/eg-widgets.js" async></script>`;
+// Expedia Flight+Hotel package search widget (Bundle & Save; add a car in Expedia's flow).
+const EXPEDIA_PACKAGES = `<div class="eg-widget" data-widget="search" data-program="us-expedia" data-lobs="packages" data-network="pz" data-camref="${SITE.expediaCamref}" data-pubref=""></div>
+<script class="eg-widgets-script" src="https://creator.expediagroup.com/products/widgets/assets/eg-widgets.js" async></script>`;
 
 // Curated hotel guides (data/hotels.json). Tracked Expedia links via your camref.
 const HOTELS = (() => {
   try {
     return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "hotels.json"), "utf8"));
+  } catch {
+    return {};
+  }
+})();
+// Auto-discovered top hotels per destination (data/dest-hotels.json, by place slug) —
+// gives every Stays page real hotel cards, not just a map. Built by fetch/hotels-discover.js.
+const DEST_HOTELS = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "dest-hotels.json"), "utf8"));
   } catch {
     return {};
   }
@@ -1080,14 +1111,27 @@ function hotelCard(h) {
   const rating = h.rating
     ? `<span class="rating">${GOOGLE_G}${stars(h.rating)} <b>${Number(h.rating).toFixed(1)}</b></span>${h.reviews ? ` <span class="muted">(${Number(h.reviews).toLocaleString()})</span>` : ""}`
     : "";
+  const badge = h.bestFor || h.area || "";
+  // Curated hotels carry a blurb; discovered ones get a factual one-liner.
+  const blurb = h.blurb
+    ? `<p class="hotel-blurb">${esc(h.blurb)}</p>`
+    : h.area
+    ? `<p class="hotel-blurb muted">Top-rated place to stay in ${esc(h.area)}.</p>`
+    : "";
+  // Price: curated "from $X", else Google price tier, else just the Check-price CTA.
+  const priceEl = h.priceFrom
+    ? `<span class="price"><span class="muted">from</span> <b>$${h.priceFrom}</b> <span class="muted">/ night</span></span>`
+    : h.priceLevel
+    ? `<span class="price">${tierBadge(h.priceLevel)}</span>`
+    : `<span class="muted" style="font-size:.84rem">Live price →</span>`;
   return `<div class="hotel-card">
-  <div class="card-img"${bg(h.image)}><span class="card-island">${esc(h.bestFor)}</span></div>
+  <div class="card-img"${bg(h.image)}>${badge ? `<span class="card-island">${esc(badge)}</span>` : ""}</div>
   <div class="card-body">
     <h3 class="card-title">${esc(h.name)}</h3>
     <div class="card-meta">${rating}</div>
-    <p class="hotel-blurb">${esc(h.blurb)}</p>
+    ${blurb}
     <div class="card-foot">
-      <span class="price"><span class="muted">from</span> <b>$${h.priceFrom}</b> <span class="muted">/ night</span></span>
+      ${priceEl}
       <a class="btn btn--book hotel-btn" href="${esc(hotelLink(h))}" target="_blank" rel="noopener sponsored">Check price →</a>
     </div>
   </div>
@@ -1111,6 +1155,66 @@ function hotelGuidePage(areaKey, areaName, hotels) {
     title: `Best Places to Stay in ${areaName} — Hotels | ${SITE.name}`,
     description: `Our hand-picked ${areaName} hotels, rated by real travelers — compare and book the best places to stay.`,
     canonical: `${SITE.domain}/stays/${areaKey}/`,
+    body,
+  });
+}
+
+function packagesPage() {
+  const pkgLink = expediaTrack("https://www.expedia.com/Vacation-Packages");
+  const body = `
+<section class="bhero"${heroImg((HAWAII_PLACES[0] || {}).image)}>
+  <div class="wrap">
+    <nav class="crumbs crumbs--light"><a href="/">Home</a> / <span>Packages</span></nav>
+    <h1 class="bhero-h1">Flight + Hotel packages</h1>
+    <p class="bhero-sub">Bundle your flight, hotel &amp; car in one booking — often cheaper than booking separately, with a single confirmation.</p>
+    ${productStrip("packages")}
+    <div class="bsearch-wrap"><a class="bsearch-cta" href="${esc(pkgLink)}" target="_blank" rel="noopener sponsored">Search Flight + Hotel deals on Expedia →</a></div>
+  </div>
+</section>
+<section class="wrap section">
+  <div class="pkg-perks">
+    <div class="pkg-perk"><b>💰 Save by bundling</b><span>Package prices are often lower than the flight and hotel booked on their own.</span></div>
+    <div class="pkg-perk"><b>🧾 One booking</b><span>Flight, hotel and car on a single itinerary and confirmation.</span></div>
+    <div class="pkg-perk"><b>🛡️ Flexible</b><span>Free cancellation on most hotels — change plans with less hassle.</span></div>
+  </div>
+</section>
+<section class="wrap section">
+  <div class="section-head"><div><span class="kicker">Also on Expedia</span><h2>Search stays &amp; flights</h2></div></div>
+  <div class="eg-wrap">${EXPEDIA_PACKAGES}</div>
+  <p class="muted" style="margin-top:12px;font-size:.84rem">For the full flight + hotel (+ car) bundle, use <b>Search Flight + Hotel deals</b> above. Booking via Expedia (merchant of record) · free cancellation on most hotels.</p>
+</section>
+<section class="wrap section">
+  <div class="section-head"><div><span class="kicker">Popular</span><h2>Package getaways</h2></div></div>
+  <div class="dest-grid">${[...HAWAII_PLACES, ...DEST_PLACES.slice(0, 8)].map((p) => placeCard(p, "stays")).join("")}</div>
+</section>`;
+  return layout({
+    title: `Flight + Hotel Packages — Bundle & Save | ${SITE.name}`,
+    description: "Bundle flight + hotel (and car) in one booking and save — worldwide vacation package deals via Expedia.",
+    canonical: SITE.domain + "/packages/",
+    body,
+  });
+}
+function transfersPage() {
+  const body = `
+${searchHero("transfers", {
+    title: "Airport transfers",
+    sub: "Pre-book a private or shared ride from the airport to your hotel — fixed prices, no haggling, your driver waiting when you land.",
+    image: (DEST_PLACES[0] || HAWAII_PLACES[0] || {}).image,
+    mode: "transfers",
+    crumbs: `<nav class="crumbs crumbs--light"><a href="/">Home</a> / <span>Transfers</span></nav>`,
+  })}
+<section class="wrap section">
+  <div class="section-head"><div><span class="kicker">Pre-book your ride</span><h2>Airport transfers by destination</h2></div></div>
+  <div class="dest-grid">${PLACES.map(
+    (p) =>
+      `<a class="dest-card dest-card--img" href="${esc(viatorSearch(p.name))}" target="_blank" rel="noopener sponsored"${bg(p.image)}><div class="dest-card-overlay"><span class="dest-name">${esc(p.name)}</span><span class="dest-meta">Airport transfers →</span></div></a>`
+  ).join("")}</div>
+  <p class="muted" style="margin-top:16px;font-size:.84rem">Airport transfers booked via Viator — free cancellation on most, prices update live.</p>
+</section>`;
+  return layout({
+    title: `Airport Transfers Worldwide | ${SITE.name}`,
+    description: "Pre-book airport transfers worldwide — private and shared rides from the airport to your hotel, free cancellation on most.",
+    canonical: SITE.domain + "/transfers/",
     body,
   });
 }
@@ -1183,6 +1287,8 @@ write("stays/index.html", staysLandingPage());
 PLACES.forEach((p) => write(`stays/${p.slug}/index.html`, placeStaysPage(p)));
 hotelAreas.forEach(({ key, name, list }) => write(`stays/${key}/index.html`, hotelGuidePage(key, name, list)));
 write("attractions/index.html", attractionsLandingPage());
+write("packages/index.html", packagesPage());
+write("transfers/index.html", transfersPage());
 write("cars/index.html", carsPage());
 
 // 404
@@ -1215,6 +1321,8 @@ const urls = [
   ...PLACES.map((p) => `${SITE.domain}/stays/${p.slug}/`),
   ...hotelAreas.map(({ key }) => `${SITE.domain}/stays/${key}/`),
   `${SITE.domain}/attractions/`,
+  `${SITE.domain}/packages/`,
+  `${SITE.domain}/transfers/`,
   `${SITE.domain}/cars/`,
 ];
 write(
