@@ -213,6 +213,61 @@ const POLY = BEYOND.filter((d) => d.collection === "polynesia");
 const WORLD = BEYOND.filter((d) => d.collection !== "polynesia");
 const beyondRegions = [...new Set(WORLD.map((d) => d.region))];
 
+/* ---------- unified "places" (Hawaii islands + worldwide destinations) ----------
+   A place has both stays and things-to-do, so the Stays & Attractions funnels cover
+   Hawaii (FareHarbor tours) and the wider world (Viator tours) with one model. */
+const ISLAND_COORDS = {
+  Oahu: [21.2793, -157.8294],
+  Maui: [20.925, -156.694],
+  Kauai: [21.88, -159.46],
+  "Big Island": [19.64, -155.996],
+  "Hawaii (Big Island)": [19.64, -155.996],
+};
+const islandImage = (i) => (CATALOG.find((t) => t.island === i && t.image) || {}).image;
+const HAWAII_PLACES = islands.map((i) => ({
+  kind: "island",
+  slug: slugifyIsland(i),
+  name: i,
+  region: "Hawaii",
+  country: "USA",
+  lat: (ISLAND_COORDS[i] || [])[0],
+  lng: (ISLAND_COORDS[i] || [])[1],
+  toursUrl: `/islands/${slugifyIsland(i)}/`,
+  tourCount: CATALOG.filter((t) => t.island === i).length,
+  image: islandImage(i),
+}));
+const DEST_PLACES = BEYOND.map((d) => {
+  const base = d.collection === "polynesia" ? "polynesia" : "beyond";
+  return {
+    kind: "dest",
+    base,
+    slug: d.slug,
+    name: d.name,
+    region: d.region,
+    country: d.country,
+    lat: d.lat,
+    lng: d.lng,
+    toursUrl: `/${base}/${d.slug}/`,
+    tourCount: (d.tours || []).length,
+    image: destImage(d),
+  };
+});
+const PLACES = [...HAWAII_PLACES, ...DEST_PLACES].filter((p) => p.lat != null && p.lng != null);
+const PLACE_BY_SLUG = {};
+PLACES.forEach((p) => {
+  if (PLACE_BY_SLUG[p.slug]) console.warn(`[places] duplicate slug: ${p.slug}`);
+  PLACE_BY_SLUG[p.slug] = p;
+});
+// Autocomplete index for the Booking-style search (name -> stays slug + tours url).
+const SEARCH_INDEX = PLACES.map((p) => ({ n: p.name, s: p.slug, t: p.toursUrl }));
+// Product tabs (Booking-style) shown in the header + search hero.
+const PRODUCTS = [
+  { k: "stays", label: "Stays", icon: "🏨", href: "/stays/" },
+  { k: "attractions", label: "Attractions", icon: "🎟️", href: "/attractions/" },
+  { k: "flights", label: "Flights", icon: "✈️", href: "/flights/" },
+  { k: "cars", label: "Cars", icon: "🚗", href: "/cars/" },
+];
+
 const FLIGHTS = (() => {
   try {
     const f = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "flights.json"), "utf8"));
@@ -262,35 +317,37 @@ ${tabBar()}
 }
 
 function nav() {
-  const islandLinks = islands.map((i) => `<a href="/islands/${slugifyIsland(i)}/">${esc(i)}</a>`).join("");
+  const prod = PRODUCTS.map(
+    (p) => `<a class="nav-link nav-prod" href="${p.href}" data-k="${p.k}"><span class="nav-ic">${p.icon}</span>${p.label}</a>`
+  ).join("");
+  const destLinks =
+    islands.map((i) => `<a href="/stays/${slugifyIsland(i)}/">${esc(i)}</a>`).join("") +
+    (POLY.length ? `<a href="/polynesia/">Polynesia</a>` : "") +
+    (WORLD.length ? `<a href="/beyond/">Beyond Hawaii</a>` : "");
   return `<header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="/"><img class="brand-logo" src="/assets/img/logo.png?v=${ICON_VER}" alt="" width="34" height="34"> Go<em>Honu</em></a>
     <button class="nav-toggle" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
     <nav class="nav-links">
+      ${prod}
       <div class="nav-group" tabindex="0">
-        <span class="nav-link nav-group-label">Hawaii Islands <i class="caret">▾</i></span>
-        <div class="nav-dropdown">${islandLinks}</div>
+        <span class="nav-link nav-group-label">Destinations <i class="caret">▾</i></span>
+        <div class="nav-dropdown">${destLinks}</div>
       </div>
-      ${POLY.length ? `<a class="nav-link" href="/polynesia/">Polynesia</a>` : ""}
-      ${WORLD.length ? `<a class="nav-link" href="/beyond/">Beyond Hawaii</a>` : ""}
-      ${FLIGHTS ? `<a class="nav-link" href="/flights/">Flights</a>` : ""}
-      ${SITE.stay22Aid ? `<a class="nav-link" href="/stay/">Hotels</a>` : ""}
-      <a class="nav-link" href="/cars/">Cars</a>
     </nav>
   </div>
-</header>`;
+</header>
+<script>(function(){var p=location.pathname;document.querySelectorAll('.nav-prod').forEach(function(a){var k=a.getAttribute('data-k');var re=new RegExp('^/'+k+'(/|$)');if((k==='attractions'&&/^\\/(attractions|islands|tours|beyond|polynesia)(\\/|$)/.test(p))||re.test(p))a.classList.add('active');});})();</script>`;
 }
 
 // App-style bottom tab bar (shows on phones only; see .tabbar CSS). Active tab is
 // set client-side by matching location.pathname against each tab's data-match regex.
 function tabBar() {
-  const tours = `/islands/${slugifyIsland(PRIMARY)}/`;
   const tabs = [
-    { href: "/", label: "Home", icon: "🏠", match: "^/$" },
-    { href: tours, label: "Tours", icon: "🎟️", match: "^/(islands|tours)/" },
-    ...(WORLD.length || POLY.length ? [{ href: WORLD.length ? "/beyond/" : "/polynesia/", label: "Beyond", icon: "🌎", match: "^/(beyond|polynesia)/" }] : []),
-    ...(SITE.stay22Aid ? [{ href: "/stay/", label: "Stay", icon: "🏨", match: "^/stay/" }] : []),
+    { href: "/stays/", label: "Stays", icon: "🏨", match: "^/stays" },
+    { href: "/attractions/", label: "Attractions", icon: "🎟️", match: "^/(attractions|islands|tours|beyond|polynesia)" },
+    ...(FLIGHTS ? [{ href: "/flights/", label: "Flights", icon: "✈️", match: "^/flights" }] : []),
+    { href: "/cars/", label: "Cars", icon: "🚗", match: "^/cars" },
   ];
   return `<nav class="tabbar" aria-label="Quick navigation">
   ${tabs
@@ -519,6 +576,7 @@ function islandPage(island) {
     <p class="hero-sub">${tours.length} ${esc(island)} experiences, all bookable now.</p>
   </div>
 </section>
+<section class="wrap" style="margin-top:16px"><a class="todo-cta todo-cta--alt" href="/stays/${slugifyIsland(island)}/"><span class="todo-ic">🏨</span><span class="todo-txt"><b>Where to stay in ${esc(island)}</b><small>Hand-picked hotels & live prices</small></span><span class="todo-arrow">→</span></a></section>
 ${USE_FH ? filterBar(tours) : ""}
 <section class="wrap section">${gridFor(tours)}</section>
 ${USE_FH ? filterScript() : ""}`;
@@ -661,26 +719,11 @@ function destinationPage(dest, base) {
     <p class="hero-sub">Top-rated things to do in ${esc(dest.name)}${hasStay ? ", plus where to stay" : ""}.</p>
   </div>
 </section>
-<div class="wrap"><div class="tabs" id="dest-tabs">
-  <button class="tab active" data-tab="tours">Tours & activities</button>
-  ${hasStay ? `<button class="tab" data-tab="stay">🏨 Where to stay</button>` : ""}
-</div></div>
-<section class="wrap section tabpane" id="pane-tours">${extGrid(dest.tours)}</section>
-${hasStay ? `<section class="band tabpane" id="pane-stay" hidden><div class="wrap section">
-  <div class="section-head"><div><span class="kicker">Where to stay</span><h2>${esc(dest.name)} hotels & resorts</h2></div></div>
-  ${stayEmbed(dest.lat, dest.lng, dest.name)}
-  <p class="muted" style="margin-top:12px;font-size:.84rem">Accommodation search powered by Stay22 · prices update live.</p>
-</div></section>` : ""}
-<script>
-(function(){
-  var tabs=document.getElementById('dest-tabs'); if(!tabs) return;
-  var panes={tours:document.getElementById('pane-tours'),stay:document.getElementById('pane-stay')};
-  tabs.addEventListener('click',function(e){var b=e.target.closest('.tab'); if(!b) return;
-    tabs.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active')}); b.classList.add('active');
-    var t=b.dataset.tab; Object.keys(panes).forEach(function(k){if(panes[k])panes[k].hidden=(k!==t);});
-  });
-})();
-</script>`;
+${hasStay ? `<section class="wrap" style="margin-top:16px"><a class="todo-cta todo-cta--alt" href="/stays/${dest.slug}/"><span class="todo-ic">🏨</span><span class="todo-txt"><b>Where to stay in ${esc(dest.name)}</b><small>Compare hotels & resorts — live prices</small></span><span class="todo-arrow">→</span></a></section>` : ""}
+<section class="wrap section">
+  <div class="section-head"><div><span class="kicker">Things to do</span><h2>Top tours & activities in ${esc(dest.name)}</h2></div></div>
+  ${extGrid(dest.tours)}
+</section>`;
   return layout({
     title: `${dest.name} — Tours${hasStay ? " & Hotels" : ""} | ${SITE.name}`,
     description: `The top-rated tours${hasStay ? " and hotels" : ""} in ${dest.name}, ranked by traveler reviews.`,
@@ -790,6 +833,7 @@ function flightsPage() {
     <span class="hero-badge">✈️ Getting to Hawaii</span>
     <h1>Cheap flights to ${esc(FLIGHTS.destinationName)}</h1>
     <p class="hero-sub">Lowest recent fares from major cities. Prices update from live search — tap any route to see current deals.</p>
+    ${productStrip("flights")}
   </div>
 </section>
 <section class="wrap section">
@@ -809,66 +853,175 @@ ${sample ? `<div class="wrap"><p class="notice">Sample fares shown — add your 
   });
 }
 
-const STAY_AREAS = [
-  { name: "Waikiki, Oahu", lat: 21.2793, lng: -157.8294 },
-  { name: "Kaanapali, Maui", lat: 20.925, lng: -156.694 },
-  { name: "Poipu, Kauai", lat: 21.88, lng: -159.46 },
-  { name: "Kailua-Kona, Big Island", lat: 19.64, lng: -155.996 },
-];
-function stayPage() {
-  const buttons = STAY_AREAS.map(
-    (a, i) =>
-      `<button class="filter${i === 0 ? " active" : ""}" data-lat="${a.lat}" data-lng="${a.lng}" data-venue="${esc(a.name)}">${esc(a.name)}</button>`
-  ).join("");
-  const body = `
-<section class="hero hero--sm">
+/* ---------- Booking-style search + Stays / Attractions funnels ---------- */
+// Product-tab chip strip shown inside each search hero.
+function productStrip(active) {
+  return `<div class="pstrip">${PRODUCTS.map(
+    (p) => `<a class="pchip${p.k === active ? " active" : ""}" href="${p.href}"><span>${p.icon}</span> ${p.label}</a>`
+  ).join("")}</div>`;
+}
+// The big rounded search bar. mode 'stays' (destination+dates+guests -> /stays/<slug>/)
+// or 'attractions' (destination -> that place's tours page).
+function searchForm(mode) {
+  const list = PLACES.map((p) => `<option value="${esc(p.name)}">`).join("");
+  const dateIn = `<div class="bfield"><label>${mode === "stays" ? "Check-in" : "Date (optional)"}</label><div class="bwrap"><span class="bic">📅</span><input name="chkin" type="date"></div></div>`;
+  const dateOut = mode === "stays" ? `<div class="bfield"><label>Check-out</label><div class="bwrap"><span class="bic">📅</span><input name="chkout" type="date"></div></div>` : "";
+  const guests = mode === "stays" ? `<div class="bfield bfield--sm"><label>Guests</label><div class="bwrap"><span class="bic">👤</span><input name="guests" type="number" min="1" max="16" value="2"></div></div>` : "";
+  return `<form class="bsearch" data-mode="${mode}" id="bsearch">
+    <div class="bfield bfield--dest"><label>Destination</label><div class="bwrap"><span class="bic">📍</span><input name="dest" list="places" placeholder="Where are you going?" autocomplete="off" required></div></div>
+    ${dateIn}${dateOut}${guests}
+    <button class="bsearch-go" type="submit">Search</button>
+    <datalist id="places">${list}</datalist>
+  </form>
+<script>
+(function(){
+  var idx=${JSON.stringify(SEARCH_INDEX)};
+  var f=document.getElementById('bsearch'); if(!f) return;
+  try{var today=new Date().toISOString().slice(0,10);if(f.chkin)f.chkin.min=today;if(f.chkout)f.chkout.min=today;}catch(e){}
+  function find(v){v=(v||'').trim().toLowerCase();if(!v)return null;
+    return idx.filter(function(x){return x.n.toLowerCase()===v;})[0]
+      ||idx.filter(function(x){return x.n.toLowerCase().indexOf(v)===0;})[0]
+      ||idx.filter(function(x){return x.n.toLowerCase().indexOf(v)>-1;})[0];}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var m=find(f.dest.value);
+    if(!m){alert('Please choose a destination from the list.');return;}
+    if(f.getAttribute('data-mode')==='attractions'){location.href=m.t;return;}
+    var q=[];if(f.chkin&&f.chkin.value)q.push('chkin='+f.chkin.value);if(f.chkout&&f.chkout.value)q.push('chkout='+f.chkout.value);if(f.guests&&f.guests.value)q.push('guests='+f.guests.value);
+    location.href='/stays/'+m.s+'/'+(q.length?'?'+q.join('&'):'');
+  });
+})();
+</script>`;
+}
+// Search hero (bold heading + product chips + the search bar over a photo).
+function searchHero(active, o) {
+  return `<section class="bhero"${heroImg(o.image)}>
   <div class="wrap">
-    <nav class="crumbs crumbs--light"><a href="/">Home</a> / <span>Where to stay</span></nav>
-    <span class="hero-badge">🏨 Where to stay</span>
-    <h1>Hotels & rentals across Hawaii</h1>
-    <p class="hero-sub">Live prices from Booking.com and more — compare on the map and book in a tap.</p>
+    ${o.crumbs || ""}
+    <h1 class="bhero-h1">${esc(o.title)}</h1>
+    ${o.sub ? `<p class="bhero-sub">${esc(o.sub)}</p>` : ""}
+    ${productStrip(active)}
+    <div class="bsearch-wrap">${searchForm(o.mode || active)}</div>
   </div>
-</section>
+</section>`;
+}
+// Image destination card used on the Stays + Attractions landings.
+function placeCard(p, mode) {
+  const href = mode === "attractions" ? p.toursUrl : `/stays/${p.slug}/`;
+  const meta = mode === "attractions" ? `${p.tourCount} things to do →` : "View hotels →";
+  return `<a class="dest-card dest-card--img" href="${href}"${bg(p.image)}>
+    <div class="dest-card-overlay"><span class="dest-name">${esc(p.name)}</span><span class="dest-meta">${meta}</span></div>
+  </a>`;
+}
+// Region sections of destination cards (Hawaii / Polynesia / worldwide regions).
+function placeSections(mode) {
+  const kicker = mode === "attractions" ? "Things to do" : "Where to stay";
+  return `
 <section class="wrap section">
-  <div class="section-head"><div><span class="kicker">Search</span><h2>Find your hotel</h2></div></div>
-  <div class="eg-wrap">${EXPEDIA_SEARCH}</div>
+  <div class="section-head"><div><span class="kicker">Hawaii</span><h2>${mode === "attractions" ? "Tours & activities in Hawaii" : "Stay in Hawaii"}</h2></div></div>
+  <div class="dest-grid">${HAWAII_PLACES.map((p) => placeCard(p, mode)).join("")}</div>
 </section>
+${POLY.length ? `<section class="band"><div class="wrap section"><div class="section-head"><div><span class="kicker">The Pacific</span><h2>Polynesia</h2></div></div><div class="dest-grid">${DEST_PLACES.filter((p) => p.base === "polynesia").map((p) => placeCard(p, mode)).join("")}</div></div></section>` : ""}
+${beyondRegions
+    .map(
+      (r) => `<section class="wrap section"><div class="section-head"><div><span class="kicker">Worldwide</span><h2>${esc(r)}</h2></div></div><div class="dest-grid">${DEST_PLACES.filter((p) => p.base === "beyond" && p.region === r).map((p) => placeCard(p, mode)).join("")}</div></section>`
+    )
+    .join("")}`;
+}
+function staysLandingPage() {
+  const body = `
+${searchHero("stays", {
+    title: "Find your next stay",
+    sub: "Hotels & resorts worldwide — from Waikiki to Bali. Compare, then book with our trusted partners.",
+    image: (HAWAII_PLACES[0] || {}).image,
+    mode: "stays",
+    crumbs: `<nav class="crumbs crumbs--light"><a href="/">Home</a> / <span>Stays</span></nav>`,
+  })}
 <section class="wrap section">
   <div class="section-head"><div><span class="kicker">Hand-picked</span><h2>Our Oahu hotel guides</h2></div></div>
-  <div class="grid guide-grid">
-    ${hotelAreas
-      .map(({ key, name, list }) => {
-        const img = (list.find((h) => h.image) || {}).image;
-        return `<a class="guide-card" href="/stay/${key}/"${bg(img)}><span class="guide-card-txt"><b>${esc(name)}</b><small>${list.length} hand-picked hotels →</small></span></a>`;
-      })
-      .join("")}
-  </div>
+  <div class="grid guide-grid">${hotelAreas
+    .map(({ key, name, list }) => {
+      const img = (list.find((h) => h.image) || {}).image;
+      return `<a class="guide-card" href="/stays/${key}/"${bg(img)}><span class="guide-card-txt"><b>${esc(name)}</b><small>${list.length} hand-picked hotels →</small></span></a>`;
+    })
+    .join("")}</div>
 </section>
+${placeSections("stays")}`;
+  return layout({
+    title: `Hotels & Resorts Worldwide — Stays | ${SITE.name}`,
+    description: "Find hotels and resorts worldwide — Hawaii, Polynesia and beyond. Compare and book with trusted partners.",
+    canonical: SITE.domain + "/stays/",
+    body,
+  });
+}
+function attractionsLandingPage() {
+  const body = `
+${searchHero("attractions", {
+    title: "Things to do, everywhere",
+    sub: "Tours, activities & attractions from Hawaii to the far side of the world — booked through trusted partners.",
+    image: (DEST_PLACES[0] || HAWAII_PLACES[0] || {}).image,
+    mode: "attractions",
+    crumbs: `<nav class="crumbs crumbs--light"><a href="/">Home</a> / <span>Attractions</span></nav>`,
+  })}
+${placeSections("attractions")}`;
+  return layout({
+    title: `Things to Do Worldwide — Attractions | ${SITE.name}`,
+    description: "Browse tours, activities and attractions worldwide — Hawaii, Polynesia and beyond, ranked by traveler reviews.",
+    canonical: SITE.domain + "/attractions/",
+    body,
+  });
+}
+// A single destination's stays page: hotels (curated where we have them, else live
+// map + Expedia), a 'things to do' cross-sell, and dates carried from the search.
+function placeStaysPage(p) {
+  const isOahu = p.slug === "oahu" && hotelAreas.length;
+  const expSearch = expediaTrack(`https://www.expedia.com/Hotel-Search?destination=${encodeURIComponent(p.name)}`);
+  const todo =
+    p.tourCount > 0
+      ? `<a class="todo-cta" href="${p.toursUrl}"><span class="todo-ic">🎟️</span><span class="todo-txt"><b>Things to do in ${esc(p.name)}</b><small>${p.tourCount} tours & activities — add them to your trip</small></span><span class="todo-arrow">→</span></a>`
+      : "";
+  const curated = isOahu
+    ? `<section class="wrap section">
+  <div class="section-head"><div><span class="kicker">Hand-picked</span><h2>Our favourite ${esc(p.name)} hotels</h2></div></div>
+  <div class="stay-areachips">${hotelAreas.map(({ key, name }) => `<a class="chip-link" href="/stays/${key}/">${esc(name)} →</a>`).join("")}</div>
+  <div class="grid hotel-grid">${hotelAreas.flatMap(({ list }) => list).map(hotelCard).join("")}</div>
+</section>`
+    : "";
+  const body = `
+${searchHero("stays", {
+    title: `Stays in ${p.name}`,
+    sub: `Compare hotels & resorts in ${p.name} — prices update live, with free cancellation on most rooms.`,
+    image: p.image,
+    mode: "stays",
+    crumbs: `<nav class="crumbs crumbs--light"><a href="/">Home</a> / <a href="/stays/">Stays</a> / <span>${esc(p.name)}</span></nav>`,
+  })}
+${todo ? `<section class="wrap" style="margin-top:18px">${todo}</section>` : ""}
+${curated}
 <section class="band"><div class="wrap section">
-  <div class="section-head"><div><span class="kicker">Or browse on a map</span><h2>Where to stay by area</h2></div></div>
-  <div class="filters" id="stay-areas">${buttons}</div>
-  <iframe id="s22" class="stay-map" title="Hotels map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  <p class="muted" style="margin-top:12px;font-size:.84rem">Map search powered by Stay22 · hotel/flight search by Expedia. Prices update live.</p>
+  <div class="section-head"><div><span class="kicker">${isOahu ? "Browse on the map" : "Hotels in " + esc(p.name)}</span><h2>${isOahu ? "More " + esc(p.name) + " stays" : "Where to stay in " + esc(p.name)}</h2></div>
+    <a class="seeall" id="exp-all" href="${esc(expSearch)}" target="_blank" rel="noopener sponsored">See all on Expedia →</a></div>
+  <iframe id="s22" class="stay-map" title="Hotels in ${esc(p.name)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-lat="${p.lat}" data-lng="${p.lng}" data-venue="${esc(p.name)}"></iframe>
+  <p class="muted" style="margin-top:12px;font-size:.84rem">Map search powered by Stay22 · hotel search &amp; booking via Expedia. Prices update live.</p>
 </div></section>
 <script>
 (function(){
-  var map=document.getElementById('s22'), bar=document.getElementById('stay-areas');
-  if(!map||!bar) return;
+  var qp=new URLSearchParams(location.search);
   function ds(d){return d.toISOString().slice(0,10);}
-  var ci=new Date(Date.now()+30*864e5), co=new Date(Date.now()+33*864e5);
-  function load(lat,lng,venue){
-    map.src='https://www.stay22.com/embed/gm?aid=${SITE.stay22Aid}&lat='+lat+'&lng='+lng+'&maincolor=0a7ea4&checkin='+ds(ci)+'&checkout='+ds(co)+'&venue='+encodeURIComponent(venue);
-  }
-  bar.addEventListener('click',function(e){var b=e.target.closest('.filter'); if(!b) return;
-    bar.querySelectorAll('.filter').forEach(function(x){x.classList.remove('active')}); b.classList.add('active');
-    load(b.dataset.lat,b.dataset.lng,b.dataset.venue);});
-  var f=bar.querySelector('.filter'); load(f.dataset.lat,f.dataset.lng,f.dataset.venue);
+  var ci=qp.get('chkin')||ds(new Date(Date.now()+30*864e5));
+  var co=qp.get('chkout')||ds(new Date(Date.now()+33*864e5));
+  var m=document.getElementById('s22');
+  if(m){m.src='https://www.stay22.com/embed/gm?aid=${SITE.stay22Aid}&lat='+m.dataset.lat+'&lng='+m.dataset.lng+'&maincolor=0a7ea4&checkin='+ci+'&checkout='+co+'&venue='+encodeURIComponent(m.dataset.venue);}
+  function addDates(u){return u+(u.indexOf('?')>-1?'&':'?')+'chkin='+ci+'&chkout='+co;}
+  var ea=document.getElementById('exp-all'); if(ea){ea.href=addDates(ea.href);}
+  [].slice.call(document.querySelectorAll('.hotel-btn')).forEach(function(a){a.href=addDates(a.href);});
+  var sf=document.getElementById('bsearch');
+  if(sf){try{sf.dest.value=${JSON.stringify(p.name)};if(sf.chkin)sf.chkin.value=qp.get('chkin')||'';if(sf.chkout)sf.chkout.value=qp.get('chkout')||'';if(sf.guests&&qp.get('guests'))sf.guests.value=qp.get('guests');}catch(e){}}
 })();
 </script>`;
   return layout({
-    title: `Where to Stay in Hawaii — Hotels & Rentals | ${SITE.name}`,
-    description: "Compare live hotel and vacation-rental prices across Oahu, Maui, Kauai and the Big Island.",
-    canonical: SITE.domain + "/stay/",
+    title: `Hotels in ${p.name} — Stays | ${SITE.name}`,
+    description: `Find and compare the best places to stay in ${p.name}. Live prices, book with trusted partners.`,
+    canonical: `${SITE.domain}/stays/${p.slug}/`,
     body,
   });
 }
@@ -925,7 +1078,7 @@ function hotelGuidePage(areaKey, areaName, hotels) {
   const body = `
 <section class="hero hero--sm"${heroImg(hotels[0] && hotels[0].image)}>
   <div class="wrap">
-    <nav class="crumbs crumbs--light"><a href="/">Home</a> / <a href="/stay/">Where to stay</a> / <span>${esc(areaName)}</span></nav>
+    <nav class="crumbs crumbs--light"><a href="/">Home</a> / <a href="/stays/">Stays</a> / <a href="/stays/oahu/">Oahu</a> / <span>${esc(areaName)}</span></nav>
     <span class="hero-badge">🏨 Hand-picked hotels</span>
     <h1>Best places to stay in ${esc(areaName)}</h1>
     <p class="hero-sub">Our favourite ${esc(areaName)} hotels — rated by real travelers. Compare them here, book on Expedia with free cancellation on most rooms.</p>
@@ -938,7 +1091,7 @@ function hotelGuidePage(areaKey, areaName, hotels) {
   return layout({
     title: `Best Places to Stay in ${areaName} — Hotels | ${SITE.name}`,
     description: `Our hand-picked ${areaName} hotels, rated by real travelers — compare and book the best places to stay.`,
-    canonical: `${SITE.domain}/stay/${areaKey}/`,
+    canonical: `${SITE.domain}/stays/${areaKey}/`,
     body,
   });
 }
@@ -951,6 +1104,7 @@ function carsPage() {
     <span class="hero-badge">🚗 Rent a Car</span>
     <h1>Compare Hawaii car rentals</h1>
     <p class="hero-sub">Search top suppliers at once — best prices, free cancellation on most, book in minutes.</p>
+    ${productStrip("cars")}
   </div>
 </section>
 <section class="wrap section">
@@ -1000,8 +1154,11 @@ if (POLY.length) {
   POLY.forEach((d) => write(`polynesia/${d.slug}/index.html`, destinationPage(d, "polynesia")));
 }
 if (FLIGHTS) write("flights/index.html", flightsPage());
-if (SITE.stay22Aid) write("stay/index.html", stayPage());
-hotelAreas.forEach(({ key, name, list }) => write(`stay/${key}/index.html`, hotelGuidePage(key, name, list)));
+// Booking-style Stays funnel + Attractions landing
+write("stays/index.html", staysLandingPage());
+PLACES.forEach((p) => write(`stays/${p.slug}/index.html`, placeStaysPage(p)));
+hotelAreas.forEach(({ key, name, list }) => write(`stays/${key}/index.html`, hotelGuidePage(key, name, list)));
+write("attractions/index.html", attractionsLandingPage());
 write("cars/index.html", carsPage());
 
 // 404
@@ -1030,8 +1187,10 @@ const urls = [
   ...(POLY.length ? [`${SITE.domain}/polynesia/`] : []),
   ...POLY.map((d) => `${SITE.domain}/polynesia/${d.slug}/`),
   ...(FLIGHTS ? [`${SITE.domain}/flights/`] : []),
-  ...(SITE.stay22Aid ? [`${SITE.domain}/stay/`] : []),
-  ...hotelAreas.map(({ key }) => `${SITE.domain}/stay/${key}/`),
+  `${SITE.domain}/stays/`,
+  ...PLACES.map((p) => `${SITE.domain}/stays/${p.slug}/`),
+  ...hotelAreas.map(({ key }) => `${SITE.domain}/stays/${key}/`),
+  `${SITE.domain}/attractions/`,
   `${SITE.domain}/cars/`,
 ];
 write(

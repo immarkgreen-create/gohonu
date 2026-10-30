@@ -150,6 +150,60 @@ h1,h2,h3,h4{line-height:1.2;margin:0 0 .4em}
   .tabbar .tab.active .tab-ic{filter:none;opacity:1;transform:translateY(-1px)}
   body{padding-bottom:calc(60px + env(safe-area-inset-bottom))}
 }
+/* ---------- Booking-style product tabs + search ---------- */
+.nav-prod .nav-ic{margin-right:5px}
+.nav-prod.active{color:var(--ocean);font-weight:700}
+.pstrip{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 2px}
+.pchip{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.55);
+  color:#fff;text-decoration:none;font-weight:700;font-size:.92rem;background:rgba(255,255,255,.14);transition:background .12s,color .12s}
+.pchip:hover{background:rgba(255,255,255,.28)}
+.pchip.active{background:#fff;color:var(--ocean);border-color:#fff}
+.bhero{position:relative;padding:40px 0 64px;color:#fff}
+.bhero .crumbs{margin-bottom:10px}
+.bhero-h1{font-size:2.4rem;line-height:1.08;margin:0 0 8px;font-weight:800;text-shadow:0 2px 16px rgba(0,0,0,.28)}
+.bhero-sub{font-size:1.05rem;max-width:640px;opacity:.96;margin:0}
+.bsearch-wrap{margin-top:20px}
+.bsearch{display:flex;flex-wrap:wrap;align-items:stretch;background:#fff;border:3px solid var(--coral);
+  border-radius:12px;padding:4px;box-shadow:0 12px 32px rgba(0,0,0,.22)}
+.bfield{flex:1 1 150px;min-width:120px;display:flex;flex-direction:column;justify-content:center;padding:7px 12px;border-right:1px solid var(--line)}
+.bfield--dest{flex:2 1 230px}
+.bfield--sm{flex:0 1 120px}
+.bfield label{font-size:.66rem;font-weight:800;color:#6b7785;text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}
+.bwrap{display:flex;align-items:center;gap:7px}
+.bic{font-size:1rem;flex:0 0 auto}
+.bfield input{border:0;outline:0;font-size:.98rem;width:100%;background:transparent;color:var(--ink);font-weight:600}
+.bsearch-go{flex:0 0 auto;margin:2px;padding:0 28px;border:0;border-radius:9px;background:var(--coral);color:#fff;
+  font-weight:800;font-size:1.02rem;cursor:pointer;min-height:54px}
+.bsearch-go:hover{filter:brightness(1.06)}
+/* cross-sell CTA (stays <-> things to do) */
+.todo-cta{display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:14px;text-decoration:none;
+  background:linear-gradient(120deg,#fff5ef,#ffece3);border:1px solid #ffd6c7;color:var(--ink);transition:transform .12s,box-shadow .12s}
+.todo-cta--alt{background:linear-gradient(120deg,#eef9fb,#e2f3f7);border-color:#bfe6ee}
+.todo-cta:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.todo-ic{font-size:1.7rem;flex:0 0 auto}
+.todo-txt{flex:1}.todo-txt b{display:block;font-size:1.05rem}.todo-txt small{color:#6b7785}
+.todo-arrow{font-size:1.3rem;font-weight:800;color:var(--coral)}
+.stay-areachips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chip-link{padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--sand);text-decoration:none;
+  color:var(--ink);font-weight:700;font-size:.88rem}
+.chip-link:hover{border-color:var(--ocean)}
+@media(max-width:760px){
+  .bhero-h1{font-size:1.7rem}
+  .bhero-sub{font-size:.98rem}
+  .bsearch{flex-direction:column;border-width:2px}
+  .bfield,.bfield--sm,.bfield--dest{border-right:0;border-bottom:1px solid var(--line);flex:1 1 auto;min-width:0}
+  .bfield input{min-width:0}
+  .bsearch-go{width:calc(100% - 4px);min-height:48px}
+  /* product chips scroll in their own strip instead of pushing the page wide */
+  .pstrip{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .pstrip::-webkit-scrollbar{display:none}
+  .pchip{flex:0 0 auto}
+}
+/* belt-and-suspenders: the page itself must never scroll sideways */
+html,body{overflow-x:clip}
+/* FareHarbor injects a ~500px cart/lightframe container into <body>; cap it so it
+   never stretches the mobile layout viewport (was zooming every page out on phones). */
+#fareharbor-lightframe,#fareharbor-cartframe{min-width:0!important;max-width:100vw!important}
 
 /* Expedia search widget */
 .eg-wrap{min-height:90px}

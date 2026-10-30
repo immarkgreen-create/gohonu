@@ -15,6 +15,16 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 # PWA manifest must be served as JSON or Chrome rejects it (Netlify defaults to octet-stream).
+# Old singular /stay paths -> new Booking-style /stays funnel
+[[redirects]]
+  from = "/stay"
+  to = "/stays/"
+  status = 301
+[[redirects]]
+  from = "/stay/*"
+  to = "/stays/:splat"
+  status = 301
+
 [[headers]]
   for = "/manifest.webmanifest"
   [headers.values]
