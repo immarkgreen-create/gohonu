@@ -10,7 +10,8 @@
       "rating": 4.7,
       "reviews": 4327,
       "image": "/assets/img/hotels/halekulani.jpg",
-      "expediaDest": "Halekulani, Honolulu, Hawaii"
+      "expediaDest": "Halekulani, Honolulu, Hawaii",
+      "photoCredit": "Google"
     },
     {
       "slug": "the-royal-hawaiian-a-luxury-collection-r",
@@ -22,7 +23,8 @@
       "rating": 4.4,
       "reviews": 4772,
       "image": "/assets/img/hotels/the-royal-hawaiian-a-luxury-collection-r.jpg",
-      "expediaDest": "The Royal Hawaiian, a Luxury Collection Resort, Honolulu, Hawaii"
+      "expediaDest": "The Royal Hawaiian, a Luxury Collection Resort, Honolulu, Hawaii",
+      "photoCredit": "Google"
     },
     {
       "slug": "moana-surfrider-a-westin-resort-spa",
@@ -34,7 +36,9 @@
       "rating": 4.4,
       "reviews": 6226,
       "image": "/assets/img/hotels/moana-surfrider-a-westin-resort-spa.jpg",
-      "expediaDest": "Moana Surfrider, A Westin Resort & Spa, Honolulu, Hawaii"
+      "expediaDest": "Moana Surfrider, A Westin Resort & Spa, Honolulu, Hawaii",
+      "expediaUrl": "https://www.expedia.com/Honolulu-Hotels-Moana-Surfrider.h15534.Hotel-Information",
+      "photoCredit": "Google"
     },
     {
       "slug": "hilton-hawaiian-village-waikiki-beach-re",
@@ -46,7 +50,8 @@
       "rating": 4.2,
       "reviews": 27405,
       "image": "/assets/img/hotels/hilton-hawaiian-village-waikiki-beach-re.jpg",
-      "expediaDest": "Hilton Hawaiian Village Waikiki Beach Resort, Honolulu, Hawaii"
+      "expediaDest": "Hilton Hawaiian Village Waikiki Beach Resort, Honolulu, Hawaii",
+      "photoCredit": "Google"
     },
     {
       "slug": "outrigger-waikiki-beach-resort",
@@ -58,7 +63,8 @@
       "rating": 4.5,
       "reviews": 7914,
       "image": "/assets/img/hotels/outrigger-waikiki-beach-resort.jpg",
-      "expediaDest": "Outrigger Waikiki Beach Resort, Honolulu, Hawaii"
+      "expediaDest": "Outrigger Waikiki Beach Resort, Honolulu, Hawaii",
+      "photoCredit": "Google"
     },
     {
       "slug": "queen-kapiolani-hotel",
@@ -70,7 +76,8 @@
       "rating": 4.1,
       "reviews": 2883,
       "image": "/assets/img/hotels/queen-kapiolani-hotel.jpg",
-      "expediaDest": "Queen Kapiolani Hotel, Honolulu, Hawaii"
+      "expediaDest": "Queen Kapiolani Hotel, Honolulu, Hawaii",
+      "photoCredit": "Google"
     }
   ]
 }

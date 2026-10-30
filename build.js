@@ -839,10 +839,14 @@ const HOTELS = (() => {
     return {};
   }
 })();
-const expediaLink = (dest) =>
-  `https://prf.hn/click/camref:${SITE.expediaCamref}/destination:${encodeURIComponent(
-    "https://www.expedia.com/Hotel-Search?destination=" + encodeURIComponent(dest)
-  )}`;
+// Append your Expedia affiliate tracking (affcid/afflid) to any Expedia URL.
+const expediaTrack = (url) => {
+  const sep = url.includes("?") ? "&" : "?";
+  return `${url}${sep}affcid=${SITE.expediaAffcid}&afflid=${SITE.expediaAfflid}`;
+};
+// Direct hotel page if we have its Expedia URL, else a tracked search for the name.
+const hotelLink = (h) =>
+  expediaTrack(h.expediaUrl || `https://www.expedia.com/Hotel-Search?destination=${encodeURIComponent(h.expediaDest)}`);
 
 function hotelCard(h) {
   const rating = h.rating
@@ -856,7 +860,7 @@ function hotelCard(h) {
     <p class="hotel-blurb">${esc(h.blurb)}</p>
     <div class="card-foot">
       <span class="price"><span class="muted">from</span> <b>$${h.priceFrom}</b> <span class="muted">/ night</span></span>
-      <a class="btn btn--book hotel-btn" href="${esc(expediaLink(h.expediaDest))}" target="_blank" rel="noopener sponsored">Check price →</a>
+      <a class="btn btn--book hotel-btn" href="${esc(hotelLink(h))}" target="_blank" rel="noopener sponsored">Check price →</a>
     </div>
   </div>
 </div>`;
@@ -873,7 +877,7 @@ function hotelGuidePage(areaKey, areaName, hotels) {
 </section>
 <section class="wrap section">
   <div class="grid hotel-grid">${hotels.map(hotelCard).join("")}</div>
-  <p class="muted" style="margin-top:16px;font-size:.84rem">Ratings by Google · prices & booking via Expedia. Rates shown are typical nightly starting prices.</p>
+  <p class="muted" style="margin-top:16px;font-size:.84rem">Photos & ratings by Google · prices & booking via Expedia. Rates shown are typical nightly starting prices.</p>
 </section>`;
   return layout({
     title: `Best Places to Stay in ${areaName} — Hotels | ${SITE.name}`,
