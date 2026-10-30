@@ -23,6 +23,13 @@ const CSS_VER = crypto
   .update(fs.readFileSync(path.join(__dirname, "assets", "css", "styles.css")))
   .digest("hex")
   .slice(0, 8);
+// Content hash of the turtle logo so the brand mark + app icons bust the 1-year
+// immutable cache whenever the artwork changes (same reason as CSS_VER).
+const ICON_VER = crypto
+  .createHash("md5")
+  .update(fs.readFileSync(path.join(__dirname, "assets", "img", "logo.png")))
+  .digest("hex")
+  .slice(0, 8);
 const OUT = path.join(ROOT, "public");
 const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "tours.json"), "utf8"));
 const SITE = DATA.site;
@@ -224,7 +231,7 @@ ${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ""}
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0a7ea4">
-<link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png?v=${ICON_VER}">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -246,7 +253,7 @@ function nav() {
   const islandLinks = islands.map((i) => `<a href="/islands/${slugifyIsland(i)}/">${esc(i)}</a>`).join("");
   return `<header class="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="/"><img class="brand-logo" src="/assets/img/logo.png" alt="" width="34" height="34"> Go<em>Honu</em></a>
+    <a class="brand" href="/"><img class="brand-logo" src="/assets/img/logo.png?v=${ICON_VER}" alt="" width="34" height="34"> Go<em>Honu</em></a>
     <button class="nav-toggle" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
     <nav class="nav-links">
       <div class="nav-group" tabindex="0">
@@ -285,7 +292,7 @@ function footer() {
   return `<footer class="footer">
   <div class="wrap footer-grid">
     <div>
-      <div class="brand brand--footer"><img class="brand-logo" src="/assets/img/logo.png" alt="" width="34" height="34"> Go<em>Honu</em></div>
+      <div class="brand brand--footer"><img class="brand-logo" src="/assets/img/logo.png?v=${ICON_VER}" alt="" width="34" height="34"> Go<em>Honu</em></div>
       <p class="muted">${esc(SITE.tagline)}</p>
     </div>
     <div>
@@ -1043,8 +1050,8 @@ write(
       theme_color: "#0a7ea4",
       categories: ["travel", "lifestyle"],
       icons: [
-        { src: "/assets/img/icons/icon-192.png", sizes: "192x192", type: "image/png", purpose: "any maskable" },
-        { src: "/assets/img/icons/icon-512.png", sizes: "512x512", type: "image/png", purpose: "any maskable" },
+        { src: `/assets/img/icons/icon-192.png?v=${ICON_VER}`, sizes: "192x192", type: "image/png", purpose: "any maskable" },
+        { src: `/assets/img/icons/icon-512.png?v=${ICON_VER}`, sizes: "512x512", type: "image/png", purpose: "any maskable" },
       ],
     },
     null,
@@ -1052,7 +1059,7 @@ write(
   ) + "\n"
 );
 
-const SW_CACHE = `gohonu-${CSS_VER}`;
+const SW_CACHE = `gohonu-${CSS_VER}-${ICON_VER}`;
 write(
   "sw.js",
   `/* GoHonu service worker — app shell cache + offline fallback. Cache key bumps with the CSS hash. */
@@ -1060,8 +1067,8 @@ const CACHE = ${JSON.stringify(SW_CACHE)};
 const CORE = [
   "/",
   "/assets/css/styles.css?v=${CSS_VER}",
-  "/assets/img/logo.png",
-  "/assets/img/icons/icon-192.png",
+  "/assets/img/logo.png?v=${ICON_VER}",
+  "/assets/img/icons/icon-192.png?v=${ICON_VER}",
   "/offline.html",
   ${SITE.stay22Aid ? '"/stay/",' : ""}
   ${WORLD.length ? '"/beyond/",' : ""}
