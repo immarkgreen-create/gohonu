@@ -792,8 +792,16 @@ function stayPage() {
   <div class="section-head"><div><span class="kicker">Search</span><h2>Hotels & flights</h2></div></div>
   <div class="eg-wrap">${EXPEDIA_SEARCH}</div>
 </section>
-<section class="wrap">
-  <a class="guide-banner" href="/stay/waikiki/">🏨 <b>Our hand-picked Waikiki hotels</b> — rated by real travelers, compare & book <span class="guide-arrow">→</span></a>
+<section class="wrap section">
+  <div class="section-head"><div><span class="kicker">Hand-picked</span><h2>Our Oahu hotel guides</h2></div></div>
+  <div class="grid guide-grid">
+    ${hotelAreas
+      .map(({ key, name, list }) => {
+        const img = (list.find((h) => h.image) || {}).image;
+        return `<a class="guide-card" href="/stay/${key}/"${bg(img)}><span class="guide-card-txt"><b>${esc(name)}</b><small>${list.length} hand-picked hotels →</small></span></a>`;
+      })
+      .join("")}
+  </div>
 </section>
 <section class="band"><div class="wrap section">
   <div class="section-head"><div><span class="kicker">Or browse on a map</span><h2>Where to stay by area</h2></div></div>
@@ -839,6 +847,13 @@ const HOTELS = (() => {
     return {};
   }
 })();
+// Pretty labels for each guide area (key in hotels.json -> display name).
+const AREA_LABELS = { waikiki: "Waikiki", "north-shore": "North Shore", "ko-olina": "Ko Olina" };
+const hotelAreas = Object.keys(HOTELS).map((k) => ({
+  key: k,
+  name: AREA_LABELS[k] || (HOTELS[k][0] && HOTELS[k][0].area) || k,
+  list: HOTELS[k],
+}));
 // Append your Expedia affiliate tracking (affcid/afflid) to any Expedia URL.
 const expediaTrack = (url) => {
   const sep = url.includes("?") ? "&" : "?";
@@ -945,7 +960,7 @@ if (POLY.length) {
 }
 if (FLIGHTS) write("flights/index.html", flightsPage());
 if (SITE.stay22Aid) write("stay/index.html", stayPage());
-if (HOTELS.waikiki) write("stay/waikiki/index.html", hotelGuidePage("waikiki", "Waikiki", HOTELS.waikiki));
+hotelAreas.forEach(({ key, name, list }) => write(`stay/${key}/index.html`, hotelGuidePage(key, name, list)));
 write("cars/index.html", carsPage());
 
 // 404
@@ -975,7 +990,7 @@ const urls = [
   ...POLY.map((d) => `${SITE.domain}/polynesia/${d.slug}/`),
   ...(FLIGHTS ? [`${SITE.domain}/flights/`] : []),
   ...(SITE.stay22Aid ? [`${SITE.domain}/stay/`] : []),
-  ...(HOTELS.waikiki ? [`${SITE.domain}/stay/waikiki/`] : []),
+  ...hotelAreas.map(({ key }) => `${SITE.domain}/stay/${key}/`),
   `${SITE.domain}/cars/`,
 ];
 write(

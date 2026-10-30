@@ -125,6 +125,16 @@ h1,h2,h3,h4{line-height:1.2;margin:0 0 .4em}
   border-radius:12px;background:var(--sand);font-weight:600;color:var(--ink);margin-top:10px;transition:border-color .12s,transform .12s}
 .guide-banner:hover{border-color:var(--ocean);transform:translateX(3px)}
 .guide-arrow{color:var(--coral);font-weight:800;margin-left:auto}
+/* Hotel-guide area cards (Where to stay) */
+.guide-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.guide-card{position:relative;display:flex;align-items:flex-end;min-height:180px;border-radius:14px;overflow:hidden;
+  background:var(--ocean) center/cover no-repeat;color:#fff;text-decoration:none;box-shadow:var(--shadow);
+  transition:transform .14s}
+.guide-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.72))}
+.guide-card:hover{transform:translateY(-4px)}
+.guide-card-txt{position:relative;z-index:1;padding:18px 20px}
+.guide-card-txt b{display:block;font-size:1.3rem;line-height:1.15}
+.guide-card-txt small{display:block;margin-top:4px;font-weight:600;opacity:.95;color:var(--coral-2,#ffd9cf)}
 
 /* Expedia search widget */
 .eg-wrap{min-height:90px}
