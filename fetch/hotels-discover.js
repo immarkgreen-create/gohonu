@@ -65,7 +65,7 @@ async function searchHotels(query, key) {
       "Content-Type": "application/json",
       "X-Goog-Api-Key": key,
       "X-Goog-FieldMask":
-        "places.id,places.displayName,places.rating,places.userRatingCount,places.photos,places.priceLevel,places.formattedAddress",
+        "places.id,places.displayName,places.rating,places.userRatingCount,places.photos,places.priceLevel,places.formattedAddress,places.location",
     },
     body: JSON.stringify({ textQuery: query, maxResultCount: 20, includedType: "lodging" }),
   });
@@ -124,9 +124,13 @@ async function main() {
       const h = ranked[i];
       const name = h.displayName?.text || "Hotel";
       const rel = `/assets/img/dest-hotels/${p.slug}/${i + 1}.jpg`;
+      const abs = path.join(ROOT, rel);
       let image = null;
-      const photo = (h.photos || [])[0];
-      if (photo?.name && (await downloadPhoto(photo.name, key, path.join(ROOT, rel)))) image = rel;
+      if (fs.existsSync(abs)) image = rel; // keep already-downloaded photo (don't re-fetch)
+      else {
+        const photo = (h.photos || [])[0];
+        if (photo?.name && (await downloadPhoto(photo.name, key, abs))) image = rel;
+      }
       hotels.push({
         slug: `${p.slug}-${slugify(name).slice(0, 40)}`,
         name,
@@ -135,6 +139,9 @@ async function main() {
         reviews: h.userRatingCount,
         priceLevel: PRICE_MAP[h.priceLevel] || null,
         image,
+        lat: h.location?.latitude,
+        lng: h.location?.longitude,
+        address: h.formattedAddress || `${name}, ${p.name}`,
         expediaDest: `${name}, ${p.name}`,
       });
     }

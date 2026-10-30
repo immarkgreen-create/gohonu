@@ -8,6 +8,9 @@
       "reviews": 4241,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/maui/1.jpg",
+      "lat": 20.6878874,
+      "lng": -156.4428011,
+      "address": "3700 Wailea Alanui Dr, Wailea, HI 96753, USA",
       "expediaDest": "Wailea Beach Resort - Marriott, Maui, Maui"
     },
     {
@@ -18,6 +21,9 @@
       "reviews": 5003,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/maui/2.jpg",
+      "lat": 20.912971,
+      "lng": -156.6921667,
+      "address": "200 Nohea Kai Dr, Lahaina, HI 96761, USA",
       "expediaDest": "Hyatt Regency Maui Resort and Spa, Maui"
     },
     {
@@ -28,6 +34,9 @@
       "reviews": 3968,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/maui/3.jpg",
+      "lat": 20.9142354,
+      "lng": -156.6934688,
+      "address": "180 Nohea Kai Dr, Lahaina, HI 96761, USA",
       "expediaDest": "Hyatt Vacation Club at Ka’anapali Beach, Maui"
     },
     {
@@ -38,6 +47,9 @@
       "reviews": 3273,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/maui/4.jpg",
+      "lat": 20.675926399999998,
+      "lng": -156.4411922,
+      "address": "4100 Wailea Alanui Dr, Wailea-Makena, HI 96753, USA",
       "expediaDest": "Fairmont Kea Lani, Maui, Maui"
     },
     {
@@ -48,6 +60,9 @@
       "reviews": 5559,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/maui/5.jpg",
+      "lat": 20.6843088,
+      "lng": -156.4410036,
+      "address": "3850 Wailea Alanui Dr, Wailea, HI 96753, USA",
       "expediaDest": "Grand Wailea, A Waldorf Astoria Resort, Maui"
     },
     {
@@ -58,6 +73,9 @@
       "reviews": 2738,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/maui/6.jpg",
+      "lat": 20.6801531,
+      "lng": -156.4423445,
+      "address": "3900 Wailea Alanui Dr, Kihei, HI 96753, USA",
       "expediaDest": "Four Seasons Resort Maui at Wailea, Maui"
     },
     {
@@ -68,6 +86,9 @@
       "reviews": 3091,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/maui/7.jpg",
+      "lat": 21.001068399999998,
+      "lng": -156.65411419999998,
+      "address": "1 Ritz Carlton Dr, Lahaina, HI 96761, USA",
       "expediaDest": "The Ritz-Carlton Maui, Kapalua, Maui"
     },
     {
@@ -78,6 +99,9 @@
       "reviews": 2465,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/maui/8.jpg",
+      "lat": 20.6926432,
+      "lng": -156.44241639999998,
+      "address": "3550 Wailea Alanui Dr, Wailea, HI 96753, USA",
       "expediaDest": "Andaz Maui at Wailea Resort, by Hyatt, Maui"
     }
   ],
@@ -90,6 +114,9 @@
       "reviews": 4785,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kauai/1.jpg",
+      "lat": 21.8763069,
+      "lng": -159.439324,
+      "address": "1571 Poipu Rd, Koloa, HI 96756, USA",
       "expediaDest": "Grand Hyatt Kauai Resort & Spa, Kauai"
     },
     {
@@ -100,6 +127,9 @@
       "reviews": 3553,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kauai/2.jpg",
+      "lat": 21.962709,
+      "lng": -159.3501978,
+      "address": "3610 Rice St, Lihue, HI 96766, USA",
       "expediaDest": "The Royal Sonesta Kaua'i Resort Lihue, Kauai"
     },
     {
@@ -110,6 +140,9 @@
       "reviews": 4032,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kauai/3.jpg",
+      "lat": 22.0101575,
+      "lng": -159.3385923,
+      "address": "4331 Kauai Beach Dr, Lihue, HI 96766, USA",
       "expediaDest": "OUTRIGGER Kauai Beach Resort & Spa, Kauai"
     },
     {
@@ -120,6 +153,9 @@
       "reviews": 1837,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kauai/4.jpg",
+      "lat": 21.880282299999998,
+      "lng": -159.46586879999998,
+      "address": "2641 Poipu Rd, Koloa, HI 96756, USA",
       "expediaDest": "Koloa Landing Resort at Poipu, Autograph Collection, Kauai"
     },
     {
@@ -130,6 +166,9 @@
       "reviews": 2457,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kauai/5.jpg",
+      "lat": 22.052907899999997,
+      "lng": -159.3294982,
+      "address": "420 Papaloa Rd, Kapaʻa, HI 96746, USA",
       "expediaDest": "Kauai Shores Hotel, Kauai"
     },
     {
@@ -140,6 +179,9 @@
       "reviews": 1676,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kauai/6.jpg",
+      "lat": 22.2206331,
+      "lng": -159.4972352,
+      "address": "5520 Ka Haku Rd, Princeville, HI 96722, USA",
       "expediaDest": "1 Hotel Hanalei Bay, Kauai"
     },
     {
@@ -150,6 +192,9 @@
       "reviews": 1838,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kauai/7.jpg",
+      "lat": 22.219514,
+      "lng": -159.49371299999999,
+      "address": "5380 Honoiki Rd, Princeville, HI 96722, USA",
       "expediaDest": "Hanalei Bay Resort, Kauai"
     },
     {
@@ -160,6 +205,9 @@
       "reviews": 2169,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kauai/8.jpg",
+      "lat": 21.9620979,
+      "lng": -159.3499131,
+      "address": "3610 Rice Street, Kalapaki Beach, Tax ID # TA, 070 692-2496-04, Lihue, HI 96766, USA",
       "expediaDest": "Marriott's Kaua'i Beach Club, Kauai"
     }
   ],
@@ -172,6 +220,9 @@
       "reviews": 3984,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/big-island/1.jpg",
+      "lat": 19.9505591,
+      "lng": -155.8598637,
+      "address": "1 N Kaniku Dr, Waimea, HI 96743, USA",
       "expediaDest": "Fairmont Orchid, Big Island"
     },
     {
@@ -182,6 +233,9 @@
       "reviews": 8743,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/big-island/2.jpg",
+      "lat": 19.923929200000003,
+      "lng": -155.88717649999998,
+      "address": "69-425 Waikōloa Beach Dr, Waikoloa Village, HI 96738, USA",
       "expediaDest": "Hilton Waikoloa Village, Big Island"
     },
     {
@@ -192,6 +246,9 @@
       "reviews": 7178,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/big-island/3.jpg",
+      "lat": 19.632109399999997,
+      "lng": -155.9903138,
+      "address": "75-5852 Ali‘i Dr, Kailua-Kona, HI 96740, USA",
       "expediaDest": "Royal Kona Resort, Big Island"
     },
     {
@@ -202,6 +259,9 @@
       "reviews": 3904,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/big-island/4.jpg",
+      "lat": 19.916263,
+      "lng": -155.88468600000002,
+      "address": "69-275 Waikōloa Beach Dr, Waikoloa Village, HI 96738, USA",
       "expediaDest": "Waikoloa Beach Marriott Resort & Spa, Big Island"
     },
     {
@@ -212,6 +272,9 @@
       "reviews": 2979,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/big-island/5.jpg",
+      "lat": 19.9257289,
+      "lng": -155.86609389999998,
+      "address": "69-699 Waikōloa Beach Dr, Waikoloa Village, HI 96738, USA",
       "expediaDest": "Hilton Grand Vacations Club Kings’ Land Waikoloa, Big Island"
     },
     {
@@ -222,6 +285,9 @@
       "reviews": 1699,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/big-island/6.jpg",
+      "lat": 19.8277012,
+      "lng": -155.9916716,
+      "address": "72-100 Ka'upulehu Drive, Kailua-Kona, HI 96740, USA",
       "expediaDest": "Four Seasons Resort Hualalai, Big Island"
     },
     {
@@ -232,6 +298,9 @@
       "reviews": 2240,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/big-island/7.jpg",
+      "lat": 19.9950016,
+      "lng": -155.82395689999998,
+      "address": "62-100 Kaunaʻoa Dr, Waimea, HI 96743, USA",
       "expediaDest": "The Westin Hapuna Beach Resort, Big Island"
     },
     {
@@ -242,6 +311,9 @@
       "reviews": 4579,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/big-island/8.jpg",
+      "lat": 19.5586138,
+      "lng": -155.9645948,
+      "address": "78-128 Ehukai St, Kailua-Kona, HI 96740, USA",
       "expediaDest": "OUTRIGGER Kona Resort & Spa, Big Island"
     }
   ],
@@ -254,6 +326,9 @@
       "reviews": 30763,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/cancun/1.jpg",
+      "lat": 21.0671078,
+      "lng": -86.7784818,
+      "address": "km 17, Blvd. Kukulcan, Zona Hotelera, 77500 Cancún, Q.R., Mexico",
       "expediaDest": "Iberostar Selection Cancún, Cancún"
     },
     {
@@ -264,6 +339,9 @@
       "reviews": 13011,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/cancun/2.jpg",
+      "lat": 20.9538196,
+      "lng": -86.83611169999999,
+      "address": "Carr Federal Libre 307 Cancun-Tulum Km 248-868, SM-36, LT-1-01 UPE-1E, 77580 Cancun, Q.R., Mexico",
       "expediaDest": "Hilton Cancun, an All-Inclusive Resort, Cancún"
     },
     {
@@ -274,6 +352,9 @@
       "reviews": 6469,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/cancun/3.jpg",
+      "lat": 21.0861891,
+      "lng": -86.7713935,
+      "address": "Boulevard Kukulcan Km 14.5, Chac L-41, Zona Hotelera, 77500 Cancún, Q.R., Mexico",
       "expediaDest": "Marriott Cancun, An All-Inclusive Resort, Cancún"
     },
     {
@@ -284,6 +365,9 @@
       "reviews": 3970,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/cancun/4.jpg",
+      "lat": 21.088236,
+      "lng": -86.7706319,
+      "address": "Km 14.5, Blvd. Kukulcan Lote 40-A, Zona Hotelera, 77500 Cancún, Q.R., Mexico",
       "expediaDest": "JW Marriott Cancun Resort & Spa, Cancún"
     },
     {
@@ -294,6 +378,9 @@
       "reviews": 3013,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/cancun/5.jpg",
+      "lat": 21.093194699999998,
+      "lng": -86.7682547,
+      "address": "Rtno. del Rey 36, Zona Hotelera, 77500 Cancún, Q.R., Mexico",
       "expediaDest": "Kempinski Hotel Cancún, Cancún"
     },
     {
@@ -304,6 +391,9 @@
       "reviews": 2734,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/cancun/6.jpg",
+      "lat": 21.0320525,
+      "lng": -86.78794909999999,
+      "address": "Blvd. Kukulcan, 03 Km 21.26, Nizuc, Zona Hotelera, 77500 Cancún, Q.R., Mexico",
       "expediaDest": "NIZUC Resort & Spa, Cancún"
     }
   ],
@@ -313,9 +403,12 @@
       "name": "Bellagio Hotel & Casino",
       "area": "Las Vegas",
       "rating": 4.7,
-      "reviews": 144327,
+      "reviews": 144328,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/las-vegas/1.jpg",
+      "lat": 36.1129455,
+      "lng": -115.17650669999999,
+      "address": "3600 S Las Vegas Blvd, Las Vegas, NV 89109, USA",
       "expediaDest": "Bellagio Hotel & Casino, Las Vegas"
     },
     {
@@ -326,6 +419,9 @@
       "reviews": 122407,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/las-vegas/2.jpg",
+      "lat": 36.121173999999996,
+      "lng": -115.16965259999999,
+      "address": "3355 S Las Vegas Blvd, Las Vegas, NV 89109, USA",
       "expediaDest": "The Venetian Las Vegas, Las Vegas"
     },
     {
@@ -336,6 +432,9 @@
       "reviews": 138668,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/las-vegas/3.jpg",
+      "lat": 36.1172612,
+      "lng": -115.17614099999999,
+      "address": "3570 S Las Vegas Blvd, Paradise, NV 89109, USA",
       "expediaDest": "Caesars Palace, Las Vegas"
     },
     {
@@ -346,6 +445,9 @@
       "reviews": 66455,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/las-vegas/4.jpg",
+      "lat": 36.126118999999996,
+      "lng": -115.16195829999998,
+      "address": "3131 Las Vegas Blvd S, Las Vegas, NV 89109, USA",
       "expediaDest": "Wynn Las Vegas, Las Vegas"
     },
     {
@@ -356,6 +458,9 @@
       "reviews": 79154,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/las-vegas/5.jpg",
+      "lat": 36.10996,
+      "lng": -115.1754159,
+      "address": "3708 Las Vegas Blvd S, Las Vegas, NV 89109, USA",
       "expediaDest": "The Cosmopolitan of Las Vegas, Las Vegas"
     },
     {
@@ -366,6 +471,9 @@
       "reviews": 113029,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/las-vegas/6.jpg",
+      "lat": 36.1036224,
+      "lng": -115.1675744,
+      "address": "3799 S Las Vegas Blvd, Las Vegas, NV 89109, USA",
       "expediaDest": "MGM Grand, Las Vegas"
     },
     {
@@ -376,6 +484,9 @@
       "reviews": 70127,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/las-vegas/7.jpg",
+      "lat": 36.0921847,
+      "lng": -115.1748583,
+      "address": "3950 S Las Vegas Blvd, Las Vegas, NV 89119, USA",
       "expediaDest": "Mandalay Bay, Las Vegas"
     },
     {
@@ -386,6 +497,9 @@
       "reviews": 83906,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/las-vegas/8.jpg",
+      "lat": 36.112462,
+      "lng": -115.17070749999999,
+      "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109, USA",
       "expediaDest": "Paris Las Vegas, Las Vegas"
     }
   ],
@@ -398,6 +512,9 @@
       "reviews": 5688,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/rome/1.jpg",
+      "lat": 41.918816799999995,
+      "lng": 12.4466178,
+      "address": "Via Alberto Cadlolo, 101, 00136 Roma RM, Italy",
       "expediaDest": "Rome Cavalieri, A Waldorf Astoria Hotel, Rome"
     },
     {
@@ -408,6 +525,9 @@
       "reviews": 2791,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/rome/2.jpg",
+      "lat": 41.902135,
+      "lng": 12.496035,
+      "address": "P.za della Repùbblica, 48, 00185 Roma RM, Italy",
       "expediaDest": "Anantara Palazzo Naiadi Rome Hotel, Rome"
     },
     {
@@ -418,6 +538,9 @@
       "reviews": 2040,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/rome/3.jpg",
+      "lat": 41.90081860000001,
+      "lng": 12.493654699999999,
+      "address": "Via Nazionale, 22, 00184 Roma RM, Italy",
       "expediaDest": "Hotel Artemide, Rome"
     },
     {
@@ -428,6 +551,9 @@
       "reviews": 2088,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/rome/4.jpg",
+      "lat": 41.904071699999996,
+      "lng": 12.494872899999999,
+      "address": "Via Vittorio Emanuele Orlando, 3, 00185 Roma RM, Italy",
       "expediaDest": "The St. Regis Rome, Rome"
     },
     {
@@ -438,6 +564,9 @@
       "reviews": 1540,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/rome/5.jpg",
+      "lat": 41.8991751,
+      "lng": 12.4773018,
+      "address": "Piazza della Rotonda, 73, 00186 Roma RM, Italy",
       "expediaDest": "Hotel Albergo del Senato, Rome"
     },
     {
@@ -448,6 +577,9 @@
       "reviews": 889,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/rome/6.jpg",
+      "lat": 41.9044226,
+      "lng": 12.505049099999999,
+      "address": "Via Palestro, 64, 00185 Roma RM, Italy",
       "expediaDest": "The Liberty Boutique Hotel, Rome"
     },
     {
@@ -458,6 +590,9 @@
       "reviews": 1295,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/rome/7.jpg",
+      "lat": 41.8989641,
+      "lng": 12.4966601,
+      "address": "P.za dell'Esquilino, 1, 00185 Roma RM, Italy",
       "expediaDest": "DoubleTree by Hilton Rome Monti, Rome"
     },
     {
@@ -468,6 +603,9 @@
       "reviews": 1442,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/rome/8.jpg",
+      "lat": 41.9090975,
+      "lng": 12.488991,
+      "address": "Via Vittorio Veneto, 191, 00187 Roma RM, Italy",
       "expediaDest": "Rome Marriott Grand Hotel Flora, Rome"
     }
   ],
@@ -480,67 +618,10 @@
       "reviews": 16947,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bali/1.jpg",
+      "lat": -8.8287865,
+      "lng": 115.21561430000001,
+      "address": "Jl. Raya Nusa Dua Selatan No.4, Benoa, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
       "expediaDest": "The Apurva Kempinski Bali, Bali"
-    },
-    {
-      "slug": "bali-hilton-bali-resort",
-      "name": "Hilton Bali Resort",
-      "area": "Bali",
-      "rating": 4.6,
-      "reviews": 11232,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/bali/2.jpg",
-      "expediaDest": "Hilton Bali Resort, Bali"
-    },
-    {
-      "slug": "bali-mulia-resort-nusa-dua-bali",
-      "name": "Mulia Resort - Nusa Dua, Bali",
-      "area": "Bali",
-      "rating": 4.6,
-      "reviews": 9350,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/bali/3.jpg",
-      "expediaDest": "Mulia Resort - Nusa Dua, Bali, Bali"
-    },
-    {
-      "slug": "bali-conrad-bali",
-      "name": "Conrad Bali",
-      "area": "Bali",
-      "rating": 4.7,
-      "reviews": 6991,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/bali/4.jpg",
-      "expediaDest": "Conrad Bali, Bali"
-    },
-    {
-      "slug": "bali-grand-hyatt-bali",
-      "name": "Grand Hyatt Bali",
-      "area": "Bali",
-      "rating": 4.5,
-      "reviews": 9113,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/bali/5.jpg",
-      "expediaDest": "Grand Hyatt Bali, Bali"
-    },
-    {
-      "slug": "bali-intercontinental-bali-resort-by-ihg",
-      "name": "InterContinental Bali Resort by IHG",
-      "area": "Bali",
-      "rating": 4.7,
-      "reviews": 4858,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/bali/6.jpg",
-      "expediaDest": "InterContinental Bali Resort by IHG, Bali"
-    },
-    {
-      "slug": "bali-novotel-bali-benoa",
-      "name": "Novotel Bali Benoa",
-      "area": "Bali",
-      "rating": 4.7,
-      "reviews": 4408,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/bali/7.jpg",
-      "expediaDest": "Novotel Bali Benoa, Bali"
     },
     {
       "slug": "bali-the-ritz-carlton-bali",
@@ -549,8 +630,37 @@
       "rating": 4.6,
       "reviews": 4585,
       "priceLevel": null,
-      "image": "/assets/img/dest-hotels/bali/8.jpg",
+      "image": "/assets/img/dest-hotels/bali/2.jpg",
+      "lat": -8.8306709,
+      "lng": 115.2153312,
+      "address": "Jl. Raya Nusa Dua Selatan, Benoa, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
       "expediaDest": "The Ritz-Carlton, Bali, Bali"
+    },
+    {
+      "slug": "bali-four-seasons-resort-bali-at-jimbaran-bay",
+      "name": "Four Seasons Resort Bali At Jimbaran Bay",
+      "area": "Bali",
+      "rating": 4.7,
+      "reviews": 2808,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bali/3.jpg",
+      "lat": -8.7844217,
+      "lng": 115.15881270000001,
+      "address": "Jl. Bukit Permai, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+      "expediaDest": "Four Seasons Resort Bali At Jimbaran Bay, Bali"
+    },
+    {
+      "slug": "bali-bvlgari-resort-bali",
+      "name": "Bvlgari Resort Bali",
+      "area": "Bali",
+      "rating": 4.7,
+      "reviews": 1983,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/bali/4.jpg",
+      "lat": -8.8429187,
+      "lng": 115.12169089999999,
+      "address": "Jl. Goa Lempeh, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali, Indonesia",
+      "expediaDest": "Bvlgari Resort Bali, Bali"
     }
   ],
   "paris": [
@@ -562,6 +672,9 @@
       "reviews": 17601,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/paris/1.jpg",
+      "lat": 48.8556488,
+      "lng": 2.2928584,
+      "address": "18 Avenue De Suffren, 22 Rue Jean Rey Entrée Au, 75015 Paris, France",
       "expediaDest": "Pullman Paris Tour Eiffel, Paris"
     },
     {
@@ -572,6 +685,9 @@
       "reviews": 7411,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/paris/2.jpg",
+      "lat": 48.8688005,
+      "lng": 2.3008313,
+      "address": "31 Av. George V, 75008 Paris, France",
       "expediaDest": "Four Seasons Hotel George V, Paris, Paris"
     },
     {
@@ -579,9 +695,12 @@
       "name": "Hotel Eiffel Seine",
       "area": "Paris",
       "rating": 4.7,
-      "reviews": 6054,
+      "reviews": 6055,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/paris/3.jpg",
+      "lat": 48.854375399999995,
+      "lng": 2.2893054999999998,
+      "address": "3 Bd de Grenelle, 75015 Paris, France",
       "expediaDest": "Hotel Eiffel Seine, Paris"
     },
     {
@@ -592,6 +711,9 @@
       "reviews": 4095,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/paris/4.jpg",
+      "lat": 48.870812099999995,
+      "lng": 2.2934608,
+      "address": "19 Av. Kléber, 75116 Paris, France",
       "expediaDest": "The Peninsula Paris, Paris"
     },
     {
@@ -602,6 +724,9 @@
       "reviews": 4657,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/paris/5.jpg",
+      "lat": 48.8680987,
+      "lng": 2.3288932,
+      "address": "15 Pl. Vendôme, 75001 Paris, France",
       "expediaDest": "Ritz Paris, Paris"
     },
     {
@@ -612,6 +737,9 @@
       "reviews": 3594,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/paris/6.jpg",
+      "lat": 48.8672703,
+      "lng": 2.3210916,
+      "address": "10 Pl. de la Concorde, 75008 Paris, France",
       "expediaDest": "Hôtel de Crillon, A Rosewood Hotel, Paris"
     },
     {
@@ -622,6 +750,9 @@
       "reviews": 3471,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/paris/7.jpg",
+      "lat": 48.863927999999994,
+      "lng": 2.2934026999999997,
+      "address": "10 Av. d'Iéna, 75116 Paris, France",
       "expediaDest": "Shangri-La Paris, Paris"
     },
     {
@@ -632,6 +763,9 @@
       "reviews": 3266,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/paris/8.jpg",
+      "lat": 48.871686399999994,
+      "lng": 2.3147995999999997,
+      "address": "112 Rue du Faubourg Saint-Honoré, 75008 Paris, France",
       "expediaDest": "Le Bristol Paris, Oetker Hotels, Paris"
     }
   ],
@@ -644,6 +778,9 @@
       "reviews": 11139,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/london/1.jpg",
+      "lat": 51.510149399999996,
+      "lng": -0.12052049999999997,
+      "address": "Strand, London WC2R 0EZ, UK",
       "expediaDest": "The Savoy, London"
     },
     {
@@ -654,6 +791,9 @@
       "reviews": 14677,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/london/2.jpg",
+      "lat": 51.501,
+      "lng": -0.11689999999999999,
+      "address": "200 Westminster Bridge Rd, London SE1 7UT, UK",
       "expediaDest": "Park Plaza London Westminster Bridge, London"
     },
     {
@@ -664,6 +804,9 @@
       "reviews": 7937,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/london/3.jpg",
+      "lat": 51.507078199999995,
+      "lng": -0.14162729999999998,
+      "address": "150 Piccadilly, London W1J 9BR, UK",
       "expediaDest": "The Ritz London, London"
     },
     {
@@ -674,6 +817,9 @@
       "reviews": 8040,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/london/4.jpg",
+      "lat": 51.5136949,
+      "lng": -0.0901693,
+      "address": "27 Poultry, London EC2R 8AJ, UK",
       "expediaDest": "The Ned London, London"
     },
     {
@@ -684,7 +830,36 @@
       "reviews": 4327,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/london/5.jpg",
+      "lat": 51.517801,
+      "lng": -0.1439928,
+      "address": "1C Portland Pl, London W1B 1JA, UK",
       "expediaDest": "The Langham, London, London"
+    },
+    {
+      "slug": "london-the-landmark-london",
+      "name": "The Landmark London",
+      "area": "London",
+      "rating": 4.6,
+      "reviews": 4897,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/london/6.jpg",
+      "lat": 51.5214599,
+      "lng": -0.1626027,
+      "address": "222 Marylebone Rd, London NW1 6JQ, UK",
+      "expediaDest": "The Landmark London, London"
+    },
+    {
+      "slug": "london-the-dorchester",
+      "name": "The Dorchester",
+      "area": "London",
+      "rating": 4.6,
+      "reviews": 4615,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/london/7.jpg",
+      "lat": 51.5070726,
+      "lng": -0.1522442,
+      "address": "53 Park Ln, London W1K 1QA, UK",
+      "expediaDest": "The Dorchester, London"
     },
     {
       "slug": "london-royal-lancaster-london",
@@ -693,28 +868,11 @@
       "rating": 4.6,
       "reviews": 4599,
       "priceLevel": null,
-      "image": "/assets/img/dest-hotels/london/6.jpg",
-      "expediaDest": "Royal Lancaster London, London"
-    },
-    {
-      "slug": "london-corinthia-london",
-      "name": "Corinthia London",
-      "area": "London",
-      "rating": 4.7,
-      "reviews": 3796,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/london/7.jpg",
-      "expediaDest": "Corinthia London, London"
-    },
-    {
-      "slug": "london-the-tower-hotel-by-thistle",
-      "name": "The Tower Hotel, by Thistle",
-      "area": "London",
-      "rating": 4.1,
-      "reviews": 12549,
-      "priceLevel": null,
       "image": "/assets/img/dest-hotels/london/8.jpg",
-      "expediaDest": "The Tower Hotel, by Thistle, London"
+      "lat": 51.512297000000004,
+      "lng": -0.175197,
+      "address": "Lancaster Terrace, London W2 2TY, UK",
+      "expediaDest": "Royal Lancaster London, London"
     }
   ],
   "tokyo": [
@@ -726,6 +884,9 @@
       "reviews": 10601,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/tokyo/1.jpg",
+      "lat": 35.7117779,
+      "lng": 139.7257143,
+      "address": "2-chōme-10-8 Sekiguchi, Bunkyo City, Tokyo 112-8680, Japan",
       "expediaDest": "Hotel Chinzanso Tokyo, Tokyo"
     },
     {
@@ -736,6 +897,9 @@
       "reviews": 9684,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/tokyo/2.jpg",
+      "lat": 35.6925835,
+      "lng": 139.6911889,
+      "address": "6-chōme-6-2 Nishishinjuku, Shinjuku City, Tokyo 160-0023, Japan",
       "expediaDest": "Hilton Tokyo, Tokyo"
     },
     {
@@ -746,6 +910,9 @@
       "reviews": 4814,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/tokyo/3.jpg",
+      "lat": 35.6870475,
+      "lng": 139.7730634,
+      "address": "2-chōme-1-1 Nihonbashimuromachi, Chuo City, Tokyo 103-8328, Japan",
       "expediaDest": "Mandarin Oriental, Tokyo, Tokyo"
     },
     {
@@ -756,6 +923,9 @@
       "reviews": 4620,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/tokyo/4.jpg",
+      "lat": 35.686213099999996,
+      "lng": 139.69048279999998,
+      "address": "2, 3-chōme-7-1 Nishishinjuku, Shinjuku City, Tokyo 163-1055, Japan",
       "expediaDest": "Park Hyatt Tokyo, Tokyo"
     },
     {
@@ -766,6 +936,9 @@
       "reviews": 4478,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/tokyo/5.jpg",
+      "lat": 35.6661648,
+      "lng": 139.73117489999998,
+      "address": "Tokyo Midtown, ９丁目-７-1 赤坂 港区 東京都 107-6245, Japan",
       "expediaDest": "The Ritz-Carlton, Tokyo, Tokyo"
     },
     {
@@ -776,6 +949,9 @@
       "reviews": 5256,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/tokyo/6.jpg",
+      "lat": 35.6600777,
+      "lng": 139.7283208,
+      "address": "6-chōme-10-3 Roppongi, Minato City, Tokyo 106-0032, Japan",
       "expediaDest": "Grand Hyatt Tokyo, Tokyo"
     },
     {
@@ -786,6 +962,9 @@
       "reviews": 4400,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/tokyo/7.jpg",
+      "lat": 35.674759099999996,
+      "lng": 139.7604704,
+      "address": "1-chōme-8-1 Yūrakuchō, Chiyoda City, Tokyo 100-0006, Japan",
       "expediaDest": "The Peninsula Tokyo, Tokyo"
     },
     {
@@ -796,6 +975,9 @@
       "reviews": 3260,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/tokyo/8.jpg",
+      "lat": 35.6824303,
+      "lng": 139.7693827,
+      "address": "MARUNOUCHI TRUST TOWER MAIN, 1-chōme-8-3 Marunouchi, Chiyoda City, Tokyo 100-8283, Japan",
       "expediaDest": "Shangri-La Tokyo, Tokyo"
     }
   ],
@@ -808,6 +990,9 @@
       "reviews": 6761,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/new-york/1.jpg",
+      "lat": 40.7646318,
+      "lng": -73.9743251,
+      "address": "768 5th Ave, New York, NY 10019, USA",
       "expediaDest": "The Plaza, New York City"
     },
     {
@@ -818,6 +1003,9 @@
       "reviews": 1327,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/new-york/2.jpg",
+      "lat": 40.7128405,
+      "lng": -74.0091874,
+      "address": "27 Barclay St, New York, NY 10007, USA",
       "expediaDest": "Four Seasons Hotel New York Downtown, New York City"
     },
     {
@@ -828,6 +1016,9 @@
       "reviews": 2143,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/new-york/3.jpg",
+      "lat": 40.7564821,
+      "lng": -73.9734562,
+      "address": "301 Park Ave, New York, NY 10022, USA",
       "expediaDest": "Waldorf Astoria New York, New York City"
     },
     {
@@ -838,6 +1029,9 @@
       "reviews": 1225,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/new-york/4.jpg",
+      "lat": 40.7622953,
+      "lng": -73.9713402,
+      "address": "57 E 57th St, New York, NY 10022, USA",
       "expediaDest": "Four Seasons Hotel New York, New York City"
     },
     {
@@ -848,6 +1042,9 @@
       "reviews": 670,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/new-york/5.jpg",
+      "lat": 40.745535499999995,
+      "lng": -73.9888447,
+      "address": "25 W 28th St, New York, NY 10001, USA",
       "expediaDest": "The Ritz-Carlton New York, NoMad, New York City"
     },
     {
@@ -858,6 +1055,9 @@
       "reviews": 368,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/new-york/6.jpg",
+      "lat": 40.763093,
+      "lng": -73.974634,
+      "address": "The Crown Building, 730 5th Ave, New York, NY 10019, USA",
       "expediaDest": "Aman New York, New York City"
     }
   ],
@@ -870,6 +1070,9 @@
       "reviews": 19068,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/barcelona/1.jpg",
+      "lat": 41.368437,
+      "lng": 2.1901534,
+      "address": "Plaça Rosa Del Vents 1, Final, Pg. de Joan de Borbó, Ciutat Vella, 08039 Barcelona, Spain",
       "expediaDest": "W Barcelona, Barcelona"
     },
     {
@@ -880,6 +1083,9 @@
       "reviews": 7224,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/barcelona/2.jpg",
+      "lat": 41.3934937,
+      "lng": 2.1623475,
+      "address": "Pg. de Gràcia, 73, Eixample, 08008 Barcelona, Spain",
       "expediaDest": "Hotel Condes de Barcelona, Barcelona"
     },
     {
@@ -890,6 +1096,9 @@
       "reviews": 6315,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/barcelona/3.jpg",
+      "lat": 41.3934401,
+      "lng": 2.1639871,
+      "address": "Pg. de Gràcia, 68, Eixample, 08007 Barcelona, Spain",
       "expediaDest": "Majestic Hotel & Spa Barcelona, Barcelona"
     },
     {
@@ -900,6 +1109,9 @@
       "reviews": 4278,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/barcelona/4.jpg",
+      "lat": 41.391167599999996,
+      "lng": 2.1665772999999997,
+      "address": "Pg. de Gràcia, 38-40, Eixample, 08007 Barcelona, Spain",
       "expediaDest": "Mandarin Oriental, Barcelona, Barcelona"
     },
     {
@@ -910,6 +1122,9 @@
       "reviews": 4803,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/barcelona/5.jpg",
+      "lat": 41.387056699999995,
+      "lng": 2.1964207,
+      "address": "Carrer de la Marina, 19-21, Ciutat Vella, 08005 Barcelona, Spain",
       "expediaDest": "Hotel Arts Barcelona, Barcelona"
     },
     {
@@ -920,6 +1135,9 @@
       "reviews": 4753,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/barcelona/6.jpg",
+      "lat": 41.3893025,
+      "lng": 2.1660399999999997,
+      "address": "Rambla de Catalunya, 26, Eixample, 08007 Barcelona, Spain",
       "expediaDest": "Hotel NH Collection Barcelona Gran Hotel Calderón, Barcelona"
     },
     {
@@ -930,6 +1148,9 @@
       "reviews": 2753,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/barcelona/7.jpg",
+      "lat": 41.3921984,
+      "lng": 2.1584943,
+      "address": "Carrer de Balmes, 117, 99, Eixample, 08008 Barcelona, Spain",
       "expediaDest": "Olivia Balmes Hotel Trabajo, Barcelona"
     },
     {
@@ -940,6 +1161,9 @@
       "reviews": 3531,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/barcelona/8.jpg",
+      "lat": 41.3834945,
+      "lng": 2.1710008,
+      "address": "La Rambla, 109, Ciutat Vella, 08002 Barcelona, Spain",
       "expediaDest": "Hotel 1898, Barcelona"
     }
   ],
@@ -952,6 +1176,9 @@
       "reviews": 22767,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/dubai/1.jpg",
+      "lat": 25.0752095,
+      "lng": 55.1321673,
+      "address": "The Walk - Dubai Marina - Jumeirah Beach Residence - Dubai - United Arab Emirates",
       "expediaDest": "Sofitel Dubai Jumeirah Beach, Dubai"
     },
     {
@@ -962,6 +1189,9 @@
       "reviews": 24807,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/dubai/2.jpg",
+      "lat": 25.1043988,
+      "lng": 55.1484354,
+      "address": "No. 1 Palm - Nakhlat Jumeira - Dubai - United Arab Emirates",
       "expediaDest": "FIVE Palm Jumeirah Hotel, Dubai"
     },
     {
@@ -972,6 +1202,9 @@
       "reviews": 22627,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/dubai/3.jpg",
+      "lat": 25.1854005,
+      "lng": 55.258087599999996,
+      "address": "57P4+8J - Business Bay - Dubai - United Arab Emirates",
       "expediaDest": "JW Marriott Marquis Hotel Dubai, Dubai"
     },
     {
@@ -979,9 +1212,12 @@
       "name": "Rixos The Palm Hotel & Suites - Ultra All Inclusive",
       "area": "Dubai",
       "rating": 4.8,
-      "reviews": 13342,
+      "reviews": 13343,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/dubai/4.jpg",
+      "lat": 25.1214181,
+      "lng": 55.1536894,
+      "address": "Plot 40 East Crescent - Palm Jumeirah - Dubai - United Arab Emirates",
       "expediaDest": "Rixos The Palm Hotel & Suites - Ultra All Inclusive, Dubai"
     },
     {
@@ -992,6 +1228,9 @@
       "reviews": 11153,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/dubai/5.jpg",
+      "lat": 25.1864031,
+      "lng": 55.268013599999996,
+      "address": "Marasi Dr - Business Bay - Dubai - United Arab Emirates",
       "expediaDest": "Radisson Blu Hotel, Dubai Waterfront, Dubai"
     },
     {
@@ -1002,6 +1241,9 @@
       "reviews": 9924,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/dubai/6.jpg",
+      "lat": 25.217823600000003,
+      "lng": 55.281912399999996,
+      "address": "Sheikh Zayed Rd - Trade Center Second - Dubai - United Arab Emirates",
       "expediaDest": "Jumeirah Emirates Towers, Dubai"
     },
     {
@@ -1012,6 +1254,9 @@
       "reviews": 9699,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/dubai/7.jpg",
+      "lat": 25.202314100000002,
+      "lng": 55.2402131,
+      "address": "Jumeira St - Jumeirah 2 - Jumeirah - Dubai - United Arab Emirates",
       "expediaDest": "Four Seasons Resort Dubai at Jumeirah Beach, Dubai"
     },
     {
@@ -1022,6 +1267,9 @@
       "reviews": 9689,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/dubai/8.jpg",
+      "lat": 25.080075,
+      "lng": 55.135853999999995,
+      "address": "The Walk Jbr - Al Mamsha St - Dubai Marina - Jumeirah Beach Residence - Dubai - United Arab Emirates",
       "expediaDest": "Rixos Premium Dubai JBR, Dubai"
     }
   ],
@@ -1034,6 +1282,9 @@
       "reviews": 17266,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bangkok/1.jpg",
+      "lat": 13.723631699999999,
+      "lng": 100.5397691,
+      "address": "Located in: Thai Wah Plaza Co.,LTD, 21/100 S Sathon Rd, Khwaeng Thung Maha Mek, Khet Sathon, Krung Thep Maha Nakhon 10120, Thailand",
       "expediaDest": "Banyan Tree Bangkok, Bangkok"
     },
     {
@@ -1044,6 +1295,9 @@
       "reviews": 7981,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bangkok/2.jpg",
+      "lat": 13.73768,
+      "lng": 100.543443,
+      "address": "78 Soi Ton Son, Khwaeng Lumphini, Pathum Wan, Krung Thep Maha Nakhon 10330, Thailand",
       "expediaDest": "Kimpton Maa-Lai Bangkok, Bangkok"
     },
     {
@@ -1054,6 +1308,9 @@
       "reviews": 13460,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bangkok/3.jpg",
+      "lat": 13.728419899999999,
+      "lng": 100.50944880000002,
+      "address": "123 Charoen Nakhon Rd, Khwaeng Khlong Ton Sai, Khet Khlong San, Krung Thep Maha Nakhon 10600, Thailand",
       "expediaDest": "Millennium Hilton Bangkok, Bangkok"
     },
     {
@@ -1061,9 +1318,12 @@
       "name": "Shangri-La Bangkok",
       "area": "Bangkok",
       "rating": 4.6,
-      "reviews": 11571,
+      "reviews": 11572,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bangkok/4.jpg",
+      "lat": 13.721432499999999,
+      "lng": 100.5142446,
+      "address": "89 Soi Wat Suan Phlu, Khwaeng Bang Rak, Khet Bang Rak, Krung Thep Maha Nakhon 10500, Thailand",
       "expediaDest": "Shangri-La Bangkok, Bangkok"
     },
     {
@@ -1074,6 +1334,9 @@
       "reviews": 7117,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bangkok/5.jpg",
+      "lat": 13.748401099999999,
+      "lng": 100.5348436,
+      "address": "991, 9 Rama I Rd, Khwaeng Pathum Wan, Pathum Wan, Krung Thep Maha Nakhon 10330, Thailand",
       "expediaDest": "Siam Kempinski Hotel Bangkok, Bangkok"
     },
     {
@@ -1084,6 +1347,9 @@
       "reviews": 6840,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bangkok/6.jpg",
+      "lat": 13.7236158,
+      "lng": 100.51431679999999,
+      "address": "48 Oriental Ave, Khwaeng Bang Rak, Khet Bang Rak, Krung Thep Maha Nakhon 10500, Thailand",
       "expediaDest": "Mandarin Oriental, Bangkok, Bangkok"
     },
     {
@@ -1094,6 +1360,9 @@
       "reviews": 6048,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bangkok/7.jpg",
+      "lat": 13.737410200000001,
+      "lng": 100.55908409999999,
+      "address": "250 Sukhumvit Rd, Khwaeng Khlong Toei, Khet Khlong Toei, Krung Thep Maha Nakhon 10110, Thailand",
       "expediaDest": "Sheraton Grande Sukhumvit, a Luxury Collection Hotel, Bangkok, Bangkok"
     },
     {
@@ -1104,6 +1373,9 @@
       "reviews": 5024,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bangkok/8.jpg",
+      "lat": 13.7231212,
+      "lng": 100.5108006,
+      "address": "333 Charoen Nakhon Rd, Khwaeng Khlong Ton Sai, Khet Khlong San, Krung Thep Maha Nakhon 10600, Thailand",
       "expediaDest": "The Peninsula Bangkok, Bangkok"
     }
   ],
@@ -1116,6 +1388,9 @@
       "reviews": 10071,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/sydney/1.jpg",
+      "lat": -33.861171999999996,
+      "lng": 151.2062978,
+      "address": "176 Cumberland St, The Rocks NSW 2000, Australia",
       "expediaDest": "Shangri-La Sydney, Sydney"
     },
     {
@@ -1126,6 +1401,9 @@
       "reviews": 6403,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/sydney/2.jpg",
+      "lat": -33.8614491,
+      "lng": 151.207588,
+      "address": "199 George St, Sydney NSW 2000, Australia",
       "expediaDest": "Four Seasons Hotel Sydney, Sydney"
     },
     {
@@ -1136,6 +1414,9 @@
       "reviews": 6925,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/sydney/3.jpg",
+      "lat": -33.8717731,
+      "lng": 151.2079742,
+      "address": "488 George St, Sydney NSW 2000, Australia",
       "expediaDest": "Hilton Sydney, Sydney"
     },
     {
@@ -1146,6 +1427,9 @@
       "reviews": 5843,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/sydney/4.jpg",
+      "lat": -33.8726871,
+      "lng": 151.1985728,
+      "address": "Sofitel Sydney Darling Harbour, 12 Darling Dr, Sydney NSW 2000, Australia",
       "expediaDest": "Sofitel Sydney Darling Harbour, Sydney"
     },
     {
@@ -1156,6 +1440,9 @@
       "reviews": 5376,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/sydney/5.jpg",
+      "lat": -33.8629015,
+      "lng": 151.2122407,
+      "address": "16 Phillip St, Sydney NSW 2000, Australia",
       "expediaDest": "InterContinental Sydney by IHG, Sydney"
     },
     {
@@ -1166,6 +1453,9 @@
       "reviews": 7652,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/sydney/6.jpg",
+      "lat": -33.8698583,
+      "lng": 151.2033906,
+      "address": "161 Sussex St, Sydney NSW 2000, Australia",
       "expediaDest": "Hyatt Regency Sydney, Sydney"
     },
     {
@@ -1176,6 +1466,9 @@
       "reviews": 5657,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/sydney/7.jpg",
+      "lat": -33.8722523,
+      "lng": 151.19785679999998,
+      "address": "100 Murray Street, Darling Hbr, Sydney NSW 2000, Australia",
       "expediaDest": "Novotel Sydney on Darling Harbour, Sydney"
     },
     {
@@ -1186,6 +1479,9 @@
       "reviews": 4492,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/sydney/8.jpg",
+      "lat": -33.8628206,
+      "lng": 151.2095118,
+      "address": "30 Pitt St, Sydney NSW 2000, Australia",
       "expediaDest": "Sydney Harbour Marriott Hotel at Circular Quay, Sydney"
     }
   ],
@@ -1198,6 +1494,9 @@
       "reviews": 2323,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/reykjavik/1.jpg",
+      "lat": 64.139832,
+      "lng": -21.888804,
+      "address": "Suðurlandsbraut 2, 108 Reykjavík, Iceland",
       "expediaDest": "Hilton Reykjavik, Reykjavik"
     },
     {
@@ -1208,6 +1507,9 @@
       "reviews": 1202,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/reykjavik/2.jpg",
+      "lat": 64.14634819999999,
+      "lng": -21.9306692,
+      "address": "Smiðjustígur 4, 101 Reykjavík, Iceland",
       "expediaDest": "Canopy by Hilton Reykjavik City Centre, Reykjavik"
     },
     {
@@ -1218,6 +1520,9 @@
       "reviews": 935,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/reykjavik/3.jpg",
+      "lat": 64.1499243,
+      "lng": -21.9353029,
+      "address": "Austurbakki 2, 101 Reykjavík, Iceland",
       "expediaDest": "The Reykjavik EDITION, Reykjavik"
     },
     {
@@ -1228,6 +1533,9 @@
       "reviews": 647,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/reykjavik/4.jpg",
+      "lat": 63.879586,
+      "lng": -22.451410799999998,
+      "address": "Norðurljósavegur 11, 241 Grindavík, Iceland",
       "expediaDest": "The Retreat at Blue Lagoon Iceland, Reykjavik"
     },
     {
@@ -1238,6 +1546,9 @@
       "reviews": 422,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/reykjavik/5.jpg",
+      "lat": 64.1472759,
+      "lng": -21.940645099999998,
+      "address": "Thorvaldsenstræti 2-6, 101 Reykjavík, Iceland",
       "expediaDest": "Iceland Parliament Hotel, Curio Collection by Hilton, Reykjavik"
     }
   ],
@@ -1250,7 +1561,23 @@
       "reviews": 6831,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/athens/1.jpg",
+      "lat": 37.976178,
+      "lng": 23.7353123,
+      "address": "1 Vasileos Georgiou A, Syntagma Square Str, Athina 105 64, Greece",
       "expediaDest": "Hotel Grande Bretagne, Athens"
+    },
+    {
+      "slug": "athens-intercontinental-athenaeum-athens-by-ihg",
+      "name": "InterContinental Athenaeum Athens by IHG",
+      "area": "Athens",
+      "rating": 4.6,
+      "reviews": 7795,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/athens/2.jpg",
+      "lat": 37.9595518,
+      "lng": 23.721764399999998,
+      "address": "Leof. Andrea Siggrou 89-93, Athina 117 45, Greece",
+      "expediaDest": "InterContinental Athenaeum Athens by IHG, Athens"
     },
     {
       "slug": "athens-four-seasons-astir-palace-hotel-athens",
@@ -1259,8 +1586,24 @@
       "rating": 4.8,
       "reviews": 3590,
       "priceLevel": null,
-      "image": "/assets/img/dest-hotels/athens/2.jpg",
+      "image": "/assets/img/dest-hotels/athens/3.jpg",
+      "lat": 37.805205,
+      "lng": 23.77115,
+      "address": "Apollonos 40, Vouliagmeni 166 71, Greece",
       "expediaDest": "Four Seasons Astir Palace Hotel Athens, Athens"
+    },
+    {
+      "slug": "athens-athens-marriott-hotel",
+      "name": "Athens Marriott Hotel",
+      "area": "Athens",
+      "rating": 4.5,
+      "reviews": 5145,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/athens/4.jpg",
+      "lat": 37.9406265,
+      "lng": 23.697043999999998,
+      "address": "Leof. Andrea Siggrou 385, Paleo Faliro 175 64, Greece",
+      "expediaDest": "Athens Marriott Hotel, Athens"
     },
     {
       "slug": "athens-grand-hyatt-athens",
@@ -1269,8 +1612,50 @@
       "rating": 4.3,
       "reviews": 7347,
       "priceLevel": null,
-      "image": "/assets/img/dest-hotels/athens/3.jpg",
+      "image": "/assets/img/dest-hotels/athens/5.jpg",
+      "lat": 37.9574365,
+      "lng": 23.718270399999998,
+      "address": "Leof. Andrea Siggrou 115, Athina 117 45, Greece",
       "expediaDest": "Grand Hyatt Athens, Athens"
+    },
+    {
+      "slug": "athens-athens-capital-hotel-mgallery-collection",
+      "name": "Athens Capital Hotel - MGallery Collection",
+      "area": "Athens",
+      "rating": 4.8,
+      "reviews": 2278,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/athens/6.jpg",
+      "lat": 37.9768061,
+      "lng": 23.736078199999998,
+      "address": "4 Eleftheriou Venizelou Avenue and 2 Kriezotou, Pl. Sintagmatos street, Athina 105 64, Greece",
+      "expediaDest": "Athens Capital Hotel - MGallery Collection, Athens"
+    },
+    {
+      "slug": "athens-herodion-hotel",
+      "name": "Herodion Hotel",
+      "area": "Athens",
+      "rating": 4.6,
+      "reviews": 2103,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/athens/7.jpg",
+      "lat": 37.968322799999996,
+      "lng": 23.7271175,
+      "address": "Rovertou Galli 4, Athina 117 42, Greece",
+      "expediaDest": "Herodion Hotel, Athens"
+    },
+    {
+      "slug": "athens-king-george-a-luxury-collection-hotel-at",
+      "name": "King George, a Luxury Collection Hotel, Athens",
+      "area": "Athens",
+      "rating": 4.7,
+      "reviews": 1145,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/athens/8.jpg",
+      "lat": 37.976384,
+      "lng": 23.734949399999998,
+      "address": "3 Vasileos Georgiou A, Pl. Sintagmatos Str, Athina 105 64, Greece",
+      "expediaDest": "King George, a Luxury Collection Hotel, Athens, Athens"
     }
   ],
   "amsterdam": [
@@ -1282,6 +1667,9 @@
       "reviews": 7047,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/amsterdam/1.jpg",
+      "lat": 52.37267000000001,
+      "lng": 4.894089999999999,
+      "address": "Dam 9, 1012 JS Amsterdam, Netherlands",
       "expediaDest": "Anantara Grand Hotel Krasnapolsky Amsterdam, Amsterdam"
     },
     {
@@ -1292,6 +1680,9 @@
       "reviews": 8776,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/amsterdam/2.jpg",
+      "lat": 52.3765751,
+      "lng": 4.905468000000001,
+      "address": "Oosterdoksstraat 4, 1011 DK Amsterdam, Netherlands",
       "expediaDest": "DoubleTree by Hilton Amsterdam Centraal Station, Amsterdam"
     },
     {
@@ -1302,6 +1693,9 @@
       "reviews": 3699,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/amsterdam/3.jpg",
+      "lat": 52.3794524,
+      "lng": 4.921913099999999,
+      "address": "Javakade 766, 1019 SH Amsterdam, Netherlands",
       "expediaDest": "Hotel Jakarta, Amsterdam"
     },
     {
@@ -1312,6 +1706,9 @@
       "reviews": 2913,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/amsterdam/4.jpg",
+      "lat": 52.3709309,
+      "lng": 4.8955845,
+      "address": "Oudezijds Voorburgwal 197, 1012 EX Amsterdam, Netherlands",
       "expediaDest": "Sofitel Legend The Grand Amsterdam, Amsterdam"
     },
     {
@@ -1322,6 +1719,9 @@
       "reviews": 2447,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/amsterdam/5.jpg",
+      "lat": 52.372878299999996,
+      "lng": 4.883357,
+      "address": "Prinsengracht 323, 1016 GZ Amsterdam, Netherlands",
       "expediaDest": "Pulitzer Amsterdam, Amsterdam"
     },
     {
@@ -1332,6 +1732,9 @@
       "reviews": 2694,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/amsterdam/6.jpg",
+      "lat": 52.3718724,
+      "lng": 4.8874276,
+      "address": "Herengracht 255, 1016 BJ Amsterdam, Netherlands",
       "expediaDest": "The Hoxton, Amsterdam, Amsterdam"
     },
     {
@@ -1342,6 +1745,9 @@
       "reviews": 1606,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/amsterdam/7.jpg",
+      "lat": 52.364768,
+      "lng": 4.896945,
+      "address": "Herengracht 542-556, 1017 CG Amsterdam, Netherlands",
       "expediaDest": "Waldorf Astoria Amsterdam, Amsterdam"
     },
     {
@@ -1352,6 +1758,9 @@
       "reviews": 1621,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/amsterdam/8.jpg",
+      "lat": 52.367796899999995,
+      "lng": 4.8830608,
+      "address": "Prinsengracht 587, 1016 HT Amsterdam, Netherlands",
       "expediaDest": "Andaz Amsterdam Prinsengracht, by Hyatt, Amsterdam"
     }
   ],
@@ -1364,6 +1773,9 @@
       "reviews": 12959,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/marrakech/1.jpg",
+      "lat": 31.623871,
+      "lng": -8.014418,
+      "address": "Bd Mohamed VI, Marrakech 40000, Morocco",
       "expediaDest": "Movenpick Hotel Mansour Eddahbi, Marrakech"
     },
     {
@@ -1374,6 +1786,9 @@
       "reviews": 10587,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/marrakech/2.jpg",
+      "lat": 31.62138,
+      "lng": -8.002614399999999,
+      "address": "Quartier De, Rue Haroun Errachid, Marrakech 40000, Morocco",
       "expediaDest": "Sofitel Marrakech Palais Imperial & Spa, Marrakech"
     },
     {
@@ -1384,6 +1799,9 @@
       "reviews": 9576,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/marrakech/3.jpg",
+      "lat": 31.621523900000003,
+      "lng": -7.997488000000001,
+      "address": "Avenue Bab Jdid، مراكش 40040, Morocco",
       "expediaDest": "La Mamounia, Marrakech"
     },
     {
@@ -1394,6 +1812,9 @@
       "reviews": 3005,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/marrakech/4.jpg",
+      "lat": 31.6211212,
+      "lng": -8.004302899999999,
+      "address": "El Mazini, Rue Hafid Ibrahim, Marrakech 40000, Morocco",
       "expediaDest": "Es Saadi palace, Marrakech"
     },
     {
@@ -1404,6 +1825,9 @@
       "reviews": 2451,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/marrakech/5.jpg",
+      "lat": 31.6251861,
+      "lng": -7.998378300000001,
+      "address": "Rue Abou Abbas El Sebti، Marrakech 40000, Morocco",
       "expediaDest": "Royal Mansour Marrakech, Marrakech"
     },
     {
@@ -1414,6 +1838,9 @@
       "reviews": 2262,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/marrakech/6.jpg",
+      "lat": 31.619644599999997,
+      "lng": -8.017166399999999,
+      "address": "1 Boulevard de la, Marrakech 40000, Morocco",
       "expediaDest": "Four Seasons Resort Marrakech, Marrakech"
     },
     {
@@ -1424,6 +1851,9 @@
       "reviews": 1639,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/marrakech/7.jpg",
+      "lat": 31.513378599999996,
+      "lng": -8.0521309,
+      "address": "Km 12 Route D'Amizmiz, Marrakech 40000, Morocco",
       "expediaDest": "Fairmont Royal Palm Marrakesh, Marrakech"
     },
     {
@@ -1434,91 +1864,13 @@
       "reviews": 1046,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/marrakech/8.jpg",
+      "lat": 31.6246,
+      "lng": -7.986806,
+      "address": "63 Derb Jamaâ, Riad Zitoun Lakdim, Marrakech 40000, Morocco",
       "expediaDest": "Riad Monceau (Le), Marrakech"
     }
   ],
-  "seoul": [
-    {
-      "slug": "seoul-the-shilla-seoul",
-      "name": "THE SHILLA Seoul",
-      "area": "Seoul",
-      "rating": 4.6,
-      "reviews": 7610,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/seoul/1.jpg",
-      "expediaDest": "THE SHILLA Seoul, Seoul"
-    },
-    {
-      "slug": "seoul-four-seasons-hotel-seoul",
-      "name": "Four Seasons Hotel Seoul",
-      "area": "Seoul",
-      "rating": 4.6,
-      "reviews": 7433,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/seoul/2.jpg",
-      "expediaDest": "Four Seasons Hotel Seoul, Seoul"
-    },
-    {
-      "slug": "seoul-the-grand-lotte-seoul",
-      "name": "The Grand Lotte Seoul",
-      "area": "Seoul",
-      "rating": 4.5,
-      "reviews": 8887,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/seoul/3.jpg",
-      "expediaDest": "The Grand Lotte Seoul, Seoul"
-    },
-    {
-      "slug": "seoul-grand-intercontinental-seoul-parnas",
-      "name": "Grand InterContinental Seoul Parnas",
-      "area": "Seoul",
-      "rating": 4.5,
-      "reviews": 7787,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/seoul/4.jpg",
-      "expediaDest": "Grand InterContinental Seoul Parnas, Seoul"
-    },
-    {
-      "slug": "seoul-grand-hyatt-seoul",
-      "name": "Grand Hyatt Seoul",
-      "area": "Seoul",
-      "rating": 4.4,
-      "reviews": 8753,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/seoul/5.jpg",
-      "expediaDest": "Grand Hyatt Seoul, Seoul"
-    },
-    {
-      "slug": "seoul-the-westin-josun-seoul",
-      "name": "The Westin Josun Seoul",
-      "area": "Seoul",
-      "rating": 4.5,
-      "reviews": 6624,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/seoul/6.jpg",
-      "expediaDest": "The Westin Josun Seoul, Seoul"
-    },
-    {
-      "slug": "seoul-conrad-seoul",
-      "name": "Conrad Seoul",
-      "area": "Seoul",
-      "rating": 4.4,
-      "reviews": 7137,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/seoul/7.jpg",
-      "expediaDest": "Conrad Seoul, Seoul"
-    },
-    {
-      "slug": "seoul-jw-marriott-hotel-seoul",
-      "name": "JW Marriott Hotel Seoul",
-      "area": "Seoul",
-      "rating": 4.4,
-      "reviews": 6429,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/seoul/8.jpg",
-      "expediaDest": "JW Marriott Hotel Seoul, Seoul"
-    }
-  ],
+  "seoul": [],
   "busan": [
     {
       "slug": "busan-ananti-at-busan-cove",
@@ -1528,6 +1880,9 @@
       "reviews": 11248,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/busan/1.jpg",
+      "lat": 35.1976638,
+      "lng": 129.22808609999998,
+      "address": "268-32 Gijanghaean-ro, Gijang, Busan, South Korea",
       "expediaDest": "Ananti at Busan Cove, Busan"
     },
     {
@@ -1538,6 +1893,9 @@
       "reviews": 6924,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/busan/2.jpg",
+      "lat": 35.1601338,
+      "lng": 129.16468749999999,
+      "address": "296 Haeundaehaebyeon-ro, Haeundae, Busan, South Korea",
       "expediaDest": "Paradise Hotel Busan, Busan"
     },
     {
@@ -1548,6 +1906,9 @@
       "reviews": 5059,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/busan/3.jpg",
+      "lat": 35.1559466,
+      "lng": 129.1540745,
+      "address": "South Korea, Busan, 67 Dongbaek-ro, Haeundae",
       "expediaDest": "The Westin Josun Busan, Busan"
     },
     {
@@ -1558,6 +1919,9 @@
       "reviews": 3744,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/busan/4.jpg",
+      "lat": 35.156544499999995,
+      "lng": 129.1419018,
+      "address": "51 Marine city 1-ro, Haeundae, Busan, South Korea",
       "expediaDest": "Park Hyatt Busan, Busan"
     },
     {
@@ -1568,6 +1932,9 @@
       "reviews": 5259,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/busan/5.jpg",
+      "lat": 35.156766,
+      "lng": 129.05587,
+      "address": "772 Gaya-daero, Busanjin District, Busan, South Korea",
       "expediaDest": "LOTTE HOTEL BUSAN, Busan"
     },
     {
@@ -1578,6 +1945,9 @@
       "reviews": 1418,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/busan/6.jpg",
+      "lat": 35.1988117,
+      "lng": 129.2222653,
+      "address": "733 Sirang-ri, Gijang-eup, Gijang, Busan, South Korea",
       "expediaDest": "Ananti at Busan Village, Busan"
     },
     {
@@ -1588,6 +1958,9 @@
       "reviews": 1475,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/busan/7.jpg",
+      "lat": 35.1599375,
+      "lng": 129.1698125,
+      "address": "30 Dalmaji-gil, Haeundae, Busan, South Korea",
       "expediaDest": "SIGNIEL BUSAN, Busan"
     }
   ],
@@ -1600,6 +1973,9 @@
       "reviews": 5399,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/jeju/1.jpg",
+      "lat": 33.2471631,
+      "lng": 126.4079553,
+      "address": "75 Jungmungwangwang-ro 72beon-gil, 특별자치도, Seogwipo, Jeju-do, South Korea",
       "expediaDest": "The Shilla Jeju, Jeju"
     },
     {
@@ -1610,6 +1986,9 @@
       "reviews": 5880,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/jeju/2.jpg",
+      "lat": 33.323125,
+      "lng": 126.8447251,
+      "address": "537 Minsokhaean-ro, Pyoseon-myeon, Seogwipo, Jeju-do, South Korea",
       "expediaDest": "Haevichi Hotel&Resort Jeju, Jeju"
     },
     {
@@ -1620,6 +1999,9 @@
       "reviews": 4864,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/jeju/3.jpg",
+      "lat": 33.248446799999996,
+      "lng": 126.41060580000001,
+      "address": "35 Jungmungwangwang-ro 72beon-gil, Seogwipo, Jeju-do, South Korea",
       "expediaDest": "LOTTE HOTEL JEJU, Jeju"
     },
     {
@@ -1630,6 +2012,9 @@
       "reviews": 7619,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/jeju/4.jpg",
+      "lat": 33.3075638,
+      "lng": 126.31763869999999,
+      "address": "South Korea, Jeju-do, Seogwipo, 특별자치도, 38 Sinhwayeoksa-Ro 304beon-Gil Andeok-Myeon,Seogwipo-Si",
       "expediaDest": "Jeju Shinhwa World Marriott Resort, Jeju"
     },
     {
@@ -1640,6 +2025,9 @@
       "reviews": 3285,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/jeju/5.jpg",
+      "lat": 33.4853707,
+      "lng": 126.4815713,
+      "address": "12 Noyeon-ro, Cheju, Jeju-do, South Korea",
       "expediaDest": "Grand Hyatt Jeju, Jeju"
     },
     {
@@ -1650,6 +2038,9 @@
       "reviews": 3021,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/jeju/6.jpg",
+      "lat": 33.2423055,
+      "lng": 126.4232514,
+      "address": "222 Jungmungwangwang-ro, Seogwipo, Jeju-do, South Korea",
       "expediaDest": "Jeju Booyoung Hotel & Resort, Jeju"
     },
     {
@@ -1660,6 +2051,9 @@
       "reviews": 4007,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/jeju/7.jpg",
+      "lat": 33.3055558,
+      "lng": 126.7920981,
+      "address": "6347-17 Iljudong-ro, Pyoseon-myeon, Seogwipo, Jeju-do, South Korea",
       "expediaDest": "Sono Calm Jeju, Jeju"
     },
     {
@@ -1670,6 +2064,9 @@
       "reviews": 2023,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/jeju/8.jpg",
+      "lat": 33.254884499999996,
+      "lng": 126.4023408,
+      "address": "542 Yeraehaean-ro, 특별자치도, Seogwipo, Jeju-do, South Korea",
       "expediaDest": "Hidden Cliff Hotel & Nature Jeju, Jeju"
     }
   ],
@@ -1682,6 +2079,9 @@
       "reviews": 2626,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kyoto/1.jpg",
+      "lat": 34.9950718,
+      "lng": 135.7693354,
+      "address": "396-1 Sayamachi 1chōme, Higashiyama Ward, Kyoto, 605-0902, Japan",
       "expediaDest": "Sakura Cross Hotel Kyoto Kiyomizudera, Kyoto"
     },
     {
@@ -1692,6 +2092,9 @@
       "reviews": 2543,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kyoto/2.jpg",
+      "lat": 35.013917,
+      "lng": 135.7708565,
+      "address": "Japan, 〒604-0902 Kyoto, Nakagyo Ward, Hokodenchō, ５４３ 鴨川二条大橋畔",
       "expediaDest": "The Ritz-Carlton, Kyoto, Kyoto"
     },
     {
@@ -1702,6 +2105,9 @@
       "reviews": 1359,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kyoto/3.jpg",
+      "lat": 34.996437799999995,
+      "lng": 135.76204189999999,
+      "address": "１４０番地２ Manjūjichō, Shimogyo Ward, Kyoto, 600-8104, Japan",
       "expediaDest": "THE BLOSSOM KYOTO, Kyoto"
     },
     {
@@ -1712,6 +2118,9 @@
       "reviews": 1346,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kyoto/4.jpg",
+      "lat": 34.998546499999996,
+      "lng": 135.7737429,
+      "address": "572 Komatsuchō, Higashiyama Ward, Kyoto, 605-0811, Japan",
       "expediaDest": "The Celestine Hotel Gion, Kyoto"
     },
     {
@@ -1722,6 +2131,9 @@
       "reviews": 1872,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kyoto/5.jpg",
+      "lat": 34.9902288,
+      "lng": 135.7761797,
+      "address": "445-3 Myōhōin Maekawachō, Higashiyama Ward, Kyoto, 605-0932, Japan",
       "expediaDest": "Four Seasons Hotel Kyoto, Kyoto"
     },
     {
@@ -1732,6 +2144,9 @@
       "reviews": 1321,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kyoto/6.jpg",
+      "lat": 35.0476127,
+      "lng": 135.7346805,
+      "address": "44-1 Kinugasa Kagamiishichō, Kita Ward, Kyoto, 603-8451, Japan",
       "expediaDest": "ROKU KYOTO, LXR Hotels & Resorts, Kyoto"
     },
     {
@@ -1742,6 +2157,9 @@
       "reviews": 1036,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kyoto/7.jpg",
+      "lat": 35.00282,
+      "lng": 135.7671181,
+      "address": "620番 Teianmaenochō, Shimogyo Ward, Kyoto, 600-8031, Japan",
       "expediaDest": "Mitsui Garden Hotel Kyoto Kawaramachi Jokyoji, Kyoto"
     },
     {
@@ -1752,6 +2170,9 @@
       "reviews": 1374,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/kyoto/8.jpg",
+      "lat": 35.011652399999996,
+      "lng": 135.7659746,
+      "address": "249 Kamihakusanchō, Nakagyo Ward, Kyoto, 604-0943, Japan",
       "expediaDest": "Hotel Resol Trinity Kyoto, Kyoto"
     }
   ],
@@ -1764,6 +2185,9 @@
       "reviews": 3944,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/osaka/1.jpg",
+      "lat": 34.6933317,
+      "lng": 135.4956353,
+      "address": "3-chōme-2-4 Nakanoshima, Kita Ward, Osaka, 530-0005, Japan",
       "expediaDest": "Conrad Osaka, Osaka"
     },
     {
@@ -1774,6 +2198,9 @@
       "reviews": 5415,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/osaka/2.jpg",
+      "lat": 34.69834000000001,
+      "lng": 135.4925207,
+      "address": "2-chōme-5-25 Umeda, Kita Ward, Osaka, 530-0001, Japan",
       "expediaDest": "The Ritz-Carlton, Osaka, Osaka"
     },
     {
@@ -1784,6 +2211,9 @@
       "reviews": 3777,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/osaka/3.jpg",
+      "lat": 34.645795299999996,
+      "lng": 135.5142975,
+      "address": "1-chōme-1-43 Abenosuji, Abeno Ward, Osaka, 545-0052, Japan",
       "expediaDest": "Osaka Marriott Miyako Hotel, Osaka"
     },
     {
@@ -1794,6 +2224,9 @@
       "reviews": 6770,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/osaka/4.jpg",
+      "lat": 34.6908166,
+      "lng": 135.5335447,
+      "address": "1-chōme-4-1 Shiromi, Chuo Ward, Osaka, 540-8578, Japan",
       "expediaDest": "Hotel New Otani Osaka, Osaka"
     },
     {
@@ -1804,6 +2237,9 @@
       "reviews": 3569,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/osaka/5.jpg",
+      "lat": 34.6697148,
+      "lng": 135.5007625,
+      "address": "2-chōme-5-15 Shinsaibashisuji, Chuo Ward, Osaka, 542-0085, Japan",
       "expediaDest": "Cross Hotel Osaka, Osaka"
     },
     {
@@ -1814,7 +2250,23 @@
       "reviews": 6242,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/osaka/6.jpg",
+      "lat": 34.6998245,
+      "lng": 135.4959532,
+      "address": "1-chōme-8-8 Umeda, Kita Ward, Osaka, 530-0001, Japan",
       "expediaDest": "Hilton Osaka, Osaka"
+    },
+    {
+      "slug": "osaka-liber-hotel-osaka",
+      "name": "Liber Hotel Osaka",
+      "area": "Osaka",
+      "rating": 4.5,
+      "reviews": 3368,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/osaka/7.jpg",
+      "lat": 34.661254,
+      "lng": 135.43289199999998,
+      "address": "1-chōme-1-35 Sakurajima, Konohana Ward, Osaka, 554-0031, Japan",
+      "expediaDest": "Liber Hotel Osaka, Osaka"
     },
     {
       "slug": "osaka-intercontinental-osaka-by-ihg",
@@ -1823,18 +2275,11 @@
       "rating": 4.5,
       "reviews": 2839,
       "priceLevel": null,
-      "image": "/assets/img/dest-hotels/osaka/7.jpg",
-      "expediaDest": "InterContinental Osaka by IHG, Osaka"
-    },
-    {
-      "slug": "osaka-citadines-namba-osaka",
-      "name": "Citadines Namba Osaka",
-      "area": "Osaka",
-      "rating": 4.7,
-      "reviews": 1484,
-      "priceLevel": null,
       "image": "/assets/img/dest-hotels/osaka/8.jpg",
-      "expediaDest": "Citadines Namba Osaka, Osaka"
+      "lat": 34.7064297,
+      "lng": 135.4942905,
+      "address": "3-3-60 Ōfukachō, Kita Ward, Osaka, 530-0011, Japan",
+      "expediaDest": "InterContinental Osaka by IHG, Osaka"
     }
   ],
   "beijing": [
@@ -1846,6 +2291,9 @@
       "reviews": 669,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/beijing/1.jpg",
+      "lat": 39.8988305,
+      "lng": 116.41240189999999,
+      "address": "Dongcheng, China, 100051",
       "expediaDest": "New World Beijing Hotel, Beijing"
     },
     {
@@ -1856,6 +2304,9 @@
       "reviews": 431,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/beijing/2.jpg",
+      "lat": 39.913914899999995,
+      "lng": 116.458197,
+      "address": "1 Guang Hua Lu, Guomao, Chao Yang Qu, Bei Jing Shi, China, 100020",
       "expediaDest": "Kerry Hotel Beijing, Beijing"
     },
     {
@@ -1866,6 +2317,9 @@
       "reviews": 430,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/beijing/3.jpg",
+      "lat": 39.9130408,
+      "lng": 116.46095299999999,
+      "address": "China, Bei Jing Shi, Chao Yang Qu, 建国门外大街1号 邮政编码: 100020",
       "expediaDest": "Hotel Jen Beijing by Shangri-La, Beijing"
     },
     {
@@ -1876,6 +2330,9 @@
       "reviews": 416,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/beijing/4.jpg",
+      "lat": 39.9151125,
+      "lng": 116.41355580000001,
+      "address": "China, Bei Jing Shi, Dong Cheng Qu, 王府井东街8号 邮政编码: 100006",
       "expediaDest": "Hilton Beijing Wangfujing, Beijing"
     },
     {
@@ -1886,6 +2343,9 @@
       "reviews": 310,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/beijing/5.jpg",
+      "lat": 39.9504553,
+      "lng": 116.46719949999999,
+      "address": "48 Liang Ma Qiao Lu, Chao Yang Qu, Bei Jing Shi, China, 100125",
       "expediaDest": "Four Seasons Beijing, Beijing"
     },
     {
@@ -1896,6 +2356,9 @@
       "reviews": 345,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/beijing/6.jpg",
+      "lat": 39.916711299999996,
+      "lng": 116.4197461,
+      "address": "金宝街97号 东城区 北京市 CN 邮政编码:, Dong Cheng Qu, China, 100005",
       "expediaDest": "Park Plaza Beijing Wangfujing, Beijing"
     },
     {
@@ -1906,6 +2369,9 @@
       "reviews": 270,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/beijing/7.jpg",
+      "lat": 39.915299,
+      "lng": 116.419539,
+      "address": "92 Jin Bao Jie, Dongdan, Beijing, Dong Cheng Qu, Bei Jing Shi, China, 100005",
       "expediaDest": "Legendale Hotel Beijing, Beijing"
     },
     {
@@ -1916,6 +2382,9 @@
       "reviews": 194,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/beijing/8.jpg",
+      "lat": 39.9765704,
+      "lng": 116.4808695,
+      "address": "China, Bei Jing Shi, Chao Yang Qu, Jiang Tai Lu, 将台路甲2号 邮政编码: 100016",
       "expediaDest": "NUO Hotel Beijing, Beijing"
     }
   ],
@@ -1928,6 +2397,9 @@
       "reviews": 2287,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/shanghai/1.jpg",
+      "lat": 31.236535999999997,
+      "lng": 121.47337399999998,
+      "address": "555 Xi Zang Zhong Lu, People's Square, Huang Pu Qu, Shang Hai Shi, China, 200003",
       "expediaDest": "Shanghai Marriott Hotel City Centre, Shanghai"
     },
     {
@@ -1938,6 +2410,9 @@
       "reviews": 978,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/shanghai/2.jpg",
+      "lat": 31.2390388,
+      "lng": 121.4895427,
+      "address": "20 Nan Jing Dong Lu, Waitan, Huang Pu Qu, Shang Hai Shi, China, 200002",
       "expediaDest": "Fairmont Peace Hotel, Shanghai"
     },
     {
@@ -1948,6 +2423,9 @@
       "reviews": 1425,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/shanghai/3.jpg",
+      "lat": 31.2354278,
+      "lng": 121.49908210000001,
+      "address": "33 Fu Cheng Lu, Lujiazui, Pu Dong Xin Qu, Shang Hai Shi, China, 200120",
       "expediaDest": "Pudong Shangri-La, Shanghai"
     },
     {
@@ -1958,6 +2436,9 @@
       "reviews": 900,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/shanghai/4.jpg",
+      "lat": 31.236544900000002,
+      "lng": 121.5012467,
+      "address": "8 Shi Ji Da Dao, Lujiazui, Pu Dong Xin Qu, China, 200120",
       "expediaDest": "The Ritz-Carlton Shanghai, Pudong, Shanghai"
     },
     {
@@ -1968,6 +2449,9 @@
       "reviews": 803,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/shanghai/5.jpg",
+      "lat": 31.228170000000002,
+      "lng": 121.44754999999998,
+      "address": "Shanghai Centre, 1376 Nan Jing Xi Lu, Jing An Qu, Shang Hai Shi, China, 200040",
       "expediaDest": "The Portman Ritz-Carlton, Shanghai, Shanghai"
     },
     {
@@ -1978,6 +2462,9 @@
       "reviews": 612,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/shanghai/6.jpg",
+      "lat": 31.233437999999996,
+      "lng": 121.48984899999999,
+      "address": "2 Zhong Shan Dong Yi Lu, Waitan, Huang Pu Qu, Shang Hai Shi, China, 200002",
       "expediaDest": "Waldorf Astoria Shanghai on the Bund, Shanghai"
     },
     {
@@ -1988,6 +2475,9 @@
       "reviews": 592,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/shanghai/7.jpg",
+      "lat": 31.222925999999998,
+      "lng": 121.4504621,
+      "address": "1218 Yan An Zhong Lu, 久光 Jing An Qu, Shang Hai Shi, China, 200040",
       "expediaDest": "Jing An Shangri-La, West Shanghai, Shanghai"
     },
     {
@@ -1998,6 +2488,9 @@
       "reviews": 854,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/shanghai/8.jpg",
+      "lat": 31.234401000000002,
+      "lng": 121.47611099999999,
+      "address": "789 Nan Jing Dong Lu, Huang Pu Qu, Shang Hai Shi, China, 200040",
       "expediaDest": "Conrad Shanghai, Shanghai"
     }
   ],
@@ -2010,6 +2503,9 @@
       "reviews": 6822,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hanoi/1.jpg",
+      "lat": 21.058806699999998,
+      "lng": 105.83235959999999,
+      "address": "05 P. Từ Hoa, Tây Hồ, Hà Nội 100000, Vietnam",
       "expediaDest": "InterContinental Hanoi Westlake by IHG, Hanoi"
     },
     {
@@ -2020,6 +2516,9 @@
       "reviews": 8176,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hanoi/2.jpg",
+      "lat": 21.024388,
+      "lng": 105.8483808,
+      "address": "44 Lý Thường Kiệt, Cửa Nam, Hà Nội 10000, Vietnam",
       "expediaDest": "Meliá Hanoi, Hanoi"
     },
     {
@@ -2030,6 +2529,9 @@
       "reviews": 6266,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hanoi/3.jpg",
+      "lat": 21.025412499999998,
+      "lng": 105.856375,
+      "address": "15 P. Ngô Quyền, Phường, Hoàn Kiếm, Hà Nội 100000, Vietnam",
       "expediaDest": "Sofitel Legend Metropole Hanoi, Hanoi"
     },
     {
@@ -2040,6 +2542,9 @@
       "reviews": 4284,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hanoi/4.jpg",
+      "lat": 21.0320526,
+      "lng": 105.8130247,
+      "address": "54 P. Liễu Giai, Giảng Võ, Hà Nội 100000, Vietnam",
       "expediaDest": "Lotte Hotel Hanoi, Hanoi"
     },
     {
@@ -2050,6 +2555,9 @@
       "reviews": 2550,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hanoi/5.jpg",
+      "lat": 21.0293134,
+      "lng": 105.8454768,
+      "address": "151-153 P. Hàng Bông, Hoàn Kiếm, Hà Nội 100000, Vietnam",
       "expediaDest": "Meritel Hanoi, Hanoi"
     },
     {
@@ -2060,6 +2568,9 @@
       "reviews": 2090,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hanoi/6.jpg",
+      "lat": 21.0296357,
+      "lng": 105.8501373,
+      "address": "92-94 P. Hàng Trống, Hoàn Kiếm, Hà Nội, Vietnam",
       "expediaDest": "The Oriental Jade Hotel, Hanoi"
     },
     {
@@ -2070,17 +2581,23 @@
       "reviews": 1614,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hanoi/7.jpg",
+      "lat": 21.0329875,
+      "lng": 105.8463034,
+      "address": "33 Duong Thanh Street, Old Quarter Hanoi City Hanoi City, 33 P. Đường Thành, Phố cổ Hà Nội, Hoàn Kiếm, Hà Nội 100000, Vietnam",
       "expediaDest": "Peridot Grand Luxury Boutique Hotel, Hanoi"
     },
     {
-      "slug": "hanoi-hanoi-le-chateau-hotel-spa",
-      "name": "Hanoi Le Chateau Hotel & Spa",
+      "slug": "hanoi-le-jardin-hotel-haute-couture",
+      "name": "Le Jardin Hotel Haute Couture",
       "area": "Hanoi",
       "rating": 4.8,
-      "reviews": 1491,
+      "reviews": 1533,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hanoi/8.jpg",
-      "expediaDest": "Hanoi Le Chateau Hotel & Spa, Hanoi"
+      "lat": 21.0430679,
+      "lng": 105.84354499999999,
+      "address": "103, 105 P. Nguyễn Trường Tộ, Ba Đình, Hà Nội 100000, Vietnam",
+      "expediaDest": "Le Jardin Hotel Haute Couture, Hanoi"
     }
   ],
   "ho-chi-minh-city": [
@@ -2092,17 +2609,23 @@
       "reviews": 10006,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/ho-chi-minh-city/1.jpg",
+      "lat": 10.764387,
+      "lng": 106.682954,
+      "address": "235 Nguyễn Văn Cừ, Cầu Ông Lãnh, Hồ Chí Minh 70000, Vietnam",
       "expediaDest": "Hotel Nikko Saigon, Ho Chi Minh City"
     },
     {
-      "slug": "ho-chi-minh-city-sofitel-saigon-plaza",
-      "name": "Sofitel Saigon Plaza",
+      "slug": "ho-chi-minh-city-new-world-saigon-hotel",
+      "name": "New World Saigon Hotel",
       "area": "Ho Chi Minh City",
-      "rating": 4.7,
-      "reviews": 8097,
+      "rating": 4.6,
+      "reviews": 11571,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/ho-chi-minh-city/2.jpg",
-      "expediaDest": "Sofitel Saigon Plaza, Ho Chi Minh City"
+      "lat": 10.7708719,
+      "lng": 106.6951897,
+      "address": "76 Lê Lai, Bến Thành, Hồ Chí Minh 700000, Vietnam",
+      "expediaDest": "New World Saigon Hotel, Ho Chi Minh City"
     },
     {
       "slug": "ho-chi-minh-city-sheraton-saigon-grand-opera-hotel",
@@ -2112,7 +2635,23 @@
       "reviews": 9639,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/ho-chi-minh-city/3.jpg",
+      "lat": 10.7754461,
+      "lng": 106.7038779,
+      "address": "88 Đồng Khởi, Sài Gòn, Hồ Chí Minh, Vietnam",
       "expediaDest": "Sheraton Saigon Grand Opera Hotel, Ho Chi Minh City"
+    },
+    {
+      "slug": "ho-chi-minh-city-rex-hotel",
+      "name": "Rex Hotel",
+      "area": "Ho Chi Minh City",
+      "rating": 4.5,
+      "reviews": 8636,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/ho-chi-minh-city/4.jpg",
+      "lat": 10.7754687,
+      "lng": 106.7012618,
+      "address": "141 Nguyễn Huệ, Sài Gòn, Hồ Chí Minh 700000, Vietnam",
+      "expediaDest": "Rex Hotel, Ho Chi Minh City"
     },
     {
       "slug": "ho-chi-minh-city-pullman-saigon-centre",
@@ -2121,18 +2660,11 @@
       "rating": 4.5,
       "reviews": 7010,
       "priceLevel": null,
-      "image": "/assets/img/dest-hotels/ho-chi-minh-city/4.jpg",
-      "expediaDest": "Pullman Saigon Centre, Ho Chi Minh City"
-    },
-    {
-      "slug": "ho-chi-minh-city-mai-house-saigon-hotel",
-      "name": "Mai House Saigon Hotel",
-      "area": "Ho Chi Minh City",
-      "rating": 4.8,
-      "reviews": 3607,
-      "priceLevel": null,
       "image": "/assets/img/dest-hotels/ho-chi-minh-city/5.jpg",
-      "expediaDest": "Mai House Saigon Hotel, Ho Chi Minh City"
+      "lat": 10.7643369,
+      "lng": 106.69176619999999,
+      "address": "148 Trần Hưng Đạo, Boulevard, Ward, Hồ Chí Minh 700000, Vietnam",
+      "expediaDest": "Pullman Saigon Centre, Ho Chi Minh City"
     },
     {
       "slug": "ho-chi-minh-city-jw-marriott-hotel-suites-saigon",
@@ -2142,6 +2674,9 @@
       "reviews": 4802,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/ho-chi-minh-city/6.jpg",
+      "lat": 10.7809413,
+      "lng": 106.7005678,
+      "address": "Đường Hai Bà Trưng, Sài Gòn, Hồ Chí Minh 70000, Vietnam",
       "expediaDest": "JW Marriott Hotel & Suites Saigon, Ho Chi Minh City"
     },
     {
@@ -2152,6 +2687,9 @@
       "reviews": 3967,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/ho-chi-minh-city/7.jpg",
+      "lat": 10.782461099999999,
+      "lng": 106.6972784,
+      "address": "76 78 Nguyễn Thị Minh Khai, Xuân Hòa, Hồ Chí Minh 070000, Vietnam",
       "expediaDest": "Hôtel des Arts Saigon - MGallery Collection, Ho Chi Minh City"
     },
     {
@@ -2162,6 +2700,9 @@
       "reviews": 5004,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/ho-chi-minh-city/8.jpg",
+      "lat": 10.779977899999999,
+      "lng": 106.70729689999999,
+      "address": "3C Tôn Đức Thắng, Sài Gòn, Hồ Chí Minh 71000, Vietnam",
       "expediaDest": "Le Méridien Saigon, Ho Chi Minh City"
     }
   ],
@@ -2174,6 +2715,9 @@
       "reviews": 5801,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hoi-an/1.jpg",
+      "lat": 15.880011799999998,
+      "lng": 108.31638819999999,
+      "address": "132 Hùng Vương, Hội An Tây, Đà Nẵng 560000, Vietnam",
       "expediaDest": "La Siesta Hoi An Resort & Spa, Hoi An"
     },
     {
@@ -2184,6 +2728,9 @@
       "reviews": 4653,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hoi-an/2.jpg",
+      "lat": 15.8833796,
+      "lng": 108.3564167,
+      "address": "Đường Tống Văn Sương, Thôn Thanh Đông, Hội An Đông, Đà Nẵng, Vietnam",
       "expediaDest": "Legacy Hoi An Resort, Hoi An"
     },
     {
@@ -2194,6 +2741,9 @@
       "reviews": 3688,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hoi-an/3.jpg",
+      "lat": 15.885653,
+      "lng": 108.3499007,
+      "address": "320 Cửa Đại, Hội An Đông, Đà Nẵng 51000, Vietnam",
       "expediaDest": "Grand Sunrise Palace Hotel, Hoi An"
     },
     {
@@ -2204,6 +2754,9 @@
       "reviews": 3875,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hoi-an/4.jpg",
+      "lat": 15.8766713,
+      "lng": 108.3198424,
+      "address": "39 Đào Duy Từ, Street, Hội An, Đà Nẵng 560000, Vietnam",
       "expediaDest": "Hotel Royal Hoi An. The Legacy By The River, Hoi An"
     },
     {
@@ -2214,6 +2767,9 @@
       "reviews": 2600,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hoi-an/5.jpg",
+      "lat": 15.8701845,
+      "lng": 108.3698057,
+      "address": "999 Trần Nhân Tông, street, Cam, Hội An Đông, Đà Nẵng 560000, Vietnam",
       "expediaDest": "Hoi An Coco River Resort & Spa, Hoi An"
     },
     {
@@ -2224,6 +2780,9 @@
       "reviews": 2194,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hoi-an/6.jpg",
+      "lat": 15.8893968,
+      "lng": 108.3295899,
+      "address": "03 Lê Đình Thám, Hội An Đông, Đà Nẵng, Vietnam",
       "expediaDest": "Anio Boutique Hotel Hoian, Hoi An"
     },
     {
@@ -2234,6 +2793,9 @@
       "reviews": 2439,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hoi-an/7.jpg",
+      "lat": 15.880727799999999,
+      "lng": 108.3246119,
+      "address": "86/2 Trần Hưng Đạo, Phường, Hội An, Đà Nẵng 51000, Vietnam",
       "expediaDest": "Allegro Hoi An, Hoi An"
     },
     {
@@ -2244,6 +2806,9 @@
       "reviews": 2584,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hoi-an/8.jpg",
+      "lat": 15.875459999999999,
+      "lng": 108.3375543,
+      "address": "Cồn Hến, Hội An, Đà Nẵng 564040, Vietnam",
       "expediaDest": "Hoi An Memories Resort & Spa, Hoi An"
     }
   ],
@@ -2256,6 +2821,9 @@
       "reviews": 27932,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/taipei/1.jpg",
+      "lat": 25.054157999999997,
+      "lng": 121.52428800000001,
+      "address": "No. 3號, Lane 39, Section 2, Zhongshan N Rd, Kangle Village, Zhongshan District, Taipei City, Taiwan 104",
       "expediaDest": "Regent Taipei, Taipei"
     },
     {
@@ -2266,6 +2834,9 @@
       "reviews": 25914,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/taipei/2.jpg",
+      "lat": 25.0789293,
+      "lng": 121.52651510000001,
+      "address": "No. 1號, Section 4, Zhongshan N Rd, Jiantan Village, Zhongshan District, Taipei City, Taiwan 10427",
       "expediaDest": "The Grand Hotel, Taipei"
     },
     {
@@ -2276,6 +2847,9 @@
       "reviews": 12224,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/taipei/3.jpg",
+      "lat": 25.055741599999998,
+      "lng": 121.5481485,
+      "address": "No. 158, DunHua N Rd, Songshan District, Taipei City, Taiwan 10548",
       "expediaDest": "Mandarin Oriental, Taipei, Taipei"
     },
     {
@@ -2286,6 +2860,9 @@
       "reviews": 15976,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/taipei/4.jpg",
+      "lat": 25.0351708,
+      "lng": 121.56286689999999,
+      "address": "No. 2號, Songshou Rd, Xicun Village, Xinyi District, Taipei City, Taiwan 110061",
       "expediaDest": "Grand Hyatt Taipei, Taipei"
     },
     {
@@ -2293,9 +2870,12 @@
       "name": "The Howard Plaza Hotel Taipei",
       "area": "Taipei",
       "rating": 4.4,
-      "reviews": 14323,
+      "reviews": 14324,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/taipei/5.jpg",
+      "lat": 25.0374653,
+      "lng": 121.54297249999998,
+      "address": "No. 160號, Section 3, Ren'ai Rd, He'an Village, Da’an District, Taipei City, Taiwan 106",
       "expediaDest": "The Howard Plaza Hotel Taipei, Taipei"
     },
     {
@@ -2306,6 +2886,9 @@
       "reviews": 14120,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/taipei/6.jpg",
+      "lat": 25.080489099999998,
+      "lng": 121.55894299999999,
+      "address": "No. 199 Lequn 2nd Road (Intersection With, Jinye 4th Road, 中山區臺北市 Taiwan 10462",
       "expediaDest": "Taipei Marriott Hotel, Taipei"
     },
     {
@@ -2316,6 +2899,9 @@
       "reviews": 15052,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/taipei/7.jpg",
+      "lat": 25.0446119,
+      "lng": 121.5220328,
+      "address": "No. 12, Section 1, Zhongxiao E Rd, Xingfu Village, Zhongzheng District, Taipei City, Taiwan 100",
       "expediaDest": "Sheraton Grand Taipei Hotel, Taipei"
     },
     {
@@ -2323,9 +2909,12 @@
       "name": "Grand Mayfull Hotel Taipei",
       "area": "Taipei",
       "rating": 4.4,
-      "reviews": 11608,
+      "reviews": 11609,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/taipei/8.jpg",
+      "lat": 25.080853400000002,
+      "lng": 121.5534575,
+      "address": "No. 55號, Lequn 2nd Rd, Chenggong Village, Zhongshan District, Taipei City, Taiwan 10491",
       "expediaDest": "Grand Mayfull Hotel Taipei, Taipei"
     }
   ],
@@ -2338,6 +2927,9 @@
       "reviews": 7668,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hong-kong/1.jpg",
+      "lat": 22.295102399999998,
+      "lng": 114.1718537,
+      "address": "Salisbury Rd, Tsim Sha Tsui, Kowloon, Hong Kong",
       "expediaDest": "The Peninsula Hong Kong, Hong Kong"
     },
     {
@@ -2348,6 +2940,9 @@
       "reviews": 5262,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hong-kong/2.jpg",
+      "lat": 22.281879399999998,
+      "lng": 114.15944329999999,
+      "address": "5 Connaught Road, Central, Hong Kong Island, Hong Kong",
       "expediaDest": "Mandarin Oriental, Hong Kong, Hong Kong"
     },
     {
@@ -2358,6 +2953,9 @@
       "reviews": 3750,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hong-kong/3.jpg",
+      "lat": 22.2863701,
+      "lng": 114.1570412,
+      "address": "8 Finance St, Central, Hong Kong Island, Hong Kong",
       "expediaDest": "Four Seasons Hotel Hong Kong, Hong Kong"
     },
     {
@@ -2368,6 +2966,9 @@
       "reviews": 2966,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/hong-kong/4.jpg",
+      "lat": 22.303403199999998,
+      "lng": 114.16019070000002,
+      "address": "九龙柯士甸道西1号, International Commerce Centre (ICC), 1 Austin Rd W, Kowloon, Hong Kong",
       "expediaDest": "The Ritz-Carlton, Hong Kong, Hong Kong"
     }
   ],
@@ -2380,6 +2981,9 @@
       "reviews": 4350,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/chiang-mai/1.jpg",
+      "lat": 18.7783217,
+      "lng": 99.0002224,
+      "address": "89/8 Changklan Rd, Tambon Chang Khlan, Amphoe Mueang Chiang Mai, Chang Wat Chiang Mai 50100, Thailand",
       "expediaDest": "Shangri-La Chiang Mai Hotel, Chiang Mai"
     },
     {
@@ -2390,6 +2994,9 @@
       "reviews": 3893,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/chiang-mai/2.jpg",
+      "lat": 18.784191,
+      "lng": 98.99969229999999,
+      "address": "108 Changklan Rd, Tambon Chang Khlan, Amphur Muang, Chang Wat Chiang Mai 50100, Thailand",
       "expediaDest": "Chiang Mai Marriott Hotel, Chiang Mai"
     },
     {
@@ -2400,6 +3007,9 @@
       "reviews": 2048,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/chiang-mai/3.jpg",
+      "lat": 18.7883369,
+      "lng": 98.98708060000001,
+      "address": "70 Rachadamnoen Rd Old City Tambon Si Phum, Amphoe Mueang Chiang Mai, Chang Wat Chiang Mai 50200, Thailand",
       "expediaDest": "U Chiang Mai Hotel, Chiang Mai"
     },
     {
@@ -2410,6 +3020,9 @@
       "reviews": 2405,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/chiang-mai/4.jpg",
+      "lat": 18.781889,
+      "lng": 99.00399999999999,
+      "address": "123, 1 Charoen Prathet Rd, Tambon Chang Khlan, Amphoe Mueang Chiang Mai, Chang Wat Chiang Mai 50100, Thailand",
       "expediaDest": "Anantara Chiang Mai Resort, Chiang Mai"
     },
     {
@@ -2420,6 +3033,9 @@
       "reviews": 1203,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/chiang-mai/5.jpg",
+      "lat": 18.7801202,
+      "lng": 99.0046229,
+      "address": "1, 1 Soi 9, Tambon Chang Khlan, Muang, Chang Wat Chiang Mai 50100, Thailand",
       "expediaDest": "Na Nirand Romantic Boutique Resort, Chiang Mai"
     },
     {
@@ -2430,6 +3046,9 @@
       "reviews": 1012,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/chiang-mai/6.jpg",
+      "lat": 18.8016707,
+      "lng": 99.00511739999999,
+      "address": "369/1 Thanon Charoenrajd, Tambon Wat Ket, Amphoe Mueang Chiang Mai, Chang Wat Chiang Mai 50000, Thailand",
       "expediaDest": "Cross Chiang Mai Riverside, Chiang Mai"
     },
     {
@@ -2440,6 +3059,9 @@
       "reviews": 726,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/chiang-mai/7.jpg",
+      "lat": 18.784284,
+      "lng": 98.98169879999999,
+      "address": "56 Samlarn Rd Old City Tambon Phra Sing, Amphoe Mueang Chiang Mai, Chang Wat Chiang Mai 50200, Thailand",
       "expediaDest": "The Inside House, Chiang Mai"
     },
     {
@@ -2450,6 +3072,9 @@
       "reviews": 860,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/chiang-mai/8.jpg",
+      "lat": 18.797249,
+      "lng": 98.96948239999999,
+      "address": "22/2 Nimmana Haeminda Rd Lane 9 Nimmanhaemin Tambon Su Thep, Muang Chang Wat Chiang Mai 50200, Thailand",
       "expediaDest": "AMANOR Hotel Chiang Mai, Chiang Mai"
     }
   ],
@@ -2462,6 +3087,9 @@
       "reviews": 5947,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/phuket/1.jpg",
+      "lat": 7.8839133,
+      "lng": 98.27257709999999,
+      "address": "99 Muen-Ngoen Road, Tambon Patong, Phuket, Chang Wat Phuket 83150, Thailand",
       "expediaDest": "Phuket Marriott Resort & Spa, Merlin Beach, Phuket"
     },
     {
@@ -2472,6 +3100,9 @@
       "reviews": 4689,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/phuket/2.jpg",
+      "lat": 8.0120586,
+      "lng": 98.295648,
+      "address": "33 Srisunthorn 33/27 Cherngthalay Bang Tao Beach, Tambon Choeng Thale, Amphoe Thalang, Chang Wat Phuket 83110, Thailand",
       "expediaDest": "Banyan Tree Phuket, Phuket"
     },
     {
@@ -2482,6 +3113,9 @@
       "reviews": 3518,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/phuket/3.jpg",
+      "lat": 8.166333,
+      "lng": 98.295344,
+      "address": "231, Mai Khao Beach, Tambon Mai Khao, Amphoe Thalang, Chang Wat Phuket 83110, Thailand",
       "expediaDest": "JW Marriott Phuket Resort & Spa, Phuket"
     },
     {
@@ -2492,6 +3126,9 @@
       "reviews": 1905,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/phuket/4.jpg",
+      "lat": 8.16875,
+      "lng": 98.29338899999999,
+      "address": "888, Moo 3, Tambon Mai Khao, Amphoe Thalang, Chang Wat Phuket 83110, Thailand",
       "expediaDest": "Anantara Mai Khao Phuket Villas, Phuket"
     },
     {
@@ -2502,6 +3139,9 @@
       "reviews": 1710,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/phuket/5.jpg",
+      "lat": 7.7794025,
+      "lng": 98.3087872,
+      "address": "11, 5 Nai Harn Beach, Tambon Rawai, Amphoe Mueang Phuket, Chang Wat Phuket 83130, Thailand",
       "expediaDest": "SUNSURI PHUKET, Phuket"
     },
     {
@@ -2512,6 +3152,9 @@
       "reviews": 1060,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/phuket/6.jpg",
+      "lat": 8.035582999999999,
+      "lng": 98.284319,
+      "address": "168 Moo 6, Layan Beach, Cherngtalay, Soi 4, ตำบลเชิงทะเล อำเภอถลาง ภูเก็ต 83110, Thailand",
       "expediaDest": "Anantara Layan Phuket Resort, Phuket"
     },
     {
@@ -2522,6 +3165,9 @@
       "reviews": 1022,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/phuket/7.jpg",
+      "lat": 8.057352999999999,
+      "lng": 98.458411,
+      "address": "32 Moo 5 Tambol Paklok, Amphur Thalang, Naka Yai Island, Tambon Pa Klok, Phuket, Chang Wat Phuket 83110, Thailand",
       "expediaDest": "The Naka Island, a Luxury Collection Resort & Spa, Phuket, Phuket"
     }
   ],
@@ -2534,6 +3180,9 @@
       "reviews": 65123,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/singapore/1.jpg",
+      "lat": 1.2837574999999999,
+      "lng": 103.8591065,
+      "address": "10 Bayfront Ave, Singapore 018956",
       "expediaDest": "Marina Bay Sands Singapore, Singapore"
     },
     {
@@ -2544,6 +3193,9 @@
       "reviews": 13261,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/singapore/2.jpg",
+      "lat": 1.310965,
+      "lng": 103.8264894,
+      "address": "22 Orange Grove Rd, Singapore 258350",
       "expediaDest": "Shangri-La Singapore, Singapore"
     },
     {
@@ -2554,6 +3206,9 @@
       "reviews": 9310,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/singapore/3.jpg",
+      "lat": 1.2863532,
+      "lng": 103.85306709999999,
+      "address": "1 Fullerton Sq, Singapore 049178",
       "expediaDest": "The Fullerton Hotel Singapore, Singapore"
     },
     {
@@ -2564,6 +3219,9 @@
       "reviews": 7840,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/singapore/4.jpg",
+      "lat": 1.2924176,
+      "lng": 103.85858520000001,
+      "address": "7 Raffles Blvd, Singapore 039595",
       "expediaDest": "Pan Pacific Singapore, Singapore"
     },
     {
@@ -2574,6 +3232,9 @@
       "reviews": 9445,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/singapore/5.jpg",
+      "lat": 1.2936866,
+      "lng": 103.8533912,
+      "address": "2 Stamford Rd, Singapore 178882",
       "expediaDest": "Swissôtel The Stamford Singapore, Singapore"
     },
     {
@@ -2584,6 +3245,9 @@
       "reviews": 7525,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/singapore/6.jpg",
+      "lat": 1.2913367999999998,
+      "lng": 103.85747459999999,
+      "address": "5 Raffles Ave., Singapore 039797",
       "expediaDest": "Mandarin Oriental, Singapore, Singapore"
     },
     {
@@ -2594,6 +3258,9 @@
       "reviews": 6840,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/singapore/7.jpg",
+      "lat": 1.294889,
+      "lng": 103.854483,
+      "address": "1 Beach Rd, Singapore 189673",
       "expediaDest": "Raffles Singapore, Singapore"
     },
     {
@@ -2604,91 +3271,13 @@
       "reviews": 6439,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/singapore/8.jpg",
+      "lat": 1.2909392,
+      "lng": 103.8599895,
+      "address": "7 Raffles Ave., Marina Bay, Singapore 039799",
       "expediaDest": "The Ritz-Carlton, Millenia Singapore, Singapore"
     }
   ],
-  "kuala-lumpur": [
-    {
-      "slug": "kuala-lumpur-shangri-la-kuala-lumpur",
-      "name": "Shangri-La Kuala Lumpur",
-      "area": "Kuala Lumpur",
-      "rating": 4.6,
-      "reviews": 11453,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/kuala-lumpur/1.jpg",
-      "expediaDest": "Shangri-La Kuala Lumpur, Kuala Lumpur"
-    },
-    {
-      "slug": "kuala-lumpur-hilton-kuala-lumpur",
-      "name": "Hilton Kuala Lumpur",
-      "area": "Kuala Lumpur",
-      "rating": 4.6,
-      "reviews": 10973,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/kuala-lumpur/2.jpg",
-      "expediaDest": "Hilton Kuala Lumpur, Kuala Lumpur"
-    },
-    {
-      "slug": "kuala-lumpur-mandarin-oriental-kuala-lumpur",
-      "name": "Mandarin Oriental, Kuala Lumpur",
-      "area": "Kuala Lumpur",
-      "rating": 4.6,
-      "reviews": 9319,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/kuala-lumpur/3.jpg",
-      "expediaDest": "Mandarin Oriental, Kuala Lumpur, Kuala Lumpur"
-    },
-    {
-      "slug": "kuala-lumpur-doubletree-by-hilton-kuala-lumpur",
-      "name": "DoubleTree by Hilton Kuala Lumpur",
-      "area": "Kuala Lumpur",
-      "rating": 4.5,
-      "reviews": 11233,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/kuala-lumpur/4.jpg",
-      "expediaDest": "DoubleTree by Hilton Kuala Lumpur, Kuala Lumpur"
-    },
-    {
-      "slug": "kuala-lumpur-grand-hyatt-kuala-lumpur",
-      "name": "Grand Hyatt Kuala Lumpur",
-      "area": "Kuala Lumpur",
-      "rating": 4.6,
-      "reviews": 7363,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/kuala-lumpur/5.jpg",
-      "expediaDest": "Grand Hyatt Kuala Lumpur, Kuala Lumpur"
-    },
-    {
-      "slug": "kuala-lumpur-jw-marriott-hotel-kuala-lumpur",
-      "name": "JW Marriott Hotel Kuala Lumpur",
-      "area": "Kuala Lumpur",
-      "rating": 4.5,
-      "reviews": 8938,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/kuala-lumpur/6.jpg",
-      "expediaDest": "JW Marriott Hotel Kuala Lumpur, Kuala Lumpur"
-    },
-    {
-      "slug": "kuala-lumpur-intercontinental-kuala-lumpur-by-ihg",
-      "name": "InterContinental Kuala Lumpur by IHG",
-      "area": "Kuala Lumpur",
-      "rating": 4.5,
-      "reviews": 8081,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/kuala-lumpur/7.jpg",
-      "expediaDest": "InterContinental Kuala Lumpur by IHG, Kuala Lumpur"
-    },
-    {
-      "slug": "kuala-lumpur-four-seasons-hotel-kuala-lumpur",
-      "name": "Four Seasons Hotel Kuala Lumpur",
-      "area": "Kuala Lumpur",
-      "rating": 4.6,
-      "reviews": 5733,
-      "priceLevel": null,
-      "image": "/assets/img/dest-hotels/kuala-lumpur/8.jpg",
-      "expediaDest": "Four Seasons Hotel Kuala Lumpur, Kuala Lumpur"
-    }
-  ],
+  "kuala-lumpur": [],
   "bora-bora": [
     {
       "slug": "bora-bora-le-bora-bora-by-pearl-resorts",
@@ -2698,6 +3287,9 @@
       "reviews": 1495,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bora-bora/1.jpg",
+      "lat": -16.4759407,
+      "lng": -151.7724793,
+      "address": "Motu Tevairoa Vaitāpē, Bora-Bora 98730, French Polynesia",
       "expediaDest": "Le Bora Bora by Pearl Resorts, Bora Bora"
     },
     {
@@ -2708,6 +3300,9 @@
       "reviews": 881,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bora-bora/2.jpg",
+      "lat": -16.486102799999998,
+      "lng": -151.6981399,
+      "address": "Motu Ome'E Bp 506 Bora Bora, Motu Piti A, au 98730, French Polynesia",
       "expediaDest": "The St. Regis Bora Bora Resort, Bora Bora"
     },
     {
@@ -2718,6 +3313,9 @@
       "reviews": 1149,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bora-bora/3.jpg",
+      "lat": -16.542214299999998,
+      "lng": -151.7359516,
+      "address": "F757+CQQ, Bora-Bora 98730, French Polynesia",
       "expediaDest": "InterContinental Le Moana Bora Bora Resort, Bora Bora"
     },
     {
@@ -2728,6 +3326,9 @@
       "reviews": 982,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bora-bora/4.jpg",
+      "lat": -16.5052016,
+      "lng": -151.7014465,
+      "address": "Motu Piti Aau, Bora-Bora 98730, French Polynesia",
       "expediaDest": "InterContinental Bora Bora Resort Thalasso Spa, Bora Bora"
     },
     {
@@ -2738,6 +3339,9 @@
       "reviews": 1102,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bora-bora/5.jpg",
+      "lat": -16.5297376,
+      "lng": -151.7678688,
+      "address": "BP 502, Bora Bora, 98730, French Polynesia",
       "expediaDest": "Conrad Bora Bora Nui, Bora Bora"
     },
     {
@@ -2748,6 +3352,9 @@
       "reviews": 920,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bora-bora/6.jpg",
+      "lat": -16.4725491,
+      "lng": -151.7071035,
+      "address": "BP 547, Motu Tehotu 98730, French Polynesia",
       "expediaDest": "Four Seasons Resort Bora Bora, Bora Bora"
     },
     {
@@ -2758,6 +3365,9 @@
       "reviews": 343,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/bora-bora/7.jpg",
+      "lat": -16.497141499999998,
+      "lng": -151.7018508,
+      "address": "MOTU TAPE, BP 190, Bora-Bora 98730, French Polynesia",
       "expediaDest": "The Westin Bora Bora Resort & Spa, Bora Bora"
     }
   ],
@@ -2770,6 +3380,9 @@
       "reviews": 2249,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/tahiti/1.jpg",
+      "lat": -17.570925,
+      "lng": -149.61873599999998,
+      "address": "PK7, Fa'a'ā 98702, French Polynesia",
       "expediaDest": "InterContinental Tahiti Resort & Spa, Tahiti"
     }
   ],
@@ -2782,6 +3395,9 @@
       "reviews": 1702,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/moorea/1.jpg",
+      "lat": -17.5007987,
+      "lng": -149.764881,
+      "address": "Teavaro, Moorea-Maiao 98728, French Polynesia",
       "expediaDest": "Sofitel Kia Ora Moorea Beach Resort, Moorea"
     },
     {
@@ -2792,6 +3408,9 @@
       "reviews": 1368,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/moorea/2.jpg",
+      "lat": -17.4810074,
+      "lng": -149.8037627,
+      "address": "PK. 5,5 Côté mer Maharepa, Moorea 98728, French Polynesia",
       "expediaDest": "Hotel Manava Beach Resort & Spa Moorea, Moorea"
     },
     {
@@ -2802,7 +3421,36 @@
       "reviews": 1718,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/moorea/3.jpg",
+      "lat": -17.485391099999998,
+      "lng": -149.8443651,
+      "address": "BP 1005, Moorea-Maiao 98729, French Polynesia",
       "expediaDest": "Hilton Moorea Lagoon Resort & Spa, Moorea"
+    },
+    {
+      "slug": "moorea-linareva-moorea-beach-resort",
+      "name": "Linareva Moorea Beach Resort",
+      "area": "Moorea",
+      "rating": 4.9,
+      "reviews": 275,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/moorea/4.jpg",
+      "lat": -17.549719000000003,
+      "lng": -149.88285919999998,
+      "address": "PK 34.5 côté mer, MOOREA 98729, French Polynesia",
+      "expediaDest": "Linareva Moorea Beach Resort, Moorea"
+    },
+    {
+      "slug": "moorea-cook-s-bay-hotel-suites-moorea",
+      "name": "Cook's Bay Hotel & Suites, Moorea",
+      "area": "Moorea",
+      "rating": 4.7,
+      "reviews": 334,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/moorea/5.jpg",
+      "lat": -17.4884447,
+      "lng": -149.8178442,
+      "address": "Baie de Cook, Moorea-Maiao 98729, French Polynesia",
+      "expediaDest": "Cook's Bay Hotel & Suites, Moorea, Moorea"
     },
     {
       "slug": "moorea-moorea-island-beach",
@@ -2811,8 +3459,37 @@
       "rating": 4.8,
       "reviews": 273,
       "priceLevel": null,
-      "image": "/assets/img/dest-hotels/moorea/4.jpg",
+      "image": "/assets/img/dest-hotels/moorea/6.jpg",
+      "lat": -17.4994498,
+      "lng": -149.9148566,
+      "address": "PK 27 District Tiahura Haapiti Moorea, Moorea-Maiao 98729, French Polynesia",
       "expediaDest": "Moorea Island Beach, Moorea"
+    },
+    {
+      "slug": "moorea-niu-beach-hotel-moorea",
+      "name": "Niu Beach Hotel Moorea",
+      "area": "Moorea",
+      "rating": 4.9,
+      "reviews": 117,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/moorea/7.jpg",
+      "lat": -17.504258699999998,
+      "lng": -149.91532329999998,
+      "address": "BP 1004, Pk 27 8 - Hauru, Moorea 98729, French Polynesia",
+      "expediaDest": "Niu Beach Hotel Moorea, Moorea"
+    },
+    {
+      "slug": "moorea-fenua-mata-i-oa",
+      "name": "Fenua Mata'i'oa",
+      "area": "Moorea",
+      "rating": 4.5,
+      "reviews": 117,
+      "priceLevel": null,
+      "image": "/assets/img/dest-hotels/moorea/8.jpg",
+      "lat": -17.491958,
+      "lng": -149.897932,
+      "address": "Îles du Vent, village tiahura, moorea 98729, French Polynesia",
+      "expediaDest": "Fenua Mata'i'oa, Moorea"
     }
   ],
   "fiji": [
@@ -2824,6 +3501,9 @@
       "reviews": 5594,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/fiji/1.jpg",
+      "lat": -18.1407395,
+      "lng": 177.4210698,
+      "address": "Yanuca Island Coral Coast Fiji Islands, Fiji",
       "expediaDest": "Shangri-La Yanuca Island, Fiji, Fiji"
     },
     {
@@ -2834,6 +3514,9 @@
       "reviews": 3790,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/fiji/2.jpg",
+      "lat": -17.7690531,
+      "lng": 177.37331749999998,
+      "address": "Beachfront, Denarau Island, Fiji",
       "expediaDest": "Sofitel Fiji Resort and Spa, Fiji"
     },
     {
@@ -2844,6 +3527,9 @@
       "reviews": 2614,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/fiji/3.jpg",
+      "lat": -17.934877699999998,
+      "lng": 177.26060189999998,
+      "address": "Savusavu Road Momi Bay, Nadi, Fiji",
       "expediaDest": "Fiji Marriott Resort Momi Bay, Fiji"
     },
     {
@@ -2854,6 +3540,9 @@
       "reviews": 2190,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/fiji/4.jpg",
+      "lat": -18.178901,
+      "lng": 177.55258,
+      "address": "Sydney Drive, Off The Queens Highway, Sigatoka, Fiji",
       "expediaDest": "OUTRIGGER Fiji Beach Resort, Fiji"
     },
     {
@@ -2864,6 +3553,9 @@
       "reviews": 2947,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/fiji/5.jpg",
+      "lat": -17.768351499999998,
+      "lng": 177.37756,
+      "address": "Denarau Island, Fiji",
       "expediaDest": "Hilton Fiji Beach Resort and Spa, Fiji"
     },
     {
@@ -2874,6 +3566,9 @@
       "reviews": 422,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/fiji/6.jpg",
+      "lat": -17.575974000000002,
+      "lng": 177.08875749999999,
+      "address": "Nadi, Fiji",
       "expediaDest": "Tokoriki Island Resort, Tokoriki Island, Fiji, Fiji"
     },
     {
@@ -2884,6 +3579,9 @@
       "reviews": 538,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/fiji/7.jpg",
+      "lat": -17.7724924,
+      "lng": 177.36753439999998,
+      "address": "Denarau Island, Fiji",
       "expediaDest": "Sheraton Denarau Villas, Fiji"
     },
     {
@@ -2894,6 +3592,9 @@
       "reviews": 277,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/fiji/8.jpg",
+      "lat": -17.758411100000004,
+      "lng": 177.1588095,
+      "address": "Malolo Island, Fiji",
       "expediaDest": "Six Senses Fiji, Fiji"
     }
   ],
@@ -2906,6 +3607,9 @@
       "reviews": 550,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/rarotonga/1.jpg",
+      "lat": -21.256265,
+      "lng": -159.73052199999998,
+      "address": "Muri Beach, Rarotonga, Cook Islands",
       "expediaDest": "Pacific Resort Rarotonga, Rarotonga"
     },
     {
@@ -2916,6 +3620,9 @@
       "reviews": 282,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/rarotonga/2.jpg",
+      "lat": -21.2552094,
+      "lng": -159.7292939,
+      "address": "5100, Muri Beach Point, Nukupure Dr, Rarotonga, Cook Islands",
       "expediaDest": "Muri Beach Club Hotel Rarotonga, Rarotonga"
     }
   ],
@@ -2928,6 +3635,9 @@
       "reviews": 583,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/samoa/1.jpg",
+      "lat": -14.0419584,
+      "lng": -171.59615639999998,
+      "address": "Main South Coast Road, Samoa",
       "expediaDest": "Saletoga Sands Resort & Spa, Samoa"
     },
     {
@@ -2938,6 +3648,9 @@
       "reviews": 817,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/samoa/2.jpg",
+      "lat": -13.82899,
+      "lng": -171.74716899999999,
+      "address": "57C3+G7C, Matautu St, Apia, Samoa",
       "expediaDest": "Taumeasina Island Resort, Samoa"
     },
     {
@@ -2948,6 +3661,9 @@
       "reviews": 205,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/samoa/3.jpg",
+      "lat": -13.4419845,
+      "lng": -172.35764559999998,
+      "address": "Fagamalo, Savai'i, Savai'i, Samoa",
       "expediaDest": "Le Lagoto Resort & Spa, Samoa"
     },
     {
@@ -2958,6 +3674,9 @@
       "reviews": 247,
       "priceLevel": null,
       "image": "/assets/img/dest-hotels/samoa/4.jpg",
+      "lat": -14.0095355,
+      "lng": -171.7889295,
+      "address": "Siumu Village, Maninoa, Samoa",
       "expediaDest": "Sinalei Reef Resort & Spa, Samoa"
     }
   ]

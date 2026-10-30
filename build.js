@@ -1028,9 +1028,13 @@ ${curated}${discovered}
   function ds(d){return d.toISOString().slice(0,10);}
   var ci=qp.get('chkin')||ds(new Date(Date.now()+30*864e5));
   var co=qp.get('chkout')||ds(new Date(Date.now()+33*864e5));
+  var g=qp.get('guests');
   var m=document.getElementById('s22');
   if(m){m.src='https://www.stay22.com/embed/gm?aid=${SITE.stay22Aid}&lat='+m.dataset.lat+'&lng='+m.dataset.lng+'&maincolor=0a7ea4&checkin='+ci+'&checkout='+co+'&venue='+encodeURIComponent(m.dataset.venue);}
-  function addDates(u){return u+(u.indexOf('?')>-1?'&':'?')+'chkin='+ci+'&chkout='+co;}
+  function addDates(u){
+    if(u.indexOf('stay22.com')>-1){return u+(u.indexOf('?')>-1?'&':'?')+'checkin='+ci+'&checkout='+co+(g?'&adults='+g:'');}
+    return u+(u.indexOf('?')>-1?'&':'?')+'chkin='+ci+'&chkout='+co;
+  }
   var ea=document.getElementById('exp-all'); if(ea){ea.href=addDates(ea.href);}
   [].slice.call(document.querySelectorAll('.hotel-btn')).forEach(function(a){a.href=addDates(a.href);});
   var sf=document.getElementById('bsearch');
@@ -1103,9 +1107,24 @@ const expediaTrack = (url) => {
   const sep = url.includes("?") ? "&" : "?";
   return `${url}${sep}affcid=${SITE.expediaAffcid}&afflid=${SITE.expediaAfflid}`;
 };
-// Direct hotel page if we have its Expedia URL, else a tracked search for the name.
+// Stay22 "Allez" deep link — resolves to the exact hotel on the best OTA and earns
+// commission via our aid. Used for discovered hotels (we have name + address + coords).
+const stay22Hotel = (h) => {
+  const p = [`aid=${encodeURIComponent(SITE.stay22Aid)}`];
+  if (h.name) p.push(`hotelname=${encodeURIComponent(h.name)}`);
+  if (h.address) p.push(`address=${encodeURIComponent(h.address)}`);
+  if (h.lat != null && h.lng != null) p.push(`lat=${h.lat}`, `lng=${h.lng}`);
+  p.push("campaign=gohonu_stays");
+  return `https://www.stay22.com/allez/roam?${p.join("&")}`;
+};
+// Curated hotels with a known Expedia page -> direct Expedia (tracked). Discovered hotels
+// (coords/address) -> Stay22 Allez, dropping the client straight onto that exact hotel.
 const hotelLink = (h) =>
-  expediaTrack(h.expediaUrl || `https://www.expedia.com/Hotel-Search?destination=${encodeURIComponent(h.expediaDest)}`);
+  h.expediaUrl
+    ? expediaTrack(h.expediaUrl)
+    : h.lat != null && h.lng != null
+    ? stay22Hotel(h)
+    : expediaTrack(`https://www.expedia.com/Hotel-Search?destination=${encodeURIComponent(h.expediaDest || h.name)}`);
 
 function hotelCard(h) {
   const rating = h.rating
