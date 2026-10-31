@@ -322,8 +322,9 @@ html,body{overflow-x:clip}
 
 /* section */
 .section{padding:48px 0}
-.section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:22px;flex-wrap:wrap;gap:8px}
+.section-head{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:22px;gap:6px}
 .section-head h2{font-size:1.7rem;margin:0}
+.section-head .muted{max-width:640px}
 
 /* grid + cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:24px}
