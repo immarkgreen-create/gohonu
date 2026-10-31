@@ -70,7 +70,7 @@ function booking(tour) {
   if (b.provider === "polynesia") return { url: b.url, label: "Book Now", external: true, note: "Booked on Polynesia.com" };
   // inquire / fallback
   return {
-    url: `mailto:${SITE.email}?subject=Booking%20enquiry:%20${encodeURIComponent(tour.name)}`,
+    url: `mailto:${SITE.email}?subject=Booking%20inquiry:%20${encodeURIComponent(tour.name)}`,
     label: "Request to Book",
     note: "The operator confirms availability directly",
   };
@@ -380,7 +380,7 @@ function tabBar() {
   const tabs = [
     { href: "/stays/", label: "Stays", icon: "🏨", match: "^/stays" },
     { href: "/packages/", label: "Packages", icon: "🧳", match: "^/packages" },
-    { href: "/attractions/", label: "Tours", icon: "🎟️", match: "^/(attractions|islands|tours|beyond|polynesia)" },
+    { href: "/attractions/", label: "Attractions", icon: "🎟️", match: "^/(attractions|islands|tours|beyond|polynesia)" },
     ...(FLIGHTS ? [{ href: "/flights/", label: "Flights", icon: "✈️", match: "^/flights" }] : []),
     { href: "/cars/", label: "Cars", icon: "🚗", match: "^/cars" },
   ];
@@ -499,7 +499,7 @@ function fhTourPage(t) {
     <nav class="crumbs crumbs--light"><a href="/">Home</a> / <a href="/islands/${slugifyIsland(t.island)}/">${esc(t.island)}</a> / <span>${esc(t.name)}</span></nav>
     <span class="tour-eyebrow">${esc(t.category)} · ${esc(t.island)}</span>
     <h1>${esc(t.name)}</h1>
-    <div class="tour-meta">${ratingLine}${t.freeCancellation ? ` <span class="chip">Free cancellation</span>` : ""}</div>
+    ${ratingLine || t.freeCancellation ? `<div class="tour-meta">${ratingLine}${t.freeCancellation ? ` <span class="chip">Free cancellation</span>` : ""}</div>` : ""}
   </div>
 </section>
 <section class="wrap tour-grid">
@@ -524,8 +524,8 @@ function fhTourPage(t) {
 </section>
 ${completeTrip(t.island, { excludeSlug: t.slug, showStays: true, n: 4 })}`;
   return layout({
-    title: `${t.name} — ${t.island} | ${SITE.name}`,
-    description: `Book ${t.name} with ${t.company} in ${t.island}. Live prices, free cancellation on most, instant confirmation.`,
+    title: `${t.name} — ${t.company}, ${t.island} | ${SITE.name}`,
+    description: `${t.name} with ${t.company} in ${t.island}. See live prices and availability, then book securely with the operator.`,
     canonical: `${SITE.domain}/tours/${t.slug}/`,
     extraHead: `<script type="application/ld+json">${JSON.stringify(ld)}</script>`,
     body,
@@ -582,8 +582,8 @@ function homeSearch() {
   <div class="pstrip homesearch-tabs">${tabs.map(([k, ic, l], i) => `<button type="button" class="pchip hs-tab${i === 0 ? " active" : ""}" data-tab="${k}"><span>${ic}</span> ${l}</button>`).join("")}</div>
   <form class="bsearch" id="homesearch">
     <div class="bfield bfield--dest"><label>Island</label><div class="bwrap"><span class="bic">🏝️</span><select name="island">${opts}</select></div></div>
-    <div class="bfield hs-date"><label>Check-in</label><div class="bwrap"><span class="bic">📅</span><input name="chkin" type="date"></div></div>
-    <div class="bfield hs-date"><label>Check-out</label><div class="bwrap"><span class="bic">📅</span><input name="chkout" type="date"></div></div>
+    <div class="bfield hs-date"><label>Check-in</label><div class="bwrap"><input name="chkin" type="date"></div></div>
+    <div class="bfield hs-date"><label>Check-out</label><div class="bwrap"><input name="chkout" type="date"></div></div>
     <div class="bfield bfield--sm hs-guests"><label>Guests</label><div class="bwrap"><span class="bic">👤</span><input name="guests" type="number" min="1" max="16" value="2"></div></div>
     <button class="bsearch-go" type="submit">Search</button>
   </form>
@@ -833,10 +833,6 @@ ${hasStay ? `<section class="wrap" style="margin-top:16px"><a class="todo-cta to
 }
 
 /* ---------- Polynesia tab (tours + Stay22 hotel map) ---------- */
-function stayEmbed(lat, lng, venue) {
-  return `<iframe class="stay-map" title="Hotels in ${esc(venue)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-lat="${lat}" data-lng="${lng}" data-venue="${esc(venue)}"></iframe>
-<script>(function(){var m=document.currentScript.previousElementSibling;function ds(d){return d.toISOString().slice(0,10);}var ci=new Date(Date.now()+30*864e5),co=new Date(Date.now()+33*864e5);m.src='https://www.stay22.com/embed/gm?aid=${SITE.stay22Aid}&lat='+m.dataset.lat+'&lng='+m.dataset.lng+'&maincolor=0a7ea4&checkin='+ds(ci)+'&checkout='+ds(co)+'&venue='+encodeURIComponent(m.dataset.venue);})();</script>`;
-}
 
 function polyLandingPage() {
   const heroPhoto = POLY[0] && destImage(POLY[0]);
@@ -886,7 +882,7 @@ function flightSearchForm() {
     <div class="flt-field"><label>To</label><input name="dest" list="airports" value="Honolulu · Oahu (HNL)" autocomplete="off" required></div>
     <div class="flt-field"><label>Depart</label><input name="depart" type="date" required></div>
     <div class="flt-field ret"><label>Return</label><input name="ret" type="date"></div>
-    <div class="flt-field flt-pax"><label>Travellers</label><input name="pax" type="number" min="1" max="9" value="1"></div>
+    <div class="flt-field flt-pax"><label>Travelers</label><input name="pax" type="number" min="1" max="9" value="1"></div>
     <button class="btn btn--book flt-go" type="submit">Search flights ✈</button>
   </div>
   <datalist id="airports">${opts}</datalist>
@@ -966,8 +962,8 @@ function productStrip(active) {
 function searchForm(mode) {
   const list = PLACES.map((p) => `<option value="${esc(p.name)}">`).join("");
   const showDate = mode === "stays" || mode === "attractions";
-  const dateIn = showDate ? `<div class="bfield"><label>${mode === "stays" ? "Check-in" : "Date (optional)"}</label><div class="bwrap"><span class="bic">📅</span><input name="chkin" type="date"></div></div>` : "";
-  const dateOut = mode === "stays" ? `<div class="bfield"><label>Check-out</label><div class="bwrap"><span class="bic">📅</span><input name="chkout" type="date"></div></div>` : "";
+  const dateIn = showDate ? `<div class="bfield"><label>${mode === "stays" ? "Check-in" : "Date (optional)"}</label><div class="bwrap"><input name="chkin" type="date"></div></div>` : "";
+  const dateOut = mode === "stays" ? `<div class="bfield"><label>Check-out</label><div class="bwrap"><input name="chkout" type="date"></div></div>` : "";
   const guests = mode === "stays" ? `<div class="bfield bfield--sm"><label>Guests</label><div class="bwrap"><span class="bic">👤</span><input name="guests" type="number" min="1" max="16" value="2"></div></div>` : "";
   const btn = mode === "transfers" ? "Find transfers" : "Search";
   return `<form class="bsearch" data-mode="${mode}" id="bsearch">
@@ -1131,7 +1127,7 @@ ${p.kind === "island" ? completeTrip(p.name, { n: 4 }) : ""}
   if(m){m.src='https://www.stay22.com/embed/gm?aid=${SITE.stay22Aid}&lat='+m.dataset.lat+'&lng='+m.dataset.lng+'&maincolor=0a7ea4&checkin='+ci+'&checkout='+co+'&venue='+encodeURIComponent(m.dataset.venue);}
   function addDates(u){
     if(u.indexOf('stay22.com')>-1){return u+(u.indexOf('?')>-1?'&':'?')+'checkin='+ci+'&checkout='+co+(g?'&adults='+g:'');}
-    return u+(u.indexOf('?')>-1?'&':'?')+'chkin='+ci+'&chkout='+co;
+    return u+(u.indexOf('?')>-1?'&':'?')+'startDate='+ci+'&endDate='+co;
   }
   var ea=document.getElementById('exp-all'); if(ea){ea.href=addDates(ea.href);}
   [].slice.call(document.querySelectorAll('.hotel-btn')).forEach(function(a){a.href=addDates(a.href);});
@@ -1273,11 +1269,7 @@ function hotelCard(h) {
     : "";
   const badge = h.bestFor || h.area || "";
   // Curated hotels carry a blurb; discovered ones get a factual one-liner.
-  const blurb = h.blurb
-    ? `<p class="hotel-blurb">${esc(h.blurb)}</p>`
-    : h.area
-    ? `<p class="hotel-blurb muted">Top-rated place to stay in ${esc(h.area)}.</p>`
-    : "";
+  const blurb = h.blurb ? `<p class="hotel-blurb">${esc(h.blurb)}</p>` : "";
   // Price: curated "from $X", else Google price tier, else just the Check-price CTA.
   const priceEl = h.priceFrom
     ? `<span class="price"><span class="muted">from</span> <b>$${h.priceFrom}</b> <span class="muted">/ night</span></span>`
@@ -1344,7 +1336,8 @@ function packagesPage() {
   <p class="muted" style="margin-top:12px;font-size:.84rem">For the full flight + hotel (+ car) bundle, use <b>Search Flight + Hotel deals</b> above. Booking via Expedia (merchant of record) · free cancellation on most hotels.</p>
 </section>
 <section class="wrap section">
-  <div class="section-head"><div><span class="kicker">Popular</span><h2>Package getaways</h2></div></div>
+  <div class="section-head"><div><span class="kicker">Where to stay</span><h2>Hotels for popular package destinations</h2></div></div>
+  <p class="muted" style="margin:-8px 0 16px">Browse the best hotels, then use the Flight + Hotel search above to bundle one with flights and save.</p>
   <div class="dest-grid">${[...HAWAII_PLACES, ...DEST_PLACES.slice(0, 8)].map((p) => placeCard(p, "stays")).join("")}</div>
 </section>`;
   return layout({
@@ -1444,11 +1437,15 @@ function aboutPage() {
     "About GoHonu",
     "Hand-picked Hawaii, by people who live here.",
     `<div class="founder">
-  <div class="founder-photo">[ Your photo here ]</div>
+  <div class="founder-photo">${
+    SITE.founderPhoto
+      ? `<img src="${esc(SITE.founderPhoto)}" alt="${esc(SITE.founderName || "GoHonu founder")}" style="width:100%;height:100%;object-fit:cover">`
+      : `<img src="/assets/img/logo.png?v=${ICON_VER}" alt="GoHonu" style="width:84px;height:84px;opacity:.9">`
+  }</div>
   <div class="founder-txt">
-    <h2>Aloha — I'm [Your name]</h2>
-    <p>[Placeholder — your story goes here.] I'm a Honolulu local, and I built GoHonu to share the Hawaii experiences I'd actually send my own friends and family on. After years of exploring every island, I got tired of tourists overpaying for forgettable tours — so I started hand-picking the operators, stays and activities that are genuinely worth it.</p>
-    <p>GoHonu brings the best of the islands into one place, with honest ratings and no fluff. You book directly with the local operators and trusted partners — I just help you find the good stuff.</p>
+    <h2>${SITE.founderName ? `Aloha — I'm ${esc(SITE.founderName)}` : "Aloha from the GoHonu team"}</h2>
+    <p>We're Honolulu locals, and we built GoHonu to share the Hawaii experiences we'd actually send our own friends and family on. After years of exploring every island, we got tired of seeing visitors overpay for forgettable tours — so we started hand-picking the operators, stays and activities that are genuinely worth it.</p>
+    <p>GoHonu brings the best of the islands into one place, with honest ratings and no fluff. You book directly with the local operators and trusted partners — we just help you find the good stuff.</p>
   </div>
 </div>
 <h2>What GoHonu is (and isn't)</h2>
@@ -1461,13 +1458,13 @@ function contactPage() {
   return infoPage(
     "contact",
     "Contact us",
-    "For partnerships and general enquiries. For help with a booking, please contact the partner on your confirmation.",
+    "For partnerships and general inquiries. For help with a booking, please contact the partner on your confirmation.",
     `<p><b>Email:</b> <a href="mailto:${SITE.email}">${SITE.email}</a></p>
 <p>Use this address for partnership opportunities, press, feedback or general questions about GoHonu.</p>
 <h2>Need help with a booking?</h2>
 <p>GoHonu doesn't process bookings or payments, so we can't look up or change your reservation. Your booking is handled by the partner shown on your confirmation email (the tour operator, hotel, airline or car supplier). Please contact them directly using the details on that confirmation — they can help with changes, cancellations, refunds and any questions about your booking.</p>
 <p class="muted">We don't offer phone support. Email is the best way to reach the GoHonu team.</p>`,
-    "Contact GoHonu for partnerships and general enquiries. Booking support is handled by the partner on your confirmation.",
+    "Contact GoHonu for partnerships and general inquiries. Booking support is handled by the partner on your confirmation.",
     "✉️ Contact"
   );
 }
@@ -1683,7 +1680,7 @@ const CORE = [
   "/assets/img/logo.png?v=${ICON_VER}",
   "/assets/img/icons/icon-192.png?v=${ICON_VER}",
   "/offline.html",
-  ${SITE.stay22Aid ? '"/stay/",' : ""}
+  ${SITE.stay22Aid ? '"/stays/",' : ""}
   ${WORLD.length ? '"/beyond/",' : ""}
 ];
 self.addEventListener("install", (e) => {

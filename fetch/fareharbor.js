@@ -60,6 +60,17 @@ function islandFromText(loc) {
   if (/Lihue|Kapaa|Koloa|Hanalei|Princeville|Poipu|Kauai|Nawiliwili|Hanapepe|Eleele|Napali/i.test(loc)) return "Kauai";
   return "Oahu";
 }
+// Strong island-specific landmarks in the tour NAME override the coords (operators
+// sometimes list a cross-island day-trip under their HQ coordinates).
+const LANDMARKS = [
+  [/road to hana|haleakala|molokini/i, "Maui"],
+  [/na\s?pali|napali|waimea canyon|kalalau/i, "Kauai"],
+  [/volcanoes national park|kilauea|mauna kea|mauna loa/i, "Big Island"],
+];
+function landmarkIsland(name) {
+  for (const [re, isl] of LANDMARKS) if (re.test(name || "")) return isl;
+  return null;
+}
 // FareHarbor 'tags' is a hyphen-joined LIST of categories (names can contain hyphens/
 // spaces, e.g. "E-Bike", "Self-Guided Tour"). Match a known vocabulary (priority
 // order = specific activities first, generic last), preferring the activity named in
@@ -95,7 +106,7 @@ const tours = rows
     // CSV stores lat/lng swapped: location_lat actually holds the longitude.
     const lat = parseFloat(get(r, "location_long"));
     const lng = parseFloat(get(r, "location_lat"));
-    const isl = (lat && lng && islandFromCoords(lat, lng)) || islandFromText(loc);
+    const isl = landmarkIsland(name) || (lat && lng && islandFromCoords(lat, lng)) || islandFromText(loc);
     return {
       slug: `${shortname}-${itemId}`.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
       name,
