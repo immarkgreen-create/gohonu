@@ -283,7 +283,7 @@ const FLIGHTS = (() => {
 })();
 
 /* ---------- shared chrome ---------- */
-function layout({ title, description, body, canonical, extraHead = "" }) {
+function layout({ title, description, body, canonical, extraHead = "", noPageview = false }) {
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -296,7 +296,7 @@ ${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ""}
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:type" content="website">
 ${SITE.ga4Id ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${SITE.ga4Id}"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${SITE.ga4Id}');</script>` : ""}
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${SITE.ga4Id}'${noPageview ? ",{send_page_view:false}" : ""});${noPageview ? "gtag('event','page_404',{bad_path:location.pathname+location.search});" : ""}</script>` : ""}
 <link rel="stylesheet" href="/assets/css/styles.css?v=${CSS_VER}">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/manifest.webmanifest">
@@ -1612,6 +1612,7 @@ write(
       <div class="hero-islands"><a class="pill pill--solid" href="/">Back to home →</a>
       ${FLIGHTS ? `<a class="pill" href="/flights/">Flights</a>` : ""}
       ${BEYOND.length ? `<a class="pill" href="/beyond/">Beyond Hawaii</a>` : ""}</div></div></section>`,
+    noPageview: true,
   })
 );
 
