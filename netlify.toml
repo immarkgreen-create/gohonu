@@ -25,6 +25,25 @@
   to = "/stays/:splat"
   status = 301
 
+# Bare parent paths have no index page (only /tours/<slug>/ and /islands/<island>/
+# exist) — send them to the Attractions hub instead of 404ing.
+[[redirects]]
+  from = "/tours"
+  to = "/attractions/"
+  status = 301
+[[redirects]]
+  from = "/tours/"
+  to = "/attractions/"
+  status = 301
+[[redirects]]
+  from = "/islands"
+  to = "/attractions/"
+  status = 301
+[[redirects]]
+  from = "/islands/"
+  to = "/attractions/"
+  status = 301
+
 [[headers]]
   for = "/manifest.webmanifest"
   [headers.values]
